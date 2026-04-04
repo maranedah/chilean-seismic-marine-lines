@@ -1,0 +1,94 @@
+{
+  "id": "kopp_2004_cinca_iquique_jgr",
+  "title": "The central Andean margin: A critical look at arc magmatism, fore-arc evolution, subduction geometry, and crustal thickening",
+  "authors": ["Kopp, Heidrun", "Flueh, Ernst R.", "Papenberg, Cord", "Klaeschen, Dirk"],
+  "year": 2004,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2003JB002855",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2003JB002855",
+  "open_access_url": null,
+  "abstract": "The seismic velocity structure of the north Chilean subduction zone near Iquique (~20°S) is derived from wide-angle seismic OBH/OBS data acquired during the CINCA95 experiment. P-wave velocity models image the crustal structure of the forearc, the subducting Nazca plate, and the continental backstop. The results reveal the geometry of the subduction zone and the structure of the margin wedge at the latitude of Iquique.",
+  "keywords": ["CINCA95", "Iquique", "20°S", "OBH", "wide-angle seismic", "P-wave velocity", "forearc", "Nazca plate", "JGR"],
+
+  "location": {
+    "latitude": -20.0,
+    "longitude": -70.5,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "North Chilean subduction zone ~20°S offshore Iquique; CINCA95 OBH wide-angle velocity structure of forearc and subducting Nazca plate",
+    "bounding_box": {
+      "lat_min": -21.0, "lat_max": -19.0,
+      "lon_min": -72.0, "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 OBH wide-angle profile — Iquique ~20°S",
+        "lat_start": -19.5, "lon_start": -72.0,
+        "lat_end": -20.5, "lon_end": -69.5,
+        "length_km": 280
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (CINCA95, SO104, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "CINCA95 OBH Wide-Angle Data — Iquique ~20°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "CINCA95 (SO104) OBH wide-angle seismic data at ~20°S near Iquique; P-wave velocity models image forearc crustal structure, subducting Nazca plate geometry, and continental backstop"
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 MCS Reflection Profiles — Iquique ~20°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection data from CINCA95 cruise complementing the OBH wide-angle velocity analysis at Iquique (~20°S)"
+    }
+  ],
+  "_data_note": "JGR paper; behind paywall. CINCA95 SO104 OBH and MCS data. Repository not confirmed.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Wide-angle seismic P-wave velocity models from CINCA95 OBH data at ~20°S image the crustal structure of the north Chilean forearc near Iquique. The subducting Nazca plate geometry and the continental backstop structure are constrained. Results provide the seismotectonic framework for the Iquique seismogenic zone.",
+    "workflow": [
+      "1. OBH data processing and quality control",
+      "2. P-wave travel-time picking",
+      "3. 2D forward ray-trace modelling",
+      "4. Velocity model refinement",
+      "5. Correlation with MCS reflection profiles"
+    ],
+    "software": ["RAYINVR", "unknown"],
+    "notes": "JGR CINCA95 OBH velocity study at Iquique; related to 2014 Iquique earthquake and Ma et al. 2022 reflectivity study"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "JGR paper; behind paywall. CINCA95 SO104 OBH data. High confidence from CINCA cruise knowledge."
+}

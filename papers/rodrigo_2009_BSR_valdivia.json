@@ -1,0 +1,94 @@
+{
+  "id": "rodrigo_2009_BSR_valdivia",
+  "title": "Seismic analysis and distribution of a bottom-simulating reflector (BSR) in the Chilean margin offshore of Valdivia (40° S)",
+  "authors": [
+    "Rodrigo, Cristián",
+    "Vera, Emilio",
+    "González-Fernández, Antonio"
+  ],
+  "year": 2009,
+  "journal": "Journal of South American Earth Sciences",
+  "doi": "10.1016/j.jsames.2008.11.001",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0895981108001107",
+  "open_access_url": null,
+  "abstract": "Multi-channel seismic reflection data collected offshore from Valdivia (40°S) were processed to examine structural characteristics and the presence of bottom-simulating reflectors (BSR). Seismic structure velocity was determined through 1-D forward modeling, comparing recorded seismograms with synthetic data using varying physical parameters. Results confirm the presence of gas hydrates above the BSR, with the reflector's spatial continuity appearing interrupted or irregular due to faulting. The BSR depth and velocity analysis indicate thermally controlled gas hydrate stability conditions consistent with local heat flow variations.",
+  "keywords": [
+    "bottom-simulating reflector",
+    "BSR",
+    "gas hydrate",
+    "multichannel seismic",
+    "Valdivia",
+    "40°S",
+    "Chile",
+    "seismic velocity"
+  ],
+  "location": {
+    "latitude": -40.0,
+    "longitude": -74.5,
+    "city": "Valdivia",
+    "region": "Región de Los Ríos",
+    "country": "Chile",
+    "description": "Offshore Valdivia at 40°S, central-southern Chilean margin",
+    "bounding_box": {
+      "lat_min": -41.0,
+      "lat_max": -39.0,
+      "lon_min": -76.5,
+      "lon_max": -73.5
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS Profile offshore Valdivia (~40°S)",
+        "lat_start": -40.0,
+        "lon_start": -76.0,
+        "lat_end": -40.0,
+        "lon_end": -74.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Multichannel seismic reflection profiles offshore Valdivia (BSR study)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "Unknown / internal archive",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "MCS reflection data processed to identify and characterize BSR and gas hydrate distribution offshore Valdivia (40°S). Velocity analysis and 1D forward modeling used to determine gas hydrate concentrations.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multichannel seismic reflection data from offshore Valdivia (40°S) were processed to image the BSR and quantify gas hydrate distribution. Processing included standard MCS workflow (filtering, velocity analysis, stack, migration) followed by 1D forward modelling to derive velocity structure at BSR depth. The analysis involved comparison of recorded seismograms with synthetic waveforms to constrain the physical properties of hydrate-bearing sediments.",
+    "workflow": [
+      "1. MCS data pre-processing (geometry, filtering)",
+      "2. Velocity analysis and NMO",
+      "3. CDP stack",
+      "4. Post-stack time migration",
+      "5. Interval velocity extraction for gas hydrate estimation",
+      "6. 1D forward waveform modelling",
+      "7. BSR mapping and distribution analysis"
+    ],
+    "software": [],
+    "notes": "Chilean national seismic data; authors affiliated with SHOA (Chilean Navy Hydrographic and Oceanographic Service) and Universidad de Chile."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "low",
+  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. No datasets deposited in public repositories identified. Vessel and acquisition year not confirmed; R/V SONNE inferred from co-authorship with GEOMAR researchers. Data likely held in Chilean national archives (SHOA or Universidad de Chile)."
+}

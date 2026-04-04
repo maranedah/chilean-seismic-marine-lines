@@ -1,0 +1,129 @@
+{
+  "id": "geersen_2018_north_chile_active_tectonics",
+  "title": "Active Tectonics of the North Chilean Marine Forearc and Adjacent Oceanic Nazca Plate",
+  "authors": [
+    "Geersen, Jacob",
+    "Ranero, César R.",
+    "Kopp, Heidrun",
+    "Behrmann, Jan H.",
+    "Lange, Dietrich",
+    "Klaucke, Ingo",
+    "Barrientos, Sergio",
+    "Diaz-Naveas, Juan",
+    "Barckhausen, Udo",
+    "Reichert, Christian"
+  ],
+  "year": 2018,
+  "journal": "Tectonics",
+  "doi": "10.1029/2018TC005087",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018tc005087",
+  "open_access_url": null,
+  "abstract": "New multibeam bathymetry data provide an unprecedented view of the tectonic regime and its along-strike heterogeneity of the North Chilean marine forearc and oceanic Nazca Plate between 19°S and 22.75°S. The tectonic map reveals a middle and upper slope configuration dominated by pervasive extensional faulting, with some faults outlining a >500-km-long ridge interpreted as remnants of a Jurassic magmatic arc. Lower slope deformation includes slope-failures, normal faulting, re-entrant embayments, and NW-SE trending anticlines and synclines resulting from subducting lower-plate topography and gravitational forearc collapse.",
+  "keywords": [
+    "north Chile forearc",
+    "19°–22.75°S",
+    "bathymetry",
+    "seismic reflection",
+    "extensional faulting",
+    "Nazca plate",
+    "subbottom profiler",
+    "Tectonics"
+  ],
+  "location": {
+    "latitude": -20.9,
+    "longitude": -70.5,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "North Chilean marine forearc and adjacent Nazca plate (19°–22.75°S); active tectonics from bathymetry and legacy seismic",
+    "bounding_box": {
+      "lat_min": -22.75,
+      "lat_max": -19.0,
+      "lon_min": -72.0,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Legacy MCS and subbottom profiles — North Chile forearc 19°–22.75°S",
+        "lat_start": -19.0,
+        "lon_start": -71.5,
+        "lat_end": -22.75,
+        "lon_end": -71.0,
+        "length_km": 420
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (multiple cruises SO104, SO211) and other GEOMAR cruises",
+    "year_acquired": 2014,
+    "source_type": "airgun array (legacy MCS) and subbottom profiler",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam Bathymetry — North Chilean Marine Forearc 19°–22.75°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.983166",
+      "doi": "10.1594/PANGAEA.983166",
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "New multibeam bathymetry providing unprecedented coverage of the north Chilean marine forearc (19°–22.75°S) and adjacent Nazca plate; reveals pervasive extensional faulting and gravitational forearc collapse. [SO211 cruise datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Legacy MCS Profiles — North Chile Forearc 19°–22.75°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Previously published and unpublished legacy seismic reflection lines (CINCA and other cruises) used to characterize deep tectonic structures in the north Chilean forearc. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Subbottom Profiler Data — North Chile Forearc",
+      "classification": "RAW",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Subbottom profiler data from recent cruises used to characterize shallow sediment structure and fault scarps in the north Chilean forearc"
+    }
+  ],
+  "_data_note": "New bathymetry from recent GEOMAR cruises (likely SO211) combined with legacy CINCA data from SO104. Tectonics AGU paper.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "New multibeam bathymetry data combined with legacy seismic reflection lines and subbottom profiler data for the north Chilean forearc (19°–22.75°S) reveal four main tectonic elements: extensional faulted middle/upper slope, Jurassic magmatic arc ridge remnants, gravitational forearc collapse on the lower slope, and Nazca plate bending-fault topography. A new tectonic map of the north Chilean marine forearc is produced.",
+    "workflow": [
+      "1. Multibeam bathymetric compilation and gridding",
+      "2. Subbottom profiler interpretation",
+      "3. Legacy seismic reflection profile interpretation",
+      "4. Tectonic map construction"
+    ],
+    "software": [
+      "GMT",
+      "Fledermaus",
+      "unknown"
+    ],
+    "notes": "Combines new bathymetry with legacy MCS from CINCA and other cruises"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Tectonics paper; behind paywall. Bathymetry from recent cruises, legacy MCS from SO104 CINCA — both at MGDS."
+}

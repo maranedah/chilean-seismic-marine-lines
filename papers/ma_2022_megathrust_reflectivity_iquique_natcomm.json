@@ -1,0 +1,117 @@
+{
+  "id": "ma_2022_megathrust_reflectivity_iquique_natcomm",
+  "title": "Megathrust reflectivity reveals the updip limit of the 2014 Iquique earthquake rupture",
+  "authors": [
+    "Ma, Bo",
+    "Klaeschen, Dirk",
+    "Kopp, Heidrun",
+    "Geersen, Jacob",
+    "Lange, Dietrich",
+    "Contreras-Reyes, Eduardo",
+    "Tréhu, Anne M."
+  ],
+  "year": 2022,
+  "journal": "Nature Communications",
+  "doi": "10.1038/s41467-022-31448-4",
+  "url": "https://www.nature.com/articles/s41467-022-31448-4",
+  "open_access_url": "https://www.nature.com/articles/s41467-022-31448-4",
+  "abstract": "State-of-the-art seismic reflection data processing is used to investigate the tectonic setting associated with the apparent updip arrest of rupture propagation during the 2014 Mw 8.1 Iquique earthquake at 15 km depth. A spatial correspondence is documented between the rupture area and seismic reflectivity of the plate boundary. North and updip of the rupture area, a coherent, highly reflective plate boundary indicates excess fluid pressure that may prevent the accumulation of elastic strain. In contrast, the rupture area is characterized by the absence of plate boundary reflectivity, indicative of low fluid pressure and strain accumulation.",
+  "keywords": [
+    "megathrust reflectivity",
+    "Iquique earthquake",
+    "MGL1610",
+    "PICTURES",
+    "19°–21°S",
+    "seismic reflection",
+    "plate boundary",
+    "fluid pressure",
+    "Nature Communications open access"
+  ],
+  "location": {
+    "latitude": -20.0,
+    "longitude": -70.5,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "Northern Chile offshore (19°–21°S); megathrust reflectivity at 2014 Iquique earthquake updip limit",
+    "bounding_box": {
+      "lat_min": -21.5,
+      "lat_max": -19.0,
+      "lon_min": -71.5,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MGL1610 PICTURES Lines — North Chile 19°–21°S (megathrust reflectivity profiles)",
+        "lat_start": -19.0,
+        "lon_start": -71.5,
+        "lat_end": -21.0,
+        "lon_end": -70.5,
+        "length_km": 300
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Marcus G. Langseth (MGL1610, PICTURES cruise, 2016)",
+    "year_acquired": 2016,
+    "source_type": "airgun array",
+    "source_volume_cui": 6600,
+    "streamer_length_m": 6000,
+    "channel_count": 480,
+    "sample_rate_ms": 2,
+    "record_length_s": 14,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "MGL1610 PICTURES MCS Data — North Chile 19°–21°S (State-of-the-Art Processing)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+      "doi": "10.1594/IEDA/323934",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "MGL1610 PICTURES MCS reflection data processed with state-of-the-art techniques (PSDM + high-resolution velocity analysis) to image megathrust reflectivity at the 2014 Iquique earthquake updip limit; absence of reflectivity in rupture zone vs. high reflectivity updip indicating fluid pressure contrast"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "MGL1610 Multibeam Bathymetry — North Chile 19°–21°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://www.rvdata.us/search/cruise/MGL1610",
+      "doi": null,
+      "repository": "RVData",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multibeam bathymetry from MGL1610 cruise offshore northern Chile"
+    }
+  ],
+  "_data_note": "Nature Communications open access paper. MGL1610 data accessible via MGDS and RVData.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "State-of-the-art seismic reflection processing (including anisotropic Kirchhoff prestack depth migration) was applied to MGL1610 PICTURES survey data (19°–21°S) to image megathrust reflectivity at the 2014 Iquique earthquake updip limit at 15 km depth. Spatial correspondence between reflectivity and rupture shows: high reflectivity updip (excess fluid pressure, velocity-weakening barrier) vs. absence of reflectivity in rupture zone (low fluid pressure, seismogenic zone).",
+    "workflow": [
+      "1. Demultiplexing and data preparation",
+      "2. Geometry assignment",
+      "3. Multiple suppression",
+      "4. Velocity model building (tomographic inversion)",
+      "5. Anisotropic Kirchhoff prestack depth migration",
+      "6. Reflection amplitude extraction and analysis",
+      "7. Spatial correlation with rupture models"
+    ],
+    "software": [
+      "Echos",
+      "Paradigm",
+      "unknown PSDM software"
+    ],
+    "notes": "Nature Communications open access. PSDM with state-of-the-art amplitude analysis of megathrust reflectors"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Open access Nature Communications paper. MGL1610 data at MGDS and RVData. High-impact result linking megathrust reflectivity to earthquake rupture limits."
+}

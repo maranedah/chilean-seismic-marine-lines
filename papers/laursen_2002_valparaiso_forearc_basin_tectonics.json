@@ -1,0 +1,81 @@
+{
+  "id": "laursen_2002_valparaiso_forearc_basin_tectonics",
+  "title": "Neotectonic deformation of the central Chile margin: Deepwater forearc basin formation in response to hot spot ridge and seamount subduction",
+  "authors": ["Laursen, J.", "Scholl, D.W.", "von Huene, Roland"],
+  "year": 2002,
+  "journal": "Tectonics",
+  "doi": "10.1029/2001TC901023",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2001TC901023",
+  "open_access_url": null,
+  "abstract": "The Valparaiso Basin is a deep-water forearc basin underlying a 40×60 km mid-slope terrace at 2.5 km water depth on the central Chile margin. Seismic-reflection data from the CONDOR investigation image a 3–3.5 km thick sediment succession. In response to underthrusting of the Juan Fernández Ridge, the basin fill is deformed above seaward-vergent outer forearc compressional highs. Basal erosion enhanced by JFR subduction thinned the continental crust and increased the subsidence rate to form the Valparaíso Forearc Basin.",
+  "keywords": ["Valparaiso Basin", "CONDOR", "seismic reflection", "forearc basin", "Juan Fernández Ridge", "32°S", "central Chile", "subduction erosion", "Tectonics"],
+
+  "location": {
+    "latitude": -32.8,
+    "longitude": -72.0,
+    "city": "Valparaíso",
+    "region": "Región de Valparaíso",
+    "country": "Chile",
+    "description": "Valparaíso deep-water forearc basin offshore central Chile (~32°–33°S); Juan Fernández Ridge subduction zone",
+    "bounding_box": {
+      "lat_min": -33.5, "lat_max": -32.0,
+      "lon_min": -73.5, "lon_max": -71.0
+    },
+    "seismic_lines": [
+      {
+        "name": "CONDOR MCS Profiles — Valparaíso Forearc Basin ~32°–33°S",
+        "lat_start": -32.0, "lon_start": -73.5,
+        "lat_end": -33.5, "lon_end": -71.0,
+        "length_km": 280
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (CONDOR SO101, 1993)",
+    "year_acquired": 1993,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CONDOR MCS Profiles — Valparaíso Forearc Basin",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection profiles from CONDOR experiment imaging 3–3.5 km sediment succession in Valparaíso deep-water forearc basin; deformation by seaward-vergent compressional highs from JFR underthrusting; basin dimensions 40×60 km at 2.5 km depth"
+    }
+  ],
+  "_data_note": "Tectonics paper; behind paywall. CONDOR (SO101) data. Repository uncertain.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "MCS reflection data from the CONDOR investigation (SO101, 1993) were processed and interpreted to characterize the Valparaíso deep-water forearc basin. The profiles image 3–3.5 km of sediment fill deformed above compressional highs formed by JFR underthrusting. Prestack and poststack processing reveals basal erosion and crustal thinning responsible for basin formation and subsidence.",
+    "workflow": [
+      "1. MCS demultiplexing and stacking",
+      "2. Multiple suppression",
+      "3. Post-stack time migration",
+      "4. Depth conversion using velocity model",
+      "5. Seismic stratigraphic interpretation"
+    ],
+    "software": ["unknown"],
+    "notes": "CONDOR experiment; companion to von Huene et al. 1997 Tectonics paper"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Tectonics paper; behind paywall. CONDOR SO101 data; repository not confirmed. Abstract from survey_results.json."
+}

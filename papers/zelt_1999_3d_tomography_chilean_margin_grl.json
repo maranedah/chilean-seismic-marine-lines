@@ -1,0 +1,123 @@
+{
+  "id": "zelt_1999_3d_tomography_chilean_margin_grl",
+  "title": "3D simultaneous seismic refraction and reflection tomography of wide-angle data from the Central Chilean Margin",
+  "authors": [
+    "Zelt, Colin A.",
+    "Hojka, A.M.",
+    "Flueh, Ernst R.",
+    "McIntosh, Kirk D."
+  ],
+  "year": 1999,
+  "journal": "Geophysical Research Letters",
+  "doi": "10.1029/1999GL900545",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/1999GL900545",
+  "open_access_url": null,
+  "abstract": "Three-dimensional (3D) simultaneous seismic refraction and reflection tomography is applied to wide-angle data from the central Chilean margin, collected in 1995 by GEOMAR in a region where the Juan Fernández Ridge on the Nazca Plate is subducting beneath South America. The 3D velocity model reveals the large-scale margin structure and establishes the relationship between seamount subduction, plate deformation and seismicity patterns.",
+  "keywords": [
+    "3D tomography",
+    "seismic refraction",
+    "CINCA95",
+    "SO104",
+    "Juan Fernández Ridge",
+    "central Chile",
+    "32°S",
+    "OBH",
+    "seamount subduction"
+  ],
+  "location": {
+    "latitude": -32.0,
+    "longitude": -72.5,
+    "city": "Valparaíso",
+    "region": "Región de Valparaíso",
+    "country": "Chile",
+    "description": "Central Chilean margin at ~32°S where the Juan Fernández Ridge subducts beneath South America; 3D tomography volume",
+    "bounding_box": {
+      "lat_min": -33.0,
+      "lat_max": -31.0,
+      "lon_min": -74.0,
+      "lon_max": -70.5
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 3D OBH Array — Central Chile ~32°S",
+        "lat_start": -31.0,
+        "lon_start": -74.0,
+        "lat_end": -33.0,
+        "lon_end": -70.5,
+        "length_km": 300
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104, CINCA95, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "obh",
+      "name": "CINCA95 OBH 3D Wide-Angle Array — Central Chile ~32°S",
+      "classification": "RAW",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "3D wide-angle OBH data from CINCA95 (SO104) at ~32°S used for first 3D simultaneous refraction-reflection tomography of the Chilean margin; reveals Juan Fernández Ridge structure and seamount subduction. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 MCS Profiles — Central Chile ~32°S",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Coincident MCS reflection data used as constraints in the 3D tomographic inversion. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "CINCA95 Swath Bathymetry — Central Chile",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SO104 used to define seafloor geometry for tomographic modeling. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "Uses same CINCA95 (SO104) OBH dataset as Flueh et al. 1998. First 3D tomographic inversion for this margin.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Wide-angle OBH data from the 1995 CINCA95 cruise (SO104) were used in 3D simultaneous refraction and reflection tomographic inversion to derive a 3D P-wave velocity model of the central Chilean margin at ~32°S. The 3D model captures the along-strike structural variability of the Juan Fernández Ridge collision zone and the relationship between seamount subduction and seismicity.",
+    "workflow": [
+      "1. OBH data sorting and instrument relocation",
+      "2. 3D travel-time picking across multiple profiles",
+      "3. 3D simultaneous refraction-reflection tomographic inversion",
+      "4. Resolution tests",
+      "5. 3D model interpretation"
+    ],
+    "software": [
+      "ZELT3D (custom code)"
+    ],
+    "notes": "First 3D tomographic inversion for the Chilean margin; short GRL letter"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "GRL paper, behind paywall. CINCA95 SO104 data accessible via MGDS. Companion to Flueh et al. 1998."
+}

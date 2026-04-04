@@ -1,0 +1,116 @@
+{
+  "id": "moscoso_2011_maule_wide_angle",
+  "title": "Revealing the deep structure and rupture plane of the 2010 Maule, Chile earthquake (Mw = 8.8) using wide angle seismic data",
+  "authors": [
+    "Moscoso, Eduardo",
+    "Grevemeyer, Ingo",
+    "Contreras-Reyes, Eduardo",
+    "Flueh, Ernst R.",
+    "Dzierma, Yvonne",
+    "Rabbel, Wolfgang",
+    "Thorwart, Martin"
+  ],
+  "year": 2011,
+  "journal": "Earth and Planetary Science Letters",
+  "doi": "10.1016/j.epsl.2011.04.025",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012821X1100241X",
+  "open_access_url": null,
+  "abstract": "The February 27, 2010 Maule earthquake ruptured ~400 km of the Nazca–South America plate boundary. Seismic refraction data reveal the fore-arc structure and subduction zone characteristics of the rupture region. A ~40 km wide accretionary prism is identified and the backstop location marking the seismogenic zone's updip boundary is determined using marine seismic reflections. Wide-angle P-wave data from multiple OBS profiles across the Maule earthquake rupture zone (34°–36°S) are used to constrain the velocity structure and geometry of the subducting Nazca plate and the seismogenic zone.",
+  "keywords": [
+    "Maule earthquake",
+    "Mw 8.8",
+    "wide-angle seismic",
+    "OBS",
+    "seismic refraction",
+    "34°–36°S",
+    "seismogenic zone",
+    "accretionary prism",
+    "backstop",
+    "2010 Chile earthquake"
+  ],
+  "location": {
+    "latitude": -35.0,
+    "longitude": -73.5,
+    "city": "Constitución / Concepción",
+    "region": "Región del Maule / Biobío",
+    "country": "Chile",
+    "description": "Offshore central Chile between 34°S and 36°S, Maule earthquake (Mw 8.8, 2010) rupture zone",
+    "bounding_box": {
+      "lat_min": -36.0,
+      "lat_max": -33.5,
+      "lon_min": -75.5,
+      "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "OBS Wide-angle Profile at ~34°S",
+        "lat_start": -34.0,
+        "lon_start": -75.0,
+        "lat_end": -34.0,
+        "lon_end": -72.0,
+        "length_km": null
+      },
+      {
+        "name": "OBS Wide-angle Profile at ~35°S",
+        "lat_start": -35.0,
+        "lon_start": -75.5,
+        "lat_end": -35.0,
+        "lon_end": -72.0,
+        "length_km": null
+      },
+      {
+        "name": "OBS Wide-angle Profile at ~36°S",
+        "lat_start": -36.0,
+        "lon_start": -75.5,
+        "lat_end": -36.0,
+        "lon_end": -72.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE",
+    "year_acquired": 2010,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Wide-angle OBS seismic refraction profiles, Maule earthquake rupture zone (34°–36°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep / internal",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Wide-angle OBS seismic refraction data from multiple profiles across the 2010 Maule earthquake rupture zone (34°–36°S). Used for P-wave tomography of the seismogenic zone structure.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Wide-angle OBS seismic refraction data from multiple profiles across the 2010 Maule earthquake rupture zone (34°–36°S) processed to produce 2D P-wave velocity models of the subduction zone. Travel time tomography used to constrain fore-arc structure, accretionary prism width (~40 km), backstop geometry, and subducting Nazca plate dip. Marine seismic reflection data also used to identify the backstop. Results provide velocity and structural constraints on the seismogenic zone updip limit.",
+    "workflow": [
+      "1. OBS deployment along multiple trench-perpendicular profiles",
+      "2. Airgun shooting",
+      "3. Travel time picking (Pg, PmP, Pn)",
+      "4. 2D P-wave travel time tomography",
+      "5. Gravity forward modelling",
+      "6. MCS reflection interpretation (backstop identification)",
+      "7. Integration with 2010 Maule earthquake aftershock seismicity"
+    ],
+    "software": [],
+    "notes": "Post-Maule earthquake rapid response survey. Data acquired in 2010 offshore south-central Chile."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. Acquisition year estimated as 2010 (post-Maule earthquake rapid response). Grevemeyer and Flueh (GEOMAR) suggest R/V SONNE. Rabbel and Thorwart (Kiel University) co-authorship confirms German collaboration."
+}

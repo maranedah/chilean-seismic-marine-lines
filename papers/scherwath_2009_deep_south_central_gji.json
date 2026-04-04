@@ -1,0 +1,114 @@
+{
+  "id": "scherwath_2009_deep_south_central_gji",
+  "title": "Deep lithospheric structures along the southern central Chile margin from wide-angle P-wave modelling",
+  "authors": [
+    "Scherwath, M.",
+    "Contreras-Reyes, E.",
+    "Flueh, E.R.",
+    "Grevemeyer, I.",
+    "Krabbenhoeft, A.",
+    "Papenberg, C.",
+    "Petersen, C.J.",
+    "Weinrebe, R.W."
+  ],
+  "year": 2009,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1111/j.1365-246X.2009.04298.x",
+  "url": "https://academic.oup.com/gji/article/179/1/579/2012327",
+  "open_access_url": "https://academic.oup.com/gji/article-pdf/179/1/579/17360408/179-1-579.pdf",
+  "abstract": "The study investigates crustal and upper-mantle structures of the subduction zone in south-central Chile by analyzing wide-angle seismic refraction data from three distinct profiles. Wide-angle P-wave modeling examines how the thermal state of the incoming oceanic Nazca Plate influences subduction zone geometry across different plate ages ranging from 3 to 14.5 million years old at the trench. The three profiles span the SPOC (36°S and 38.5°S) and TIPTEQ (38.2°S) experiment areas, covering the south-central Chile margin from 36°S to 43°S.",
+  "keywords": [
+    "wide-angle seismic",
+    "P-wave modelling",
+    "south-central Chile",
+    "SPOC",
+    "TIPTEQ",
+    "lithospheric structure",
+    "oceanic plate age",
+    "OBS"
+  ],
+  "location": {
+    "latitude": -39.5,
+    "longitude": -74.0,
+    "city": "Valdivia / Concepción",
+    "region": "Los Ríos / Biobío",
+    "country": "Chile",
+    "description": "South-central Chile margin from 36°S to 43°S, spanning SPOC and TIPTEQ experiment profiles",
+    "bounding_box": {
+      "lat_min": -43.0,
+      "lat_max": -36.0,
+      "lon_min": -77.0,
+      "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC Profile P1 (~36°S)",
+        "lat_start": -36.0,
+        "lon_start": -76.0,
+        "lat_end": -36.0,
+        "lon_end": -72.5,
+        "length_km": null
+      },
+      {
+        "name": "SPOC Profile P3 (~38.5°S)",
+        "lat_start": -38.5,
+        "lon_start": -76.5,
+        "lat_end": -38.5,
+        "lon_end": -73.0,
+        "length_km": null
+      },
+      {
+        "name": "TIPTEQ Profile (~38.2°S)",
+        "lat_start": -38.2,
+        "lon_start": -76.0,
+        "lat_end": -38.2,
+        "lon_end": -73.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161 SPOC 2001; SO181 TIPTEQ 2004–2005)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "SPOC Wide-angle OBS Seismic Data (three profiles, 36°–43°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Wide-angle OBS seismic refraction data from SPOC (SO161) and TIPTEQ (SO181) experiments. Three profiles across the south-central Chile margin used for P-wave forward modelling and 2D velocity structure.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Wide-angle seismic refraction data from three profiles along the south-central Chile margin (36°–43°S) processed through 2D P-wave forward modelling. Data from SPOC (R/V SONNE SO161, 2001) and TIPTEQ (SO181, 2004–2005) cruises. Velocity-depth models were derived by iterative forward modelling of travel times (Pg, PmP, Pn phases). Results constrain the depth of the Moho under the oceanic plate at varying ages (3–14.5 Ma at trench), and how thermal state influences the subduction geometry.",
+    "workflow": [
+      "1. OBS instrument deployment and recovery (SPOC SO161, TIPTEQ SO181)",
+      "2. Airgun shooting along trench-perpendicular profiles",
+      "3. Phase identification and travel time picking",
+      "4. 2D P-wave forward modelling (iterative)",
+      "5. Gravity forward modelling as additional constraint",
+      "6. Comparison of velocity models with thermal models"
+    ],
+    "software": [],
+    "notes": "Data from two cruises: SPOC 2001 (SO161) and TIPTEQ 2004–2005 (SO181). Three profiles spanning 36°–43°S."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Bronze open access PDF available at Oxford Academic. Abstract reconstructed from survey snippet and GEOMAR/SPOC/TIPTEQ project knowledge. Publisher elided abstract from Semantic Scholar API. Cruise identifiers (SO161, SO181) confirmed from co-author Contreras-Reyes_2008 paper."
+}

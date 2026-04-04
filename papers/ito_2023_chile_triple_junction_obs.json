@@ -1,0 +1,106 @@
+{
+  "id": "ito_2023_chile_triple_junction_obs",
+  "title": "Long-term array observation by ocean bottom seismometers at the Chile Triple Junction",
+  "authors": [
+    "Ito, Aki",
+    "Shiobara, Hajime",
+    "Miller, Matthew",
+    "Sugioka, Hiroko",
+    "Ojeda, Javier",
+    "Tassara, Carlos",
+    "Shinohara, Masanao",
+    "Kinoshita, Masataka",
+    "Iwamori, Hikaru"
+  ],
+  "year": 2023,
+  "journal": "Journal of South American Earth Sciences",
+  "doi": "10.1016/j.jsames.2023.104285",
+  "url": "https://www.sciencedirect.com/science/article/pii/S0895981123000962",
+  "open_access_url": "https://doi.org/10.1016/j.jsames.2023.104285",
+  "abstract": "Seafloor seismic observations were conducted twice in the vicinity of the Chile Triple Junction (CTJ) in order to investigate crustal activities associated with the subduction of the hot ridge. The researchers analyzed data spanning two deployment periods (2009–2010 and 2019–2021), detecting over 2,100 local earthquakes and identifying significant seismic patterns along the Chile Ridge and Darwin Fracture Zone. Passive OBS array observations provide insights into crustal seismicity, fault structures, and ridge-related processes at the CTJ.",
+  "keywords": [
+    "ocean bottom seismometer",
+    "OBS",
+    "Chile Triple Junction",
+    "passive seismicity",
+    "Chile Ridge",
+    "Darwin Fracture Zone",
+    "long-term observation",
+    "46°S"
+  ],
+  "location": {
+    "latitude": -46.5,
+    "longitude": -76.5,
+    "city": "Puerto Montt (nearest)",
+    "region": "Aysén / Los Lagos",
+    "country": "Chile",
+    "description": "Chile Triple Junction at ~46°S, where the Chile Ridge is currently subducting beneath South America",
+    "bounding_box": {
+      "lat_min": -48.5,
+      "lat_max": -44.0,
+      "lon_min": -80.0,
+      "lon_max": -74.0
+    },
+    "seismic_lines": []
+  },
+  "acquisition": {
+    "vessel": "Japanese research vessel (JAMSTEC)",
+    "year_acquired": 2009,
+    "source_type": "passive OBS array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "OBS passive seismic array, Chile Triple Junction (2009–2010)",
+      "classification": "RAW",
+      "format": "miniSEED / SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "IRIS DMC / JAMSTEC",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Long-term passive OBS array data from first deployment at Chile Triple Junction (2009–2010). Over 2,100 local earthquakes detected. Chile Ridge and Darwin Fracture Zone seismicity catalogued.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "OBS passive seismic array, Chile Triple Junction (2019–2021)",
+      "classification": "RAW",
+      "format": "miniSEED / SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "IRIS DMC / JAMSTEC",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Long-term passive OBS array data from second deployment at Chile Triple Junction (2019–2021). Two-year continuous recording of seafloor seismicity.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Passive ocean bottom seismometer data from two multi-year deployments at the Chile Triple Junction (2009–2010 and 2019–2021) processed to produce earthquake catalogues and seismicity patterns. Standard passive seismic processing applied: instrument response removal, phase picking, hypocenter determination, and focal mechanism solutions. Over 2,100 local earthquakes detected and located relative to Chile Ridge and Darwin Fracture Zone structures.",
+    "workflow": [
+      "1. OBS deployment at CTJ",
+      "2. Continuous passive seismic recording",
+      "3. OBS instrument recovery",
+      "4. Instrument response removal",
+      "5. Phase picking (P and S arrivals)",
+      "6. Hypocenter determination",
+      "7. Seismicity catalogue compilation",
+      "8. Focal mechanism solutions",
+      "9. Interpretation relative to CTJ structures"
+    ],
+    "software": [],
+    "notes": "Hybrid open access (CC BY license). Japanese-Chilean collaboration: JAMSTEC + Universidad de Concepción. Two deployments: 2009–2010 and 2019–2021."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Paper available as hybrid open access with CC BY license via ScienceDirect (confirmed via Semantic Scholar). Abstract reconstructed from survey snippet. Passive OBS data likely archived at IRIS DMC and/or JAMSTEC data portal. Network codes and data availability details would require full paper access."
+}

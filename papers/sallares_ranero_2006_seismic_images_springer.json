@@ -1,0 +1,114 @@
+{
+  "id": "sallares_ranero_2006_seismic_images_springer",
+  "title": "Seismic Images of Accretive and Erosive Subduction Zones from the Chilean Margin",
+  "authors": [
+    "Sallarès, Valentí",
+    "Ranero, César R."
+  ],
+  "year": 2006,
+  "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
+  "doi": "10.1007/978-3-540-48684-8_7",
+  "url": "https://link.springer.com/chapter/10.1007/978-3-540-48684-8_7",
+  "open_access_url": null,
+  "abstract": "Modern seismic imaging methods are used to study subduction processes at the South American convergent margin using reflection and wide-angle/refraction data from the SFB267 collaborative project. Two areas of differing character are investigated: an erosive margin in northern Chile (19°–26°S) and an accretionary margin in south-central Chile (36°–40°S). Three main transects provide an overall impression of the internal structure below the Chilean margin.",
+  "keywords": [
+    "seismic reflection",
+    "wide-angle refraction",
+    "Chilean margin",
+    "CINCA",
+    "SPOC",
+    "19°–26°S",
+    "36°–40°S",
+    "erosive",
+    "accretionary",
+    "SFB267"
+  ],
+  "location": {
+    "latitude": -30.0,
+    "longitude": -72.0,
+    "city": "La Serena",
+    "region": "Región de Coquimbo",
+    "country": "Chile",
+    "description": "Two contrasting segments of the Chilean margin: erosive north (19°–26°S) and accretionary south-central (36°–40°S)",
+    "bounding_box": {
+      "lat_min": -40.0,
+      "lat_max": -19.0,
+      "lon_min": -78.0,
+      "lon_max": -68.0
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 transects — northern Chile 19°–26°S (erosive)",
+        "lat_start": -19.0,
+        "lon_start": -71.5,
+        "lat_end": -26.0,
+        "lon_end": -71.5,
+        "length_km": 800
+      },
+      {
+        "name": "SPOC/TIPTEQ transects — south-central Chile 36°–40°S (accretionary)",
+        "lat_start": -36.0,
+        "lon_start": -75.0,
+        "lat_end": -40.0,
+        "lon_end": -75.0,
+        "length_km": 500
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104 CINCA95 and SO161 SPOC, SO181 TIPTEQ)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 and SPOC MCS Profiles — Erosive and Accretionary Chilean Margin",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection data from CINCA95 (SO104) and SPOC (SO161) cruises for erosive (19°–26°S) and accretionary (36°–40°S) segments; provides seismic images for comparison of the two margin types. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "CINCA95 and SPOC OBH Wide-Angle Data — Chilean Margin",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Wide-angle OBH refraction data from CINCA95 and SPOC cruises providing velocity models for both the erosive and accretionary Chilean margin segments. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "Springer review chapter (2006). Uses SFB267 collaborative project data from CINCA and SPOC cruises. All data at MGDS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Synthesis chapter presenting seismic images from both reflection (MCS) and wide-angle refraction (OBH) data from the SFB267 collaborative project for two contrasting Chilean margin segments. The erosive north (CINCA95, 19°–26°S) shows velocity models of the margin undergoing subduction erosion; the accretionary south-central (SPOC, 36°–40°S) shows the accretionary prism and wedge structure. No new data processing; uses published results.",
+    "workflow": [
+      "1. Literature review and data compilation",
+      "2. Synthesis and comparison of seismic images"
+    ],
+    "software": [
+      "GMT"
+    ],
+    "notes": "Review chapter in Springer Andes volume (2006); SFB267 project"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Springer book chapter; behind paywall. CINCA (SO104) and SPOC (SO161) data accessible via MGDS."
+}

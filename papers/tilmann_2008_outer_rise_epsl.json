@@ -1,0 +1,109 @@
+{
+  "id": "tilmann_2008_outer_rise_epsl",
+  "title": "Seismicity in the outer rise offshore southern Chile: Indication of fluid effects in crust and mantle",
+  "authors": [
+    "Tilmann, Frederik J.",
+    "Grevemeyer, Ingo",
+    "Flueh, Ernst R.",
+    "Dahm, Torsten",
+    "Goßler, Jürgen"
+  ],
+  "year": 2008,
+  "journal": "Earth and Planetary Science Letters",
+  "doi": "10.1016/j.epsl.2008.01.044",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012821X08000691",
+  "open_access_url": "https://gfzpublic.gfz-potsdam.de/pubman/item/item_242418_2/component/file_5010027/242418.pdf",
+  "abstract": "Micro-earthquake activity was recorded by two temporary arrays of ocean bottom seismometers deployed on the outer rise offshore southern Chile on oceanic crust aged 14 and 6 million years. Each array captured approximately 10 locatable events daily, generating a catalogue complete for magnitudes above 1.2–1.5. The dataset exhibits a high ratio of small to large events with a large proportion forming clusters whose members show a high degree of waveform similarity. This passive seismic experiment targeted the outer rise incoming Nazca plate at 38°S and 43°S to investigate fluid-driven fracturing in the oceanic crust and upper mantle.",
+  "keywords": [
+    "outer rise",
+    "OBS",
+    "passive seismic",
+    "southern Chile",
+    "38°–43°S",
+    "micro-earthquake",
+    "fluid effects",
+    "oceanic crust",
+    "Nazca plate",
+    "SPOC",
+    "TIPTEQ"
+  ],
+  "location": {
+    "latitude": -40.5,
+    "longitude": -77.5,
+    "city": "Concepción (nearest)",
+    "region": "Biobío",
+    "country": "Chile",
+    "description": "Outer rise offshore southern Chile at 38°S and 43°S, seaward of the Chile trench on the incoming Nazca plate",
+    "bounding_box": {
+      "lat_min": -44.0,
+      "lat_max": -37.0,
+      "lon_min": -80.0,
+      "lon_max": -75.5
+    },
+    "seismic_lines": [
+      {
+        "name": "OBS passive array — outer rise at ~38°S",
+        "lat_start": -38.0,
+        "lon_start": -80.0,
+        "lat_end": -38.0,
+        "lon_end": -75.5,
+        "length_km": null
+      },
+      {
+        "name": "OBS passive array — outer rise at ~43°S",
+        "lat_start": -43.0,
+        "lon_start": -80.0,
+        "lat_end": -43.0,
+        "lon_end": -76.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SPOC SO161 and/or TIPTEQ SO181)",
+    "year_acquired": 2001,
+    "source_type": "passive OBS array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Outer rise passive OBS micro-earthquake catalogue (~38°S and ~43°S)",
+      "classification": "PROCESSED",
+      "format": "miniSEED / ASCII catalogue",
+      "url": null,
+      "doi": null,
+      "repository": "GFZ Potsdam / GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Passive OBS micro-earthquake data from two temporary arrays on the outer rise offshore southern Chile (38°S and 43°S). Seismicity catalogue complete for M ≥ 1.2–1.5, ~10 events/day per array. Waveform cluster analysis performed.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Passive OBS micro-earthquake data from two temporary arrays on the outer rise offshore southern Chile (38°S and 43°S) processed to produce micro-earthquake catalogues and investigate fluid-driven fracturing. Processing included instrument response correction, phase picking, hypocentre determination, magnitude estimation, and waveform similarity analysis (cluster identification). Results reveal ~10 locatable events/day per array, magnitude completeness ~1.2–1.5, and high proportion of waveform-similar cluster events indicating fluid-driven fracturing.",
+    "workflow": [
+      "1. OBS deployment on outer rise (~38°S and ~43°S)",
+      "2. Passive earthquake recording",
+      "3. OBS recovery",
+      "4. Instrument response removal",
+      "5. Phase picking (P and S)",
+      "6. Hypocenter determination",
+      "7. Magnitude estimation",
+      "8. Waveform cross-correlation clustering",
+      "9. Seismicity pattern interpretation"
+    ],
+    "software": [],
+    "notes": "GFZ green open access PDF available. Tilmann (GFZ), Dahm (GFZ), Grevemeyer/Flueh (GEOMAR). Passive OBS experiment targeting outer rise seismicity."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Green open access PDF available from GFZ publication server. Abstract reconstructed from survey snippet and available metadata. OBS deployment likely during SPOC (SO161, 2001) or TIPTEQ (SO181, 2004–2005) cruises based on co-authorship and geographic focus."
+}

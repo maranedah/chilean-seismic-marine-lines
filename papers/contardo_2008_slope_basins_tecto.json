@@ -1,0 +1,96 @@
+{
+  "id": "contardo_2008_slope_basins_tecto",
+  "title": "Tectono-sedimentary evolution of marine slope basins in the Chilean forearc (33°30′–36°50′S): Insights into their link with the subduction process",
+  "authors": [
+    "Contardo, X.",
+    "Cembrano, J.",
+    "Jensen, A.",
+    "Díaz-Naveas, J."
+  ],
+  "year": 2008,
+  "journal": "Tectonophysics",
+  "doi": "10.1016/j.tecto.2007.12.014",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040195108001546",
+  "open_access_url": null,
+  "abstract": "Connections between plate convergence and forearc basin development along central Chile's margin (33°30′–36°50′S) are examined using seismic data. The study identifies asymmetric half-graben structures on the slope controlled by faults that govern differential uplift and subsidence patterns. Three primary seismic sequences — basal pre-kinematic, intermediate syn-kinematic, and upper post-kinematic units — characterize the sedimentary architecture. Marine seismic reflection data reveal the structural controls on slope basin formation and evolution in relation to the ongoing subduction process.",
+  "keywords": [
+    "slope basins",
+    "forearc basin",
+    "seismic reflection",
+    "central Chile",
+    "33.5°–36.9°S",
+    "half-graben",
+    "tectono-sedimentary",
+    "subduction erosion",
+    "seismic stratigraphy"
+  ],
+  "location": {
+    "latitude": -35.2,
+    "longitude": -72.5,
+    "city": "Constitución / Biobío region",
+    "region": "Maule / Biobío",
+    "country": "Chile",
+    "description": "Offshore central Chile between 33°30′S and 36°50′S, marine slope basin analysis",
+    "bounding_box": {
+      "lat_min": -37.0,
+      "lat_max": -33.5,
+      "lon_min": -74.5,
+      "lon_max": -71.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS profiles along central Chile slope (33.5°–36.9°S)",
+        "lat_start": -33.5,
+        "lon_start": -74.0,
+        "lat_end": -36.9,
+        "lon_end": -74.5,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": null,
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Multichannel seismic reflection profiles, central Chile slope basins (33.5°–36.9°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "SHOA / Universidad Católica",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Marine MCS reflection data from central Chile margin (33.5°–36.9°S) used for seismic stratigraphic analysis of slope basins and half-graben structures.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Marine seismic reflection data from the central Chile margin (33.5°–36.9°S) processed to characterize the tectono-sedimentary evolution of slope basins. Standard MCS processing applied for structural and stratigraphic interpretation. Three seismic sequences identified (pre-kinematic, syn-kinematic, post-kinematic). Asymmetric half-graben structures identified as principal slope basin controlling structures.",
+    "workflow": [
+      "1. MCS data loading and pre-processing",
+      "2. Geometry assignment",
+      "3. Velocity analysis and NMO",
+      "4. CDP stack",
+      "5. Post-stack time migration",
+      "6. Seismic stratigraphic analysis",
+      "7. Structural mapping of half-grabens and fault system"
+    ],
+    "software": [],
+    "notes": "Chilean national study. Díaz-Naveas (SHOA), Cembrano and Contardo (PUC Chile). Data likely from SHOA national seismic surveys."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "low",
+  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. No specific cruise or acquisition year identified. Authors from Chilean institutions (SHOA, PUC Chile) suggest national seismic survey data. Data likely held at SHOA or Universidad Católica."
+}

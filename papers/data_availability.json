@@ -1,0 +1,1032 @@
+{
+  "generated_at": "2026-04-02T12:00:00Z",
+  "summary": {
+    "total_papers": 32,
+    "open_access_data": 7,
+    "restricted_data": 20,
+    "unknown_access": 5,
+    "classification_breakdown": {
+      "RAW": 41,
+      "SEMI_PROCESSED": 1,
+      "PROCESSED": 49
+    }
+  },
+  "papers": [
+    {
+      "id": "maksymowicz_2015_wedge_geometry_tecto",
+      "title": "The geometry of the Chilean continental wedge: Tectonic segmentation of subduction processes off Chile",
+      "year": 2015,
+      "city": "Multiple (full Chilean coast)",
+      "latitude": -30.0,
+      "longitude": -73.0,
+      "datasets": [
+        {
+          "name": "Compiled bathymetric and seismic data — full Chilean margin",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": null,
+          "doi": null,
+          "repository": "Published literature compilation"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "warwel_2025_copiapo_refraction",
+      "title": "Seismic Structure and Tectonics of the North-Central Chilean Subduction Zone Along the Copiapó Ridge From Amphibious Seismic Refraction Tomography and Local Seismicity",
+      "year": 2025,
+      "city": "Copiapó",
+      "latitude": -27.0,
+      "longitude": -71.5,
+      "datasets": [
+        {
+          "name": "Wide-angle OBS/OBH seismic refraction data, SO297",
+          "classification": "PROCESSED",
+          "access": "unknown",
+          "url": null,
+          "doi": null,
+          "repository": "IRIS DMC / PANGAEA"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "ito_2023_chile_triple_junction_obs",
+      "title": "Long-term array observation by ocean bottom seismometers at the Chile Triple Junction",
+      "year": 2023,
+      "city": "Puerto Montt (nearest)",
+      "latitude": -46.5,
+      "longitude": -76.5,
+      "datasets": [
+        {
+          "name": "OBS passive seismic array, Chile Triple Junction (2009–2010)",
+          "classification": "RAW",
+          "access": "unknown",
+          "url": null,
+          "doi": null,
+          "repository": "IRIS DMC / JAMSTEC"
+        },
+        {
+          "name": "OBS passive seismic array, Chile Triple Junction (2019–2021)",
+          "classification": "RAW",
+          "access": "unknown",
+          "url": null,
+          "doi": null,
+          "repository": "IRIS DMC / JAMSTEC"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "gonzalez_2023_northern_forearc_mcs",
+      "title": "Shallow structure of the Northern Chilean marine forearc between 19°S–21°S using multichannel seismic reflection and refraction data",
+      "year": 2023,
+      "city": "Iquique",
+      "latitude": -20.0,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "MGL1610 Multichannel Seismic Reflection Data (PICTURES cruise)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+          "doi": "10.1594/IEDA/323934",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 OBS Wide-angle Refraction Data (XW Network)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+          "doi": "10.7914/SN/XW_2016",
+          "repository": "IRIS DMC / EarthScope"
+        },
+        {
+          "name": "MGL1610 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+          "doi": "10.7284/123638",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+          "doi": "10.7284/123647",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+          "doi": "10.7284/123640",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Navigation/Positions (C-Nav 3050)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+          "doi": "10.7284/907099",
+          "repository": "MGDS / RVData (R2R)"
+        },
+        {
+          "name": "MGL1610 Seismic Navigation — Shot Time (Processed)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+          "doi": "10.1594/IEDA/323933",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 Subbottom Profiler (Knudsen 3260)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+          "doi": "10.7284/123641",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "ma_2023_iquique_ridge_impact",
+      "title": "Impact of the Iquique Ridge on structure and deformation of the north Chilean subduction zone",
+      "year": 2023,
+      "city": "Iquique",
+      "latitude": -20.0,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "MGL1610 MCS Reflection Data targeting Iquique Ridge (19°–21°S)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+          "doi": "10.1594/IEDA/323934",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 OBS Wide-angle Refraction Data (XW Network)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+          "doi": "10.7914/SN/XW_2016",
+          "repository": "IRIS DMC / EarthScope"
+        },
+        {
+          "name": "MGL1610 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+          "doi": "10.7284/123638",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+          "doi": "10.7284/123647",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+          "doi": "10.7284/123640",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Navigation/Positions (C-Nav 3050)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+          "doi": "10.7284/907099",
+          "repository": "MGDS / RVData (R2R)"
+        },
+        {
+          "name": "MGL1610 Seismic Navigation — Shot Time (Processed)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+          "doi": "10.1594/IEDA/323933",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 Subbottom Profiler (Knudsen 3260)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+          "doi": "10.7284/123641",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "trehu_2023_imaging_megathrust_summary",
+      "title": "Imaging the source region of recent megathrust earthquakes along the Chile subduction zone: A summary of results from recent experiments",
+      "year": 2023,
+      "city": "Multiple (Iquique to Puerto Montt)",
+      "latitude": -30.0,
+      "longitude": -73.0,
+      "datasets": [
+        {
+          "name": "MGL1610 (PICTURES) MCS Reflection Data — MGDS",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+          "doi": "10.1594/IEDA/323934",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 OBS Wide-angle Refraction Data (XW Network)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+          "doi": "10.7914/SN/XW_2016",
+          "repository": "IRIS DMC / EarthScope"
+        },
+        {
+          "name": "MGL1610 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+          "doi": "10.7284/123638",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+          "doi": "10.7284/123647",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+          "doi": "10.7284/123640",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Navigation/Positions (C-Nav 3050)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+          "doi": "10.7284/907099",
+          "repository": "MGDS / RVData (R2R)"
+        },
+        {
+          "name": "MGL1610 Seismic Navigation — Shot Time (Processed)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+          "doi": "10.1594/IEDA/323933",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 Subbottom Profiler (Knudsen 3260)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+          "doi": "10.7284/123641",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 (CEVICHE) MCS Reflection Data — South-central Chile 2017",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
+          "doi": "10.1594/IEDA/324399",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1701 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123885",
+          "doi": "10.7284/123885",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123893",
+          "doi": "10.7284/907175",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123887",
+          "doi": "10.7284/907175",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 Navigation/Positions",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/603741",
+          "doi": "10.7284/907175",
+          "repository": "MGDS / RVData (R2R)"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "myers_2022_iquique_ridge_crustal",
+      "title": "Crustal Structure of the Incoming Iquique Ridge Offshore Northern Chile",
+      "year": 2022,
+      "city": "Iquique",
+      "latitude": -20.0,
+      "longitude": -72.0,
+      "datasets": [
+        {
+          "name": "MGL1610 OBS Wide-angle Seismic Data (XW Network)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+          "doi": "10.7914/SN/XW_2016",
+          "repository": "IRIS DMC / EarthScope"
+        },
+        {
+          "name": "MGL1610 MCS Reflection Data (Iquique Ridge profiles)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+          "doi": "10.1594/IEDA/323934",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+          "doi": "10.7284/123638",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+          "doi": "10.7284/123647",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+          "doi": "10.7284/123640",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Navigation/Positions (C-Nav 3050)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+          "doi": "10.7284/907099",
+          "repository": "MGDS / RVData (R2R)"
+        },
+        {
+          "name": "MGL1610 Seismic Navigation — Shot Time (Processed)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+          "doi": "10.1594/IEDA/323933",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 Subbottom Profiler (Knudsen 3260)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+          "doi": "10.7284/123641",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "storch_2021_iquique_seismic_images",
+      "title": "Seismic images of the Northern Chilean subduction zone at 19°40′S, prior to the 2014 Iquique earthquake",
+      "year": 2021,
+      "city": "Iquique",
+      "latitude": -19.67,
+      "longitude": -70.8,
+      "datasets": [
+        {
+          "name": "CINCA95 Multichannel Seismic Reflection Data (reprocessed)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep / internal archive"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "obando_2021_accretionary_central_marine",
+      "title": "Shallow seismic investigations of the accretionary complex offshore Central Chile",
+      "year": 2021,
+      "city": "Constitución / Arauco",
+      "latitude": -35.5,
+      "longitude": -73.0,
+      "datasets": [
+        {
+          "name": "Five OBS seismic refraction lines, central Chile accretionary prism",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "Unknown / internal"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "olsen_2020_thick_sediment_epsl",
+      "title": "Thick, strong sediment subduction along south-central Chile and its role in great earthquakes",
+      "year": 2020,
+      "city": "Multiple (Valparaíso to Puerto Montt)",
+      "latitude": -40.0,
+      "longitude": -75.0,
+      "datasets": [
+        {
+          "name": "MGL1701 (CEVICHE) MCS Reflection Data — South-central Chile 2017",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
+          "doi": "10.1594/IEDA/324399",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1701 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123885",
+          "doi": "10.7284/123885",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123893",
+          "doi": "10.7284/907175",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123887",
+          "doi": "10.7284/907175",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1701 Navigation/Positions",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/603741",
+          "doi": "10.7284/907175",
+          "repository": "MGDS / RVData (R2R)"
+        },
+        {
+          "name": "MGL1701 Seismic Navigation — Shot Time (Processed)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24398",
+          "doi": "10.1594/IEDA/324398",
+          "repository": "MGDS"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "reginato_2020_iquique_wedge_tecto",
+      "title": "Seismic structure and tectonics of the continental wedge overlying the source region of the Iquique Mw8.1 2014 earthquake",
+      "year": 2020,
+      "city": "Iquique",
+      "latitude": -20.0,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "MGL1610 Trench-perpendicular MCS Reflection Profile at ~20°S",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+          "doi": "10.1594/IEDA/323934",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 OBS Wide-angle Refraction Data (XW Network)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+          "doi": "10.7914/SN/XW_2016",
+          "repository": "IRIS DMC / EarthScope"
+        },
+        {
+          "name": "MGL1610 Bathymetry:Swath (Multibeam EM122)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+          "doi": "10.7284/123638",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Gravity (BGM-3 Gravimeter)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+          "doi": "10.7284/123647",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Magnetics (G-882 Magnetometer)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+          "doi": "10.7284/123640",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        },
+        {
+          "name": "MGL1610 Navigation/Positions (C-Nav 3050)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+          "doi": "10.7284/907099",
+          "repository": "MGDS / RVData (R2R)"
+        },
+        {
+          "name": "MGL1610 Seismic Navigation — Shot Time (Processed)",
+          "classification": "PROCESSED",
+          "access": "open",
+          "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+          "doi": "10.1594/IEDA/323933",
+          "repository": "MGDS"
+        },
+        {
+          "name": "MGL1610 Subbottom Profiler (Knudsen 3260)",
+          "classification": "RAW",
+          "access": "open",
+          "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+          "doi": "10.7284/123641",
+          "repository": "MGDS / RVData (NOAA:NCEI)"
+        }
+      ],
+      "has_open_data": true
+    },
+    {
+      "id": "ramos_2018_tipteq_reflection_tecto",
+      "title": "Reflection seismic images and amplitude ratio modelling of the Chilean subduction zone at 38.25°S",
+      "year": 2018,
+      "city": "Arauco / Lebu",
+      "latitude": -38.25,
+      "longitude": -73.8,
+      "datasets": [
+        {
+          "name": "TIPTEQ Near-vertical Seismic Reflection Data (38.25°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GFZ Potsdam"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "maksymowicz_2018_north_chile_forearc",
+      "title": "Heterogeneous structure of the Northern Chile marine forearc and its implications for megathrust earthquakes",
+      "year": 2018,
+      "city": "Iquique / Arica",
+      "latitude": -20.75,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "Published seismic reflection profiles and velocity models (18°–23.5°S, north Chile)",
+          "classification": "PROCESSED",
+          "access": "unknown",
+          "url": null,
+          "doi": null,
+          "repository": "Published literature (CINCA, BGR, GEOMAR)"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "vargas-cordero_2016_gas_hydrate_chiloe",
+      "title": "Gas hydrate and free gas estimation from seismic analysis offshore Chiloé island (Chile)",
+      "year": 2016,
+      "city": "Castro (Chiloé Island)",
+      "latitude": -42.0,
+      "longitude": -74.5,
+      "datasets": [
+        {
+          "name": "Multichannel seismic profile offshore Chiloé Island",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "OGS (Istituto Nazionale di Oceanografia e di Geofisica Sperimentale) or SHOA"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "geersen_2015_seamounts_iquique",
+      "title": "Subducting seamounts control interplate coupling and seismic rupture in the 2014 Iquique earthquake area",
+      "year": 2015,
+      "city": "Iquique",
+      "latitude": -20.0,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "Marine seismic reflection and swath bathymetric data, northern Chile (19°–21°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep / BGR"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "contreras-reyes_2015_central_chile_gji",
+      "title": "Structure and tectonics of the central Chilean margin (31°–33°S): implications for subduction erosion and shallow crustal seismicity",
+      "year": 2015,
+      "city": "Valparaíso",
+      "latitude": -32.0,
+      "longitude": -72.0,
+      "datasets": [
+        {
+          "name": "Wide-angle OBS seismic refraction profiles (31°–33°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        },
+        {
+          "name": "Multichannel seismic reflection profiles (31°–33°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "maksymowicz_2012_chile_triple_junction",
+      "title": "Structure and geodynamics of the post-collision zone between the Nazca–Antarctic spreading center and South America",
+      "year": 2012,
+      "city": "Puerto Montt (nearest)",
+      "latitude": -46.5,
+      "longitude": -76.0,
+      "datasets": [
+        {
+          "name": "Wide-angle OBS seismic refraction and MCS reflection data, Chile Triple Junction",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "moscoso_2011_maule_wide_angle",
+      "title": "Revealing the deep structure and rupture plane of the 2010 Maule, Chile earthquake (Mw = 8.8) using wide angle seismic data",
+      "year": 2011,
+      "city": "Constitución / Concepción",
+      "latitude": -35.0,
+      "longitude": -73.5,
+      "datasets": [
+        {
+          "name": "Wide-angle OBS seismic refraction profiles, Maule earthquake rupture zone (34°–36°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep / internal"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "contreras-reyes_2012_abrupt_dip_ngeo",
+      "title": "Abrupt change in the dip of the subducting plate beneath north Chile",
+      "year": 2012,
+      "city": "Tocopilla",
+      "latitude": -22.0,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "Amphibious wide-angle seismic refraction data (~22°S, Tocopilla)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep / internal"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "contreras-reyes_2010_sediment_accretion_tectonics",
+      "title": "Tectonic control on sediment accretion and subduction off south central Chile: Implications for coseismic rupture processes of the 1960 and 2010 megathrust earthquakes",
+      "year": 2010,
+      "city": "Multiple (Valparaíso to Puerto Montt)",
+      "latitude": -40.0,
+      "longitude": -74.5,
+      "datasets": [
+        {
+          "name": "Compiled wide-angle OBS refraction profiles, south-central Chile (33°–46°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        },
+        {
+          "name": "Multichannel seismic reflection profiles, south-central Chile",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "contreras-reyes_2010_flexure_gji",
+      "title": "Lithospheric flexure modelling seaward of the Chile trench: implications for oceanic plate weakening in the Trench Outer Rise region",
+      "year": 2010,
+      "city": "Various (full coast)",
+      "latitude": -30.0,
+      "longitude": -74.0,
+      "datasets": [
+        {
+          "name": "Compiled published wide-angle seismic refraction data (multiple cruises)",
+          "classification": "PROCESSED",
+          "access": "unknown",
+          "url": null,
+          "doi": null,
+          "repository": "Published literature (no single repository)"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "scherwath_2009_deep_south_central_gji",
+      "title": "Deep lithospheric structures along the southern central Chile margin from wide-angle P-wave modelling",
+      "year": 2009,
+      "city": "Valdivia / Concepción",
+      "latitude": -39.5,
+      "longitude": -74.0,
+      "datasets": [
+        {
+          "name": "SPOC Wide-angle OBS Seismic Data (three profiles, 36°–43°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "rodrigo_2009_BSR_valdivia",
+      "title": "Seismic analysis and distribution of a bottom-simulating reflector (BSR) in the Chilean margin offshore of Valdivia (40° S)",
+      "year": 2009,
+      "city": "Valdivia",
+      "latitude": -40.0,
+      "longitude": -74.5,
+      "datasets": [
+        {
+          "name": "Multichannel seismic reflection profiles offshore Valdivia (BSR study)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "Unknown / internal archive"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "gross_2008_tipteq_reflection",
+      "title": "The reflection seismic survey of project TIPTEQ—the inventory of the Chilean subduction zone at 38.2° S",
+      "year": 2008,
+      "city": "Concepción / Arauco",
+      "latitude": -38.2,
+      "longitude": -73.5,
+      "datasets": [
+        {
+          "name": "TIPTEQ Marine Multichannel Seismic Reflection Data",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep / internal archive"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "contreras-reyes_2008_arauco_jgr",
+      "title": "Upper lithospheric structure of the subduction zone offshore of southern Arauco peninsula, Chile, at ~38°S",
+      "year": 2008,
+      "city": "Arauco / Lebu",
+      "latitude": -38.0,
+      "longitude": -74.5,
+      "datasets": [
+        {
+          "name": "SPOC/TIPTEQ Wide-angle OBS Seismic Refraction Data (~38°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        },
+        {
+          "name": "SPOC/TIPTEQ Multichannel Seismic Reflection Data (~38°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "tilmann_2008_outer_rise_epsl",
+      "title": "Seismicity in the outer rise offshore southern Chile: Indication of fluid effects in crust and mantle",
+      "year": 2008,
+      "city": "Concepción (nearest)",
+      "latitude": -40.5,
+      "longitude": -77.5,
+      "datasets": [
+        {
+          "name": "Outer rise passive OBS micro-earthquake catalogue (~38°S and ~43°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GFZ Potsdam / GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "contardo_2008_slope_basins_tecto",
+      "title": "Tectono-sedimentary evolution of marine slope basins in the Chilean forearc (33°30′–36°50′S): Insights into their link with the subduction process",
+      "year": 2008,
+      "city": "Constitución / Biobío region",
+      "latitude": -35.2,
+      "longitude": -72.5,
+      "datasets": [
+        {
+          "name": "Multichannel seismic reflection profiles, central Chile slope basins (33.5°–36.9°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "SHOA / Universidad Católica"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "sallaras_2005_antofagasta_erosion",
+      "title": "Structure and tectonics of the erosional convergent margin off Antofagasta, north Chile (23°30′S)",
+      "year": 2005,
+      "city": "Antofagasta",
+      "latitude": -23.5,
+      "longitude": -71.0,
+      "datasets": [
+        {
+          "name": "CINCA Wide-angle OBS seismic refraction data (23°30′S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        },
+        {
+          "name": "CINCA Near-vertical MCS reflection data (23°30′S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "araneda_2003_spoc_amphibious",
+      "title": "Amphibious Seismic Survey Images Plate Interface at 1960 Chile Earthquake",
+      "year": 2003,
+      "city": "Valdivia / Concepción",
+      "latitude": -38.0,
+      "longitude": -75.0,
+      "datasets": [
+        {
+          "name": "SPOC Marine Wide-angle OBS Seismic Refraction Data (SO161)",
+          "classification": "RAW",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        },
+        {
+          "name": "SPOC Near-vertical MCS Reflection Data (SO161)",
+          "classification": "SEMI_PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GEOMAR OceanRep"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "storch_2023_iquique_topographic_tecto",
+      "title": "A topographic depression on the subducting Nazca plate controls the April 1st 2014 M8.1 Iquique earthquake rupture in Northern Chile",
+      "year": 2023,
+      "city": "Iquique",
+      "latitude": -19.5,
+      "longitude": -70.5,
+      "datasets": [
+        {
+          "name": "CINCA95 Multichannel Seismic Reflection Data (reprocessed, ~19°–21°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "GFZ Potsdam / GEOMAR internal"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "polonia_1999_southernmost_chile",
+      "title": "Structural variability at the active continental margin off southernmost Chile",
+      "year": 1999,
+      "city": "Punta Arenas",
+      "latitude": -55.5,
+      "longitude": -67.0,
+      "datasets": [
+        {
+          "name": "Multichannel seismic reflection profiles, southernmost Chile (54°–57°S)",
+          "classification": "PROCESSED",
+          "access": "restricted",
+          "url": null,
+          "doi": null,
+          "repository": "OGS (Istituto Nazionale di Oceanografia e di Geofisica Sperimentale) or SHOA"
+        }
+      ],
+      "has_open_data": false
+    },
+    {
+      "id": "dasilva_1997_fjords_chile_seismic_facies",
+      "title": "Seismic facies changes along a nearly continuous 24° latitudinal transect: the fjords of Chile and the northern Antarctic Peninsula",
+      "year": 1997,
+      "city": "Puerto Montt to Punta Arenas",
+      "latitude": -53.0,
+      "longitude": -68.0,
+      "datasets": [
+        {
+          "name": "High-resolution seismic reflection profiles, Chilean fjords and Antarctic Peninsula",
+          "classification": "PROCESSED",
+          "access": "unknown",
+          "url": null,
+          "doi": null,
+          "repository": "Rice University / USAP (US Antarctic Program)"
+        }
+      ],
+      "has_open_data": false
+    }
+  ]
+}

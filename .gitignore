@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Downloaded PDFs (large binary files, reproducible via download_pdfs.py)
+pdfs/
+
+# Rendered figure images (large, reproducible via /figure-extractor)
+images/
+
+# Downloaded seismic datasets (very large, reproducible via download.py)
+data/
+
+# Temp files used by Claude for output redirection (Windows pattern)
+**.txt
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit
+.streamlit/
+
+# Local Claude settings (machine-specific allow lists)
+.claude/settings.local.json

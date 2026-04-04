@@ -1,0 +1,96 @@
+{
+  "id": "vargas-cordero_2019_chile_triple_junction_hydrate_mdpi",
+  "title": "Gas Hydrate Estimate in an Area of Deformation and High Heat Flow at the Chile Triple Junction",
+  "authors": [
+    "Vargas-Cordero, Iván de la Cruz",
+    "Tinivella, Umberta",
+    "Villar-Muñoz, Lucía"
+  ],
+  "year": 2019,
+  "journal": "Geosciences",
+  "doi": "10.3390/geosciences9010028",
+  "url": "https://www.mdpi.com/2076-3263/9/1/28",
+  "open_access_url": "https://www.mdpi.com/2076-3263/9/1/28/pdf",
+  "abstract": "Gas hydrate spatial distribution, concentration and geothermal gradients are estimated in the accretionary prism and forearc sediments offshore Taitao Peninsula (45.5°–47°S) near the Chile Triple Junction. Velocity analysis of seismic profile RC2901-751 indicates gas hydrate concentrations less than 10% of total rock volume and extremely high geothermal gradients. The large estimated methane volumes (7.21 × 10¹¹ m³ hydrate, 4.1 × 10¹⁰ m³ free gas) make this region a potential massive methane source.",
+  "keywords": [
+    "gas hydrate",
+    "Chile Triple Junction",
+    "Taitao Peninsula",
+    "RC2901-751",
+    "45.5°–47°S",
+    "BSR",
+    "high heat flow",
+    "MDPI open access"
+  ],
+  "location": {
+    "latitude": -46.2,
+    "longitude": -76.0,
+    "city": "Puerto Montt",
+    "region": "Región de Los Lagos",
+    "country": "Chile",
+    "description": "Offshore Taitao Peninsula near Chile Triple Junction (45.5°–47°S); gas hydrate study on RC2901-751 line",
+    "bounding_box": {
+      "lat_min": -47.0,
+      "lat_max": -45.5,
+      "lon_min": -77.5,
+      "lon_max": -74.5
+    },
+    "seismic_lines": [
+      {
+        "name": "RC2901-751",
+        "lat_start": -46.0,
+        "lon_start": -77.5,
+        "lat_end": -46.0,
+        "lon_end": -74.5,
+        "length_km": 270
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Conrad (RC2901 cruise)",
+    "year_acquired": 1990,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "R/V Conrad Line RC2901-751 — Taitao Peninsula / Chile Triple Junction (45.5°–47°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "LDEO / unknown",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Named MCS line RC2901-751 from R/V Conrad offshore Taitao Peninsula near Chile Triple Junction; velocity analysis yields gas hydrate concentrations <10% total volume and extremely high geothermal gradients from BSR depth. [R/V Conrad RC2901 (Lamont, early 1990s) — no confirmed public data portal found]"
+    }
+  ],
+  "_data_note": "Open access MDPI paper. Line RC2901-751 from R/V Conrad 1990 cruise; pre-ODP Leg 141 site survey. Accessible via MGDS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Velocity analysis was applied to the RC2901-751 MCS seismic line offshore Taitao Peninsula (Chile Triple Junction ~45.5°–47°S) to derive gas hydrate and free gas concentrations. PSDM yields velocity model for BSR characterization. Extremely high geothermal gradients are inferred from BSR depth in this high-heat-flow region associated with the Chile Ridge spreading center.",
+    "workflow": [
+      "1. MCS data loading",
+      "2. Velocity analysis (PSDM)",
+      "3. BSR identification",
+      "4. Gas hydrate and free gas concentration estimation",
+      "5. Geothermal gradient calculation from BSR depth"
+    ],
+    "software": [
+      "Echos (OGS)",
+      "unknown"
+    ],
+    "notes": "MDPI open-access Geosciences paper"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Open access MDPI Geosciences. RC2901-751 is a named line from R/V Conrad 1990 cruise, accessible via MGDS."
+}

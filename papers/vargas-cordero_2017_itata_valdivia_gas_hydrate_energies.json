@@ -1,0 +1,107 @@
+{
+  "id": "vargas-cordero_2017_itata_valdivia_gas_hydrate_energies",
+  "title": "Gas Hydrate and Free Gas Concentrations in Two Sites inside the Chilean Margin (Itata and Valdivia Offshores)",
+  "authors": [
+    "Vargas-Cordero, Iván de la Cruz",
+    "Tinivella, Umberta",
+    "Villar-Muñoz, Lucía"
+  ],
+  "year": 2017,
+  "journal": "Energies",
+  "doi": "10.3390/en10122154",
+  "url": "https://www.mdpi.com/1996-1073/10/12/2154",
+  "open_access_url": "https://www.mdpi.com/1996-1073/10/12/2154/pdf",
+  "abstract": "Two sectors in the Chilean margin—Itata (~37°S) and Valdivia (~40°S) offshores—were analysed using seismic data to characterize gas hydrate concentrations. Maximum hydrate concentration reaches 17% of total volume in both sectors. Strong lateral velocity variations show a maximum value in Valdivia offshore (2380 m/s above the BSR) and a minimum below in Itata offshore (1380 m/s below BSR). Geothermal gradients range from 32–87 °C/km in Itata and ~35 °C/km in Valdivia.",
+  "keywords": [
+    "gas hydrate",
+    "BSR",
+    "Itata",
+    "Valdivia",
+    "37°S",
+    "40°S",
+    "seismic velocity",
+    "free gas",
+    "Chilean margin",
+    "MDPI open access"
+  ],
+  "location": {
+    "latitude": -38.5,
+    "longitude": -74.5,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Two sites on the Chilean margin: Itata offshore (~37°S) and Valdivia offshore (~40°S)",
+    "bounding_box": {
+      "lat_min": -41.0,
+      "lat_max": -37.0,
+      "lon_min": -76.5,
+      "lon_max": -73.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Itata offshore MCS profile (~37°S)",
+        "lat_start": -37.0,
+        "lon_start": -76.0,
+        "lat_end": -37.0,
+        "lon_end": -73.5,
+        "length_km": 220
+      },
+      {
+        "name": "Valdivia offshore MCS profile (~40°S)",
+        "lat_start": -40.0,
+        "lon_start": -76.0,
+        "lat_end": -40.0,
+        "lon_end": -74.0,
+        "length_km": 180
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE and legacy cruises",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "MCS Profiles — Itata and Valdivia Offshores (37°S and 40°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection profiles at Itata (~37°S) and Valdivia (~40°S) offshore Chilean margin analyzed for BSR-based gas hydrate and free gas quantification; velocity model shows hydrate concentrations up to 17% of total volume. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "MDPI open access paper. Uses legacy MCS seismic data from Chilean margin, likely from SPOC/GEOMAR cruises.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Velocity analysis (NMO-based and PSDM) was applied to MCS reflection profiles at two Chilean margin sites (Itata ~37°S and Valdivia ~40°S) to derive velocity models for gas hydrate and free gas quantification. Maximum hydrate concentration is 17% at both sites. Geothermal gradient derived from BSR depth ranges from 32–87°C/km at Itata and ~35°C/km at Valdivia.",
+    "workflow": [
+      "1. MCS data loading",
+      "2. Velocity analysis and model building",
+      "3. Pre-stack depth migration",
+      "4. BSR identification and depth mapping",
+      "5. Gas hydrate and free gas concentration estimation",
+      "6. Geothermal gradient calculation"
+    ],
+    "software": [
+      "Echos (OGS)",
+      "unknown"
+    ],
+    "notes": "MDPI open-access journal; full text freely available"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Open access paper (MDPI Energies). PDF freely available. Uses legacy Chilean margin MCS data."
+}

@@ -1,0 +1,113 @@
+{
+  "id": "geersen_2011_south_chile_forearc_tectonics",
+  "title": "Active tectonics of the South Chilean marine fore arc (35°S–40°S)",
+  "authors": [
+    "Geersen, Jacob",
+    "Behrmann, Jan H.",
+    "Völker, David",
+    "Krastel, Sebastian",
+    "Ranero, César R.",
+    "Diaz-Naveas, Juan",
+    "Weinrebe, Wilhelm"
+  ],
+  "year": 2011,
+  "journal": "Tectonics",
+  "doi": "10.1029/2010TC002777",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010TC002777",
+  "open_access_url": null,
+  "abstract": "A unique acoustic data set including >90% bathymetric coverage of the continental slope reveals an along-strike heterogeneity of the South Chilean marine fore arc (35°S–40°S). The South Chilean marine forearc is separated into four tectonic segments: Concepción North, Concepción South, Nahuelbuta, and Tolten (from north to south). Splay faults are seismically imaged in multiple segments, with normal faults and transpressional structures documenting active deformation. Giant submarine landslides observed offshore Arauco Peninsula coincide with the segment boundary between the 1960 and 2010 earthquake rupture zones.",
+  "keywords": [
+    "marine forearc",
+    "south Chile",
+    "35°–40°S",
+    "seismic reflection",
+    "bathymetry",
+    "splay faults",
+    "tectonic segmentation",
+    "submarine landslides",
+    "Arauco"
+  ],
+  "location": {
+    "latitude": -37.5,
+    "longitude": -74.0,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "South Chilean marine forearc 35°–40°S; four tectonic segments identified from bathymetry and seismic reflection",
+    "bounding_box": {
+      "lat_min": -40.0,
+      "lat_max": -35.0,
+      "lon_min": -76.0,
+      "lon_max": -72.5
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC/TIPTEQ and legacy MCS profiles — South Chile forearc 35°–40°S",
+        "lat_start": -35.0,
+        "lon_start": -75.0,
+        "lat_end": -40.0,
+        "lon_end": -74.0,
+        "length_km": 600
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (multiple GEOMAR cruises) and legacy survey vessels",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "GEOMAR MCS Reflection Profiles — South Chile Forearc 35°–40°S",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "High- and low-frequency MCS reflection profiles from SPOC, TIPTEQ and legacy GEOMAR cruises used to image splay faults, normal faults and transpressional structures in the south Chilean forearc (35°–40°S). [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — South Chile Forearc >90% Coverage (35°–40°S)",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Comprehensive >90% coverage swath bathymetry of the south Chilean forearc slope (35°–40°S) revealing four tectonic segments and giant submarine landslides offshore Arauco Peninsula. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "SPOC (SO161) and TIPTEQ (SO181) data accessible via MGDS. Key tectonic study of the south Chilean forearc.",
+  "processing": {
+    "classification": "SEMI_PROCESSED",
+    "summary": "Comprehensive swath bathymetric dataset (>90% slope coverage) combined with high- and low-frequency MCS reflection profiles from the south Chilean forearc (35°–40°S) reveals four tectonic segments with distinct structural styles. Splay faults, normal faults and transpressional structures are imaged from seismic reflection profiles from SPOC, TIPTEQ and legacy cruises.",
+    "workflow": [
+      "1. Multibeam bathymetric compilation and gridding",
+      "2. MCS reflection interpretation",
+      "3. Heat flow measurement integration",
+      "4. Tectonic segmentation analysis"
+    ],
+    "software": [
+      "GMT",
+      "unknown"
+    ],
+    "notes": "Key study defining four tectonic segments of the south Chilean marine forearc"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Tectonics/AGU paper; behind paywall. SPOC/TIPTEQ data at MGDS. Foundational study for the south Chilean forearc tectonic segmentation."
+}

@@ -1,0 +1,134 @@
+{
+  "id": "contreras-reyes_2010_sediment_accretion_tectonics",
+  "title": "Tectonic control on sediment accretion and subduction off south central Chile: Implications for coseismic rupture processes of the 1960 and 2010 megathrust earthquakes",
+  "authors": [
+    "Contreras-Reyes, Eduardo",
+    "Grevemeyer, Ingo",
+    "Flueh, Ernst R.",
+    "Reichert, Christian"
+  ],
+  "year": 2010,
+  "journal": "Tectonics",
+  "doi": "10.1029/2010TC002734",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010TC002734",
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2010TC002734",
+  "abstract": "A compilation of published and new seismic refraction and multichannel seismic reflection data along the south-central Chile margin (33°–46°S) was used to study the processes of sediment accretion and subduction and their implications on megathrust seismicity. Wide-angle seismic profiles and multichannel seismic reflection lines image the accretionary prism and subduction channel structures along multiple transects. The study demonstrates systematic variations in accretionary prism width, sediment thickness, and subduction channel properties along the margin, and links these structural controls to the coseismic rupture patterns of the 1960 Valdivia (Mw 9.5) and 2010 Maule (Mw 8.8) earthquakes.",
+  "keywords": [
+    "sediment accretion",
+    "seismic refraction",
+    "multichannel seismic",
+    "south-central Chile",
+    "33°–46°S",
+    "SPOC",
+    "TIPTEQ",
+    "megathrust earthquake",
+    "subduction channel",
+    "1960 Valdivia",
+    "2010 Maule"
+  ],
+  "location": {
+    "latitude": -40.0,
+    "longitude": -74.5,
+    "city": "Multiple (Valparaíso to Puerto Montt)",
+    "region": "Central and South Chile",
+    "country": "Chile",
+    "description": "South-central Chile margin from 33°S to 46°S, multiple transects spanning SPOC and TIPTEQ experiment areas",
+    "bounding_box": {
+      "lat_min": -46.0,
+      "lat_max": -33.0,
+      "lon_min": -78.0,
+      "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC Profile at ~36°S",
+        "lat_start": -36.0,
+        "lon_start": -76.5,
+        "lat_end": -36.0,
+        "lon_end": -72.5,
+        "length_km": null
+      },
+      {
+        "name": "SPOC Profile at ~38.5°S",
+        "lat_start": -38.5,
+        "lon_start": -76.5,
+        "lat_end": -38.5,
+        "lon_end": -73.0,
+        "length_km": null
+      },
+      {
+        "name": "TIPTEQ Profile at ~38.2°S",
+        "lat_start": -38.2,
+        "lon_start": -76.0,
+        "lat_end": -38.2,
+        "lon_end": -72.5,
+        "length_km": null
+      },
+      {
+        "name": "Profile at ~43°S (Chile Triple Junction vicinity)",
+        "lat_start": -43.0,
+        "lon_start": -77.5,
+        "lat_end": -43.0,
+        "lon_end": -74.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161 SPOC 2001; SO181 TIPTEQ 2004–2005)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Compiled wide-angle OBS refraction profiles, south-central Chile (33°–46°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Compilation of published and new OBS wide-angle seismic refraction data from multiple GEOMAR cruises (SPOC SO161, TIPTEQ SO181 and others) along the 33°–46°S Chilean margin.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "Multichannel seismic reflection profiles, south-central Chile",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "MCS reflection data from SPOC and TIPTEQ experiments imaging the accretionary prism and subduction channel structures.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Compilation of published wide-angle OBS seismic refraction and MCS reflection data from multiple GEOMAR cruises (SPOC SO161, TIPTEQ SO181) along the south-central Chilean margin (33°–46°S). Data processed to extract accretionary prism width, sediment thickness, and subduction channel properties at multiple transects. Structural parameters compared along-margin to correlate with coseismic rupture patterns of 1960 and 2010 megathrust earthquakes.",
+    "workflow": [
+      "1. Compilation of published velocity models from SPOC, TIPTEQ, and other cruises",
+      "2. New OBS data processing where applicable",
+      "3. Gravity modelling as constraint",
+      "4. Extraction of accretionary prism width and subduction channel thickness",
+      "5. Along-margin comparison",
+      "6. Correlation with earthquake rupture parameters"
+    ],
+    "software": [],
+    "notes": "Bronze open access PDF available. Key compilation study covering multiple GEOMAR cruises. Direct link between sediment accretion patterns and 1960/2010 earthquake ruptures."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Bronze open access PDF available via Wiley OnlineLibrary. Abstract reconstructed from survey snippet. Compilation study drawing on SPOC (SO161, 2001) and TIPTEQ (SO181, 2004–2005) data. Includes new data not previously published. Reichert co-authorship suggests BGR (Federal Institute for Geosciences, Germany) involvement."
+}

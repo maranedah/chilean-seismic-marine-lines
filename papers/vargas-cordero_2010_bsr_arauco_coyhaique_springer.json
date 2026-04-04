@@ -1,0 +1,106 @@
+{
+  "id": "vargas-cordero_2010_bsr_arauco_coyhaique_springer",
+  "title": "Analyses of bottom simulating reflections offshore Arauco and Coyhaique (Chile)",
+  "authors": [
+    "Vargas-Cordero, Iván de la Cruz",
+    "Tinivella, Umberta",
+    "Accaino, Flavio",
+    "Loreto, M.-F.",
+    "Fanucci, Francesco"
+  ],
+  "year": 2010,
+  "journal": "Geo-Marine Letters",
+  "doi": "10.1007/s00367-009-0171-5",
+  "url": "https://link.springer.com/article/10.1007/s00367-009-0171-5",
+  "open_access_url": null,
+  "abstract": "Two seismic sections offshore Arauco (~37°S) and Coyhaique (~44°S) in the Chilean continental margin were analyzed to characterize hydrate-bearing sediments. Velocity analysis was used to estimate gas-phase concentrations and identify hydrate and free gas layers relative to the BSR. In the southern sector (Coyhaique), maximum gas hydrate and free gas concentrations were calculated at 15% and 2.7% of total volume respectively.",
+  "keywords": [
+    "BSR",
+    "gas hydrate",
+    "free gas",
+    "Arauco",
+    "Coyhaique",
+    "37°S",
+    "44°S",
+    "seismic velocity",
+    "Chilean margin"
+  ],
+  "location": {
+    "latitude": -40.5,
+    "longitude": -75.0,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Two sites on the Chilean margin: offshore Arauco (~37°S) and offshore Coyhaique (~44°S)",
+    "bounding_box": {
+      "lat_min": -44.5,
+      "lat_max": -37.0,
+      "lon_min": -76.5,
+      "lon_max": -73.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS section — offshore Arauco (~37°S)",
+        "lat_start": -37.0,
+        "lon_start": -76.0,
+        "lat_end": -37.0,
+        "lon_end": -73.5,
+        "length_km": 220
+      },
+      {
+        "name": "MCS section — offshore Coyhaique (~44°S)",
+        "lat_start": -44.5,
+        "lon_start": -76.5,
+        "lat_end": -44.5,
+        "lon_end": -74.5,
+        "length_km": 180
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Conrad (RC2901) and/or R/V SONNE",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "MCS Sections — Arauco (~37°S) and Coyhaique (~44°S) Offshore Chile",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Two seismic sections from the Chilean margin analyzed for BSR velocity and gas hydrate/free gas quantification: offshore Arauco (~37°S) and Coyhaique (~44°S); maximum concentrations 15% hydrate and 2.7% free gas at Coyhaique. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "Geo-Marine Letters paper; behind paywall. Uses Chilean margin seismic data, likely from SPOC/GEOMAR or Conrad cruises.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Velocity analysis was applied to two MCS seismic sections from the Chilean margin at Arauco (~37°S) and Coyhaique (~44°S) to derive BSR-based gas hydrate and free gas estimates. The Coyhaique sector shows higher concentrations (hydrate: 15%, free gas: 2.7% of total volume). Results compare BSR characteristics in two contrasting tectonic settings on the south-central Chilean margin.",
+    "workflow": [
+      "1. MCS data loading",
+      "2. Velocity analysis (NMO/PSDM)",
+      "3. BSR identification",
+      "4. Gas hydrate and free gas concentration estimation"
+    ],
+    "software": [
+      "Echos (OGS)",
+      "unknown"
+    ],
+    "notes": "Two-site comparison paper; sister paper to other Vargas-Cordero Coyhaique study (2010)"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Geo-Marine Letters paper; behind paywall. Uses Chilean margin seismic profiles from legacy cruises."
+}

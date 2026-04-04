@@ -1,0 +1,93 @@
+{
+  "id": "maksymowicz_2013_golfo_penas_geo_marine",
+  "title": "Reestablishment of an accretionary prism after the subduction of a spreading ridge — constraints by a geometric model for the Golfo de Penas, Chile",
+  "authors": ["Maksymowicz, Andrei"],
+  "year": 2013,
+  "journal": "Geo-Marine Letters",
+  "doi": "10.1007/s00367-013-0331-5",
+  "url": "https://link.springer.com/article/10.1007/s00367-013-0331-5",
+  "open_access_url": null,
+  "abstract": "Seismic studies offshore southern Chile reveal a 70–80 km wide accretionary prism seaward of the Golfo de Penas (GPAP) where the Chile Ridge collided with the South American Plate between 3 and 6 Ma. A mass balance analysis based on a 2D model of accretionary wedge and trench geometry explains the relative importance of sedimentary fluxes and deformation front migration for wedge restoration after ridge subduction.",
+  "keywords": ["accretionary prism", "Golfo de Penas", "Chile Triple Junction", "46°S", "seismic refraction", "velocity model", "wedge geometry", "ridge subduction"],
+
+  "location": {
+    "latitude": -46.0,
+    "longitude": -76.5,
+    "city": "Puerto Montt",
+    "region": "Región de Los Lagos",
+    "country": "Chile",
+    "description": "Post-collision zone near Golfo de Penas (~46°S) where the Chile Ridge subducted 3–6 Ma, south Chile",
+    "bounding_box": {
+      "lat_min": -47.0, "lat_max": -45.0,
+      "lon_min": -78.0, "lon_max": -75.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Golfo de Penas seismic refraction/velocity model (~46°S)",
+        "lat_start": -46.0, "lon_start": -78.0,
+        "lat_end": -46.0, "lon_end": -75.0,
+        "length_km": 280
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "Multiple GEOMAR cruises (references Maksymowicz et al. 2012 data)",
+    "year_acquired": 2004,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "OBS Refraction Velocity Model — Golfo de Penas ~46°S",
+      "classification": "PROCESSED",
+      "format": "ASCII",
+      "url": null,
+      "doi": null,
+      "repository": "other",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Seismic velocity models from OBS wide-angle refraction (published in Maksymowicz et al. 2012) applied in geometric mass-balance model for the Golfo de Penas accretionary prism restoration"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — Golfo de Penas Region",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from GEOMAR cruises used to define wedge geometry for the mass-balance model"
+    }
+  ],
+  "_data_note": "Modeling paper using published data from Maksymowicz et al. 2012 (Chile Triple Junction). No new data acquisition.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "A geometric mass-balance model of the Golfo de Penas accretionary prism is constructed using published OBS seismic velocity models from Maksymowicz et al. (2012) and swath bathymetry. The model constrains the timeline of prism reestablishment after the Chile Ridge subduction (3–6 Ma ago). No new seismic data acquisition; modeling paper.",
+    "workflow": [
+      "1. Compilation of published velocity models and wedge geometry",
+      "2. 2D geometric wedge model construction",
+      "3. Mass balance calculation for sediment flux",
+      "4. Sensitivity analysis"
+    ],
+    "software": ["unknown"],
+    "notes": "Modeling-only paper; references Maksymowicz et al. 2012 OBS dataset from Chile Triple Junction"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Geo-Marine Letters paper; behind paywall. Modeling study using previously published data. No new data acquired."
+}

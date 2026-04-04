@@ -1,0 +1,134 @@
+{
+  "id": "von_huene_ranero_2003_antofagasta_erosion_jgr",
+  "title": "Subduction erosion and basal friction along the sediment-starved convergent margin off Antofagasta, Chile",
+  "authors": [
+    "von Huene, Roland",
+    "Ranero, César R."
+  ],
+  "year": 2003,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2001JB001569",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2001JB001569",
+  "open_access_url": "https://oceanrep.geomar.de/id/eprint/698/7/Huene_2003.pdf",
+  "abstract": "Prestack depth-migrated seismic records image slope debris that collects in a frontal prism, including approximately 30% pore fluid, which fills subducting grabens and is subsequently incorporated into an approximately 1.5-km-thick interplate reflective layer. Two mechanisms of basal erosion are identified from seismic images: erosion by seamount tunnelling and removal of large rock lenses of a distending upper plate. The study examines how subduction erosion is associated with strong interplate coupling and upper plate abrasion along the sediment-starved north Chile margin.",
+  "keywords": [
+    "subduction erosion",
+    "basal friction",
+    "Antofagasta",
+    "CINCA95",
+    "north Chile",
+    "seismic reflection",
+    "prestack depth migration",
+    "interplate coupling"
+  ],
+  "location": {
+    "latitude": -23.5,
+    "longitude": -70.8,
+    "city": "Antofagasta",
+    "region": "Región de Antofagasta",
+    "country": "Chile",
+    "description": "Offshore Antofagasta, north Chilean margin at ~23°S; erosive convergent margin",
+    "bounding_box": {
+      "lat_min": -24.0,
+      "lat_max": -23.0,
+      "lon_min": -71.5,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 Profile (SO104)",
+        "lat_start": -23.5,
+        "lon_start": -71.5,
+        "lat_end": -23.5,
+        "lon_end": -70.0,
+        "length_km": 150
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104, CINCA95 cruise, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 Multichannel Seismic Reflection Data — Antofagasta Transect",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Prestack depth-migrated MCS reflection profiles from SO104 (CINCA95) offshore Antofagasta; images subducting grabens, frontal prism, 1.5-km thick interplate reflective layer, and seamount tunnelling structures. No direct public dataset download identified; BGR holds track shapefiles only (Marine_Seismik@bgr.de)."
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "CINCA95 Swath Bathymetry — North Chile Margin",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SO104 cruise offshore Antofagasta used to characterize slope morphology and tectonic features. Published as Geersen et al. (2018), merged multibeam grid from SO104, SO244, and MGL1610."
+    },
+    {
+      "data_type": "gravity",
+      "name": "CINCA95 Free-Air Gravity — North Chile",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Shipboard gravity data from CINCA95 cruise used to supplement seismic interpretation of crustal structure"
+    },
+    {
+      "data_type": "navigation",
+      "name": "CINCA95 Navigation Data",
+      "classification": "RAW",
+      "format": "CSV",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Navigation and positioning data from the SO104 cruise"
+    }
+  ],
+  "_data_note": "CINCA95 (SO104) data hosted at MGDS. Prestack depth migration applied to MCS profiles makes them PROCESSED.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multichannel seismic reflection data from the 1995 CINCA95 cruise (R/V SONNE SO104) were processed using prestack depth migration (PSDM). The processing yields detailed depth images of the sediment-starved north Chilean margin near Antofagasta (~23°30'S). Key structural features resolved include subducting oceanic grabens filled with slope debris (~30% pore fluid), a ~1.5-km-thick interplate reflective layer, and evidence of basal erosion by seamount tunnelling and upper plate distension.",
+    "workflow": [
+      "1. Demultiplexing and trace editing",
+      "2. Geometry assignment",
+      "3. Multiple suppression",
+      "4. Velocity analysis and tomographic velocity model building",
+      "5. Prestack depth migration (PSDM)",
+      "6. Depth section interpretation"
+    ],
+    "software": [
+      "unknown"
+    ],
+    "notes": "PSDM applied; this is a fully processed section used for tectonic interpretation"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Open access PDF available via OceanRep GEOMAR. Data from CINCA95 SO104 cruise (1995), accessible via MGDS. The Semantic Scholar record confirms OA PDF at oceanrep.geomar.de."
+}

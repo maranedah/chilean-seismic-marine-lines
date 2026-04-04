@@ -1,0 +1,120 @@
+{
+  "id": "contreras-reyes_2008_arauco_jgr",
+  "title": "Upper lithospheric structure of the subduction zone offshore of southern Arauco peninsula, Chile, at ~38°S",
+  "authors": [
+    "Contreras-Reyes, Eduardo",
+    "Grevemeyer, Ingo",
+    "Flueh, Ernst R.",
+    "Scherwath, M.",
+    "Bialas, Joerg"
+  ],
+  "year": 2008,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2007JB005569",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2007JB005569",
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2007JB005569",
+  "abstract": "A joint interpretation of swath bathymetric, seismic refraction, wide-angle reflection, and multichannel seismic (MCS) data was used to derive a detailed tomographic image of the Nazca–South America subduction zone system offshore southern Arauco peninsula at ~38°S. Data were acquired during R/V SONNE cruises SO161 (SPOC) and SO181 (TIPTEQ) projects. Seismic reflection data revealed outer rise bending-related faults cutting at least 6 km into the uppermost mantle. The study images the full subduction zone with a 40 km wide accretionary prism, varying crustal structure, and the geometry of the subducting Nazca plate.",
+  "keywords": [
+    "SPOC",
+    "TIPTEQ",
+    "seismic refraction",
+    "OBS",
+    "multichannel seismic",
+    "Arauco peninsula",
+    "38°S",
+    "outer rise faults",
+    "bending-related faults",
+    "accretionary prism",
+    "tomography"
+  ],
+  "location": {
+    "latitude": -38.0,
+    "longitude": -74.5,
+    "city": "Arauco / Lebu",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Offshore southern Arauco peninsula at ~38°S, central Chile subduction zone (SPOC/TIPTEQ experiment area)",
+    "bounding_box": {
+      "lat_min": -39.0,
+      "lat_max": -37.0,
+      "lon_min": -77.0,
+      "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC Wide-angle Profile P4 (~38°S)",
+        "lat_start": -38.0,
+        "lon_start": -77.0,
+        "lat_end": -38.0,
+        "lon_end": -72.5,
+        "length_km": null
+      },
+      {
+        "name": "TIPTEQ Wide-angle Profile (~38.2°S)",
+        "lat_start": -38.2,
+        "lon_start": -76.5,
+        "lat_end": -38.2,
+        "lon_end": -72.5,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161 SPOC 2001; SO181 TIPTEQ 2004–2005)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "SPOC/TIPTEQ Wide-angle OBS Seismic Refraction Data (~38°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Wide-angle OBS seismic refraction data from SPOC (SO161) and TIPTEQ (SO181) cruises offshore southern Arauco peninsula at ~38°S. P-wave tomographic velocity model derived.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "SPOC/TIPTEQ Multichannel Seismic Reflection Data (~38°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "MCS reflection data from SPOC/TIPTEQ cruises imaging the outer rise, accretionary prism, and subduction zone at ~38°S.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Joint interpretation of swath bathymetric, wide-angle OBS seismic refraction, and MCS reflection data from SPOC (SO161, 2001) and TIPTEQ (SO181, 2004–2005) cruises at ~38°S offshore Arauco peninsula. OBS data processed through 2D P-wave travel time tomography to derive crustal velocity model. MCS data processed for imaging outer rise faults and accretionary prism geometry. Results integrated to produce comprehensive lithospheric model including outer rise bending faults (≥6 km depth) and 40 km wide accretionary prism.",
+    "workflow": [
+      "1. Wide-angle OBS data from SO161 and SO181",
+      "2. Phase picking (Pg, PmP, Pn)",
+      "3. 2D P-wave forward modelling / tomographic inversion",
+      "4. MCS: geometry, velocity analysis, stack, migration",
+      "5. Gravity forward modelling",
+      "6. Swath bathymetry processing",
+      "7. Integrated structural interpretation"
+    ],
+    "software": [],
+    "notes": "Bronze open access PDF available. Key paper for south-central Chile subduction zone structure at ~38°S. First documentation of outer rise bending faults cutting ≥6 km into mantle in this area."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Bronze open access PDF available via Wiley. Abstract reconstructed from survey snippet. SPOC (SO161, 2001) and TIPTEQ (SO181, 2004–2005) cruise identities confirmed from authorship and companion papers. Bialas (GEOMAR) confirmed involvement in acquisition."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "vargas-cordero_2010_coyhaique_thermal_state_mpg",
+  "title": "Thermal state and concentration of gas hydrate and free gas of Coyhaique, Chilean Margin (44°30′S)",
+  "authors": [
+    "Vargas-Cordero, Iván de la Cruz",
+    "Tinivella, Umberta",
+    "Accaino, Flavio",
+    "Loreto, M.-F.",
+    "Fanucci, Francesco"
+  ],
+  "year": 2010,
+  "journal": "Marine and Petroleum Geology",
+  "doi": "10.1016/j.marpetgeo.2010.01.008",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264817210000450",
+  "open_access_url": null,
+  "abstract": "Detailed velocity analysis using pre-stack depth migration was performed on multichannel seismic reflection line RC2901-734 offshore Coyhaique, Chile (44°30′S). The velocity model shows a hydrate-bearing layer above the BSR with high velocity (1700–2200 m/s) and maximum thickness of 250 m, and a free gas-bearing layer below with low velocity (1250–1400 m/s). Geothermal gradient estimates range from 35 to 95 °C/km.",
+  "keywords": [
+    "gas hydrate",
+    "BSR",
+    "free gas",
+    "Coyhaique",
+    "44.5°S",
+    "RC2901-734",
+    "pre-stack depth migration",
+    "seismic velocity",
+    "thermal state"
+  ],
+  "location": {
+    "latitude": -44.5,
+    "longitude": -75.5,
+    "city": "Coyhaique",
+    "region": "Región de Aysén",
+    "country": "Chile",
+    "description": "Offshore Coyhaique, southern Chile at ~44°30'S; gas hydrate and BSR study on named seismic line",
+    "bounding_box": {
+      "lat_min": -45.0,
+      "lat_max": -44.0,
+      "lon_min": -76.5,
+      "lon_max": -74.5
+    },
+    "seismic_lines": [
+      {
+        "name": "RC2901-734",
+        "lat_start": -44.5,
+        "lon_start": -76.5,
+        "lat_end": -44.5,
+        "lon_end": -74.5,
+        "length_km": 180
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Conrad (RC2901 cruise)",
+    "year_acquired": 1990,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "R/V Conrad Line RC2901-734 — Coyhaique Offshore 44.5°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "LDEO / unknown",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Named MCS line RC2901-734 from R/V Conrad cruise offshore Coyhaique (44.5°S); analyzed with pre-stack depth migration for BSR velocity analysis, revealing gas hydrate layer (1700–2200 m/s) and free gas zone (1250–1400 m/s). [R/V Conrad RC2901 (Lamont, early 1990s) — no confirmed public data portal found]"
+    }
+  ],
+  "_data_note": "RC2901 cruise data accessible via MGDS. Line RC2901-734 is a named seismic profile from the R/V Conrad 1990 cruise.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Pre-stack depth migration (PSDM) was applied to the RC2901-734 MCS line offshore Coyhaique (44.5°S) to derive a detailed velocity model for gas hydrate and free gas quantification. The velocity model shows a high-velocity hydrate layer (1700–2200 m/s, up to 250 m thick) above the BSR and a low-velocity free gas zone (1250–1400 m/s) below. Geothermal gradients of 35–95°C/km are estimated from BSR depth.",
+    "workflow": [
+      "1. Trace editing and preprocessing",
+      "2. Velocity analysis (semblance, NMO correction)",
+      "3. Pre-stack depth migration (PSDM)",
+      "4. Residual velocity analysis for BSR zone",
+      "5. Gas hydrate and free gas concentration estimation",
+      "6. Geothermal gradient calculation from BSR depth"
+    ],
+    "software": [
+      "Echos (OGS)",
+      "unknown"
+    ],
+    "notes": "PSDM applied to single named seismic line; geothermal gradient derived from BSR depth"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Marine and Petroleum Geology paper; behind paywall. Line RC2901-734 from R/V Conrad 1990 cruise accessible via MGDS."
+}

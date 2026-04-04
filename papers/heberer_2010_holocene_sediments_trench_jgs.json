@@ -1,0 +1,93 @@
+{
+  "id": "heberer_2010_holocene_sediments_trench_jgs",
+  "title": "Holocene sediments from the Southern Chile Trench: a record of active margin magmatism, tectonics and palaeoseismicity",
+  "authors": ["Heberer, Bianca", "Röser, G.", "Behrmann, Jan H.", "Rahn, M.", "Kopf, A."],
+  "year": 2010,
+  "journal": "Journal of the Geological Society",
+  "doi": "10.1144/0016-76492009-015",
+  "url": "https://pubs.geoscienceworld.org/gsl/jgs/article-abstract/167/3/539/372744/",
+  "open_access_url": null,
+  "abstract": "Sedimentology, petrography and provenance of Holocene sediments from the Southern Chile Trench (36°–47°S) are investigated using gravity core descriptions, physical property measurements and quantitative X-ray analysis. Recurrence rates of sandy turbidites in the trench fan sediments indicate a link to the palaeoseismic record, making the turbidites useful as paleo-megaearthquake indicators. Core locations are defined using multichannel seismic reflection profiles to identify channel morphology.",
+  "keywords": ["Chile Trench", "turbidites", "paleoseismicity", "seismic reflection", "36°–47°S", "gravity cores", "Holocene", "JGS"],
+
+  "location": {
+    "latitude": -41.5,
+    "longitude": -75.5,
+    "city": "Valdivia",
+    "region": "Región de Los Ríos",
+    "country": "Chile",
+    "description": "Southern Chile Trench (36°–47°S); Holocene sediment cores located using MCS reflection profiles",
+    "bounding_box": {
+      "lat_min": -47.0, "lat_max": -36.0,
+      "lon_min": -77.0, "lon_max": -74.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Legacy MCS profiles — Southern Chile Trench 36°–47°S (core site selection)",
+        "lat_start": -36.0, "lon_start": -76.0,
+        "lat_end": -47.0, "lon_end": -75.0,
+        "length_km": 1300
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (various cruises) for seismic; gravity cores from multiple cruises",
+    "year_acquired": null,
+    "source_type": "sub-bottom profiler and reflection seismic",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Legacy MCS Profiles — Southern Chile Trench 36°–47°S",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Seismic reflection profiles used to identify channel morphology in the Southern Chile Trench and select core locations for paleoseismic study between 36°–47°S"
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Sub-Bottom Profiler Data — Southern Chile Trench",
+      "classification": "RAW",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Parasound/CHIRP sub-bottom profiler data used to locate gravity core sites and characterize shallow stratigraphy"
+    }
+  ],
+  "_data_note": "Primarily sedimentological study; seismic data used for site selection. JGS paper; behind paywall.",
+
+  "processing": {
+    "classification": "SEMI_PROCESSED",
+    "summary": "MCS reflection profiles in the Southern Chile Trench (36°–47°S) are used as a framework to identify submarine channel morphology and select gravity core locations for paleoseismic study. Holocene sediment cores are analyzed for turbidite recurrence rates as paleoseismic indicators. The seismic data enables correlation of sediment deposits with tectonic and volcanic events.",
+    "workflow": [
+      "1. MCS profiling for channel morphology identification",
+      "2. Core site selection",
+      "3. Gravity core description and physical property measurement",
+      "4. Turbidite identification and recurrence analysis"
+    ],
+    "software": ["unknown"],
+    "notes": "Primarily sedimentological; seismic data is auxiliary for site selection"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "JGS paper; behind paywall. Seismic data from legacy R/V SONNE cruises, repository not confirmed."
+}

@@ -1,0 +1,81 @@
+{
+  "id": "contreras-reyes_2010_flexure_gji",
+  "title": "Lithospheric flexure modelling seaward of the Chile trench: implications for oceanic plate weakening in the Trench Outer Rise region",
+  "authors": [
+    "Contreras-Reyes, Eduardo",
+    "Osses, Axel"
+  ],
+  "year": 2010,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1111/j.1365-246X.2010.04629.x",
+  "url": "https://academic.oup.com/gji/article/182/1/97/564627",
+  "open_access_url": "https://academic.oup.com/gji/article-pdf/182/1/97/1508955/182-1-97.pdf",
+  "abstract": "The study investigates lithospheric bending patterns along the Chilean subduction zone where oceanic plates of varying ages (0–50 Ma) enter the trench. Elastic plate modeling with variable elastic thickness is used to predict outer rise topography. Results reveal a systematic reduction in elastic thickness of up to 50 per cent as plates approach the trench axis, consistent with inelastic plate weakening during bending. Published wide-angle seismic refraction data from multiple GEOMAR cruises along the Chilean margin are used to constrain lithospheric thickness and velocity structure as model input.",
+  "keywords": [
+    "lithospheric flexure",
+    "elastic thickness",
+    "outer rise",
+    "Chile trench",
+    "plate weakening",
+    "bending",
+    "seismic refraction"
+  ],
+  "location": {
+    "latitude": -30.0,
+    "longitude": -74.0,
+    "city": "Various (full coast)",
+    "region": "Full Chilean margin",
+    "country": "Chile",
+    "description": "Full Chilean margin from ~18°S to 46°S, focusing on the outer rise seaward of the trench",
+    "bounding_box": {
+      "lat_min": -46.0,
+      "lat_max": -18.0,
+      "lon_min": -78.0,
+      "lon_max": -72.0
+    },
+    "seismic_lines": []
+  },
+  "acquisition": {
+    "vessel": null,
+    "year_acquired": null,
+    "source_type": null,
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Compiled published wide-angle seismic refraction data (multiple cruises)",
+      "classification": "PROCESSED",
+      "format": "ASCII / model output",
+      "url": null,
+      "doi": null,
+      "repository": "Published literature (no single repository)",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Compilation of published velocity-depth profiles from multiple GEOMAR/SPOC/TIPTEQ/CINCA marine seismic refraction cruises along the Chilean margin used as model input for elastic plate flexure calculations.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Primarily a modelling study using published seismic refraction data as constraints. No new data acquired. Elastic plate flexure models computed using published velocity-depth models from multiple prior GEOMAR campaigns along the full Chilean margin (18°–46°S). The seismic data inform crustal thickness and elastic plate thickness estimates used in forward flexure models.",
+    "workflow": [
+      "1. Compilation of published velocity-depth models from prior seismic surveys",
+      "2. Extraction of crustal and lithospheric thickness from velocity models",
+      "3. Forward elastic plate flexure modelling (variable elastic thickness)",
+      "4. Comparison with observed trench topography",
+      "5. Inversion for effective elastic thickness along the margin"
+    ],
+    "software": [],
+    "notes": "No new seismic data acquired; modelling study using published data. Covers the full Chilean margin from ~18°S to 46°S."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Bronze open access PDF available at Oxford Academic. Abstract reconstructed from survey snippet. This is a modelling study — no primary seismic data collected. Seismic data used are published compilations from prior GEOMAR cruises. No datasets deposited in public repositories."
+}

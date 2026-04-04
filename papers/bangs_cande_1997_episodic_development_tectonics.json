@@ -1,0 +1,108 @@
+{
+  "id": "bangs_cande_1997_episodic_development_tectonics",
+  "title": "Episodic development of a convergent margin inferred from structures and processes along the southern Chile margin",
+  "authors": [
+    "Bangs, Nathan L.",
+    "Cande, Steven C."
+  ],
+  "year": 1997,
+  "journal": "Tectonics",
+  "doi": "10.1029/97TC00494",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/97TC00494",
+  "open_access_url": null,
+  "abstract": "Seismic reflection data acquired across the southern coast of Chile image structures formed along the continental margin revealing an episodic history of accretion, non-accretion, and possibly erosion. Structures at the toe of the continental slope suggest frontal accretion of 0.75 to 1.75 km of trench fill. A small accretionary wedge 20–30 km wide abuts the truncated continental metamorphic basement extending seaward from beneath the shelf.",
+  "keywords": [
+    "seismic reflection",
+    "accretionary wedge",
+    "south Chile",
+    "Isla Mocha",
+    "frontal accretion",
+    "convergent margin",
+    "metamorphic basement",
+    "Conrad"
+  ],
+  "location": {
+    "latitude": -39.0,
+    "longitude": -74.5,
+    "city": "Temuco",
+    "region": "Región de La Araucanía",
+    "country": "Chile",
+    "description": "Southern Chile margin near Isla Mocha (~38°–40°S); accretionary wedge and shelf offshore pre-site survey area",
+    "bounding_box": {
+      "lat_min": -40.0,
+      "lat_max": -38.0,
+      "lon_min": -76.0,
+      "lon_max": -73.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Conrad pre-site MCS profiles — south Chile (~38°–40°S)",
+        "lat_start": -38.0,
+        "lon_start": -76.0,
+        "lat_end": -40.0,
+        "lon_end": -73.5,
+        "length_km": 300
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Conrad (pre-ODP site survey)",
+    "year_acquired": 1990,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Conrad MCS Reflection Data — South Chile ~38°–40°S",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "LDEO / unknown",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multichannel seismic reflection profiles from the R/V Conrad pre-ODP site survey across the southern Chile margin near Isla Mocha; images accretionary wedge, frontal accretion, and truncated metamorphic basement. [R/V Conrad RC2901 (Lamont, early 1990s) — no confirmed public data portal found]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Bathymetry — South Chile Margin ~38°–40°S",
+      "classification": "RAW",
+      "format": "XYZ",
+      "url": null,
+      "doi": null,
+      "repository": "NOAA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Shipboard bathymetry used for profile location and slope morphology characterization"
+    }
+  ],
+  "_data_note": "Conrad cruise data likely in MGDS under cruise designation RC2901 or similar LDEO Conrad cruises. South Chile margin MCS data from pre-ODP surveys.",
+  "processing": {
+    "classification": "SEMI_PROCESSED",
+    "summary": "Multichannel seismic reflection data from R/V Conrad acquired as part of ODP Leg 141 pre-site surveys were processed and interpreted to document the episodic development of the southern Chile convergent margin. The profiles image 20–30 km wide accretionary wedge, frontal accretion structures at the slope toe, and truncated metamorphic basement beneath the shelf. Processing includes standard NMO, stack, and post-stack migration to TWT sections.",
+    "workflow": [
+      "1. Demultiplexing",
+      "2. Geometry assignment",
+      "3. Bandpass filtering",
+      "4. Velocity analysis",
+      "5. NMO correction and CDP stack",
+      "6. Post-stack time migration"
+    ],
+    "software": [
+      "unknown"
+    ],
+    "notes": "Stacked and migrated sections — classified as SEMI_PROCESSED (not depth migrated)"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Paper behind paywall (Tectonics/AGU). Conrad cruise data likely available via MGDS. Abstract from survey_results.json snippet."
+}

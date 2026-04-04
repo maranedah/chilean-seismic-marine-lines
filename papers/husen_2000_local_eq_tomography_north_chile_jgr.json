@@ -1,0 +1,81 @@
+{
+  "id": "husen_2000_local_eq_tomography_north_chile_jgr",
+  "title": "Local earthquake tomography of shallow subduction in north Chile: A combined onshore and offshore study",
+  "authors": ["Husen, Stephan", "Kissling, E.", "Flueh, Ernst R.", "Asch, G."],
+  "year": 2000,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2000JB900229",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2000JB900229",
+  "open_access_url": null,
+  "abstract": "Local earthquake tomography (LET) of the north Chilean subduction zone near 23°S is performed using a combined onshore-offshore network of 44 stations. P-wave velocity models derived from Antofagasta earthquake (1995 Mw 8.0) aftershock recordings image the shallow subduction geometry and velocity structure of the forearc. OBH stations from the CINCA95 cruise provided the offshore component of the combined network.",
+  "keywords": ["local earthquake tomography", "north Chile", "23°S", "CINCA95", "OBH", "Antofagasta aftershocks", "shallow subduction", "P-wave velocity"],
+
+  "location": {
+    "latitude": -23.0,
+    "longitude": -70.5,
+    "city": "Antofagasta",
+    "region": "Región de Antofagasta",
+    "country": "Chile",
+    "description": "North Chile subduction zone ~23°S; combined onshore-offshore LET using CINCA95 OBH and land stations; Antofagasta earthquake (1995 Mw 8.0) aftershock zone",
+    "bounding_box": {
+      "lat_min": -24.0, "lat_max": -22.0,
+      "lon_min": -72.0, "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 OBH passive network — North Chile ~23°S (combined onshore-offshore LET)",
+        "lat_start": -22.0, "lon_start": -72.0,
+        "lat_end": -24.0, "lon_end": -69.5,
+        "length_km": 280
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (CINCA95, SO104, 1995) and land seismic network",
+    "year_acquired": 1995,
+    "source_type": "passive (earthquake aftershocks)",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": 44,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "CINCA95 OBH Passive Aftershock Data — North Chile ~23°S (LET network)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "OBH passive recordings of Antofagasta (1995 Mw 8.0) aftershocks from CINCA95 cruise; combined with 44-station onshore-offshore network for local earthquake tomography of north Chile shallow subduction (~23°S); P-wave velocity model of forearc"
+    }
+  ],
+  "_data_note": "JGR paper; behind paywall. CINCA95 (SO104) OBH passive data. Specific repository not confirmed.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "P-wave local earthquake tomography (LET) of the north Chilean subduction zone (~23°S) using a 44-station combined onshore-offshore network including CINCA95 OBH instruments. Antofagasta earthquake (1995 Mw 8.0) aftershock recordings provide the passive seismic dataset. Velocity inversion images the shallow subduction geometry and forearc structure.",
+    "workflow": [
+      "1. OBH and land station data quality control",
+      "2. P-wave arrival time picking",
+      "3. 1D reference velocity model construction",
+      "4. SIMULPS local earthquake tomography inversion",
+      "5. Resolution analysis (checkerboard tests)"
+    ],
+    "software": ["SIMULPS", "unknown"],
+    "notes": "Combined onshore-offshore LET study using CINCA95 OBH data; companion to Husen et al. 1999 passive seismology studies"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "JGR paper; behind paywall. CINCA95 OBH passive data from SO104 cruise. Repository not confirmed."
+}

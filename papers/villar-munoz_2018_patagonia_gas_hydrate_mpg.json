@@ -1,0 +1,94 @@
+{
+  "id": "villar-munoz_2018_patagonia_gas_hydrate_mpg",
+  "title": "A first estimation of gas hydrates offshore Patagonia (Chile)",
+  "authors": ["Villar-Muñoz, Lucía", "Bento, Joaquim P.", "Klaeschen, Dirk", "Tinivella, Umberta", "Vargas-Cordero, Iván de la Cruz", "Behrmann, Jan H."],
+  "year": 2018,
+  "journal": "Marine and Petroleum Geology",
+  "doi": "10.1016/j.marpetgeo.2018.06.002",
+  "url": "https://oceanrep.geomar.de/id/eprint/43532/",
+  "open_access_url": "https://oceanrep.geomar.de/id/eprint/43532/",
+  "abstract": "The spatial distribution of gas hydrate in the accretionary prism and forearc sediments offshore western Patagonia (50°–57°S), landward of the Antarctica–South America plate boundary, is documented for the first time. BSR-derived heat flow values of 30–70 mW/m² are calculated. Average gas hydrate concentration is 3.4%–10% and average BSR thickness is ~290 m, with estimated methane of ~3.0 × 10¹³ m³.",
+  "keywords": ["gas hydrate", "BSR", "Patagonia", "50°–57°S", "Antarctica-South America", "seismic reflection", "heat flow", "OceanRep GEOMAR open access"],
+
+  "location": {
+    "latitude": -53.5,
+    "longitude": -73.0,
+    "city": "Punta Arenas",
+    "region": "Región de Magallanes",
+    "country": "Chile",
+    "description": "Offshore western Patagonia (50°–57°S); first systematic gas hydrate study for southern Chilean Patagonian margin",
+    "bounding_box": {
+      "lat_min": -57.0, "lat_max": -50.0,
+      "lon_min": -76.0, "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS profiles — offshore Patagonia 50°–57°S (legacy and R/V SONNE)",
+        "lat_start": -50.0, "lon_start": -75.0,
+        "lat_end": -57.0, "lon_end": -70.0,
+        "length_km": 800
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE and legacy cruises (multiple)",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "MCS Reflection Data — Offshore Patagonia 50°–57°S",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": "https://oceanrep.geomar.de/id/eprint/43532/",
+      "doi": null,
+      "repository": "other",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multichannel seismic reflection profiles from offshore western Patagonia (50°–57°S) used to map BSR distribution and estimate gas hydrate concentration for the first time in this region; BSR-derived heat flow 30–70 mW/m²"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — Offshore Patagonia 50°–57°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from various cruises used to characterize the Patagonian continental margin morphology"
+    }
+  ],
+  "_data_note": "Open access via OceanRep GEOMAR. First gas hydrate study for the southern Chilean Patagonian margin (50°–57°S).",
+
+  "processing": {
+    "classification": "SEMI_PROCESSED",
+    "summary": "MCS reflection profiles from offshore western Patagonia (50°–57°S) were analyzed to identify and map the BSR distribution for the first time in this region. Velocity analysis provides gas hydrate concentration estimates (3.4%–10% total volume) and BSR-derived heat flow values (30–70 mW/m²). The large estimated methane volume (~3.0 × 10¹³ m³) makes this an important potential resource.",
+    "workflow": [
+      "1. Compilation of legacy seismic profiles",
+      "2. BSR identification and mapping",
+      "3. Velocity analysis in BSR zone",
+      "4. Gas hydrate concentration estimation",
+      "5. Heat flow calculation from BSR depth"
+    ],
+    "software": ["unknown"],
+    "notes": "Open access via GEOMAR OceanRep repository"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Open access via OceanRep GEOMAR (confirmed URL). First gas hydrate mapping for the Patagonian margin."
+}

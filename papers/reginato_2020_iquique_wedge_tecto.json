@@ -1,0 +1,193 @@
+{
+  "id": "reginato_2020_iquique_wedge_tecto",
+  "title": "Seismic structure and tectonics of the continental wedge overlying the source region of the Iquique Mw8.1 2014 earthquake",
+  "authors": [
+    "Reginato, Gabino",
+    "Vera, Emilio",
+    "Contreras-Reyes, Eduardo",
+    "Tréhu, Anne M.",
+    "Maksymowicz, Andrei",
+    "Bello-González, J.P.",
+    "González, Felipe"
+  ],
+  "year": 2020,
+  "journal": "Tectonophysics",
+  "doi": "10.1016/j.tecto.2020.228629",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040195120303127",
+  "open_access_url": "https://www.sciencedirect.com/science/article/am/pii/S0040195120303127",
+  "abstract": "A trench-perpendicular seismic reflection profile acquired across the zone of maximum slip of the 2014 Iquique earthquake reveals structural features controlling earthquake behavior. A frontal prism in the continental wedge characterized by low velocities restricts aftershock propagation. Extensional deformation patterns including growth strata and fault structures within the Iquique forearc basin are identified. The study finds a strong spatial correlation between the Iquique forearc basin and the highest slip area for the 2014 earthquake, indicating that long-term structural development influenced the earthquake's rupture characteristics. The seismic reflection data reveals crustal velocity structure contrasts that influenced both rupture propagation and aftershock distribution.",
+  "keywords": [
+    "seismic reflection",
+    "Iquique earthquake",
+    "Mw8.1",
+    "continental wedge",
+    "forearc basin",
+    "northern Chile",
+    "20°S",
+    "frontal prism",
+    "aftershock",
+    "MGL1610"
+  ],
+  "location": {
+    "latitude": -20.0,
+    "longitude": -70.5,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "Offshore northern Chile at ~20°S, across the zone of maximum slip of the 2014 Mw 8.1 Iquique earthquake",
+    "bounding_box": {
+      "lat_min": -21.0,
+      "lat_max": -19.0,
+      "lon_min": -72.0,
+      "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "Trench-perpendicular MCS profile at ~20°S (Iquique source region)",
+        "lat_start": -20.0,
+        "lon_start": -72.0,
+        "lat_end": -20.0,
+        "lon_end": -70.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Marcus G. Langseth (MGL1610 — PICTURES cruise, 2016)",
+    "year_acquired": 2016,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "MGL1610 Trench-perpendicular MCS Reflection Profile at ~20°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y / SEGD (raw shots at MGDS)",
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+      "doi": "10.1594/IEDA/323934",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 -A '*.segd,*.segy' 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934'",
+      "description": "Trench-perpendicular seismic reflection profile from the 2016 MGL1610 (PICTURES) cruise at ~20°S, imaging the continental wedge structure above the Iquique earthquake source region.",
+      "data_type": "seismic_reflection_mcs"
+    },
+    {
+      "name": "MGL1610 OBS Wide-angle Refraction Data (XW Network, IRIS/EarthScope)",
+      "classification": "RAW",
+      "format": "SEED / miniSEED",
+      "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+      "doi": "10.7914/SN/XW_2016",
+      "repository": "IRIS DMC / EarthScope",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "51 OBS stations (XW network, 2016) deployed during MGL1610 cruise offshore northern Chile. Wide-angle seismic refraction data accessible via IRIS/EarthScope web services.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "MGL1610 Bathymetry:Swath (Multibeam EM122) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "Kongsberg .all (MBSystem)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+      "doi": "10.7284/123638",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 170,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+      "description": "Raw multibeam swath bathymetry, backscatter, and sidescan data (2,642 files, ~170 GB) acquired with Kongsberg EM122 during the 2016 PICTURES (MGL1610) cruise offshore northern Chile 19°–21°S.",
+      "data_type": "bathymetry"
+    },
+    {
+      "name": "MGL1610 Gravity (BGM-3 Gravimeter) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "ASCII (LDS NMEA)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+      "doi": "10.7284/123647",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 0.167,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+      "description": "Raw underway gravimeter data (Bell BGM-3, 48 files, ~167 MB) from the 2016 PICTURES (MGL1610) cruise. A processed gravity product (~696 MB) is also available via RVData.",
+      "data_type": "gravity"
+    },
+    {
+      "name": "MGL1610 Magnetics (G-882 Magnetometer) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "ASCII (LDS NMEA)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+      "doi": "10.7284/123640",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 2.6,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+      "description": "Raw magnetometer data (Geometrics G-882, 65 files, ~2.6 GB) from the 2016 PICTURES (MGL1610) cruise. A processed magnetics product (~2.5 GB) is also available.",
+      "data_type": "magnetics"
+    },
+    {
+      "name": "MGL1610 Navigation/Positions (C-Nav 3050) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "R2R:Nav",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+      "doi": "10.7284/907099",
+      "repository": "MGDS / RVData (R2R)",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+      "description": "Primary navigation (GPS positions) data from the 2016 PICTURES (MGL1610) cruise, C-Nav 3050 system, archived via Rolling Deck to Repository (R2R).",
+      "data_type": "navigation"
+    },
+    {
+      "name": "MGL1610 Seismic Navigation — Shot Time (ASCII, Processed) — PICTURES cruise 2016",
+      "classification": "PROCESSED",
+      "format": "ASCII",
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+      "doi": "10.1594/IEDA/323933",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933'",
+      "description": "Processed seismic shot time navigation data from the MGL1610 PICTURES cruise, offshore Chile. For use when processing the MCS reflection data.",
+      "data_type": "navigation"
+    },
+    {
+      "name": "MGL1610 Subbottom Profiler (Knudsen 3260) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "KEB / SGY / XTF",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+      "doi": "10.7284/123641",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 1.1,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+      "description": "Raw singlebeam/subbottom profiler data (Knudsen 3260, 50 files, ~1.1 GB) from the 2016 PICTURES (MGL1610) cruise.",
+      "data_type": "subbottom"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Trench-perpendicular MCS reflection profile from the PICTURES cruise (MGL1610, 2016) at ~20°S processed to image the continental wedge structure above the 2014 Iquique earthquake source region. Standard MCS processing applied followed by depth conversion. Velocity structure extracted and combined with seismic reflection for interpretation. Results reveal a frontal prism with low velocities correlated with the updip limit of Iquique earthquake aftershocks, and a forearc basin spatially correlated with the high-slip region.",
+    "workflow": [
+      "1. MCS data acquisition (MGL1610, 2016)",
+      "2. Geometry assignment",
+      "3. Bandpass filtering",
+      "4. Multiple suppression",
+      "5. Velocity analysis",
+      "6. NMO and stacking",
+      "7. Post-stack migration",
+      "8. Depth conversion using velocity model",
+      "9. Integration with 2014 earthquake slip model and aftershock distribution"
+    ],
+    "software": [],
+    "notes": "Bronze open access manuscript available. Part of the PICTURES (MGL1610) campaign. University of Chile + OSU collaboration."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Bronze open access manuscript available via ScienceDirect. Abstract confirmed from Semantic Scholar summary. MGL1610 (PICTURES) cruise data from 2016 confirmed by author list (Tréhu, Contreras-Reyes, González) matching other MGL1610 papers. MGDS cruise DOI 10.7284/907099. All MGL1610 data confirmed open access."
+}

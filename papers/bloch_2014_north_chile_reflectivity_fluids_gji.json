@@ -1,0 +1,81 @@
+{
+  "id": "bloch_2014_north_chile_reflectivity_fluids_gji",
+  "title": "Seismic reflectivity of the subducting Nazca plate and fluid-related processes at the north Chilean subduction zone",
+  "authors": ["Bloch, Wiebke", "Schurr, Bernd", "Kummerow, Jörn", "Salazar, Pablo", "Shapiro, Serge A."],
+  "year": 2014,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1093/gji/ggu173",
+  "url": "https://academic.oup.com/gji/article/198/3/1977/612997",
+  "open_access_url": null,
+  "abstract": "Seismic reflectivity of the subducting Nazca plate is studied in north Chile using passive seismic data from a combined onshore-offshore network. Intraslab reflectors and plate boundary reflectivity are correlated with fluid release processes along the subducting slab. High reflectivity zones indicate elevated pore fluid pressure at the megathrust and within the subducting oceanic crust.",
+  "keywords": ["seismic reflectivity", "north Chile", "Nazca plate", "fluids", "megathrust", "passive seismic", "intraslab", "GJI"],
+
+  "location": {
+    "latitude": -21.5,
+    "longitude": -70.0,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "North Chilean subduction zone ~19°–23°S; seismic reflectivity of subducting Nazca plate using passive network data",
+    "bounding_box": {
+      "lat_min": -23.0, "lat_max": -19.0,
+      "lon_min": -72.0, "lon_max": -68.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Passive seismic network profiles — North Chile ~19°–23°S (reflectivity study)",
+        "lat_start": -19.0, "lon_start": -71.0,
+        "lat_end": -23.0, "lon_end": -69.0,
+        "length_km": 500
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "Land and offshore passive seismic network",
+    "year_acquired": 2010,
+    "source_type": "passive (natural earthquakes)",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Passive Seismic Network — North Chile ~19°–23°S (reflectivity/fluids study)",
+      "classification": "PROCESSED",
+      "format": "miniSEED",
+      "url": null,
+      "doi": null,
+      "repository": "other",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Passive seismic network recordings used to study seismic reflectivity of the subducting Nazca plate in north Chile; reflectors correlated with fluid-related processes and elevated pore pressure at megathrust and in oceanic crust"
+    }
+  ],
+  "_data_note": "GJI paper; behind paywall. Passive seismic network data. Specific repository not confirmed.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Passive seismic data from a combined onshore-offshore network in north Chile (~19°–23°S) are used to extract seismic reflectivity of the subducting Nazca plate. Intraslab reflectors and plate boundary reflectivity are analyzed in relation to fluid release processes. High reflectivity zones are interpreted as indicators of elevated pore fluid pressure.",
+    "workflow": [
+      "1. Passive seismic data selection and quality control",
+      "2. P-wave travel-time analysis",
+      "3. Reflection extraction from intraslab phases",
+      "4. Reflectivity mapping and spatial correlation",
+      "5. Fluid pressure interpretation"
+    ],
+    "software": ["unknown"],
+    "notes": "GJI study focusing on megathrust fluid processes in north Chile; related to IPOC network and PICTURES survey area"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "low",
+  "analysis_notes": "GJI paper; behind paywall. Limited abstract information available. Passive seismic network data; repository not confirmed."
+}

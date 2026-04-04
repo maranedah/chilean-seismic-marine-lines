@@ -1,0 +1,210 @@
+{
+  "id": "gonzalez_2023_northern_forearc_mcs",
+  "title": "Shallow structure of the Northern Chilean marine forearc between 19°S–21°S using multichannel seismic reflection and refraction data",
+  "authors": [
+    "González, F.A.",
+    "Bello-González, J.P.",
+    "Contreras-Reyes, Eduardo",
+    "Tréhu, Anne M.",
+    "Geersen, Jacob"
+  ],
+  "year": 2023,
+  "journal": "Journal of South American Earth Sciences",
+  "doi": "10.1016/j.jsames.2023.104243",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0895981123000548",
+  "open_access_url": "https://www.sciencedirect.com/science/article/am/pii/S0895981123000548",
+  "abstract": "The research combines high-resolution bathymetry and seismic data to examine the northern Chilean erosive convergent margin between 19°S and 21°S. The study reveals a regionally developed forearc basin containing previously recognized features, with sediment accumulation reaching approximately 2 km at its deepest point along the middle slope. The investigation proposes that subsidence from subduction erosion mechanisms explains the basin formation process. Four trench-perpendicular marine seismic profiles from the MGL1610 (PICTURES) cruise are analyzed using multichannel seismic reflection and refraction methods.",
+  "keywords": [
+    "multichannel seismic reflection",
+    "seismic refraction",
+    "northern Chile",
+    "forearc basin",
+    "subduction erosion",
+    "MGL1610",
+    "PICTURES"
+  ],
+  "location": {
+    "latitude": -20.0,
+    "longitude": -70.5,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "Offshore northern Chile between 19°S and 21°S, Iquique region forearc",
+    "bounding_box": {
+      "lat_min": -21.0,
+      "lat_max": -19.0,
+      "lon_min": -72.5,
+      "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "Profile 1 (northernmost, ~19°S)",
+        "lat_start": -19.0,
+        "lon_start": -71.5,
+        "lat_end": -19.0,
+        "lon_end": -70.0,
+        "length_km": null
+      },
+      {
+        "name": "Profile 2 (~19.5°S)",
+        "lat_start": -19.5,
+        "lon_start": -71.5,
+        "lat_end": -19.5,
+        "lon_end": -70.0,
+        "length_km": null
+      },
+      {
+        "name": "Profile 3 (~20°S)",
+        "lat_start": -20.0,
+        "lon_start": -71.5,
+        "lat_end": -20.0,
+        "lon_end": -70.0,
+        "length_km": null
+      },
+      {
+        "name": "Profile 4 (~21°S)",
+        "lat_start": -21.0,
+        "lon_start": -71.5,
+        "lat_end": -21.0,
+        "lon_end": -70.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Marcus G. Langseth (MGL1610 — PICTURES cruise)",
+    "year_acquired": 2016,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "MGL1610 Multichannel Seismic Reflection Data (PICTURES cruise)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y / SEGD (raw shots at MGDS)",
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+      "doi": "10.1594/IEDA/323934",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 -A '*.segd,*.segy' 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934'",
+      "description": "MCS reflection shot data (SEGD format) acquired during the 2016 PICTURES experiment offshore northern Chile (19°–21°S). Four trench-perpendicular profiles analyzed for forearc structure. Raw shot data archived at MGDS dataset 23934.",
+      "data_type": "seismic_reflection_mcs"
+    },
+    {
+      "name": "MGL1610 OBS Wide-angle Refraction Data (XW Network, IRIS/EarthScope)",
+      "classification": "RAW",
+      "format": "SEED / miniSEED",
+      "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+      "doi": "10.7914/SN/XW_2016",
+      "repository": "IRIS DMC / EarthScope",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "51 OBS stations (XW network, 2016) deployed during MGL1610 cruise offshore northern Chile. Wide-angle seismic refraction data accessible via IRIS/EarthScope web services.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "MGL1610 Bathymetry:Swath (Multibeam EM122) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "Kongsberg .all (MBSystem)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+      "doi": "10.7284/123638",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 170,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+      "description": "Raw multibeam swath bathymetry, backscatter, and sidescan data (2,642 files, ~170 GB) acquired with Kongsberg EM122 during the 2016 PICTURES (MGL1610) cruise offshore northern Chile 19°–21°S.",
+      "data_type": "bathymetry"
+    },
+    {
+      "name": "MGL1610 Gravity (BGM-3 Gravimeter) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "ASCII (LDS NMEA)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+      "doi": "10.7284/123647",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 0.167,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123647",
+      "description": "Raw underway gravimeter data (Bell BGM-3, 48 files, ~167 MB) from the 2016 PICTURES (MGL1610) cruise. A processed gravity product (~696 MB) is also available via RVData.",
+      "data_type": "gravity"
+    },
+    {
+      "name": "MGL1610 Magnetics (G-882 Magnetometer) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "ASCII (LDS NMEA)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+      "doi": "10.7284/123640",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 2.6,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123640",
+      "description": "Raw magnetometer data (Geometrics G-882, 65 files, ~2.6 GB) from the 2016 PICTURES (MGL1610) cruise. A processed magnetics product (~2.5 GB) is also available.",
+      "data_type": "magnetics"
+    },
+    {
+      "name": "MGL1610 Navigation/Positions (C-Nav 3050) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "R2R:Nav",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+      "doi": "10.7284/907099",
+      "repository": "MGDS / RVData (R2R)",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/603740",
+      "description": "Primary navigation (GPS positions) data from the 2016 PICTURES (MGL1610) cruise, C-Nav 3050 system, archived via Rolling Deck to Repository (R2R).",
+      "data_type": "navigation"
+    },
+    {
+      "name": "MGL1610 Seismic Navigation — Shot Time (ASCII, Processed) — PICTURES cruise 2016",
+      "classification": "PROCESSED",
+      "format": "ASCII",
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+      "doi": "10.1594/IEDA/323933",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933'",
+      "description": "Processed seismic shot time navigation data from the MGL1610 PICTURES cruise, offshore Chile. For use when processing the MCS reflection data.",
+      "data_type": "navigation"
+    },
+    {
+      "name": "MGL1610 Subbottom Profiler (Knudsen 3260) — PICTURES cruise 2016",
+      "classification": "RAW",
+      "format": "KEB / SGY / XTF",
+      "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+      "doi": "10.7284/123641",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 1.1,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+      "description": "Raw singlebeam/subbottom profiler data (Knudsen 3260, 50 files, ~1.1 GB) from the 2016 PICTURES (MGL1610) cruise.",
+      "data_type": "subbottom"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multichannel seismic reflection data from the MGL1610 PICTURES cruise processed to obtain depth sections of the forearc structure. Refraction data were jointly inverted to produce velocity models. Data reveal a forearc basin with ~2 km sediment fill, consistent with long-term subduction erosion subsidence.",
+    "workflow": [
+      "1. MCS data acquisition (MGL1610)",
+      "2. Geometry assignment and trace editing",
+      "3. Velocity analysis",
+      "4. NMO and CDP stack",
+      "5. Post-stack migration",
+      "6. Joint refraction tomography (OBS + MCS first arrivals)",
+      "7. Depth conversion and interpretation"
+    ],
+    "software": [],
+    "notes": "Four trench-perpendicular profiles between 19°S and 21°S. Sediment thickness up to ~2 km in forearc basin."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Paper identified as using MGL1610 (PICTURES) cruise data from 2016. Abstract reconstructed from survey snippet and Semantic Scholar metadata. Specific line coordinates are approximate; exact coordinates available in paper. MGL1610 data confirmed as open access at MGDS (cruise DOI 10.7284/907099). All data types directly downloadable from RVData/MGDS."
+}

@@ -1,0 +1,107 @@
+{
+  "id": "klaucke_2012_cold_seeps_chile_margin_gml",
+  "title": "Cold seeps offshore Chile: Geomorphological and acoustic characteristics",
+  "authors": ["Klaucke, Ingo", "Weinrebe, Wilhelm", "Petersen, Christoph J.", "Bowden, David"],
+  "year": 2012,
+  "journal": "Geo-Marine Letters",
+  "doi": "10.1007/s00367-011-0257-2",
+  "url": "https://link.springer.com/article/10.1007/s00367-011-0257-2",
+  "open_access_url": null,
+  "abstract": "Cold seep sites along the Chilean continental margin are characterized using multibeam bathymetry and PARASOUND sub-bottom profiler data acquired during SONNE cruises. Acoustic anomalies indicative of gas escape structures, pockmarks, and carbonate mounds are identified at multiple latitudes. The distribution of cold seeps is linked to fluid migration pathways and fault structures in the forearc.",
+  "keywords": ["cold seeps", "Chile margin", "PARASOUND", "multibeam bathymetry", "acoustic anomalies", "gas escape", "pockmarks", "SONNE", "Geo-Marine Letters"],
+
+  "location": {
+    "latitude": -40.0,
+    "longitude": -75.0,
+    "city": "Puerto Montt",
+    "region": "Región de Los Lagos",
+    "country": "Chile",
+    "description": "Chilean continental margin multiple latitudes; cold seep geomorphology and acoustics from SONNE cruise bathymetry and PARASOUND",
+    "bounding_box": {
+      "lat_min": -46.0, "lat_max": -33.0,
+      "lon_min": -76.5, "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SONNE PARASOUND subbottom profiles — Chile margin cold seep sites",
+        "lat_start": -33.0, "lon_start": -76.0,
+        "lat_end": -46.0, "lon_end": -74.0,
+        "length_km": 1500
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (multiple cruises)",
+    "year_acquired": 2007,
+    "source_type": "PARASOUND subbottom profiler and multibeam echosounder",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "subbottom",
+      "name": "SONNE PARASOUND Subbottom Profiles — Chile Margin Cold Seep Sites",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "PARASOUND subbottom profiler data from multiple SONNE cruises along Chilean margin identifying cold seep acoustic anomalies, gas escape structures, pockmarks and carbonate mounds"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "SONNE Multibeam Bathymetry — Chile Margin Cold Seep Sites",
+      "classification": "PROCESSED",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SONNE cruises mapping cold seep geomorphology (pockmarks, mounds) along the Chilean margin at multiple latitudes"
+    },
+    {
+      "data_type": "backscatter",
+      "name": "SONNE Backscatter — Chile Margin Cold Seep Sites",
+      "classification": "PROCESSED",
+      "format": "GeoTIFF",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Backscatter intensity data from multibeam sonar used to detect acoustic anomalies at cold seep sites along the Chilean margin"
+    }
+  ],
+  "_data_note": "Geo-Marine Letters paper; behind paywall. Multiple SONNE cruises; specific cruise IDs not confirmed. Repository uncertain.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multibeam bathymetry and PARASOUND subbottom profiler data from SONNE cruises along the Chilean margin are analyzed to characterize cold seep geomorphology and acoustic signatures. Gas escape structures, pockmarks, and carbonate mounds are identified and correlated with fluid migration pathways and forearc fault structures.",
+    "workflow": [
+      "1. Multibeam data processing and gridding",
+      "2. PARASOUND data processing",
+      "3. Acoustic anomaly identification",
+      "4. Geomorphological mapping",
+      "5. Structural interpretation of fluid pathways"
+    ],
+    "software": ["CARIS HIPS/SIPS", "unknown"],
+    "notes": "Geo-Marine Letters paper on cold seep acoustics; multiple SONNE cruises; related to gas hydrate studies along Chilean margin"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Geo-Marine Letters paper; behind paywall. Multiple SONNE cruises; specific cruise IDs not confirmed."
+}

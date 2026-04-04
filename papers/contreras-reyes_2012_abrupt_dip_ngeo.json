@@ -1,0 +1,96 @@
+{
+  "id": "contreras-reyes_2012_abrupt_dip_ngeo",
+  "title": "Abrupt change in the dip of the subducting plate beneath north Chile",
+  "authors": [
+    "Contreras-Reyes, Eduardo",
+    "Jara, J.",
+    "Grevemeyer, Ingo",
+    "Ruiz, Sergio",
+    "Carrizo, D."
+  ],
+  "year": 2012,
+  "journal": "Nature Geoscience",
+  "doi": "10.1038/ngeo1447",
+  "url": "https://www.nature.com/articles/ngeo1447",
+  "open_access_url": null,
+  "abstract": "Wide-angle seismic refraction and reflection data from land and sea, complemented by hypocentre data recorded during the 2007 Tocopilla aftershocks, document an abrupt change in the dip of the subducting plate from less than 10° to about 22° at approximately 22°S. The abrupt change occurs at a depth of approximately 20 km at about 60 km landward of the trench. The amphibious seismic experiment includes marine OBS stations and land seismometers. This abrupt dip change is linked to variations in the seismogenic coupling and the structural architecture of the subduction zone at this latitude.",
+  "keywords": [
+    "subducting plate dip",
+    "north Chile",
+    "22°S",
+    "Tocopilla earthquake",
+    "wide-angle seismic",
+    "OBS",
+    "amphibious seismic",
+    "seismogenic zone",
+    "Nature Geoscience"
+  ],
+  "location": {
+    "latitude": -22.0,
+    "longitude": -70.5,
+    "city": "Tocopilla",
+    "region": "Región de Antofagasta",
+    "country": "Chile",
+    "description": "Offshore north Chile at ~22°S, site of 2007 Tocopilla earthquake, documenting abrupt slab dip change",
+    "bounding_box": {
+      "lat_min": -23.5,
+      "lat_max": -20.5,
+      "lon_min": -72.0,
+      "lon_max": -68.5
+    },
+    "seismic_lines": [
+      {
+        "name": "Amphibious seismic profile at ~22°S (marine + land)",
+        "lat_start": -22.0,
+        "lon_start": -72.0,
+        "lat_end": -22.0,
+        "lon_end": -68.5,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE",
+    "year_acquired": 2007,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Amphibious wide-angle seismic refraction data (~22°S, Tocopilla)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep / internal",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Marine OBS + land station wide-angle seismic refraction data at ~22°S offshore Tocopilla. Complemented by 2007 Tocopilla aftershock hypocentres for constraining slab geometry.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Amphibious wide-angle seismic refraction and reflection data from marine OBS and land seismic stations at ~22°S offshore Tocopilla, combined with 2007 Tocopilla earthquake aftershock hypocentre data. Processing involved travel time tomography to derive the 2D P-wave velocity model and slab geometry. The velocity model combined with hypocentre data documents an abrupt change in slab dip from <10° to ~22° at ~20 km depth, 60 km from the trench.",
+    "workflow": [
+      "1. Marine OBS deployment and land station installation",
+      "2. Airgun shooting along profile at ~22°S",
+      "3. Phase picking on OBS and land stations",
+      "4. 2D P-wave tomographic inversion",
+      "5. Integration with 2007 Tocopilla aftershock hypocentres",
+      "6. Slab geometry interpretation"
+    ],
+    "software": [],
+    "notes": "Nature Geoscience letter; behind paywall. Abrupt dip change from <10° to ~22° at ~22°S. Amphibious experiment with marine OBS and onshore seismic stations."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "low",
+  "analysis_notes": "Paper behind paywall in Nature Geoscience; no open access version found. Abstract reconstructed from survey snippet. Acquisition timing likely shortly after 2007 Tocopilla earthquake (Mw 7.7). Grevemeyer (GEOMAR) co-authorship suggests R/V SONNE involvement. No data repository identified."
+}

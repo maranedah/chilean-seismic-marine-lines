@@ -1,0 +1,107 @@
+{
+  "id": "volker_2006_latitudinal_sediment_peru_chile_springer",
+  "title": "Latitudinal Variation in Sedimentary Processes in the Peru-Chile Trench off Central Chile",
+  "authors": [
+    "Völker, David",
+    "Reichert, Christian",
+    "Wiedicke, Michael"
+  ],
+  "year": 2006,
+  "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
+  "doi": "10.1007/978-3-540-48684-8_9",
+  "url": "https://link.springer.com/chapter/10.1007/978-3-540-48684-8_9",
+  "open_access_url": null,
+  "abstract": "Sediment fill of the Chile Trench reflects latitudinal variations in climate and morphology of Chile as well as sediment transport processes. Within the trench, northward transport of sediment is described between 33°S and 42°S along a northward-dipping trench-parallel axial channel. The chapter uses multichannel seismic data and swath bathymetry to document trench fill stratigraphy and volume distribution.",
+  "keywords": [
+    "Chile Trench",
+    "sediment fill",
+    "seismic reflection",
+    "bathymetry",
+    "33°–42°S",
+    "turbidites",
+    "axial channel",
+    "latitudinal variation"
+  ],
+  "location": {
+    "latitude": -37.5,
+    "longitude": -75.5,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Peru-Chile Trench off central Chile 33°–42°S; latitudinal sediment distribution study",
+    "bounding_box": {
+      "lat_min": -42.0,
+      "lat_max": -33.0,
+      "lon_min": -78.0,
+      "lon_max": -73.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC, TIPTEQ and legacy MCS profiles — Chile Trench 33°–42°S",
+        "lat_start": -33.0,
+        "lon_start": -75.0,
+        "lat_end": -42.0,
+        "lon_end": -75.0,
+        "length_km": 1000
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161 SPOC, SO181 TIPTEQ and earlier cruises)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "SPOC/TIPTEQ MCS Profiles — Chile Trench 33°–42°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection profiles from SPOC, TIPTEQ and legacy cruises used to document trench fill stratigraphy and northward axial channel transport between 33°–42°S. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — Chile Trench 33°–42°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SPOC/TIPTEQ cruises for the Chile Trench region between 33°–42°S. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "Springer review chapter (2006). Uses SPOC (SO161) and TIPTEQ (SO181) data from MGDS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "MCS reflection profiles and swath bathymetry from SPOC, TIPTEQ and legacy cruises are compiled to characterize latitudinal variations in Chile Trench sediment fill stratigraphy (33°–42°S). The chapter documents a northward-dipping axial channel transporting sediment northward along the trench axis and explains the latitudinal volume distribution in terms of climate and submarine canyon morphology.",
+    "workflow": [
+      "1. Compilation of published MCS and bathymetric data",
+      "2. Seismic stratigraphy interpretation",
+      "3. Volume calculation"
+    ],
+    "software": [
+      "GMT",
+      "unknown"
+    ],
+    "notes": "Springer review chapter (2006)"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Springer book chapter; behind paywall. SPOC (SO161) and TIPTEQ (SO181) data at MGDS."
+}

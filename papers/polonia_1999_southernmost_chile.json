@@ -1,0 +1,96 @@
+{
+  "id": "polonia_1999_southernmost_chile",
+  "title": "Structural variability at the active continental margin off southernmost Chile",
+  "authors": [
+    "Polonia, A.",
+    "Brancolini, G.",
+    "Torelli, L.",
+    "Vera, E."
+  ],
+  "year": 1999,
+  "journal": "Journal of Geodynamics",
+  "doi": "10.1016/S0264-3707(98)00003-9",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264370798000039",
+  "open_access_url": null,
+  "abstract": "Newly acquired seismic reflection data from offshore southernmost Chile between 54°S and 57°S reveal the intricate tectonic setting of this active continental margin. This poorly studied region has long been challenging for researchers due to adverse weather patterns that have hindered data collection. Three primary tectonic domains are identified south of the Magellan Strait: the oceanic Antarctic plate, an accretionary wedge with deformed sedimentary sequences, and a continental backstop. The study documents structural variability along and across the margin using the newly acquired multichannel seismic reflection profiles.",
+  "keywords": [
+    "seismic reflection",
+    "southernmost Chile",
+    "54°–57°S",
+    "Magellan Strait",
+    "Antarctic plate",
+    "accretionary wedge",
+    "continental margin",
+    "tectonic domains"
+  ],
+  "location": {
+    "latitude": -55.5,
+    "longitude": -67.0,
+    "city": "Punta Arenas",
+    "region": "Región de Magallanes y la Antártica Chilena",
+    "country": "Chile",
+    "description": "Offshore southernmost Chile between 54°S and 57°S, south of Magellan Strait, active convergent margin",
+    "bounding_box": {
+      "lat_min": -57.0,
+      "lat_max": -54.0,
+      "lon_min": -71.0,
+      "lon_max": -63.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS profiles offshore Tierra del Fuego / Drake Passage (~54°–57°S)",
+        "lat_start": -54.0,
+        "lon_start": -70.0,
+        "lat_end": -57.0,
+        "lon_end": -64.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": null,
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Multichannel seismic reflection profiles, southernmost Chile (54°–57°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "OGS (Istituto Nazionale di Oceanografia e di Geofisica Sperimentale) or SHOA",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Newly acquired MCS reflection profiles from the poorly studied southernmost Chilean margin (54°–57°S), imaging three tectonic domains including oceanic Antarctic plate, accretionary wedge, and continental backstop.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multichannel seismic reflection data newly acquired offshore southernmost Chile (54°–57°S) processed to characterize structural variability of the active margin. Standard MCS processing applied to produce stacked and migrated sections. Three tectonic domains identified: oceanic Antarctic plate, accretionary wedge, and continental backstop. First systematic seismic coverage of this poorly studied region.",
+    "workflow": [
+      "1. MCS data acquisition in challenging weather conditions",
+      "2. Demultiplexing and trace editing",
+      "3. Geometry assignment",
+      "4. Bandpass filtering",
+      "5. Velocity analysis",
+      "6. NMO correction and CDP stacking",
+      "7. Post-stack migration",
+      "8. Tectonic interpretation"
+    ],
+    "software": [],
+    "notes": "Italian-Chilean collaborative study. OGS Trieste (Italy) and Universidad de Chile involved. Data from late 1990s. Austral region with limited prior coverage."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "low",
+  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. 1999 paper predates most data repositories. Data likely archived at OGS (Trieste, Italy) or SHOA (Chile). No public datasets identified. Vessel and acquisition year not confirmed."
+}

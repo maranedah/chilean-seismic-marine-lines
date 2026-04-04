@@ -1,0 +1,122 @@
+{
+  "id": "volker_2011_submarine_landslide_maule_marine_geology",
+  "title": "Analysis of submarine landsliding in the rupture area of the 27 February 2010 Maule earthquake, Central Chile",
+  "authors": [
+    "Völker, David",
+    "Scholz, Felipe",
+    "Geersen, Jacob"
+  ],
+  "year": 2011,
+  "journal": "Marine Geology",
+  "doi": "10.1016/j.margeo.2011.03.006",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0025322711001848",
+  "open_access_url": null,
+  "abstract": "Comparison of bathymetric datasets compiled before and after the 2010 Mw 8.8 Maule earthquake offshore Central Chile proves that no new submarine landslides on a size scale detectable with hull-mounted bathymetric echosounders (features >1 km horizontal size) formed as a direct consequence of the ground shaking. Gravity coring around a pre-existing slide feature offshore Concepción documents retrogressive failures triggered by aftershocks.",
+  "keywords": [
+    "submarine landslide",
+    "Maule earthquake",
+    "bathymetry",
+    "seismic reflection",
+    "central Chile",
+    "36°–38°S",
+    "aftershock",
+    "Concepción"
+  ],
+  "location": {
+    "latitude": -37.0,
+    "longitude": -73.5,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Offshore central Chile ~36°–38°S, Maule earthquake rupture zone; submarine landslide analysis using repeat bathymetry",
+    "bounding_box": {
+      "lat_min": -38.0,
+      "lat_max": -36.0,
+      "lon_min": -75.0,
+      "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Pre-earthquake MCS and post-earthquake survey profiles — Maule offshore",
+        "lat_start": -36.0,
+        "lon_start": -74.0,
+        "lat_end": -38.0,
+        "lon_end": -73.0,
+        "length_km": 250
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (post-Maule survey, 2010) and pre-earthquake GEOMAR cruises",
+    "year_acquired": 2010,
+    "source_type": "sub-bottom profiler (Parasound) and multibeam",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "bathymetry",
+      "name": "Pre/Post Maule Earthquake Comparative Bathymetry — Central Chile 36°–38°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Pre-earthquake (legacy GEOMAR) and post-earthquake (R/V SONNE SO210, 2010) multibeam bathymetry compared to detect submarine landslides from 2010 Maule earthquake. [SO210 cruise datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Parasound Sub-Bottom Profiles — Maule Earthquake Zone",
+      "classification": "RAW",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Parasound sub-bottom profiler data acquired post-Maule earthquake to image shallow stratigraphy around slide features"
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Legacy MCS Profiles — Maule Rupture Zone",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Pre-earthquake seismic reflection data from the Maule rupture zone used to characterize pre-existing slide features"
+    }
+  ],
+  "_data_note": "Post-Maule earthquake survey (R/V SONNE SO210, 2010). Comparative bathymetry study. Primarily bathymetry and subbottom; MCS secondary.",
+  "processing": {
+    "classification": "RAW",
+    "summary": "Pre- and post-earthquake multibeam bathymetric datasets offshore central Chile (36°–38°S) were compared to assess submarine landsliding from the 2010 Maule earthquake. Parasound sub-bottom profiler data and gravity cores from the post-earthquake R/V SONNE SO210 cruise supplement the bathymetric comparison. No new large-scale MCS seismic survey conducted; study focuses on comparative bathymetry.",
+    "workflow": [
+      "1. Pre-earthquake bathymetry gridding from legacy GEOMAR cruises",
+      "2. Post-earthquake survey (SO210) bathymetry processing",
+      "3. Difference map calculation",
+      "4. Parasound sub-bottom profiling interpretation",
+      "5. Core description and correlation with seismic features"
+    ],
+    "software": [
+      "GMT",
+      "Caris HIPS/SIPS"
+    ],
+    "notes": "Primarily bathymetric study; seismic role is secondary context"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Marine Geology paper; behind paywall. Post-Maule R/V SONNE SO210 data likely at MGDS. Abstract from survey_results.json."
+}

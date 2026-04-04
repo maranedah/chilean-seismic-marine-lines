@@ -1,0 +1,117 @@
+{
+  "id": "contreras-reyes_2015_central_chile_gji",
+  "title": "Structure and tectonics of the central Chilean margin (31°–33°S): implications for subduction erosion and shallow crustal seismicity",
+  "authors": [
+    "Contreras-Reyes, Eduardo",
+    "Ruiz, Javier A.",
+    "Becerra, Juan",
+    "Kopp, Heidrun",
+    "Reichert, Christian",
+    "Maksymowicz, Andrei",
+    "Arriagada, César"
+  ],
+  "year": 2015,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1093/gji/ggv309",
+  "url": "https://academic.oup.com/gji/article/203/2/776/574531",
+  "open_access_url": "https://academic.oup.com/gji/article-pdf/203/2/776/17367650/ggv309.pdf",
+  "abstract": "Using wide-angle seismic refraction and multichannel seismic (MCS) reflection data at 31°–33°S, the team identified large-scale crustal thinning and long-term subsidence of the submarine forearc caused by subduction erosion processes. A trenchward dipping normal scarp marks the upper-to-middle continental slope transition. A prominent lateral velocity contrast propagates deep into the continental crust defining a major lateral seismic discontinuity associated with the collision of the Juan Fernández Ridge. The central Chilean margin shows a heterogeneous structure strongly controlled by the subduction of the Juan Fernández Ridge at ~33°S.",
+  "keywords": [
+    "wide-angle seismic",
+    "multichannel seismic reflection",
+    "central Chile",
+    "31°–33°S",
+    "subduction erosion",
+    "Juan Fernández Ridge",
+    "crustal structure"
+  ],
+  "location": {
+    "latitude": -32.0,
+    "longitude": -72.0,
+    "city": "Valparaíso",
+    "region": "Región de Valparaíso",
+    "country": "Chile",
+    "description": "Offshore central Chile between 31°S and 33°S, Juan Fernández Ridge collision zone",
+    "bounding_box": {
+      "lat_min": -33.5,
+      "lat_max": -30.5,
+      "lon_min": -74.5,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Wide-angle profile at ~31°S",
+        "lat_start": -31.0,
+        "lon_start": -73.5,
+        "lat_end": -31.0,
+        "lon_end": -70.5,
+        "length_km": null
+      },
+      {
+        "name": "Wide-angle profile at ~32.5°S",
+        "lat_start": -32.5,
+        "lon_start": -73.5,
+        "lat_end": -32.5,
+        "lon_end": -70.5,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Wide-angle OBS seismic refraction profiles (31°–33°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Wide-angle seismic refraction data recorded on OBS instruments along profiles at 31°–33°S offshore central Chile. Used for 2D P-wave tomography.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "Multichannel seismic reflection profiles (31°–33°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "MCS reflection data acquired offshore central Chile between 31°S and 33°S, imaging forearc structure and subduction erosion.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Combined wide-angle OBS refraction and multichannel seismic reflection data from offshore central Chile (31°–33°S) processed to produce velocity and structural models. Wide-angle data processed through 2D travel time tomography. MCS data processed through standard stack and migration workflow. Results integrated to characterize the crustal structure and document large-scale subduction erosion.",
+    "workflow": [
+      "1. Wide-angle OBS data: phase picking (Pg, PmP, Pn)",
+      "2. 2D P-wave travel time tomography",
+      "3. MCS: geometry assignment, velocity analysis",
+      "4. MCS: NMO, stack, post-stack migration",
+      "5. Gravity modeling as additional constraint",
+      "6. Interpretation: crustal thinning, erosion quantification"
+    ],
+    "software": [],
+    "notes": "Bronze open access PDF available via Oxford Academic. Study covers Juan Fernández Ridge collision zone at ~33°S."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Bronze open access PDF available at Oxford Academic. Abstract partially reconstructed from survey snippet and Semantic Scholar metadata — publisher elided abstract from API response. Cruise details not confirmed; Sonne vessel inferred from GEOMAR authorship and regional survey history."
+}

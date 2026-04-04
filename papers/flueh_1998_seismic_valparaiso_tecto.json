@@ -1,0 +1,144 @@
+{
+  "id": "flueh_1998_seismic_valparaiso_tecto",
+  "title": "Seismic investigation of the continental margin off- and onshore Valparaiso, Chile",
+  "authors": [
+    "Flueh, Ernst R.",
+    "Vidal, N.",
+    "Ranero, César R.",
+    "Hojka, A.",
+    "von Huene, Roland",
+    "Bialas, Joerg",
+    "Hinz, K.",
+    "Cordoba, D.",
+    "Dañobeitia, J.J.",
+    "Zelt, C."
+  ],
+  "year": 1998,
+  "journal": "Tectonophysics",
+  "doi": "10.1016/S0040-1951(97)00269-2",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040195197002692",
+  "open_access_url": null,
+  "abstract": "Seismic investigations of the continental margin off- and onshore Valparaiso, Chile were carried out during the CINCA project in 1995. Wide-angle reflection and refraction data were acquired using Ocean Bottom Hydrophones (OBH) and ocean-bottom seismometers along profiles across the margin in the Valparaiso region. The velocity structure reveals the geometry of the subducting Nazca plate and the overriding South American continental crust in the Juan Fernández Ridge collision zone.",
+  "keywords": [
+    "seismic refraction",
+    "OBH",
+    "CINCA95",
+    "SO104",
+    "Valparaiso",
+    "Juan Fernández Ridge",
+    "wide-angle",
+    "amphibious",
+    "central Chile",
+    "32°S"
+  ],
+  "location": {
+    "latitude": -32.5,
+    "longitude": -72.0,
+    "city": "Valparaíso",
+    "region": "Región de Valparaíso",
+    "country": "Chile",
+    "description": "Continental margin off- and onshore Valparaiso, central Chile at ~32°S; Juan Fernández Ridge collision zone",
+    "bounding_box": {
+      "lat_min": -33.5,
+      "lat_max": -31.5,
+      "lon_min": -74.0,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 Profile 2 — Valparaiso OBH/OBS line (~32°S)",
+        "lat_start": -32.5,
+        "lon_start": -74.0,
+        "lat_end": -32.5,
+        "lon_end": -70.0,
+        "length_km": 420
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104, CINCA95, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "obh",
+      "name": "CINCA95 OBH Wide-Angle Refraction Data — Valparaiso ~32°S",
+      "classification": "RAW",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Ocean Bottom Hydrophone (OBH) wide-angle refraction and reflection data from CINCA95 (SO104) at ~32°S; reveals Nazca plate geometry and overriding continental crust at the Juan Fernández Ridge collision zone. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 MCS Reflection Profiles — Valparaiso Region",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Coincident MCS reflection profiles providing near-vertical imaging to complement the wide-angle OBH data at Valparaiso. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "CINCA95 Swath Bathymetry — Central Chile ~32°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SO104 CINCA95 cruise in the Valparaiso margin region. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "gravity",
+      "name": "CINCA95 Gravity — Central Chile ~32°S",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Shipboard gravity data from SO104 cruise offshore Valparaiso"
+    }
+  ],
+  "_data_note": "CINCA95 (SO104) data accessible via MGDS. This is a foundational paper for the Valparaiso/Juan Fernández Ridge collision zone using OBH instruments.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Wide-angle P-wave reflection and refraction data from OBH instruments deployed along an amphibious profile at ~32°S (CINCA95 SO104 cruise) were processed using forward and inverse ray-tracing to derive 2D velocity models. The models reveal the geometry of the subducting Nazca plate and the structure of the overriding continental crust in the Juan Fernández Ridge collision zone near Valparaiso.",
+    "workflow": [
+      "1. OBH data processing and timing correction",
+      "2. Instrument relocation from direct water wave",
+      "3. P-wave travel-time picking",
+      "4. 2D forward ray-tracing modeling",
+      "5. Tomographic refinement",
+      "6. Gravity modeling for constraint"
+    ],
+    "software": [
+      "RAYINVR"
+    ],
+    "notes": "Amphibious profile with marine OBH and land stations; companion to Zelt et al. 1999 3D tomography paper using same dataset"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Tectonophysics paper, behind paywall. CINCA95 SO104 data accessible via MGDS. Foundational CINCA paper for the Valparaiso/JFR collision zone."
+}

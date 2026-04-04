@@ -1,0 +1,168 @@
+{
+  "id": "olsen_2020_thick_sediment_epsl",
+  "title": "Thick, strong sediment subduction along south-central Chile and its role in great earthquakes",
+  "authors": [
+    "Olsen, Kelly M.",
+    "Bangs, Nathan L.",
+    "Tréhu, Anne M.",
+    "Han, Shuoshuo",
+    "Arnulf, Adrien",
+    "Contreras-Reyes, Eduardo"
+  ],
+  "year": 2020,
+  "journal": "Earth and Planetary Science Letters",
+  "doi": "10.1016/j.epsl.2020.116195",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012821X20301382",
+  "open_access_url": "https://www.sciencedirect.com/science/article/am/pii/S0012821X20301382",
+  "abstract": "Using a seismic survey conducted in 2017 with a 15.15-km receiver array, shallow structures along south-central Chile are imaged over ~1000 km of margin length. Relative to other sediment-dominated subduction zones where sediment is typically accreted at the toe, an unusually large percentage of the thick trench sediments are consistently subducted beneath the slope. The well-drained, strong sediments are linked to the occurrence of great earthquakes in this region. The subduction of the strong, well-drained, thick sediment layer creates favorable conditions for a smooth plate interface that generates particularly powerful earthquakes, distinguishing this margin from other subduction zones globally.",
+  "keywords": [
+    "sediment subduction",
+    "seismic reflection",
+    "south-central Chile",
+    "33°–46°S",
+    "15.15 km streamer",
+    "great earthquakes",
+    "accretionary prism",
+    "MGL1701",
+    "CEVICHE",
+    "2017 survey",
+    "plate interface"
+  ],
+  "location": {
+    "latitude": -40.0,
+    "longitude": -75.0,
+    "city": "Multiple (Valparaíso to Puerto Montt)",
+    "region": "Central and South Chile",
+    "country": "Chile",
+    "description": "South-central Chile margin from ~30°S to 44°S, ~1000 km long seismic survey conducted in Jan–Feb 2017 (MGL1701 CEVICHE)",
+    "bounding_box": {
+      "lat_min": -44.0,
+      "lat_max": -30.0,
+      "lon_min": -78.0,
+      "lon_max": -71.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MGL1701 CEVICHE 2017 South-central Chile Survey (~1000 km margin-parallel and trench-perpendicular profiles)",
+        "lat_start": -30.0,
+        "lon_start": -74.5,
+        "lat_end": -44.0,
+        "lon_end": -76.5,
+        "length_km": 1000
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Marcus G. Langseth (MGL1701 — CEVICHE cruise, Jan–Feb 2017)",
+    "year_acquired": 2017,
+    "source_type": "airgun array (36 airguns, 6,600 in³)",
+    "source_volume_cui": 6600,
+    "streamer_length_m": 15150,
+    "channel_count": 1212,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "MGL1701 (CEVICHE) MCS Reflection Data — South-central Chile 2017",
+      "classification": "PROCESSED",
+      "format": "SEG-Y / SEGD (raw shots at MGDS)",
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
+      "doi": "10.1594/IEDA/324399",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 -A '*.segd,*.segy' 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399'",
+      "description": "MCS reflection shot data from the CEVICHE experiment (MGL1701, Jan–Feb 2017) along ~1000 km of south-central Chile margin (30°–44°S). 1212-channel, 15.1-km streamer, targeting 2015 Illapel, 2010 Maule, and 1960 Valdivia earthquake source regions. Records consistent subduction of thick trench sediments. Cruise DOI: 10.7284/907175.",
+      "data_type": "seismic_reflection_mcs"
+    },
+    {
+      "name": "MGL1701 Bathymetry:Swath (Multibeam EM122) — CEVICHE cruise 2017",
+      "classification": "RAW",
+      "format": "Kongsberg .all (MBSystem)",
+      "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123885",
+      "doi": "10.7284/123885",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": 201.3,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1701/fileset/123885",
+      "description": "Raw multibeam swath bathymetry data (1,753 files, ~201 GB, Kongsberg EM122) from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile 30°–44°S. Released August 2022.",
+      "data_type": "bathymetry"
+    },
+    {
+      "name": "MGL1701 Gravity (BGM-3 Gravimeter) — CEVICHE cruise 2017",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123893",
+      "doi": "10.7284/907175",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1701/fileset/123893",
+      "description": "Raw underway gravimeter data from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile.",
+      "data_type": "gravity"
+    },
+    {
+      "name": "MGL1701 Magnetics (G-882 Magnetometer) — CEVICHE cruise 2017",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123887",
+      "doi": "10.7284/907175",
+      "repository": "MGDS / RVData (NOAA:NCEI)",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1701/fileset/123887",
+      "description": "Raw magnetometer data from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile.",
+      "data_type": "magnetics"
+    },
+    {
+      "name": "MGL1701 Navigation/Positions — CEVICHE cruise 2017",
+      "classification": "RAW",
+      "format": "R2R:Nav",
+      "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/603741",
+      "doi": "10.7284/907175",
+      "repository": "MGDS / RVData (R2R)",
+      "size_gb": 0.253,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1701/fileset/603741",
+      "description": "Primary navigation (GPS positions, 253 MB) from the 2017 CEVICHE (MGL1701) cruise, archived via R2R.",
+      "data_type": "navigation"
+    },
+    {
+      "name": "MGL1701 Seismic Navigation — Shot Time (ASCII, Processed) — CEVICHE cruise 2017",
+      "classification": "PROCESSED",
+      "format": "ASCII",
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24398",
+      "doi": "10.1594/IEDA/324398",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": "wget -r -np -nH --cut-dirs=4 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24398'",
+      "description": "Processed seismic shot time navigation data from the MGL1701 CEVICHE cruise, offshore south-central Chile. For use when processing the MCS reflection data.",
+      "data_type": "navigation"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multichannel seismic reflection data acquired in 2017 along ~1000 km of south-central Chile margin (30°–44°S) during MGL1701 CEVICHE cruise, using a 15.15 km long receiver array (1212 channels, 6600 in³ source). Standard MCS processing applied including multiple suppression, velocity analysis, NMO, stack, and post-stack migration. The long streamer provides extended offset and improved imaging at depth. Results reveal consistent subduction of thick trench sediments rather than frontal accretion, providing a structural explanation for the region's propensity for great earthquakes.",
+    "workflow": [
+      "1. Data acquisition (MGL1701 CEVICHE, Jan–Feb 2017, 15.15 km streamer)",
+      "2. Navigation processing",
+      "3. Geometry assignment",
+      "4. Bandpass filtering and noise attenuation",
+      "5. Surface-related multiple elimination (SRME)",
+      "6. Velocity analysis",
+      "7. NMO correction",
+      "8. CDP stack",
+      "9. Post-stack time migration",
+      "10. Interpretation of accretionary vs. erosive processes"
+    ],
+    "software": [],
+    "notes": "Bronze open access manuscript available. Exceptional dataset: 15.15 km streamer covering ~1000 km of south-central Chile in 2017. UTIG-OSU-Chile collaboration. Cruise MGL1701 (CEVICHE) confirmed; DOI 10.7284/907175. Note: a prior version of this record incorrectly listed the MGL1610 MGDS URL for this 2017 dataset — corrected."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Bronze open access manuscript available via ScienceDirect. Abstract confirmed from Semantic Scholar summary. 2017 cruise confirmed as MGL1701 (CEVICHE project, Nathan Bangs + Anne Trehu PIs, Jan 10–Feb 18 2017, cruise DOI 10.7284/907175). 15.15 km streamer length explicitly stated in paper. Previously the data URL incorrectly pointed to MGL1610 — corrected to MGL1701 resources. Arnulf co-authorship confirms UT Institute for Geophysics involvement."
+}

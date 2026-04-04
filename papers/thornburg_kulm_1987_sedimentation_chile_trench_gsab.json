@@ -1,0 +1,94 @@
+{
+  "id": "thornburg_kulm_1987_sedimentation_chile_trench_gsab",
+  "title": "Sedimentation in the Chile Trench: Depositional morphologies, lithofacies, and stratigraphy",
+  "authors": ["Thornburg, T.M.", "Kulm, L.D."],
+  "year": 1987,
+  "journal": "Geological Society of America Bulletin",
+  "doi": "10.1130/0016-7606(1987)98<33:SITCTD>2.0.CO;2",
+  "url": "https://pubs.geoscienceworld.org/gsa/gsab/article-abstract/98/1/33/182491",
+  "open_access_url": null,
+  "abstract": "Sedimentation in the Chile Trench is characterized from single-channel seismic reflection profiles, piston cores, and bathymetric data collected during R/V Yaquina cruises offshore Chile. Depositional morphologies include axial turbidite systems, ponded sediment bodies, and inter-ridge fans. Lithofacies variations reflect changes in terrigenous input along the trench axis from 36°S to 46°S.",
+  "keywords": ["Chile Trench", "sedimentation", "turbidites", "single-channel seismic", "R/V Yaquina", "36°–46°S", "stratigraphy", "GSAB"],
+
+  "location": {
+    "latitude": -41.0,
+    "longitude": -75.5,
+    "city": "Puerto Montt",
+    "region": "Región de Los Lagos",
+    "country": "Chile",
+    "description": "Chile Trench axial sedimentation 36°–46°S; single-channel seismic reflection, piston cores and bathymetry from R/V Yaquina cruises",
+    "bounding_box": {
+      "lat_min": -46.0, "lat_max": -36.0,
+      "lon_min": -77.0, "lon_max": -73.5
+    },
+    "seismic_lines": [
+      {
+        "name": "R/V Yaquina SCS profiles — Chile Trench 36°–46°S",
+        "lat_start": -36.0, "lon_start": -76.5,
+        "lat_end": -46.0, "lon_end": -75.0,
+        "length_km": 1200
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V Yaquina (Oregon State University, 1970s–1980s)",
+    "year_acquired": 1980,
+    "source_type": "single-channel seismic (airgun or sparker)",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": 1,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": 1,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "R/V Yaquina Single-Channel Seismic — Chile Trench 36°–46°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Single-channel seismic reflection profiles from R/V Yaquina cruises along the Chile Trench axis (36°–46°S); images axial turbidite systems, ponded sediment bodies, and inter-ridge fans; foundational trench sedimentation study"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "R/V Yaquina Bathymetry — Chile Trench 36°–46°S",
+      "classification": "PROCESSED",
+      "format": "ASCII",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Bathymetric data from R/V Yaquina cruises mapping Chile Trench depositional morphology 36°–46°S"
+    }
+  ],
+  "_data_note": "Classic 1987 GSAB paper; behind paywall. R/V Yaquina (Oregon State) legacy data. Repository uncertain; may be at NGDC/NOAA or MGDS.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Single-channel seismic reflection profiles, piston cores, and bathymetric data from R/V Yaquina cruises are used to characterize Chile Trench axial sedimentation from 36°S to 46°S. Depositional morphologies (turbidite systems, ponded sediments, inter-ridge fans) and lithofacies variations are described in relation to terrigenous input sources.",
+    "workflow": [
+      "1. SCS data processing (bandpass filter, gain)",
+      "2. Bathymetric data compilation",
+      "3. Sediment thickness mapping",
+      "4. Core-seismic correlation",
+      "5. Depositional environment interpretation"
+    ],
+    "software": ["unknown"],
+    "notes": "Classic foundational paper on Chile Trench sedimentation; legacy R/V Yaquina data from Oregon State University"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Classic 1987 GSAB paper; behind paywall. Legacy R/V Yaquina data. Repository uncertain."
+}

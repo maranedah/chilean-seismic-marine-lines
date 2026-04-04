@@ -1,0 +1,97 @@
+{
+  "id": "storch_2021_iquique_seismic_images",
+  "title": "Seismic images of the Northern Chilean subduction zone at 19°40′S, prior to the 2014 Iquique earthquake",
+  "authors": [
+    "Storch, Ina",
+    "Buske, Stefan",
+    "Victor, Pia",
+    "Oncken, Onno"
+  ],
+  "year": 2021,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1093/gji/ggab035",
+  "url": "https://academic.oup.com/gji/article/225/2/1048/6139805",
+  "open_access_url": "https://gfzpublic.gfz-potsdam.de/pubman/item/item_5005786_1/component/file_5005799/5005786.pdf",
+  "abstract": "Multichannel seismic data from the CINCA95 experiment acquired in 1995 along the Northern Chilean subduction zone are reprocessed using pre-stack depth migration (PSDM) to produce detailed depth images of the megathrust interface down to approximately 16 km depth. The depth-migrated seismic image reveals significantly varying interplate reflectivity caused by fluid-rich sediments in grabens and half-grabens on the subducting Nazca plate. The continental wedge divides into two distinct domains: a frontal unit with back-rotated splay faults, and a landward unit separated by a large splay fault. This megasplay fault separates distinct tectonic units with differing seismicity patterns that illuminate interplate locking mechanisms beneath the continental slope. The study focuses on the central part of the 2014 Iquique earthquake (Mw 8.1) rupture zone.",
+  "keywords": [
+    "CINCA95",
+    "pre-stack depth migration",
+    "northern Chile",
+    "Iquique earthquake",
+    "subduction zone",
+    "interplate reflectivity",
+    "splay fault",
+    "seismic reprocessing"
+  ],
+  "location": {
+    "latitude": -19.67,
+    "longitude": -70.8,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "Offshore northern Chile at 19°40′S, site of the 2014 Mw 8.1 Iquique earthquake",
+    "bounding_box": {
+      "lat_min": -20.5,
+      "lat_max": -19.0,
+      "lon_min": -72.5,
+      "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 Profile at 19°40′S",
+        "lat_start": -19.67,
+        "lon_start": -72.0,
+        "lat_end": -19.67,
+        "lon_end": -70.2,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104 — CINCA95 cruise, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "CINCA95 Multichannel Seismic Reflection Data (reprocessed)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep / internal archive",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "CINCA95 multichannel seismic data acquired in 1995 offshore northern Chile, reprocessed in this study using pre-stack depth migration (PSDM) to image the subduction interface at 19°40′S to ~16 km depth.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Legacy CINCA95 multichannel seismic data (1995) were reprocessed with modern pre-stack depth migration (PSDM). The workflow involved full reprocessing from raw shot gathers through velocity model building to produce a depth-migrated image with significantly improved resolution compared to original processing. The PSDM workflow reveals subducting plate topography, the plate interface reflectivity variations, and major splay faults in the continental wedge to approximately 16 km depth.",
+    "workflow": [
+      "1. Data loading and quality control of CINCA95 MCS records",
+      "2. Trace editing and noise removal",
+      "3. Bandpass filtering",
+      "4. Geometry assignment and common-midpoint (CMP) sorting",
+      "5. Velocity analysis (tomographic model building)",
+      "6. Surface-consistent deconvolution",
+      "7. Multiple suppression (surface-related multiple elimination)",
+      "8. Pre-stack depth migration (PSDM)",
+      "9. Depth image interpretation"
+    ],
+    "software": [],
+    "notes": "Reprocessing of 1995 CINCA95 data. Original data acquired during SONNE cruise SO104. Pre-stack depth migration used for improved imaging."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Paper is open access via GFZ publication server. Abstract confirmed from OpenAlex and GFZ repository. CINCA95 data are archival (1995); not publicly deposited in standard repositories but held at GEOMAR/GFZ. Acquisition vessel SO104 (SONNE) inferred from CINCA95 project documentation."
+}

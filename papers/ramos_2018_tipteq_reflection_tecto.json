@@ -1,0 +1,95 @@
+{
+  "id": "ramos_2018_tipteq_reflection_tecto",
+  "title": "Reflection seismic images and amplitude ratio modelling of the Chilean subduction zone at 38.25°S",
+  "authors": [
+    "Ramos, C.",
+    "Mechie, J.",
+    "Stiller, M."
+  ],
+  "year": 2018,
+  "journal": "Tectonophysics",
+  "doi": "10.1016/j.tecto.2018.10.007",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040195118303275",
+  "open_access_url": "https://gfzpublic.gfz-potsdam.de/pubman/item/item_3669894_3/component/file_3684892/3669894.pdf",
+  "abstract": "Near-vertical reflection data from the TIPTEQ amphibious experiment at 38.25°S are used to examine structural properties within the Chilean subduction zone where a magnitude 9.5 earthquake occurred in 1960. The study employed seismic reflection imaging techniques and the reflectivity method to model traveltimes and amplitude ratios. The analysis revealed that the continental crust contains highly reflective horizontal and dipping events. The Lanalhue Fault Zone is imaged at shallow depths for the first time in this study, which also constrains the seismic velocity structure. The results indicate no significant fluid accumulation above the plate interface in this region.",
+  "keywords": [
+    "TIPTEQ",
+    "reflection seismic",
+    "38.25°S",
+    "Chile subduction zone",
+    "Lanalhue Fault Zone",
+    "amplitude modelling",
+    "1960 earthquake",
+    "reflectivity method"
+  ],
+  "location": {
+    "latitude": -38.25,
+    "longitude": -73.8,
+    "city": "Arauco / Lebu",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Onshore-offshore TIPTEQ profile at 38.25°S, site of the 1960 Mw 9.5 Valdivia earthquake",
+    "bounding_box": {
+      "lat_min": -39.0,
+      "lat_max": -37.5,
+      "lon_min": -76.5,
+      "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "TIPTEQ Near-vertical Reflection Profile (38.25°S)",
+        "lat_start": -38.25,
+        "lon_start": -76.0,
+        "lat_end": -38.25,
+        "lon_end": -72.5,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO181 — TIPTEQ cruise, 2004/2005)",
+    "year_acquired": 2004,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "TIPTEQ Near-vertical Seismic Reflection Data (38.25°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GFZ Potsdam",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Near-vertical incidence seismic reflection data from TIPTEQ experiment at 38.25°S. Used for reflection imaging and amplitude ratio modelling to image the Lanalhue Fault Zone and plate interface reflectivity.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Near-vertical reflection seismic data from the TIPTEQ amphibious experiment at 38.25°S processed to produce reflection images of the Chilean subduction zone. Processing included standard MCS workflow followed by depth migration. Additionally, amplitude ratio modelling using the reflectivity method was applied to quantify physical properties at reflective horizons. The Lanalhue Fault Zone is imaged at shallow depths for the first time.",
+    "workflow": [
+      "1. Data loading of TIPTEQ near-vertical reflection records",
+      "2. Geometry assignment",
+      "3. Bandpass filtering",
+      "4. Velocity analysis",
+      "5. NMO and CDP stacking",
+      "6. Post-stack depth migration",
+      "7. Reflectivity method modelling for amplitude ratio analysis",
+      "8. Interpretation of Lanalhue Fault Zone and plate interface"
+    ],
+    "software": [],
+    "notes": "GFZ Potsdam green open access PDF available. Mechie and Stiller are GFZ Potsdam researchers. Uses TIPTEQ data (SO181). First seismic image of Lanalhue Fault Zone."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Green open access PDF available at GFZ publication server. Abstract reconstructed from Semantic Scholar summary and survey snippet. TIPTEQ SO181 cruise confirmed. GFZ holds TIPTEQ data archive."
+}

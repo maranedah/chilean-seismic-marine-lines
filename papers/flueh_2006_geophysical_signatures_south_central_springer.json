@@ -1,0 +1,124 @@
+{
+  "id": "flueh_2006_geophysical_signatures_south_central_springer",
+  "title": "Geophysical Signatures and Active Tectonics at the South-Central Chilean Margin",
+  "authors": [
+    "Flueh, Ernst R.",
+    "Voss, N.K.",
+    "Krawczyk, C.M.",
+    "Oncken, O.",
+    "Koulakov, I.",
+    "Schick, R.",
+    "Stiller, M."
+  ],
+  "year": 2006,
+  "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
+  "doi": "10.1007/978-3-540-48684-8_8",
+  "url": "https://link.springer.com/chapter/10.1007/978-3-540-48684-8_8",
+  "open_access_url": null,
+  "abstract": "The ISSA 2000 and SPOC 2001 onshore and offshore projects surveyed the Chilean margin between 36° and 40°S, including the location of the 1960 Valdivia earthquake. The chapter discusses geophysical and active-source seismic data acquired offshore and onshore in the south-central Chilean margin, including reflection and refraction profiles from RV Sonne cruise SO161.",
+  "keywords": [
+    "south-central Chile",
+    "SPOC",
+    "SO161",
+    "ISSA",
+    "36°–40°S",
+    "seismic reflection",
+    "seismic refraction",
+    "Valdivia earthquake",
+    "amphibious"
+  ],
+  "location": {
+    "latitude": -38.0,
+    "longitude": -74.0,
+    "city": "Valdivia",
+    "region": "Región de Los Ríos",
+    "country": "Chile",
+    "description": "South-central Chilean margin 36°–40°S; SPOC (SO161) amphibious survey and ISSA 2000 land survey",
+    "bounding_box": {
+      "lat_min": -40.0,
+      "lat_max": -36.0,
+      "lon_min": -77.0,
+      "lon_max": -71.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC SO161 MCS and OBH profiles — 36°–40°S",
+        "lat_start": -36.0,
+        "lon_start": -76.0,
+        "lat_end": -40.0,
+        "lon_end": -74.0,
+        "length_km": 500
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161, SPOC 2001) and land stations (ISSA 2000)",
+    "year_acquired": 2001,
+    "source_type": "airgun array (offshore) and explosive shots (onshore)",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "SPOC SO161 MCS Reflection Profiles — South-Central Chile 36°–40°S",
+      "classification": "SEMI_PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multichannel seismic reflection profiles from SPOC SO161 across the south-central Chilean margin (36°–40°S) at the 1960 Valdivia earthquake zone. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "SPOC SO161 OBH/OBS Wide-Angle Data — South-Central Chile",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Wide-angle OBH and OBS refraction data from SPOC SO161 providing velocity models for the south-central Chile margin. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "SPOC SO161 Swath Bathymetry — South-Central Chile",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SO161 SPOC cruise in the south-central Chilean margin region. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "SPOC (SO161) data accessible via MGDS. ISSA 2000 land data not in marine repositories.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Review chapter presenting geophysical data synthesis from the SPOC 2001 (SO161) offshore survey and ISSA 2000 onshore survey for the south-central Chilean margin (36°–40°S). Includes MCS reflection and OBH/OBS refraction profiles from the SPOC cruise combined with land-based explosion seismology and seismicity data. Covers the 1960 Valdivia earthquake rupture zone.",
+    "workflow": [
+      "1. Data compilation from SPOC and ISSA projects",
+      "2. Synthesis and geophysical interpretation"
+    ],
+    "software": [
+      "GMT",
+      "unknown"
+    ],
+    "notes": "Springer review chapter; SPOC SO161 data accessible via MGDS"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Springer book chapter; behind paywall. SPOC SO161 data at MGDS. ISSA 2000 land data not in public marine repositories."
+}

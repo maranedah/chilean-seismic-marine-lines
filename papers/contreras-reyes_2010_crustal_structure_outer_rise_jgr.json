@@ -1,0 +1,81 @@
+{
+  "id": "contreras-reyes_2010_crustal_structure_outer_rise_jgr",
+  "title": "Crustal structure beneath the central Chilean subduction zone from wide-angle P-wave modelling: Seismotectonic and geodynamic implications",
+  "authors": ["Contreras-Reyes, Eduardo", "Grevemeyer, Ingo", "Flueh, Ernst R.", "Reichert, Christian"],
+  "year": 2008,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1111/j.1365-246X.2008.03823.x",
+  "url": "https://academic.oup.com/gji/article/175/2/641/2192534",
+  "open_access_url": null,
+  "abstract": "Wide-angle seismic modelling of P-wave data from OBS/OBH instruments deployed along profiles crossing the central Chilean subduction zone (~36°–39°S) reveals the crustal structure of the forearc, continental shelf, and incoming oceanic plate. The velocity models image the subducting Nazca plate, crustal accretionary prism, and continental basement. Results constrain the seismotectonic framework and geodynamic processes of the SPOC study area.",
+  "keywords": ["central Chile", "36°–39°S", "SPOC", "OBS/OBH", "wide-angle", "P-wave modelling", "crustal structure", "outer rise", "GJI"],
+
+  "location": {
+    "latitude": -37.5,
+    "longitude": -74.5,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Central Chilean subduction zone ~36°–39°S; wide-angle P-wave velocity models from SPOC OBS/OBH profiles",
+    "bounding_box": {
+      "lat_min": -39.0, "lat_max": -36.0,
+      "lon_min": -76.5, "lon_max": -72.5
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC OBS/OBH wide-angle profiles — Central Chile ~36°–39°S",
+        "lat_start": -36.0, "lon_start": -76.5,
+        "lat_end": -39.0, "lon_end": -73.0,
+        "length_km": 450
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (SPOC SO161, 2001)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "SPOC OBS/OBH Wide-Angle Data — Central Chile ~36°–39°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Wide-angle P-wave OBS/OBH data from SPOC SO161 cruise imaging crustal structure of forearc, continental shelf, and incoming oceanic plate at ~36°–39°S; velocity models constrain seismotectonic framework"
+    }
+  ],
+  "_data_note": "GJI paper; behind paywall. SPOC SO161 data at MGDS. Repository not confirmed.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Wide-angle P-wave modelling of SPOC OBS/OBH data from ~36°–39°S provides crustal velocity structure of the central Chilean subduction zone. Velocity models image the subducting Nazca plate, accretionary prism, and continental basement, constraining seismotectonic and geodynamic interpretations.",
+    "workflow": [
+      "1. OBS/OBH data processing and quality control",
+      "2. P-wave travel-time picking",
+      "3. Forward ray-tracing modelling (RAYINVR)",
+      "4. Resolution analysis",
+      "5. Seismotectonic interpretation"
+    ],
+    "software": ["RAYINVR", "unknown"],
+    "notes": "GJI paper using SPOC SO161 wide-angle data; related to Contreras-Reyes et al. 2007 and 2008 studies"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "GJI paper; behind paywall. SPOC SO161 OBS/OBH data. Repository not confirmed."
+}

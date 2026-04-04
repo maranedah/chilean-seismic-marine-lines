@@ -1,0 +1,114 @@
+{
+  "id": "sallaras_2005_antofagasta_erosion",
+  "title": "Structure and tectonics of the erosional convergent margin off Antofagasta, north Chile (23°30′S)",
+  "authors": [
+    "Sallarès, Valentí",
+    "Ranero, César R."
+  ],
+  "year": 2005,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2004JB003418",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2004JB003418",
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2004JB003418",
+  "abstract": "Coincident wide-angle seismic refraction and near-vertical seismic profiling, combined with gravity data, were used to study the Antofagasta sector (23°30′S) of the north Chilean convergent continental margin where subduction erosion has dominated the evolution since at least the Mesozoic. A 2-D velocity field of the overriding and subducting plates was obtained using joint refraction and reflection travel time tomography. Gravity and velocity models indicate the overriding plate is mainly composed of arc-type igneous basement. The study is based on data from the CINCA (Convergent Subduction off North Chile and Antofagasta) experiment.",
+  "keywords": [
+    "CINCA",
+    "wide-angle seismic",
+    "near-vertical seismic",
+    "Antofagasta",
+    "23°30′S",
+    "subduction erosion",
+    "north Chile",
+    "travel time tomography",
+    "joint refraction-reflection tomography"
+  ],
+  "location": {
+    "latitude": -23.5,
+    "longitude": -71.0,
+    "city": "Antofagasta",
+    "region": "Región de Antofagasta",
+    "country": "Chile",
+    "description": "Offshore Antofagasta at 23°30′S, northern Chilean convergent margin, CINCA experiment",
+    "bounding_box": {
+      "lat_min": -24.5,
+      "lat_max": -22.5,
+      "lon_min": -72.5,
+      "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA Wide-angle Profile at 23°30′S",
+        "lat_start": -23.5,
+        "lon_start": -72.5,
+        "lat_end": -23.5,
+        "lon_end": -70.0,
+        "length_km": null
+      },
+      {
+        "name": "CINCA Near-vertical MCS Profile at 23°30′S",
+        "lat_start": -23.5,
+        "lon_start": -72.5,
+        "lat_end": -23.5,
+        "lon_end": -70.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104 — CINCA experiment, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "CINCA Wide-angle OBS seismic refraction data (23°30′S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Wide-angle seismic refraction data from the CINCA experiment (1995) at 23°30′S offshore Antofagasta. OBS instruments recorded airgun shots for joint refraction-reflection travel time tomography.",
+      "data_type": "seismic_refraction_obs"
+    },
+    {
+      "name": "CINCA Near-vertical MCS reflection data (23°30′S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Near-vertical incidence MCS reflection profiles from CINCA experiment at 23°30′S offshore Antofagasta, coincident with wide-angle profile.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Coincident wide-angle seismic refraction and near-vertical MCS reflection data from the CINCA experiment (1995) at 23°30′S offshore Antofagasta processed to produce a 2D velocity model. Joint refraction and reflection travel time tomography used to obtain the velocity field. Gravity forward modelling applied as additional constraint. The resulting models reveal arc-type igneous basement of the overriding plate and document long-term subduction erosion.",
+    "workflow": [
+      "1. CINCA OBS deployment and airgun shooting (1995)",
+      "2. Wide-angle travel time picking (Pg, PmP, Pn phases)",
+      "3. Near-vertical MCS: geometry, velocity analysis, stack",
+      "4. Joint refraction-reflection travel time tomography",
+      "5. 2D gravity forward modelling",
+      "6. Integration and interpretation"
+    ],
+    "software": [],
+    "notes": "Foundational paper for north Chile subduction zone seismic structure. CINCA experiment conducted in 1995 by GEOMAR aboard R/V SONNE SO104."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Bronze open access PDF available via Wiley. Abstract reconstructed from survey snippet. CINCA experiment data from 1995 held at GEOMAR; not publicly deposited in standard repositories. Vessel SO104 confirmed from CINCA project documentation."
+}

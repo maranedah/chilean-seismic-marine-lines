@@ -1,0 +1,112 @@
+{
+  "id": "reginato_2020_splay_fault_mejillones_tecto",
+  "title": "Seismicity in the upper plate of the Northern Chilean offshore forearc: Evidence of splay fault south of the Mejillones Peninsula",
+  "authors": [
+    "Reginato, Gabino",
+    "Vera, Emilio",
+    "Contreras-Reyes, Eduardo",
+    "González-Vidal, D.",
+    "Tréhu, Anne M."
+  ],
+  "year": 2020,
+  "journal": "Tectonophysics",
+  "doi": "10.1016/j.tecto.2020.228748",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040195120303899",
+  "open_access_url": null,
+  "abstract": "A 3D tomographic model of the upper plate was developed using arrival times from the 1995 CINCA seismic network aftershock catalog from the Antofagasta earthquake (Mw 8.1). Seismicity partially defined by a clear lineament between 22 and 5 km depth is interpreted as an active splay fault ~50 km long south of the Mejillones Peninsula. The splay fault zone shows decreased Vp and Vs velocities and increased Vp/Vs ratio suggesting fracturing and fluid saturation.",
+  "keywords": [
+    "splay fault",
+    "Mejillones Peninsula",
+    "CINCA95",
+    "OBH",
+    "north Chile",
+    "23°S",
+    "Antofagasta earthquake",
+    "3D tomography",
+    "seismicity"
+  ],
+  "location": {
+    "latitude": -23.5,
+    "longitude": -70.5,
+    "city": "Antofagasta",
+    "region": "Región de Antofagasta",
+    "country": "Chile",
+    "description": "Northern Chilean offshore forearc south of Mejillones Peninsula (~23°S); splay fault imaging using CINCA seismic network",
+    "bounding_box": {
+      "lat_min": -24.0,
+      "lat_max": -22.5,
+      "lon_min": -71.5,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 seismic network (OBH+land) — Antofagasta region",
+        "lat_start": -22.5,
+        "lon_start": -71.0,
+        "lat_end": -24.0,
+        "lon_end": -70.0,
+        "length_km": 200
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104 CINCA95, 1995) — passive seismic network post-Antofagasta earthquake",
+    "year_acquired": 1995,
+    "source_type": "passive seismic (aftershock recording)",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "CINCA95 OBH Passive Seismic Network — Antofagasta Aftershock Catalog ~23°S",
+      "classification": "RAW",
+      "format": "MSEED",
+      "url": null,
+      "doi": null,
+      "repository": "IRIS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Passive seismic recordings from the CINCA95 OBH+land network offshore Antofagasta (~23°S) used for 3D local earthquake tomography; defines splay fault ~50 km long south of Mejillones Peninsula"
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 MCS Profiles — Antofagasta Region",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection profiles from CINCA95 (SO104) used as structural framework for interpreting the splay fault imaged by local earthquake tomography. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "CINCA95 OBH passive network. MCS data from SO104 accessible via MGDS. Passive OBH data may be at IRIS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Aftershock P-wave arrival times from the CINCA95 seismic network (OBH + land stations offshore/onshore Antofagasta, 1995) were inverted for a 3D Vp, Vs and Vp/Vs model of the northern Chilean offshore forearc at ~23°S. A splay fault ~50 km long south of Mejillones Peninsula is identified as a velocity anomaly (reduced Vp/Vs) between 5–22 km depth. CINCA95 MCS profiles provide structural context.",
+    "workflow": [
+      "1. Antofagasta earthquake aftershock catalog assembly",
+      "2. P- and S-wave arrival time picking from OBH/land stations",
+      "3. 3D simultaneous inversion for hypocenters and velocity structure",
+      "4. Resolution tests",
+      "5. Correlation with MCS reflection profiles"
+    ],
+    "software": [
+      "SIMULPS",
+      "unknown"
+    ],
+    "notes": "Passive OBH study combined with MCS interpretation from CINCA95"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Tectonophysics paper; behind paywall. CINCA95 MCS data at MGDS. Passive OBH data from 1995 may be at IRIS."
+}

@@ -1,0 +1,123 @@
+'use client'
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import type { PaperSummary } from '@/types/paper'
+import Badge, { type BadgeVariant } from '@/atoms/Badge'
+
+type SortKey = 'year' | 'title' | 'authors_short' | 'journal' | 'geographic_region' | 'num_datasets' | 'completeness'
+
+const ACCESS_VARIANT: Record<string, BadgeVariant> = {
+  open: 'success',
+  restricted: 'danger',
+  unknown: 'neutral',
+}
+
+interface Props {
+  papers: PaperSummary[]
+}
+
+export default function PapersTable({ papers }: Props) {
+  const router = useRouter()
+  const [sortKey, setSortKey] = useState<SortKey>('year')
+  const [sortAsc, setSortAsc] = useState(false)
+
+  function handleSort(key: SortKey) {
+    if (key === sortKey) {
+      setSortAsc((v) => !v)
+    } else {
+      setSortKey(key)
+      setSortAsc(key !== 'year')
+    }
+  }
+
+  const sorted = [...papers].sort((a, b) => {
+    const av = a[sortKey]
+    const bv = b[sortKey]
+    const cmp = av < bv ? -1 : av > bv ? 1 : 0
+    return sortAsc ? cmp : -cmp
+  })
+
+  function SortIcon({ col }: { col: SortKey }) {
+    if (col !== sortKey) return <span className="text-gray-300 ml-1">↕</span>
+    return <span className="text-blue-500 ml-1">{sortAsc ? '↑' : '↓'}</span>
+  }
+
+  const thClass =
+    'px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider cursor-pointer hover:text-gray-800 select-none whitespace-nowrap'
+
+  return (
+    <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+      <table className="w-full text-sm">
+        <thead className="bg-gray-50 border-b border-gray-200">
+          <tr>
+            <th className={thClass} onClick={() => handleSort('year')}>
+              Year <SortIcon col="year" />
+            </th>
+            <th className={thClass} onClick={() => handleSort('authors_short')}>
+              Authors <SortIcon col="authors_short" />
+            </th>
+            <th className={thClass} onClick={() => handleSort('title')}>
+              Title <SortIcon col="title" />
+            </th>
+            <th className={thClass} onClick={() => handleSort('journal')}>
+              Journal <SortIcon col="journal" />
+            </th>
+            <th className={thClass} onClick={() => handleSort('geographic_region')}>
+              Region <SortIcon col="geographic_region" />
+            </th>
+            <th className={thClass}>Access</th>
+            <th className={thClass} onClick={() => handleSort('num_datasets')}>
+              Datasets <SortIcon col="num_datasets" />
+            </th>
+            <th className={thClass} onClick={() => handleSort('completeness')}>
+              Fill <SortIcon col="completeness" />
+            </th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-100">
+          {sorted.map((p) => (
+            <tr
+              key={p.id}
+              className="hover:bg-blue-50 cursor-pointer transition-colors"
+              onClick={() => router.push(`/papers/${p.id}`)}
+            >
+              <td className="px-4 py-3 text-gray-900 font-medium">{p.year}</td>
+              <td className="px-4 py-3 text-gray-600 whitespace-nowrap">{p.authors_short}</td>
+              <td className="px-4 py-3 text-gray-900 max-w-xs">
+                <span className="line-clamp-2 hover:text-blue-700" title={p.title}>
+                  {p.title}
+                </span>
+              </td>
+              <td className="px-4 py-3 text-gray-600 whitespace-nowrap text-xs">{p.journal}</td>
+              <td className="px-4 py-3 text-gray-600 text-xs whitespace-nowrap">
+                {p.geographic_region.split(' (')[0]}
+              </td>
+              <td className="px-4 py-3">
+                <div className="flex flex-wrap gap-1">
+                  {p.access_types.map((a) => (
+                    <Badge key={a} label={a} variant={ACCESS_VARIANT[a] ?? 'neutral'} />
+                  ))}
+                </div>
+              </td>
+              <td className="px-4 py-3 text-center text-gray-700">{p.num_datasets}</td>
+              <td className="px-4 py-3 text-center whitespace-nowrap">
+                <span
+                  className={`text-xs font-medium ${
+                    p.completeness >= 80
+                      ? 'text-green-700'
+                      : p.completeness >= 60
+                        ? 'text-yellow-700'
+                        : 'text-red-600'
+                  }`}
+                >
+                  {p.completeness}%
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}

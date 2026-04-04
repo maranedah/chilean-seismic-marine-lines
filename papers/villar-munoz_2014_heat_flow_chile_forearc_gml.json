@@ -1,0 +1,98 @@
+{
+  "id": "villar-munoz_2014_heat_flow_chile_forearc_gml",
+  "title": "Heat flow in the southern Chile forearc controlled by large-scale tectonic processes",
+  "authors": [
+    "Villar-Muñoz, Lucía",
+    "Behrmann, Jan H.",
+    "Diaz-Naveas, Juan",
+    "Klaeschen, Dirk",
+    "Karstens, Jens"
+  ],
+  "year": 2014,
+  "journal": "Geo-Marine Letters",
+  "doi": "10.1007/s00367-013-0353-z",
+  "url": "https://link.springer.com/article/10.1007/s00367-013-0353-z",
+  "open_access_url": null,
+  "abstract": "Between 33°S and 47°S, heat flow through the southern Chile forearc is estimated using the depth of the bottom-simulating reflector obtained from a comprehensive database of reflection seismic profiles. On the upper and middle continental slope, heat flow is 30–60 mW/m², whereas the actively deforming accretionary wedge on the lower slope shows heat flow reaching ~90 mW/m², indicating advecting pore fluids from deeper in the subduction zone. Large-scale tectonic features including the subducting Juan Fernández Ridge, oceanic fracture zones, and the Chile Ridge spreading center modulate the heat flow pattern.",
+  "keywords": [
+    "heat flow",
+    "BSR",
+    "southern Chile forearc",
+    "33°–47°S",
+    "seismic reflection",
+    "Juan Fernández Ridge",
+    "Chile Ridge",
+    "gas hydrate"
+  ],
+  "location": {
+    "latitude": -40.0,
+    "longitude": -75.0,
+    "city": "Valdivia",
+    "region": "Región de Los Ríos",
+    "country": "Chile",
+    "description": "Southern Chile forearc from 33°S to 47°S; heat flow from BSR depth on comprehensive seismic database",
+    "bounding_box": {
+      "lat_min": -47.0,
+      "lat_max": -33.0,
+      "lon_min": -77.0,
+      "lon_max": -73.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Comprehensive database of MCS profiles — Southern Chile forearc 33°–47°S",
+        "lat_start": -33.0,
+        "lon_start": -74.0,
+        "lat_end": -47.0,
+        "lon_end": -75.0,
+        "length_km": 1500
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "Multiple vessels (compilation: GEOMAR SONNE cruises, Conrad, and others)",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Comprehensive MCS Database — Southern Chile Forearc 33°–47°S (BSR Heat Flow)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Comprehensive database of MCS reflection profiles from multiple cruises along the southern Chile forearc (33°–47°S); BSR depths used to derive heat flow map showing 30–90 mW/m² pattern modulated by Juan Fernández Ridge, fracture zones and Chile Ridge. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "Geo-Marine Letters paper; behind paywall. Uses compiled MCS database from multiple GEOMAR and other cruises.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "BSR depths from a comprehensive database of MCS reflection profiles along the southern Chile forearc (33°–47°S) are mapped and converted to heat flow values using gas hydrate stability theory. The resulting heat flow map (30–90 mW/m²) reveals latitudinal patterns modulated by large-scale tectonic features: Juan Fernández Ridge subduction at ~33°S, oceanic fracture zones, and the Chile Ridge spreading center at ~46°S.",
+    "workflow": [
+      "1. MCS database compilation from multiple cruises",
+      "2. BSR identification and depth mapping",
+      "3. Heat flow calculation from BSR depth and thermal gradient",
+      "4. Spatial interpolation and heat flow map construction",
+      "5. Tectonic interpretation"
+    ],
+    "software": [
+      "GMT",
+      "unknown"
+    ],
+    "notes": "Large-scale heat flow synthesis paper; uses data from many cruises"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Geo-Marine Letters paper; behind paywall. Comprehensive compilation from multiple GEOMAR cruises accessible via MGDS."
+}

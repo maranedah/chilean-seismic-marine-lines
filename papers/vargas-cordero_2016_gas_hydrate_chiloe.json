@@ -1,0 +1,97 @@
+{
+  "id": "vargas-cordero_2016_gas_hydrate_chiloe",
+  "title": "Gas hydrate and free gas estimation from seismic analysis offshore Chiloé island (Chile)",
+  "authors": [
+    "Vargas-Cordero, Iván de la Cruz",
+    "Tinivella, Umberta",
+    "Villar-Muñoz, Lucía",
+    "Giustiniani, Michela"
+  ],
+  "year": 2016,
+  "journal": "Andean Geology",
+  "doi": "10.5027/andgeoV43n3-a02",
+  "url": "https://www.andeangeology.cl/index.php/revista1/article/view/V43n3-a02/html",
+  "open_access_url": "http://www.andeangeology.cl/index.php/revista1/article/download/V43n3-a02/pdf",
+  "abstract": "One seismic section offshore Chiloé Island was analyzed to better define the seismic character of the hydrate-bearing sediments. Velocity analysis was used to estimate the gas-phase concentration and relate it to geological features. The velocity model allowed recognition of two important layers that characterize hydrate- and free gas-bearing sediments above and below the BSR respectively. The velocity above the BSR is high (1,800–2,200 m/s) indicating gas hydrate presence, while below the BSR velocities are low (1,600–1,700 m/s) indicating free gas. Calculated concentrations are 9.5% gas hydrate and 0.5% free gas by volume at maximum. Variations in BSR depth are attributed to geothermal gradients ranging from 25 to 45°C/km.",
+  "keywords": [
+    "gas hydrate",
+    "BSR",
+    "free gas",
+    "Chiloé Island",
+    "Chile",
+    "42°S",
+    "seismic velocity",
+    "multichannel seismic",
+    "Andean Geology"
+  ],
+  "location": {
+    "latitude": -42.0,
+    "longitude": -74.5,
+    "city": "Castro (Chiloé Island)",
+    "region": "Región de Los Lagos",
+    "country": "Chile",
+    "description": "Offshore Chiloé Island at ~42°S, southern Chilean margin, gas hydrate province",
+    "bounding_box": {
+      "lat_min": -43.0,
+      "lat_max": -41.0,
+      "lon_min": -76.5,
+      "lon_max": -73.5
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS Profile offshore Chiloé Island (~42°S)",
+        "lat_start": -42.0,
+        "lon_start": -76.0,
+        "lat_end": -42.0,
+        "lon_end": -74.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": null,
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Multichannel seismic profile offshore Chiloé Island",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "OGS (Istituto Nazionale di Oceanografia e di Geofisica Sperimentale) or SHOA",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Single MCS reflection section offshore Chiloé Island analyzed for BSR identification and gas hydrate estimation. Velocity model derived for hydrate and free gas quantification.",
+      "data_type": "seismic_reflection_mcs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "A single multichannel seismic reflection profile offshore Chiloé Island (~42°S) was processed and analyzed for BSR characterization and gas hydrate/free gas estimation. Standard MCS processing applied. Velocity analysis performed to derive interval velocities for gas hydrate concentration estimation using rock physics relationships. Two-layer velocity model identified: high velocity (1,800–2,200 m/s) above BSR (hydrate-bearing) and low velocity (1,600–1,700 m/s) below BSR (free gas zone).",
+    "workflow": [
+      "1. MCS data pre-processing",
+      "2. Velocity analysis and NMO",
+      "3. CDP stack",
+      "4. Post-stack migration",
+      "5. BSR identification and depth mapping",
+      "6. Interval velocity extraction",
+      "7. Gas hydrate and free gas concentration estimation (rock physics)",
+      "8. Geothermal gradient estimation from BSR depth"
+    ],
+    "software": [],
+    "notes": "Gold open access paper in Andean Geology (Chilean national journal). OGS Trieste (Italy) co-authorship suggests Italian-Chilean collaborative dataset."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Paper is gold open access in Andean Geology with CC-BY license. Full PDF available at journal website. Abstract confirmed from Semantic Scholar. No explicit data repository link found in metadata. Seismic data likely from a prior SHOA or OGS cruise; specific vessel not confirmed."
+}

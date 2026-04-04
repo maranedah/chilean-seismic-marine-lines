@@ -1,0 +1,98 @@
+{
+  "id": "volker_2011_thermal_control_seismogenic_jgr",
+  "title": "Thermal control of the seismogenic zone of southern central Chile",
+  "authors": [
+    "Völker, David",
+    "Grevemeyer, Ingo",
+    "Stipp, Michael",
+    "Wang, Kelin",
+    "He, Jiangheng"
+  ],
+  "year": 2011,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2011JB008247",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JB008247",
+  "open_access_url": null,
+  "abstract": "Thermal models for the Chile subduction zone are developed along two profiles at 38.2°S and 42°S within the rupture area of the 1960 Valdivia earthquake and south of the 2010 Maule earthquake. The age difference of the subducting Nazca Plate has a major impact on the thermal regime. Seafloor heat flow values derived from the depth of gas hydrate bottom-simulating reflectors confirm that the southern area has higher heat flow due to the younger, hotter incoming plate. The seismogenic zone widens and shifts landward to greater depths from south to north.",
+  "keywords": [
+    "thermal model",
+    "seismogenic zone",
+    "38.2°S",
+    "42°S",
+    "BSR",
+    "heat flow",
+    "TIPTEQ",
+    "SPOC",
+    "Valdivia earthquake"
+  ],
+  "location": {
+    "latitude": -40.0,
+    "longitude": -75.0,
+    "city": "Valdivia",
+    "region": "Región de Los Ríos",
+    "country": "Chile",
+    "description": "South-central Chile subduction zone at two profiles: 38.2°S (TIPTEQ line) and 42°S",
+    "bounding_box": {
+      "lat_min": -43.0,
+      "lat_max": -38.0,
+      "lon_min": -77.0,
+      "lon_max": -73.0
+    },
+    "seismic_lines": [
+      {
+        "name": "TIPTEQ/SPOC BSR profiles — 38.2°S and 42°S",
+        "lat_start": -38.2,
+        "lon_start": -77.0,
+        "lat_end": -42.0,
+        "lon_end": -76.0,
+        "length_km": 450
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161 SPOC, SO181 TIPTEQ)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "SPOC/TIPTEQ MCS Profiles — BSR Heat Flow at 38.2°S and 42°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection profiles from SPOC (SO161) and TIPTEQ (SO181) used to map BSR depth for heat flow estimation at 38.2°S and 42°S; confirms higher heat flow at 42°S from younger incoming plate. [TIPTEQ cruise (SO181, 2004/2005) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "JGR paper; behind paywall. Uses SPOC/TIPTEQ data from MGDS for BSR-based thermal modeling.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "BSR depths from MCS reflection profiles at 38.2°S (TIPTEQ line, SO181) and 42°S (SPOC line, SO161) are used to derive seafloor heat flow values for thermal modeling of the seismogenic zone. The thermal models show that the younger (~3 Ma) plate at 42°S produces higher heat flow than the older (~14 Ma) plate at 38.2°S, resulting in a narrower and shallower seismogenic zone in the south.",
+    "workflow": [
+      "1. BSR depth mapping from MCS profiles",
+      "2. BSR-to-heat-flow conversion using gas hydrate stability models",
+      "3. Thermal finite element modeling of subduction zones",
+      "4. Comparison of modeled and BSR-derived heat flow"
+    ],
+    "software": [
+      "unknown (custom thermal code)",
+      "GMT"
+    ],
+    "notes": "Thermal modeling study using BSR depth from existing MCS profiles as heat flow proxy"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "JGR paper; behind paywall. Uses SPOC (SO161) and TIPTEQ (SO181) data accessible via MGDS."
+}

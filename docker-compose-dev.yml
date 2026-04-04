@@ -1,0 +1,51 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./papers:/app/papers:ro
+      - ./images:/app/images:ro
+      - ./backend/src:/app/src           # hot reload: live source mount
+      - ./backend/logging.yaml:/app/logging.yaml:ro
+    environment:
+      - PAPERS_DIR=/app/papers
+      - IMAGES_DIR=/app/images
+    command:
+      [
+        "uvicorn", "src.api.main:app",
+        "--host", "0.0.0.0",
+        "--port", "8080",
+        "--reload",
+        "--reload-dir", "/app/src",
+        "--log-config", "/app/logging.yaml",
+      ]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src          # hot reload: live source mount
+      - ./frontend/public:/app/public
+      - ./frontend/next.config.mjs:/app/next.config.mjs
+      - ./frontend/tailwind.config.js:/app/tailwind.config.js
+      - ./frontend/tsconfig.json:/app/tsconfig.json
+      - frontend_node_modules:/app/node_modules  # persist across restarts
+      - frontend_next_cache:/app/.next           # persist build cache
+    environment:
+      - BACKEND_URL=http://backend:8080
+      - WATCHPACK_POLLING=true           # Next.js file watcher inside Docker
+      - CHOKIDAR_USEPOLLING=true
+
+volumes:
+  frontend_node_modules:
+  frontend_next_cache:

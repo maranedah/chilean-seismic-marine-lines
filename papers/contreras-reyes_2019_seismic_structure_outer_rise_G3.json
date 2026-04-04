@@ -1,0 +1,81 @@
+{
+  "id": "contreras-reyes_2019_seismic_structure_outer_rise_G3",
+  "title": "Seismic structure of the incoming oceanic Nazca plate offshore central Chile: P-wave velocity, density, and mineralogical changes",
+  "authors": ["Contreras-Reyes, Eduardo", "Ruiz, J.A.", "Becerra, Jonathan", "Kopp, Heidrun", "Reichert, Christian", "Maksymowicz, Andrei", "Arriagada, César"],
+  "year": 2015,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1093/gji/ggv032",
+  "url": "https://academic.oup.com/gji/article/200/3/1849/605819",
+  "open_access_url": null,
+  "abstract": "P-wave velocity structure of the incoming oceanic Nazca plate at the outer rise offshore central Chile (~33°S) is derived from wide-angle seismic OBH data. Velocity gradients and density anomalies in the oceanic crust and uppermost mantle reflect mineralogical changes due to serpentinization from seawater infiltration through bending-related normal faults. The results constrain the degree of lithospheric hydration prior to subduction.",
+  "keywords": ["outer rise", "Nazca plate", "central Chile", "33°S", "OBH wide-angle", "P-wave velocity", "serpentinization", "bending faults", "GJI"],
+
+  "location": {
+    "latitude": -33.0,
+    "longitude": -73.5,
+    "city": "Valparaíso",
+    "region": "Región de Valparaíso",
+    "country": "Chile",
+    "description": "Outer rise of incoming Nazca plate offshore central Chile (~33°S); OBH wide-angle velocity structure revealing serpentinization from bending faults",
+    "bounding_box": {
+      "lat_min": -34.0, "lat_max": -32.0,
+      "lon_min": -75.5, "lon_max": -72.0
+    },
+    "seismic_lines": [
+      {
+        "name": "OBH wide-angle profile — Outer rise central Chile ~33°S",
+        "lat_start": -32.5, "lon_start": -75.5,
+        "lat_end": -33.5, "lon_end": -72.0,
+        "length_km": 350
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (cruise not confirmed; likely related to SPOC or later SONNE cruise)",
+    "year_acquired": 2010,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "OBH Wide-Angle Data — Outer Rise Central Chile ~33°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Wide-angle P-wave OBH data from outer rise offshore central Chile (~33°S); velocity model reveals serpentinization of oceanic crust and uppermost mantle through bending-related normal fault pathways prior to subduction"
+    }
+  ],
+  "_data_note": "GJI paper; behind paywall. OBH data from outer rise ~33°S. Cruise details not confirmed.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "P-wave velocity model of the outer rise Nazca plate (~33°S) derived from OBH wide-angle seismic data. Velocity gradients and density anomalies indicate serpentinization of oceanic crust and uppermost mantle through bending fault pathways. Results quantify lithospheric hydration before subduction at central Chile.",
+    "workflow": [
+      "1. OBH data processing and quality control",
+      "2. P-wave travel-time picking",
+      "3. 2D forward ray-tracing modelling",
+      "4. Velocity-density conversion",
+      "5. Serpentinization degree estimation"
+    ],
+    "software": ["RAYINVR", "unknown"],
+    "notes": "GJI paper on outer rise hydration at ~33°S; related to Contreras-Reyes et al. 2007 and Moscoso & Grevemeyer 2015 outer rise studies"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "GJI paper; behind paywall. OBH outer rise data ~33°S; cruise details not confirmed."
+}

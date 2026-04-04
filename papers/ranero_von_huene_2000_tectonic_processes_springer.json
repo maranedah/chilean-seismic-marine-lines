@@ -1,0 +1,107 @@
+{
+  "id": "ranero_von_huene_2000_tectonic_processes_springer",
+  "title": "Tectonic Processes along the Chile Convergent Margin",
+  "authors": [
+    "Ranero, César R.",
+    "von Huene, Roland",
+    "Weinrebe, W.",
+    "Reichert, C."
+  ],
+  "year": 2006,
+  "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
+  "doi": "10.1007/978-3-540-48684-8_5",
+  "url": "https://link.springer.com/chapter/10.1007/978-3-540-48684-8_5",
+  "open_access_url": null,
+  "abstract": "The Chile convergent margin spans more than 3500 km providing a unique natural laboratory where variations in subduction properties can be studied along a single plate boundary. The chapter synthesizes multichannel seismic reflection data from CINCA, SPOC, TIPTEQ and other cruises, along with multibeam bathymetry, to characterize tectonic processes. Extreme climatic change from the Atacama Desert north to glacially influenced south produces dramatic variability in trench sedimentation.",
+  "keywords": [
+    "review",
+    "Chile convergent margin",
+    "seismic reflection",
+    "CINCA",
+    "SPOC",
+    "TIPTEQ",
+    "bathymetry",
+    "tectonic processes",
+    "subduction"
+  ],
+  "location": {
+    "latitude": -30.0,
+    "longitude": -73.0,
+    "city": "La Serena",
+    "region": "Región de Coquimbo",
+    "country": "Chile",
+    "description": "Full Chilean convergent margin from ~18°S to 54°S; synthesis of multiple cruise datasets",
+    "bounding_box": {
+      "lat_min": -54.0,
+      "lat_max": -18.0,
+      "lon_min": -80.0,
+      "lon_max": -68.0
+    },
+    "seismic_lines": [
+      {
+        "name": "Compilation — CINCA, SPOC, TIPTEQ MCS profiles (full Chile margin)",
+        "lat_start": -18.0,
+        "lon_start": -72.0,
+        "lat_end": -54.0,
+        "lon_end": -72.0,
+        "length_km": 4000
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "Multiple vessels (compilation: R/V SONNE SO104, SO161, SO181 and others)",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Compilation of MCS Data — Full Chile Margin (CINCA, SPOC, TIPTEQ)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Synthesis chapter using MCS reflection data from CINCA95 (SO104), SPOC (SO161), TIPTEQ (SO181) and other cruises to characterize tectonic processes along the full Chilean convergent margin. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Compilation of Swath Bathymetry — Full Chile Margin",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry compilation from multiple cruises along the full Chilean margin used to characterize tectonic geomorphology. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "Springer review chapter (2006). No new data acquisition; synthesis of CINCA, SPOC, TIPTEQ data from MGDS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Synthesis chapter compiling and interpreting MCS reflection data and multibeam bathymetry from multiple GEOMAR cruises along the full Chilean convergent margin. No new data processing. The chapter characterizes the latitudinal transition from erosive (north) to accretionary (south) margin styles, trench sedimentation patterns, and structural controls on megathrust seismicity.",
+    "workflow": [
+      "1. Literature review and data compilation",
+      "2. Synthesis and interpretation"
+    ],
+    "software": [
+      "GMT"
+    ],
+    "notes": "Review chapter in Springer Andes volume (2006)"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Springer book chapter; behind paywall. Synthesis using CINCA, SPOC, TIPTEQ data from MGDS."
+}

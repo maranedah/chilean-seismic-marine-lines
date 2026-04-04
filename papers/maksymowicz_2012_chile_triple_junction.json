@@ -1,0 +1,96 @@
+{
+  "id": "maksymowicz_2012_chile_triple_junction",
+  "title": "Structure and geodynamics of the post-collision zone between the Nazca–Antarctic spreading center and South America",
+  "authors": [
+    "Maksymowicz, Andrei",
+    "Contreras-Reyes, Eduardo",
+    "Grevemeyer, Ingo",
+    "Flueh, Ernst R."
+  ],
+  "year": 2012,
+  "journal": "Earth and Planetary Science Letters",
+  "doi": "10.1016/j.epsl.2012.06.023",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012821X1200307X",
+  "open_access_url": null,
+  "abstract": "The Chile Triple Junction, where the Chile Ridge subducts beneath South America, is examined using detailed tomographic imaging of the upper lithospheric Antarctic–South America subduction zone. Marine seismic refraction data from OBS instruments and multichannel seismic (MCS) reflection data are used. Results indicate that extensive trench sediment has been frontally accreted to the forearc forming a 70–80 km wide accretionary prism. The subduction of the Chile Ridge creates a distinctive tectonic environment with a hot slab, reduced coupling, and a transition from accretionary to erosive margin character.",
+  "keywords": [
+    "Chile Triple Junction",
+    "Chile Ridge",
+    "seismic refraction",
+    "OBS",
+    "multichannel seismic",
+    "accretionary prism",
+    "46°S",
+    "subduction",
+    "Antarctic plate"
+  ],
+  "location": {
+    "latitude": -46.5,
+    "longitude": -76.0,
+    "city": "Puerto Montt (nearest)",
+    "region": "Aysén / Los Lagos",
+    "country": "Chile",
+    "description": "Chile Triple Junction at ~46°S where the Chile Ridge subducts beneath South America",
+    "bounding_box": {
+      "lat_min": -48.0,
+      "lat_max": -44.5,
+      "lon_min": -79.0,
+      "lon_max": -74.0
+    },
+    "seismic_lines": [
+      {
+        "name": "OBS refraction profile at Chile Triple Junction (~46°S)",
+        "lat_start": -46.5,
+        "lon_start": -79.0,
+        "lat_end": -46.5,
+        "lon_end": -74.5,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Wide-angle OBS seismic refraction and MCS reflection data, Chile Triple Junction",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Amphibious seismic refraction (OBS) and MCS reflection data from the Chile Triple Junction region (~46°S), used for tomographic imaging of the Antarctic–South America subduction zone and accretionary prism structure.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Marine seismic refraction (OBS) and MCS reflection data from the Chile Triple Junction processed to image the lithospheric structure of the Antarctic–South America subduction zone. OBS data processed through 2D P-wave travel time tomography; MCS data through standard stack and migration workflow. Results constrain the 70–80 km wide accretionary prism and document the impact of the hot Chile Ridge subduction on forearc structure.",
+    "workflow": [
+      "1. OBS deployment at Chile Triple Junction",
+      "2. Airgun shooting along profile(s)",
+      "3. OBS: travel time picking (Pg, PmP)",
+      "4. 2D P-wave tomographic inversion",
+      "5. MCS: geometry, velocity analysis, stack, migration",
+      "6. Gravity modelling as additional constraint",
+      "7. Integrated interpretation"
+    ],
+    "software": [],
+    "notes": "GEOMAR-led study. Chile Triple Junction is the locus of Chile Ridge subduction at ~46°S. Accretionary prism 70–80 km wide confirmed."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "low",
+  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet and Semantic Scholar metadata (abstract elided by publisher). Cruise identification not confirmed; GEOMAR authorship (Grevemeyer, Flueh) suggests R/V SONNE. Acquisition year unknown."
+}

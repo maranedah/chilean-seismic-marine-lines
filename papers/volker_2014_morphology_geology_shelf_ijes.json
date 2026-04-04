@@ -1,0 +1,110 @@
+{
+  "id": "volker_2014_morphology_geology_shelf_ijes",
+  "title": "Morphology and geology of the continental shelf and upper slope of southern Central Chile (33°S–43°S)",
+  "authors": [
+    "Völker, David",
+    "Geersen, Jacob",
+    "Contreras-Reyes, Eduardo",
+    "Reichert, Christian"
+  ],
+  "year": 2014,
+  "journal": "International Journal of Earth Sciences",
+  "doi": "10.1007/s00531-012-0795-y",
+  "url": "https://link.springer.com/article/10.1007/s00531-012-0795-y",
+  "open_access_url": null,
+  "abstract": "The geologic setting of the southern Central Chilean continental shelf (33°S–43°S) is summarized using recently published geophysical, seismological, sedimentological and bio-geochemical data, together with unpublished reflection seismic profiles, swath bathymetry and biological observations. Shelf basins show highly variable thickness of Oligocene–Quaternary sedimentary units dissected by marine continuations of upper plate faults known from land. A paleo-accretionary complex forms the bulk of the continental margin, sandwiched between the present active accretionary prism and the continental crust.",
+  "keywords": [
+    "continental shelf",
+    "seismic reflection",
+    "33°–43°S",
+    "south-central Chile",
+    "shelf basins",
+    "bathymetry",
+    "paleo-accretionary complex",
+    "IJES"
+  ],
+  "location": {
+    "latitude": -38.0,
+    "longitude": -74.0,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "Continental shelf and upper slope of southern Central Chile 33°–43°S; synthesis using published and unpublished data",
+    "bounding_box": {
+      "lat_min": -43.0,
+      "lat_max": -33.0,
+      "lon_min": -76.0,
+      "lon_max": -71.5
+    },
+    "seismic_lines": [
+      {
+        "name": "Published and unpublished MCS profiles — shelf 33°–43°S",
+        "lat_start": -33.0,
+        "lon_start": -74.0,
+        "lat_end": -43.0,
+        "lon_end": -74.0,
+        "length_km": 1100
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "Multiple vessels (compilation including R/V SONNE cruises)",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Published and Unpublished MCS Profiles — Southern Central Chile Shelf 33°–43°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Compilation of published and previously unpublished MCS reflection profiles of the continental shelf (33°–43°S); maps shelf basin architecture with Oligocene–Quaternary sediments and upper plate faults. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — Southern Central Chile Shelf 33°–43°S",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry for the shelf and upper slope of southern Central Chile; compilation from SPOC, TIPTEQ and other cruises. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "IJES synthesis paper; uses published and unpublished GEOMAR MCS data. Published data accessible via MGDS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Synthesis of published and unpublished MCS reflection profiles, swath bathymetry and geophysical data for the southern Central Chilean continental shelf (33°–43°S). The compilation maps shelf basin stratigraphy (Oligocene–Quaternary sedimentary units), identifies marine continuations of upper-plate faults from land, and reveals a paleo-accretionary complex sandwiched between the modern accretionary prism and continental crust.",
+    "workflow": [
+      "1. Data compilation from multiple cruises",
+      "2. Seismic reflection interpretation",
+      "3. Basin architecture mapping",
+      "4. Synthesis with geological data"
+    ],
+    "software": [
+      "GMT",
+      "Kingdom Suite",
+      "unknown"
+    ],
+    "notes": "Includes previously unpublished MCS profiles from GEOMAR"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "IJES paper; behind paywall. Includes unpublished GEOMAR MCS data. Published data accessible via MGDS from SPOC/TIPTEQ cruises."
+}

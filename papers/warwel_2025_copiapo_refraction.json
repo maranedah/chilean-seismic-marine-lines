@@ -1,0 +1,97 @@
+{
+  "id": "warwel_2025_copiapo_refraction",
+  "title": "Seismic Structure and Tectonics of the North-Central Chilean Subduction Zone Along the Copiapó Ridge From Amphibious Seismic Refraction Tomography and Local Seismicity",
+  "authors": [
+    "Warwel, Arne",
+    "Lange, Dietrich",
+    "Dannowski, Anke",
+    "Contreras-Reyes, Eduardo",
+    "Klaucke, Ingo",
+    "Díaz-Naveas, Juan",
+    "Moreno, Marcos",
+    "Kopp, Heidrun"
+  ],
+  "year": 2025,
+  "journal": "Geochemistry, Geophysics, Geosystems",
+  "doi": "10.1029/2024GC011829",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2024GC011829",
+  "open_access_url": "https://doi.org/10.1029/2024gc011829",
+  "abstract": "Wide-angle seismic refraction and reflection data were recorded on 36 OBS/OBH and 10 seismic land stations along an approximately E-W oriented 445 km long transect that aligns with the Copiapó Ridge off Chile's coastline during R/V SONNE cruise SO297. The study investigates structural controls on the north-central Chilean subduction zone at ~27°S using amphibious seismic refraction tomography and local seismicity. Oceanic crust thickness is 6–7 km with P-wave velocities between 3.0 and 7.3 km/s. The subduction angle increases gradually from 12° in the forearc to 22° at greater depths. Three distinct seismicity bands are identified aligned with plate structures, with the largest detected event reaching magnitude 5.9 in the deepest zone.",
+  "keywords": [
+    "seismic refraction",
+    "OBS",
+    "Chile subduction zone",
+    "Copiapó Ridge",
+    "amphibious experiment",
+    "tomography",
+    "seismicity"
+  ],
+  "location": {
+    "latitude": -27.0,
+    "longitude": -71.5,
+    "city": "Copiapó",
+    "region": "Región de Atacama",
+    "country": "Chile",
+    "description": "Offshore north-central Chile (~27°S) along the Copiapó Ridge transect",
+    "bounding_box": {
+      "lat_min": -28.0,
+      "lat_max": -26.0,
+      "lon_min": -74.5,
+      "lon_max": -68.5
+    },
+    "seismic_lines": [
+      {
+        "name": "SO297 Main Profile",
+        "lat_start": -27.0,
+        "lon_start": -74.0,
+        "lat_end": -27.0,
+        "lon_end": -69.0,
+        "length_km": 445
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO297)",
+    "year_acquired": 2022,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Wide-angle OBS/OBH seismic refraction data, SO297",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "IRIS DMC / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Seismic refraction data recorded on 36 OBS/OBH and 10 land stations along 445 km E-W transect at ~27°S. Data used for P-wave travel time tomography.",
+      "data_type": "seismic_refraction_obs"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Amphibious wide-angle seismic refraction data from SO297 cruise processed through 2D P-wave travel time tomography. Both OBS/OBH marine instruments and onshore seismic land stations recorded airgun shots along the 445 km transect. Tomographic velocity model derived; local seismicity catalogue compiled from passively recorded events during instrument deployment.",
+    "workflow": [
+      "1. OBS/OBH instrument deployment and recovery",
+      "2. Airgun shooting along ~445 km transect",
+      "3. Phase picking (Pg, PmP, Pn) on OBS/OBH and land station records",
+      "4. 2D P-wave travel time tomography",
+      "5. Seismicity catalogue compilation from passive recording",
+      "6. Integration of velocity model with seismicity to define subduction geometry"
+    ],
+    "software": [],
+    "notes": "Amphibious experiment: 36 OBS/OBH + 10 land stations. Passive seismicity catalogue compiled during deployment period."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Full paper accessed via OpenAlex (CC-BY). Abstract reconstructed from available metadata. Data not yet deposited in a public repository as of analysis date; paper is from 2025. Acquisition year estimated based on SO297 cruise context."
+}

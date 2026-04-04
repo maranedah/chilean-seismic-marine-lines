@@ -1,0 +1,94 @@
+{
+  "id": "von_huene_weinrebe_1997_forearc_structures_mgr",
+  "title": "Subduction processes along the Chile convergent margin",
+  "authors": ["von Huene, Roland", "Weinrebe, Wilhelm", "Heeren, F."],
+  "year": 1999,
+  "journal": "Journal of Geodynamics",
+  "doi": "10.1016/S0264-3707(98)00021-5",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264370798000215",
+  "open_access_url": null,
+  "abstract": "Subduction processes along the Chilean convergent margin are documented from multibeam bathymetry and seismic reflection data acquired during SONNE cruises. Forearc morphology, slope stability, and tectonic erosion are described at multiple segments between 19°S and 46°S. Structural variations correspond to changes in sediment supply, subduction rate, and the nature of the subducting plate.",
+  "keywords": ["subduction processes", "Chile", "forearc", "multibeam bathymetry", "seismic reflection", "SONNE", "tectonic erosion", "19°–46°S", "Journal of Geodynamics"],
+
+  "location": {
+    "latitude": -32.0,
+    "longitude": -73.0,
+    "city": "Valparaíso",
+    "region": "Región de Valparaíso",
+    "country": "Chile",
+    "description": "Chilean convergent margin 19°–46°S; multibeam bathymetry and MCS reflection data from SONNE cruises documenting forearc structure and subduction processes",
+    "bounding_box": {
+      "lat_min": -46.0, "lat_max": -19.0,
+      "lon_min": -76.0, "lon_max": -69.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SONNE MCS and multibeam — Chile margin 19°–46°S (subduction processes)",
+        "lat_start": -19.0, "lon_start": -74.0,
+        "lat_end": -46.0, "lon_end": -74.0,
+        "length_km": 3000
+      }
+    ]
+  },
+
+  "acquisition": {
+    "vessel": "R/V SONNE (CINCA95 SO104 and other SONNE cruises)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "SONNE MCS Reflection Profiles — Chile Margin 19°–46°S (subduction processes)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "MCS reflection profiles from SONNE cruises (including CINCA95) along Chilean margin 19°–46°S documenting forearc structure, tectonic erosion, and subduction processes at multiple segments"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "SONNE Multibeam Bathymetry — Chile Margin 19°–46°S",
+      "classification": "PROCESSED",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SONNE cruises mapping Chilean continental margin morphology and forearc structural variations 19°–46°S"
+    }
+  ],
+  "_data_note": "Journal of Geodynamics paper; behind paywall. CINCA95 and other SONNE cruises. Repository uncertain.",
+
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multibeam bathymetry and MCS reflection data from multiple SONNE cruises (including CINCA95 SO104) are compiled to document subduction processes along the Chilean convergent margin from 19°S to 46°S. Forearc morphology, slope stability, tectonic erosion, and structural variations related to sediment supply and subduction rate are described.",
+    "workflow": [
+      "1. Multibeam bathymetry processing and compilation",
+      "2. MCS data stacking and migration",
+      "3. Structural interpretation across segments",
+      "4. Sediment thickness estimation",
+      "5. Tectonic erosion rate analysis"
+    ],
+    "software": ["unknown"],
+    "notes": "Journal of Geodynamics overview paper using CINCA95 and other SONNE cruise data; comprehensive margin-wide synthesis"
+  },
+
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Journal of Geodynamics paper; behind paywall. Multiple SONNE cruises. Repository not confirmed."
+}

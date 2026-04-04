@@ -1,0 +1,113 @@
+{
+  "id": "contreras-reyes_2008_poisson_bending_gji",
+  "title": "Effect of trench-outer rise bending-related faulting on seismic Poisson's ratio and mantle anisotropy: a case study offshore of Southern Central Chile",
+  "authors": [
+    "Contreras-Reyes, Eduardo",
+    "Grevemeyer, Ingo",
+    "Flueh, Ernst R.",
+    "Scherwath, Martin",
+    "Bialas, Joerg"
+  ],
+  "year": 2008,
+  "journal": "Geophysical Journal International",
+  "doi": "10.1111/j.1365-246X.2007.03668.x",
+  "url": "https://academic.oup.com/gji/article/173/1/142/552413",
+  "open_access_url": null,
+  "abstract": "Joint inversion of seismic refraction and wide-angle reflection data at the Southern Central Chile outer rise yields the P- and S-wave velocity structure of the incoming oceanic Nazca Plate. The Poisson's ratio in the uppermost mantle increases from ~1.75 in the outer rise to values of >1.8 at the trench axis, indicating increasing serpentinization. Bending-related faulting opens near-vertical cracks modifying porosity and permeability and providing pathways for seawater.",
+  "keywords": [
+    "Poisson's ratio",
+    "S-wave",
+    "bending faults",
+    "outer rise",
+    "serpentinization",
+    "south Chile",
+    "SPOC",
+    "TIPTEQ",
+    "OBS",
+    "mantle anisotropy"
+  ],
+  "location": {
+    "latitude": -40.5,
+    "longitude": -76.5,
+    "city": "Valdivia",
+    "region": "Región de Los Ríos",
+    "country": "Chile",
+    "description": "Outer rise of the Nazca plate offshore southern central Chile (~38°–43°S), trench-outer rise region",
+    "bounding_box": {
+      "lat_min": -43.0,
+      "lat_max": -38.0,
+      "lon_min": -79.0,
+      "lon_max": -74.0
+    },
+    "seismic_lines": [
+      {
+        "name": "SPOC/TIPTEQ outer rise OBS profile — P-S wave (~38°–43°S)",
+        "lat_start": -38.0,
+        "lon_start": -77.0,
+        "lat_end": -43.0,
+        "lon_end": -77.0,
+        "length_km": 580
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO161 SPOC and SO181 TIPTEQ)",
+    "year_acquired": 2001,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 4,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "SPOC/TIPTEQ OBS P- and S-wave Wide-Angle Data — South Chile Outer Rise",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Wide-angle P- and S-wave OBS refraction data from the outer rise of southern central Chile used to derive 2D Poisson's ratio models; documents increasing serpentinization toward the trench. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — South Chile Outer Rise",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": null,
+      "doi": null,
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multibeam bathymetry from SO161 to map bending-related fault scarps and outer rise topography. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    }
+  ],
+  "_data_note": "SPOC (SO161) and TIPTEQ (SO181) data accessible via MGDS. Both P and S waves used to derive Vp/Vs (Poisson's ratio) structure.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Joint P- and S-wave seismic refraction data from OBS instruments deployed at the outer rise of southern central Chile (SPOC/TIPTEQ cruises) were processed to derive 2D Vp, Vs and Poisson's ratio models. Travel-time modeling reveals systematic Poisson's ratio increase toward the trench axis reflecting progressive serpentinization. Anisotropy analysis indicates bending-related normal faults create subvertical cracks enabling seawater infiltration.",
+    "workflow": [
+      "1. OBS data processing and instrument relocation",
+      "2. P-wave travel-time picking",
+      "3. S-wave travel-time picking (converted phases)",
+      "4. Joint Vp-Vs forward modeling",
+      "5. Poisson's ratio calculation",
+      "6. Mantle anisotropy analysis"
+    ],
+    "software": [
+      "RAYINVR"
+    ],
+    "notes": "S-wave data from converted phases on OBS; first study to derive Poisson's ratio at this outer rise location"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Paper behind paywall (GJI). Data from SPOC SO161 / TIPTEQ SO181 accessible via MGDS. Note: Semantic Scholar returned wrong paper for this DOI — the paper was identified from survey_results.json metadata."
+}

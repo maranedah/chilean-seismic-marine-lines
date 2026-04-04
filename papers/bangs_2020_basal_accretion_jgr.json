@@ -1,0 +1,156 @@
+{
+  "id": "bangs_2020_basal_accretion_jgr",
+  "title": "Basal Accretion Along the South Central Chilean Margin and Its Relationship to Great Earthquakes",
+  "authors": [
+    "Bangs, Nathan L.",
+    "Morgan, Joanna",
+    "Tréhu, Anne M.",
+    "Contreras-Reyes, Eduardo",
+    "Arnulf, Adrien",
+    "Han, Shuoshuo",
+    "Olsen, Kelly M.",
+    "Zhang, Emily"
+  ],
+  "year": 2020,
+  "journal": "Journal of Geophysical Research: Solid Earth",
+  "doi": "10.1029/2020JB019861",
+  "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020JB019861",
+  "open_access_url": null,
+  "abstract": "In 2017 seismic reflection data were acquired along approximately 1,000 km of the south-central Chile margin using the R/V Langseth's 15 km long receiver array and 108.2 liter seismic source. A thick underthrust sediment layer separated from downgoing oceanic crust is proposed to be the source of strong coupling producing the world's largest earthquakes. Basal accretion of crustal slices from the subducting Nazca plate forms anomalous high-velocity wedge bodies at depth.",
+  "keywords": [
+    "basal accretion",
+    "south-central Chile",
+    "MGL1701",
+    "CEVICHE",
+    "R/V Langseth",
+    "15-km streamer",
+    "megathrust",
+    "seismic reflection",
+    "underthrust sediment"
+  ],
+  "location": {
+    "latitude": -37.0,
+    "longitude": -74.5,
+    "city": "Concepción",
+    "region": "Región del Biobío",
+    "country": "Chile",
+    "description": "South-central Chile margin from ~30°S to 44°S (CEVICHE survey area) encompassing both 1960 and 2010 earthquake rupture zones",
+    "bounding_box": {
+      "lat_min": -44.0,
+      "lat_max": -30.0,
+      "lon_min": -77.0,
+      "lon_max": -71.0
+    },
+    "seismic_lines": [
+      {
+        "name": "MGL1701 (CEVICHE) Line 1 — south-central Chile",
+        "lat_start": -30.0,
+        "lon_start": -73.0,
+        "lat_end": -44.0,
+        "lon_end": -75.0,
+        "length_km": 1000
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V Marcus G. Langseth (MGL1701, CEVICHE cruise, 2017)",
+    "year_acquired": 2017,
+    "source_type": "airgun array",
+    "source_volume_cui": 6600,
+    "streamer_length_m": 15150,
+    "channel_count": 1212,
+    "sample_rate_ms": 2,
+    "record_length_s": 20,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "MGL1701 CEVICHE MCS Reflection Data — South-Central Chile 30°–44°S",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
+      "doi": "10.1594/IEDA/324399",
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "15.15-km long-offset MCS reflection data from 2017 CEVICHE cruise along ~1000 km of south-central Chile; images underthrust sediment layer, basal accretion of crustal slices, and plate boundary reflectivity"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "MGL1701 Multibeam Bathymetry — South-Central Chile",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://www.rvdata.us/search/cruise/MGL1701",
+      "doi": null,
+      "repository": "RVData",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multibeam bathymetry acquired during MGL1701 cruise along the south-central Chilean margin"
+    },
+    {
+      "data_type": "gravity",
+      "name": "MGL1701 Shipboard Gravity — South-Central Chile",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": "https://www.rvdata.us/search/cruise/MGL1701",
+      "doi": null,
+      "repository": "RVData",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Free-air gravity data from MGL1701 cruise used to constrain density models of basal accretion bodies"
+    },
+    {
+      "data_type": "magnetics",
+      "name": "MGL1701 Magnetics — South-Central Chile",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": "https://www.rvdata.us/search/cruise/MGL1701",
+      "doi": null,
+      "repository": "RVData",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Magnetic anomaly data from MGL1701 cruise"
+    },
+    {
+      "data_type": "navigation",
+      "name": "MGL1701 Navigation Data",
+      "classification": "RAW",
+      "format": "CSV",
+      "url": "https://www.rvdata.us/search/cruise/MGL1701",
+      "doi": null,
+      "repository": "RVData",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Navigation and GPS positioning data from the MGL1701 CEVICHE cruise"
+    }
+  ],
+  "_data_note": "MGL1701 CEVICHE cruise data accessible via MGDS and RVData. Long-offset 15.15-km streamer makes this a unique dataset for imaging deep structure.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Long-offset MCS reflection data (15.15-km streamer) from the 2017 R/V Langseth MGL1701 CEVICHE cruise were processed using full waveform inversion and prestack depth migration. The processing reveals a thick underthrust sediment layer at the plate boundary and anomalous high-velocity wedge bodies interpreted as basally accreted crustal slices from the subducting Nazca plate. The data cover ~1,000 km of the south-central Chile margin (30°–44°S).",
+    "workflow": [
+      "1. Demultiplexing and data loading",
+      "2. Geometry assignment and trace editing",
+      "3. Multiple suppression (surface-related, internal)",
+      "4. Velocity analysis and tomographic model building",
+      "5. Prestack depth migration",
+      "6. Full waveform inversion for velocity model refinement",
+      "7. Depth section interpretation"
+    ],
+    "software": [
+      "ProMAX",
+      "unknown FWI code"
+    ],
+    "notes": "15.15-km streamer provides long-offset data critical for imaging deep structure; FWI applied for high-resolution velocity models"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "MGL1701 cruise data available via MGDS and RVData. Companion paper to Olsen et al. 2020, Arnulf et al. 2022, and Maksymowicz et al. 2021 using the same CEVICHE dataset."
+}

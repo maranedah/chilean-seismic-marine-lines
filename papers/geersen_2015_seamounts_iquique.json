@@ -1,0 +1,95 @@
+{
+  "id": "geersen_2015_seamounts_iquique",
+  "title": "Subducting seamounts control interplate coupling and seismic rupture in the 2014 Iquique earthquake area",
+  "authors": [
+    "Geersen, Jacob",
+    "Ranero, César R.",
+    "Barckhausen, Udo",
+    "Reichert, Christian"
+  ],
+  "year": 2015,
+  "journal": "Nature Communications",
+  "doi": "10.1038/ncomms9267",
+  "url": "https://www.nature.com/articles/ncomms9267",
+  "open_access_url": "https://www.nature.com/articles/ncomms9267.pdf",
+  "abstract": "To date, the parameters that determine rupture area of great subduction zone earthquakes remain contentious. On 1 April 2014, the Mw 8.1 Iquique earthquake ruptured a portion of the well-recognized northern Chile seismic gap but left large highly coupled areas un-ruptured. Marine seismic reflection and swath bathymetric data indicate that structural variations in the subducting Nazca Plate control regional-scale plate-coupling variations and the limited extent of the 2014 earthquake. Several under-thrusting seamounts correlate to the southward and up-dip arrest of seismic rupture during the 2014 earthquake, thus supporting a causal link. By fracturing the overriding plate, subducting seamounts are likely further responsible for reduced plate-coupling in the shallow subduction zone around 20.5°S. The data support that lower plate influence on coupling offshore Northern Chile is dominant, whereas the structure of the upper plate plays a minor role.",
+  "keywords": [
+    "seamounts",
+    "Iquique earthquake",
+    "Mw 8.1",
+    "marine seismic reflection",
+    "northern Chile",
+    "19°–21°S",
+    "plate coupling",
+    "rupture control",
+    "Nazca plate",
+    "swath bathymetry"
+  ],
+  "location": {
+    "latitude": -20.0,
+    "longitude": -70.5,
+    "city": "Iquique",
+    "region": "Región de Tarapacá",
+    "country": "Chile",
+    "description": "Offshore northern Chile between 19°S and 21°S, site of the 2014 Mw 8.1 Iquique earthquake, subducting Nazca plate",
+    "bounding_box": {
+      "lat_min": -21.5,
+      "lat_max": -18.5,
+      "lon_min": -72.5,
+      "lon_max": -69.5
+    },
+    "seismic_lines": [
+      {
+        "name": "MCS reflection profiles offshore northern Chile (19°–21°S)",
+        "lat_start": -19.0,
+        "lon_start": -72.0,
+        "lat_end": -21.0,
+        "lon_end": -71.0,
+        "length_km": null
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE",
+    "year_acquired": null,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": null,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "name": "Marine seismic reflection and swath bathymetric data, northern Chile (19°–21°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "GEOMAR OceanRep / BGR",
+      "size_gb": null,
+      "access": "restricted",
+      "download_command": null,
+      "description": "Marine MCS reflection and swath bathymetry data from offshore northern Chile (19°–21°S) used to identify subducting seamounts and their correlation with the 2014 Iquique earthquake rupture limits.",
+      "data_type": "bathymetry"
+    }
+  ],
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Marine seismic reflection and swath bathymetric data from offshore northern Chile (19°–21°S) processed to image the subducting Nazca plate structure and identify seamounts. Standard MCS processing applied for reflection imaging. Swath bathymetry mosaicked to map seafloor topography of incoming Nazca plate. Results correlated with 2014 Iquique earthquake rupture distribution and seismic coupling models.",
+    "workflow": [
+      "1. MCS reflection data processing (geometry, filter, velocity, stack, migration)",
+      "2. Swath bathymetry processing and mosaicking",
+      "3. Seamount identification and characterization",
+      "4. Spatial correlation with 2014 Iquique earthquake rupture zone",
+      "5. Plate coupling analysis"
+    ],
+    "software": [],
+    "notes": "Gold open access paper (CC-BY) in Nature Communications. Ranero (ICREA/CSIC) and Reichert/Barckhausen (BGR) co-authorship confirms prior CINCA/BGR surveys used."
+  },
+  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Gold open access PDF available from Nature Communications (CC-BY). Full abstract confirmed from OpenAlex. Seismic data from prior surveys (likely CINCA or BGR surveys) offshore northern Chile. Data not publicly deposited in named repository based on available metadata."
+}

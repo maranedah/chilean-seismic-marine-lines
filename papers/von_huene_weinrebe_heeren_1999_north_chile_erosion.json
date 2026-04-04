@@ -1,0 +1,122 @@
+{
+  "id": "von_huene_weinrebe_heeren_1999_north_chile_erosion",
+  "title": "Subduction erosion along the North Chile margin",
+  "authors": [
+    "von Huene, Roland",
+    "Weinrebe, W.",
+    "Heeren, F."
+  ],
+  "year": 1999,
+  "journal": "Journal of Geodynamics",
+  "doi": "10.1016/S0264-3707(98)00002-7",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264370798000027",
+  "open_access_url": null,
+  "abstract": "Swath bathymetry off Antofagasta reveals tectonic features consistent with subduction erosion of the upper plate by the incoming oceanic Nazca plate. The North Chile margin lacks an accretionary wedge and is characterized by pervasive extensional faulting of the continental slope. The study examines the large-scale geometry and mass budget of the eroded Chilean margin using multichannel seismic data.",
+  "keywords": [
+    "subduction erosion",
+    "north Chile",
+    "bathymetry",
+    "multichannel seismic",
+    "Antofagasta",
+    "CINCA95",
+    "extensional faulting"
+  ],
+  "location": {
+    "latitude": -22.5,
+    "longitude": -70.5,
+    "city": "Antofagasta",
+    "region": "Región de Antofagasta",
+    "country": "Chile",
+    "description": "Offshore north Chile from ~19°S to 26°S; erosive convergent margin lacking accretionary wedge",
+    "bounding_box": {
+      "lat_min": -26.0,
+      "lat_max": -19.0,
+      "lon_min": -72.0,
+      "lon_max": -70.0
+    },
+    "seismic_lines": [
+      {
+        "name": "CINCA95 MCS profiles — north Chile",
+        "lat_start": -19.0,
+        "lon_start": -71.0,
+        "lat_end": -26.0,
+        "lon_end": -71.0,
+        "length_km": 800
+      }
+    ]
+  },
+  "acquisition": {
+    "vessel": "R/V SONNE (SO104, CINCA95, 1995)",
+    "year_acquired": 1995,
+    "source_type": "airgun array",
+    "source_volume_cui": null,
+    "streamer_length_m": null,
+    "channel_count": null,
+    "sample_rate_ms": 2,
+    "record_length_s": null,
+    "fold": null,
+    "line_spacing_km": null
+  },
+  "data": [
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 MCS Reflection Profiles — North Chile Margin (19°–26°S)",
+      "classification": "PROCESSED",
+      "format": "SEG-Y",
+      "url": null,
+      "doi": null,
+      "repository": "BGR / PANGAEA",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Multichannel seismic reflection profiles from the CINCA95 (SO104) cruise used to quantify subduction erosion along the north Chile margin between 19°–26°S; images extensional faulting and lack of accretionary wedge. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "CINCA95 Swath Bathymetry — North Chile (19°–26°S)",
+      "classification": "RAW",
+      "format": "NetCDF",
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": "PANGAEA",
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "Multibeam swath bathymetry from SO104 revealing tectonic features of the north Chile margin consistent with subduction erosion. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Shipboard Gravity — North Chile",
+      "classification": "RAW",
+      "format": "ASCII",
+      "url": null,
+      "doi": null,
+      "repository": "MGDS",
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Shipboard free-air gravity data from SO104 supplementing seismic and bathymetric interpretation"
+    }
+  ],
+  "_data_note": "CINCA95 (SO104) cruise data. MCS and bathymetry accessible via MGDS.",
+  "processing": {
+    "classification": "PROCESSED",
+    "summary": "Multichannel seismic reflection data from CINCA95 (SO104, 1995) were processed to image the north Chilean margin structure. The study uses depth-converted seismic profiles to calculate mass budgets of eroded forearc material and characterize the geometry of the sediment-starved margin. Swath bathymetry is combined with seismic data to map extensional faulting and slope morphology between 19°–26°S.",
+    "workflow": [
+      "1. Demultiplexing",
+      "2. Geometry assignment",
+      "3. Bandpass filtering",
+      "4. Velocity analysis",
+      "5. NMO and stack",
+      "6. Post-stack migration",
+      "7. Depth conversion using velocity model"
+    ],
+    "software": [
+      "unknown"
+    ],
+    "notes": "Synthesis paper using CINCA95 data; some profiles depth-migrated for mass balance calculations"
+  },
+  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analysis_confidence": "medium",
+  "analysis_notes": "Paper behind paywall; abstract and metadata derived from survey_results.json snippet and known CINCA95 cruise information. No open-access version found."
+}
