@@ -7,23 +7,9 @@ const nextConfig = {
     }
     return config
   },
-  async rewrites() {
-    const backendUrl = process.env.BACKEND_URL ?? 'http://localhost:8000'
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${backendUrl}/api/:path*`,
-      },
-      {
-        source: '/images/:path*',
-        destination: `${backendUrl}/images/:path*`,
-      },
-      {
-        source: '/previews/:path*',
-        destination: `${backendUrl}/previews/:path*`,
-      },
-    ]
-  },
+  // Proxying to the backend is handled in src/middleware.ts at runtime so that
+  // BACKEND_URL is read from the running container's environment rather than
+  // being baked in during `next build`.
 }
 
 export default nextConfig
