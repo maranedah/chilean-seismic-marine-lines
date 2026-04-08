@@ -1,4 +1,4 @@
-import type { Paper, PaperSummary, Stats } from '../types/paper'
+import type { FiguresManifest, Paper, PaperSummary, Stats } from '../types/paper'
 
 const BASE = '/api'
 
@@ -21,4 +21,14 @@ export function fetchPaper(id: string): Promise<Paper> {
 
 export function fetchStats(): Promise<Stats> {
   return request<Stats>('/stats')
+}
+
+export async function fetchFigures(id: string): Promise<FiguresManifest | null> {
+  try {
+    const res = await fetch(`/images/${encodeURIComponent(id)}/figures.json`)
+    if (!res.ok) return null
+    return res.json() as Promise<FiguresManifest>
+  } catch {
+    return null
+  }
 }

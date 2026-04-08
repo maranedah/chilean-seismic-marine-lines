@@ -159,6 +159,22 @@ export interface Stats {
   figures_per_paper: Record<string, number>
 }
 
+export interface FigureEntry {
+  filename: string
+  path: string
+  page: number
+  type: string
+  figure_label: string | null
+  caption: string | null
+  description: string | null
+}
+
+export interface FiguresManifest {
+  paper_id: string
+  total_figures: number
+  figures: FigureEntry[]
+}
+
 export interface PaperFilters {
   q?: string
   // basic
