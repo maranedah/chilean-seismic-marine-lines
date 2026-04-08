@@ -1,0 +1,53 @@
+name: Build Backend Container
+
+on:
+  workflow_call:
+
+env:
+  PROJECT_ID: ${{ github.ref == 'refs/heads/main' && secrets.PROD_PROJECT_ID || secrets.DEV_PROJECT_ID }}
+  REGION: us-central1
+  REGISTRY: us.gcr.io
+  PROJECT_NAME: sismica-marina
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Google Auth
+      uses: 'google-github-actions/auth@v2'
+      with:
+        credentials_json: ${{ github.ref == 'refs/heads/main' && secrets.PROD_GCP_SA_KEY || secrets.DEV_GCP_SA_KEY }}
+        create_credentials_file: true
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+
+    - name: Activate service account and set project
+      run: |
+        gcloud auth list || true
+        gcloud config set project "$PROJECT_ID"
+
+    - name: Configure Docker for Container Registry
+      run: gcloud auth configure-docker us.gcr.io --quiet
+
+    - name: Docker login (explicit)
+      run: |
+        gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us.gcr.io
+
+    - name: Verify auth context
+      run: |
+        gcloud auth list
+        gcloud config list project
+
+    - name: Build and Push Container
+      # Build context is project root so Dockerfile.prod can COPY papers/
+      run: |-
+        IMAGE_URL="${REGISTRY}/${PROJECT_ID}/${PROJECT_NAME}-backend:${GITHUB_SHA}"
+        docker build -f backend/Dockerfile.prod -t $IMAGE_URL .
+        docker push $IMAGE_URL
+        docker tag $IMAGE_URL ${REGISTRY}/${PROJECT_ID}/${PROJECT_NAME}-backend:latest
+        docker push ${REGISTRY}/${PROJECT_ID}/${PROJECT_NAME}-backend:latest

@@ -1,0 +1,72 @@
+name: Deploy Infrastructure
+
+on:
+  workflow_call:
+
+env:
+  PROJECT_ID: ${{ github.ref == 'refs/heads/main' && secrets.PROD_PROJECT_ID || secrets.DEV_PROJECT_ID }}
+  REGION: us-central1
+  REGISTRY: us.gcr.io
+  PROJECT_NAME: sismica-marina
+  GCP_SA_KEY: ${{ github.ref == 'refs/heads/main' && secrets.PROD_GCP_SA_KEY || secrets.DEV_GCP_SA_KEY }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Google Auth
+      uses: 'google-github-actions/auth@v2'
+      with:
+        credentials_json: ${{ env.GCP_SA_KEY }}
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v2
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: "1.9.0"
+
+    - name: Create Service Account Key File
+      run: |
+        echo '${{ env.GCP_SA_KEY }}' > /tmp/gcp-sa-key.json
+
+    - name: Create TFVars File
+      working-directory: terraform
+      run: |
+        cat <<EOF > terraform.tfvars
+        project_id     = "${{ env.PROJECT_ID }}"
+        region         = "${{ env.REGION }}"
+        project_name   = "${{ env.PROJECT_NAME }}"
+        environment    = "${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}"
+        backend_image  = "${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.PROJECT_NAME }}-backend:${{ github.sha }}"
+        frontend_image = "${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.PROJECT_NAME }}-frontend:${{ github.sha }}"
+        EOF
+
+    - name: Terraform Init
+      working-directory: terraform
+      run: |
+        if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+          BACKEND_BUCKET="sismica-marina-tf-state-prod"
+        else
+          BACKEND_BUCKET="sismica-marina-tf-state-dev"
+        fi
+        terraform init -backend-config="bucket=${BACKEND_BUCKET}"
+
+    - name: Terraform Plan
+      working-directory: terraform
+      run: terraform plan -lock=false
+
+    - name: Terraform Apply
+      working-directory: terraform
+      run: terraform apply -auto-approve -lock=false
+
+    - name: Output Service URLs
+      working-directory: terraform
+      run: |
+        echo "Frontend URL: $(terraform output -raw frontend_url)"
+        echo "Backend URL:  $(terraform output -raw backend_url)"
