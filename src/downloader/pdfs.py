@@ -32,8 +32,8 @@ from pathlib import Path
 
 import requests
 
-PAPERS_DIR = Path(__file__).parent.parent.parent / "papers"
-PDFS_DIR = Path(__file__).parent.parent.parent / "pdfs"
+PAPERS_DIR = Path(__file__).parent.parent.parent / "data" / "extracted_jsons"
+PDFS_DIR = Path(__file__).parent.parent.parent / "data" / "source_paper_pdfs"
 
 HEADERS = {
     "User-Agent": (
@@ -48,8 +48,8 @@ HEADERS = {
     "Upgrade-Insecure-Requests": "1",
 }
 
-SESSION = requests.Session()
-SESSION.headers.update(HEADERS)
+# Initialized in main() to avoid creating an HTTP connection pool at import time.
+SESSION: requests.Session
 
 
 # ---------------------------------------------------------------------------
@@ -372,6 +372,10 @@ def download_pdf(url: str, dest: Path, dry_run: bool, paper: dict | None = None)
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    global SESSION
+    SESSION = requests.Session()
+    SESSION.headers.update(HEADERS)
+
     parser = argparse.ArgumentParser(
         description="Download PDF copies of Chilean marine seismic papers",
         formatter_class=argparse.RawDescriptionHelpFormatter,

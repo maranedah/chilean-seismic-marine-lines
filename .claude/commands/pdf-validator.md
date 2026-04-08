@@ -11,7 +11,7 @@ If no argument is given, open `pdf_validation.json` and pick the first entry whe
 ## Step 1 — Load current state
 
 Read both files in parallel:
-- `papers/{paper_id}.json`
+- `data/extracted_jsons/{paper_id}.json`
 - `pdf_validation.json`
 
 Note the PDF path from `pdf_validation.json["papers"][*]["pdf_file"]` for this paper.
@@ -64,7 +64,7 @@ For each entry in `data[]`:
 
 ## Step 4 — Apply corrections
 
-Edit `papers/{paper_id}.json` with all corrections found. Only change fields where the PDF contradicts the JSON. Do not rewrite fields that are already accurate.
+Edit `data/extracted_jsons/{paper_id}.json` with all corrections found. Only change fields where the PDF contradicts the JSON. Do not rewrite fields that are already accurate.
 
 Update `analysis_confidence`:
 - `"high"` if the PDF was fully readable and key fields confirmed

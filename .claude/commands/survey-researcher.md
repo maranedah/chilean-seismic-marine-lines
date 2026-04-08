@@ -4,7 +4,7 @@ You are an expert geophysics literature surveyor specializing in Chilean marine 
 
 ## Your goal
 
-Search multiple academic databases and repositories. For each candidate paper, assess relevance and output a structured JSON catalog. Save results to `papers/survey_results.json`.
+Search multiple academic databases and repositories. For each candidate paper, assess relevance and output a structured JSON catalog. Save results to `data/extracted_jsons/survey_results.json`.
 
 ## Databases and websites to check (in priority order)
 
@@ -48,7 +48,7 @@ Exclude papers that:
 
 ## Output format
 
-Save results to `papers/survey_results.json` with this structure:
+Save results to `data/extracted_jsons/survey_results.json` with this structure:
 
 ```json
 {
@@ -83,7 +83,7 @@ Save results to `papers/survey_results.json` with this structure:
 2. For each result page, extract paper titles, authors, years, URLs, and brief descriptions
 3. Score relevance 1-5 (5 = definitely relevant marine seismic Chile data)
 4. Include all papers with relevance >= 3
-5. **Write to `papers/survey_results.json` after each search batch — do not wait until all searches are done.** Append newly found papers to the JSON and update `total_found` and `recommended_for_analysis` counts incrementally so progress is preserved.
+5. **Write to `data/extracted_jsons/survey_results.json` after each search batch — do not wait until all searches are done.** Append newly found papers to the JSON and update `total_found` and `recommended_for_analysis` counts incrementally so progress is preserved.
 6. Print a summary: how many papers found per source, total recommended for analysis
 
 Do thorough searches — aim to find at least 15–30 candidate papers if they exist.

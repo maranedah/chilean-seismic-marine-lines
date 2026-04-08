@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import dynamic from 'next/dynamic'
 import { fetchPapers } from '@/services/api'
@@ -20,6 +20,16 @@ export default function MapPage() {
     queryKey: ['papers'],
     queryFn: fetchPapers,
   })
+
+  // Eagerly preload all preview images so they're browser-cached before hover.
+  useEffect(() => {
+    allPapers.forEach((paper) => {
+      paper.preview_figures?.forEach((src) => {
+        const img = new Image()
+        img.src = src
+      })
+    })
+  }, [allPapers])
 
   const filtered = useMemo(() => applyFilters(allPapers, filters), [allPapers, filters])
   const filterOptions = useMemo(() => computeFilterOptions(allPapers), [allPapers])

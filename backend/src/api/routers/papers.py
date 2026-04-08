@@ -5,8 +5,8 @@ from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException
 
 from ...application.use_cases import GetPaperUseCase, ListPapersUseCase
-from ...domain.ports import PaperFilters, PaperRepository
-from ..dependencies import get_repo
+from ...domain.ports import FigureRepository, PaperFilters, PaperRepository
+from ..dependencies import get_figure_repo, get_repo
 from ..schemas import PaperSchema, PaperSummarySchema, to_paper_schema, to_paper_summary
 
 router = APIRouter(prefix="/api/papers", tags=["papers"])
@@ -23,6 +23,7 @@ def list_papers(
     data_types: Optional[str] = None,
     q: Optional[str] = None,
     repo: PaperRepository = Depends(get_repo),
+    figure_repo: FigureRepository = Depends(get_figure_repo),
 ) -> list[PaperSummarySchema]:
     filters = PaperFilters(
         region=region,
@@ -35,7 +36,7 @@ def list_papers(
         q=q,
     )
     papers = ListPapersUseCase(repo).execute(filters)
-    return [to_paper_summary(p) for p in papers]
+    return [to_paper_summary(p, figure_repo.get_preview_figures(p.id)) for p in papers]
 
 
 @router.get("/{paper_id}", response_model=PaperSchema)

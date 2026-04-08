@@ -1,4 +1,4 @@
-# Build context must be the project root so papers/ can be copied in.
+# Build context must be the project root.
 # Usage: docker build -f backend/Dockerfile.prod -t <image> .
 FROM python:3.11-slim
 
@@ -8,9 +8,10 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/src/ ./src/
-COPY papers/ ./papers/
 
-ENV PAPERS_DIR=/app/papers
+# GCS_BUCKET must be injected at runtime (e.g. via Cloud Run env vars or -e flag).
+# GOOGLE_APPLICATION_CREDENTIALS should point to a mounted service-account key,
+# or rely on Workload Identity when running on GCP.
 
 EXPOSE 8000
 

@@ -26,7 +26,7 @@ if hasattr(sys.stderr, "reconfigure"):
 
 from .mgds import scrape_cruise
 
-PAPERS_DIR = Path(__file__).parent.parent.parent / "papers"
+PAPERS_DIR = Path(__file__).parent.parent.parent / "data" / "extracted_jsons"
 
 # ── Cruise → paper mapping (from probe_cruises.py results) ───────────────────
 

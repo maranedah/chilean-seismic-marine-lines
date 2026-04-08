@@ -2573,17 +2573,17 @@ The following databases and repositories were searched during the literature sur
 
 To add a new paper to the database:
 
-1. Copy `papers/schema.json` as a template
+1. Copy `data/extracted_jsons/schema.json` as a template
 2. Fill in all required fields: `id`, `title`, `authors`, `year`, `journal`, `doi`, `url`, `location`, `acquisition`, `data`, and `processing`
 3. Name the file using the convention: `lastname_year_keyword.json`
-4. Place it in the `papers/` directory
+4. Place it in the `data/extracted_jsons/` directory
 5. Run the Streamlit app to verify the entry renders correctly:
 
 ```bash
 streamlit run app.py
 ```
 
-See `papers/schema.json` for the full field specification and allowed values.
+See `data/extracted_jsons/schema.json` for the full field specification and allowed values.
 
 ---
 
@@ -2607,4 +2607,4 @@ Data licenses vary by source. See individual paper JSON files for access and lic
 | Restricted | ~45 |
 | Unknown | ~35 |
 | **Total papers** | **98** |
-"# chiealn-seismic-marine-lines" 
+"# chiealn-seismic-marine-lines"

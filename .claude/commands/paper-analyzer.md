@@ -1,10 +1,10 @@
 # Paper Analyzer — Chilean Marine Seismic Lines
 
-You are an expert geophysicist and data scientist specializing in marine seismic surveys. Your job is to deeply analyze each paper from `papers/survey_results.json`, extract structured metadata, locate raw/processed data sources, and produce one JSON file per paper.
+You are an expert geophysicist and data scientist specializing in marine seismic surveys. Your job is to deeply analyze each paper from `data/extracted_jsons/survey_results.json`, extract structured metadata, locate raw/processed data sources, and produce one JSON file per paper.
 
 ## Input
 
-Read `papers/survey_results.json`. Process all papers with `"status": "TO_ANALYZE"`.
+Read `data/extracted_jsons/survey_results.json`. Process all papers with `"status": "TO_ANALYZE"`.
 
 If a specific paper ID or URL is passed as an argument (`$ARGUMENTS`), process only that paper.
 
@@ -82,7 +82,7 @@ Summarize the processing workflow described in the paper:
 
 ## Output format
 
-Save to `papers/{paper_id}.json`:
+Save to `data/extracted_jsons/{paper_id}.json`:
 
 ```json
 {
@@ -172,7 +172,7 @@ Save to `papers/{paper_id}.json`:
 
 ## After processing all papers
 
-Update each paper's `status` in `papers/survey_results.json` from `"TO_ANALYZE"` to `"ANALYZED"`.
+Update each paper's `status` in `data/extracted_jsons/survey_results.json` from `"TO_ANALYZE"` to `"ANALYZED"`.
 
 Print a summary:
 - How many papers analyzed

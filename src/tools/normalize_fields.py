@@ -8,7 +8,7 @@ import json
 import re
 from pathlib import Path
 
-PAPERS_DIR = Path(__file__).parent.parent.parent / "papers"
+PAPERS_DIR = Path(__file__).parent.parent.parent / "data" / "extracted_jsons"
 EXCLUDE = {"survey_results.json", "data_availability.json", "schema.json"}
 
 # ── Vessel normalization ───────────────────────────────────────────────────────

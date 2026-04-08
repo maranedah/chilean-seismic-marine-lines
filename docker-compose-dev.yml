@@ -5,13 +5,16 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./papers:/app/papers:ro
-      - ./images:/app/images:ro
+      - ./data/extracted_jsons:/app/data/extracted_jsons:ro
+      - ./data/extracted_images:/app/data/extracted_images:ro
+      - ./${GCP_SA_KEY}:/run/secrets/sa-key.json:ro
       - ./backend/src:/app/src           # hot reload: live source mount
       - ./backend/logging.yaml:/app/logging.yaml:ro
     environment:
-      - PAPERS_DIR=/app/papers
-      - IMAGES_DIR=/app/images
+      - PAPERS_DIR=/app/data/extracted_jsons
+      - IMAGES_DIR=/app/data/extracted_images
+      - GCS_BUCKET=${GCS_BUCKET}
+      - GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/sa-key.json
     command:
       [
         "uvicorn", "src.api.main:app",

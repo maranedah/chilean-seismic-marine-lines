@@ -4,7 +4,7 @@
 
 A curated database of ~98 scientific papers about **marine seismic surveys** (reflection and refraction) along the Chilean subduction zone, from northern Chile (~18°S) to the southernmost tip (~57°S), spanning 1987–2025.
 
-Each paper is stored as a structured JSON file in `papers/` containing:
+Each paper is stored as a structured JSON file in `data/extracted_jsons/` containing:
 - Full bibliographic metadata (DOI, URL, open-access URL)
 - Geographic location and bounding box
 - Seismic acquisition parameters (vessel, streamer length, source volume, etc.)
@@ -19,7 +19,13 @@ A **Streamlit web app** (`app.py`) provides an interactive map and table view of
 
 ```
 chilean-seismic-marine-lines/
-├── papers/                  # One JSON file per paper + survey_results.json
+├── data/
+│   ├── extracted_jsons/     # One JSON file per paper + survey_results.json
+│   ├── extracted_images/    # Extracted figure images per paper
+│   ├── extracted_text/      # Extracted PDF text per paper
+│   ├── source_paper_pdfs/   # Downloaded PDF copies of papers
+│   ├── datasets/            # Downloaded open-access seismic datasets
+│   └── graphify-out/        # Knowledge graph outputs
 ├── app.py                   # Streamlit interactive map app
 ├── download.py              # Dataset downloader (seismic data, bathymetry, etc.)
 ├── requirements.txt         # Python dependencies

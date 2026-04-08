@@ -1,33 +1,11 @@
 """Pydantic response schemas and domain→schema adapters."""
 
-import json
-import os
 from typing import Optional
 
 from pydantic import BaseModel
 
 from ..application.use_cases import StatsResult
 from ..domain.models import Paper
-
-# Root of the project (4 levels up from this file: api → src → backend → project)
-_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-
-
-def _load_preview_figures(paper_id: str, max_count: int = 3) -> list[str]:
-    """Return up to max_count figure URL paths for a paper, or [] if none."""
-    figures_json = os.path.join(_PROJECT_ROOT, "images", paper_id, "figures.json")
-    if not os.path.exists(figures_json):
-        return []
-    try:
-        with open(figures_json, encoding="utf-8") as f:
-            data = json.load(f)
-        return [
-            "/" + fig["path"].replace("\\", "/")
-            for fig in data.get("figures", [])[:max_count]
-            if fig.get("path")
-        ]
-    except Exception:
-        return []
 
 
 # ── Response schemas ──────────────────────────────────────────────────────────
@@ -205,7 +183,7 @@ def _authors_short(authors: list[str]) -> str:
     return ", ".join(first_three) + suffix
 
 
-def to_paper_summary(paper: Paper) -> PaperSummarySchema:
+def to_paper_summary(paper: Paper, preview_figures: list[str] | None = None) -> PaperSummarySchema:
     lat = paper.location.latitude if paper.location else None
     lon = paper.location.longitude if paper.location else None
     city = paper.location.city if paper.location else ""
@@ -253,7 +231,7 @@ def to_paper_summary(paper: Paper) -> PaperSummarySchema:
             else []
         ),
         completeness=paper.completeness,
-        preview_figures=_load_preview_figures(paper.id),
+        preview_figures=preview_figures or [],
     )
 
 

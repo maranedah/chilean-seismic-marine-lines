@@ -39,7 +39,7 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-PAPERS_DIR = Path(__file__).parent.parent.parent / "papers"
+PAPERS_DIR = Path(__file__).parent.parent.parent / "data" / "extracted_jsons"
 
 # Map MGDS data_type strings → our schema data_type values
 DATA_TYPE_MAP = {
@@ -322,36 +322,42 @@ def parse_mgds_datasets(url: str) -> list[dict]:
 
 # ── Top-level: enrich sensors → dataset entries ───────────────────────────────
 
-def enrich_sensor(sensor: dict) -> dict:
-    """Fetch detail page for a sensor and merge into a dataset entry."""
-    url = sensor.get("url", "")
-    detail: dict = {}
-
+def _fetch_sensor_detail(url: str) -> dict:
+    """
+    Dispatch to the appropriate detail-page parser based on URL shape.
+    Returns a detail dict (may be empty if URL type is unrecognised).
+    """
+    if not url:
+        return {}
     try:
         if "rvdata.us" in url:
-            detail = parse_r2r_fileset(url)
-        elif "DataSets.php" in url:
+            return parse_r2r_fileset(url)
+        if "DataSets.php" in url:
             sub_datasets = parse_mgds_datasets(url)
-            # Merge all sub-datasets: collect all DOIs and formats
-            if sub_datasets:
-                dois = [d["doi"] for d in sub_datasets if "doi" in d]
-                fmts = [d["format_str"] for d in sub_datasets if "format_str" in d]
-                detail = {
-                    "source_url": url,
-                    "sub_dois": dois,
-                    "format_str": ", ".join(sorted(set(fmts))),
-                    "description": sub_datasets[0].get("description", ""),
-                    "access": "open",  # MGDS seismic data is generally accessible
-                }
-        elif url:
-            # Unknown URL type (IRIS, Files.php individual sets, etc.) — skip detail fetch
-            # but keep the entry with whatever MGDS surface info we have
-            pass
+            if not sub_datasets:
+                return {}
+            dois = [d["doi"] for d in sub_datasets if "doi" in d]
+            fmts = [d["format_str"] for d in sub_datasets if "format_str" in d]
+            return {
+                "source_url": url,
+                "sub_dois": dois,
+                "format_str": ", ".join(sorted(set(fmts))),
+                "description": sub_datasets[0].get("description", ""),
+                "access": "open",
+            }
+        # Unknown URL type (IRIS, Files.php, etc.) — no detail fetch
+        return {}
     except Exception as exc:
         print(f"  WARNING: failed to fetch {url}: {exc}", file=sys.stderr)
+        return {}
 
-    # Resolve our schema data_type
-    # Handle combined sensor strings like "Bathymetry:Singlebeam, Gravity:Field, Magnetic:Field"
+
+def _build_dataset_entry(sensor: dict, detail: dict) -> dict:
+    """
+    Map sensor surface info + fetched detail dict into our paper JSON schema
+    dataset entry.  Private keys (_*) carry extra provenance for review.
+    """
+    # Resolve data_type (handles combined strings like "Bathymetry:Singlebeam, Gravity:Field")
     raw_type_key = sensor["raw_type"].lower()
     data_type = DATA_TYPE_MAP.get(raw_type_key)
     if data_type is None:
@@ -361,39 +367,31 @@ def enrich_sensor(sensor: dict) -> dict:
                 break
     data_type = data_type or "unknown"
 
-    # Resolve repo name
     repo_raw = (sensor.get("repo_raw") or "").strip()
     repo = REPO_MAP.get(repo_raw.lower(), repo_raw) if repo_raw else None
 
-    # Build format list
     fmt_raw = sensor.get("fmt_raw") or detail.get("format_str") or ""
     formats = [f.strip() for f in re.split(r"[,/]", fmt_raw) if f.strip()] or None
 
-    # Build entry
+    url = sensor.get("url", "")
     entry: dict = {
-        "data_type": data_type,
-        "name": sensor["raw_type"],
+        "data_type":      data_type,
+        "name":           sensor["raw_type"],
         "classification": detail.get("classification", "RAW"),
-        "format": formats,
-        "url": detail.get("doi_url") or url or None,
-        "doi": detail.get("doi"),
-        "repository": [repo] if repo else None,
-        "size_gb": detail.get("size_gb"),
-        "access": detail.get("access", "unknown"),
+        "format":         formats,
+        "url":            detail.get("doi_url") or url or None,
+        "doi":            detail.get("doi"),
+        "repository":     [repo] if repo else None,
+        "size_gb":        detail.get("size_gb"),
+        "access":         detail.get("access", "unknown"),
         "download_command": None,
-        "description": detail.get("description", ""),
-        "cdp_spacing_m": None,
+        "description":    detail.get("description", ""),
+        "cdp_spacing_m":  None,
     }
 
-    # Extra info (not in schema but useful for review)
-    if detail.get("sub_dois"):
-        entry["_sub_dois"] = detail["sub_dois"]
-    if detail.get("file_count"):
-        entry["_file_count"] = detail["file_count"]
-    if detail.get("size_str"):
-        entry["_size_str"] = detail["size_str"]
-    if detail.get("date_released"):
-        entry["_date_released"] = detail["date_released"]
+    for key in ("sub_dois", "file_count", "size_str", "date_released"):
+        if detail.get(key):
+            entry[f"_{key}"] = detail[key]
     if detail.get("lat_min") is not None:
         entry["_bbox"] = {
             "lat_min": detail["lat_min"], "lat_max": detail["lat_max"],
@@ -401,6 +399,12 @@ def enrich_sensor(sensor: dict) -> dict:
         }
 
     return entry
+
+
+def enrich_sensor(sensor: dict) -> dict:
+    """Fetch detail page for a sensor and merge into a dataset entry."""
+    detail = _fetch_sensor_detail(sensor.get("url", ""))
+    return _build_dataset_entry(sensor, detail)
 
 
 def scrape_cruise(cruise_id: str) -> list[dict]:

@@ -11,6 +11,7 @@ Usage:
   python -m src.extract.resolution paper_id1    # specific papers
 """
 
+import argparse
 import json
 import os
 import re
@@ -148,8 +149,8 @@ def _first_match(patterns, text) -> float | None:
 # ── per-paper processing ──────────────────────────────────────────────────────
 
 def process(paper_id: str) -> dict:
-    txt_path = str(ROOT / "pdf_text" / f"{paper_id}.txt")
-    json_path = str(ROOT / "papers" / f"{paper_id}.json")
+    txt_path = str(ROOT / "data" / "extracted_text" / f"{paper_id}.txt")
+    json_path = str(ROOT / "data" / "extracted_jsons" / f"{paper_id}.json")
 
     result = {"shot_interval_m": None, "group_interval_m": None, "changed": False}
 
@@ -199,15 +200,20 @@ def process(paper_id: str) -> dict:
 
 # ── main ──────────────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
-    sys.stdout.reconfigure(encoding="utf-8")
+def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
 
-    ids = sys.argv[1:]
+    parser = argparse.ArgumentParser(description="Extract shot/group interval parameters from PDF text files")
+    parser.add_argument("paper_ids", nargs="*", metavar="PAPER_ID",
+                        help="Paper IDs to process (default: all with extracted text)")
+    args = parser.parse_args()
+
+    ids = args.paper_ids
     if not ids:
-        # Auto-detect all papers that have a txt file
         ids = [
             f[:-4]
-            for f in sorted(os.listdir(ROOT / "pdf_text"))
+            for f in sorted(os.listdir(ROOT / "data" / "extracted_text"))
             if f.endswith(".txt")
         ]
 
@@ -218,3 +224,7 @@ if __name__ == "__main__":
             updated += 1
 
     print(f"\nDone. {updated}/{len(ids)} papers updated.")
+
+
+if __name__ == "__main__":
+    main()

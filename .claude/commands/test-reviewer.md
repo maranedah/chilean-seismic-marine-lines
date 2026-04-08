@@ -24,7 +24,7 @@ If `$ARGUMENTS` is provided (e.g. `/test-reviewer download`), focus only on that
 ```bash
 python -c "
 import json, os, sys
-papers_dir = 'papers'
+papers_dir = 'data/extracted_jsons'
 errors = []
 required_fields = ['id', 'title', 'year', 'doi', 'location', 'data']
 for fname in os.listdir(papers_dir):
@@ -72,7 +72,7 @@ Read `_tmp_out.txt`, report results, delete it.
 ```bash
 python -c "
 import json, os
-with open('papers/survey_results.json') as f:
+with open('data/extracted_jsons/survey_results.json') as f:
     data = json.load(f)
 papers = data if isinstance(data, list) else data.get('papers', [])
 valid_statuses = {'TO_ANALYZE', 'ANALYZED', 'SKIPPED', 'ERROR'}
@@ -101,7 +101,7 @@ Read `_tmp_out.txt`, report results, delete it.
 ```bash
 python -c "
 import json, os
-results_path = 'papers/survey_results.json'
+results_path = 'data/extracted_jsons/survey_results.json'
 with open(results_path) as f:
     data = json.load(f)
 index = data if isinstance(data, list) else data.get('papers', [])

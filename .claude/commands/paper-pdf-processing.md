@@ -4,20 +4,20 @@ Process a paper's PDF: extract text, extract figures, validate/update the JSON m
 
 ## Input
 
-A paper ID (e.g. `becerra_2013_arauco_basin_seismic_tecto`). If no argument is given, find papers where a PDF exists in `pdfs/` but either:
-- `pdf_text/{id}.txt` is missing, OR
-- `images/{id}/figures.json` is missing, OR
+A paper ID (e.g. `becerra_2013_arauco_basin_seismic_tecto`). If no argument is given, find papers where a PDF exists in `data/source_paper_pdfs/` but either:
+- `data/extracted_text/{id}.txt` is missing, OR
+- `data/extracted_images/{id}/figures.json` is missing, OR
 - the entry in `pdf_validation.json` has `"validated": false`
 
 Process the first such paper found.
 
 ## Step 1 — Verify the PDF exists
 
-Check `pdfs/{paper_id}.pdf`. If it doesn't exist, print an error and stop.
+Check `data/source_paper_pdfs/{paper_id}.pdf`. If it doesn't exist, print an error and stop.
 
 ## Step 2 — Extract text (if not already done)
 
-Check if `pdf_text/{paper_id}.txt` exists. If not, run:
+Check if `data/extracted_text/{paper_id}.txt` exists. If not, run:
 
 ```bash
 python extract_pdf_text.py {paper_id} > _tmp_extract.txt 2>&1
@@ -27,11 +27,11 @@ Read `_tmp_extract.txt` to confirm success, then delete it.
 
 ## Step 3 — Extract figures (if not already done)
 
-Check if `images/{paper_id}/figures.json` exists. If not, invoke the `figure-extractor` command for this paper ID.
+Check if `data/extracted_images/{paper_id}/figures.json` exists. If not, invoke the `figure-extractor` command for this paper ID.
 
 ## Step 4 — Validate and update JSON metadata
 
-Use the `/pdf-validator` skill to validate `papers/{paper_id}.json` against the PDF. This will:
+Use the `/pdf-validator` skill to validate `data/extracted_jsons/{paper_id}.json` against the PDF. This will:
 - Verify bibliographic fields (title, authors, year, DOI)
 - Extract/update acquisition parameters
 - Find data availability links
@@ -55,7 +55,7 @@ Add or update the entry in `pdf_validation.json`:
 ```json
 {
   "id": "{paper_id}",
-  "pdf_file": "pdfs/{paper_id}.pdf",
+  "pdf_file": "data/source_paper_pdfs/{paper_id}.pdf",
   "validated": true,
   "validated_at": "YYYY-MM-DD",
   "notes": "Processed via paper-pdf-processing command. {brief summary of changes}"

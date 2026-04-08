@@ -28,3 +28,17 @@ class PaperRepository(ABC):
 
     @abstractmethod
     def list_filtered(self, filters: PaperFilters) -> list[Paper]: ...
+
+
+class FigureRepository(ABC):
+    """Port for reading extracted figure metadata from any storage backend."""
+
+    @abstractmethod
+    def get_figure_stats(self) -> tuple[int, int, dict[str, int]]:
+        """Return (pdfs_analyzed, figures_total, figures_per_paper)."""
+        ...
+
+    @abstractmethod
+    def get_preview_figures(self, paper_id: str, max_count: int = 3) -> list[str]:
+        """Return up to max_count figure URL paths for a paper, or []."""
+        ...

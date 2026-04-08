@@ -8,13 +8,16 @@ This script replaces them with:
   - Real PANGAEA dataset DOIs where they exist (bathymetry compilations)
   - null + access=unknown for seismic/OBS data with no public dataset DOI
   - Specific MGDS Files.php dataset pages for MGL1701 / MGL1610 MCS data
+
+Usage:
+    python -m src.tools.fix_urls
 """
 
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent.parent
-PAPERS_DIR = ROOT / "papers"
+PAPERS_DIR = ROOT / "data" / "extracted_jsons"
 EXCLUDE = {"survey_results.json", "data_availability.json", "schema.json"}
 
 # Real PANGAEA dataset DOIs found via research
@@ -26,10 +29,6 @@ MGDS_MGL1701_MCS = "https://www.marine-geo.org/tools/search/Files.php?data_set_u
 MGDS_MGL1701_MCS_DOI = "10.1594/IEDA/324399"
 MGDS_MGL1610_MCS = "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934"
 MGDS_MGL1610_MCS_DOI = "10.1594/IEDA/323934"
-
-report = []
-total_fixed = 0
-files_updated = 0
 
 
 def fix_dataset(entry: dict) -> bool:
@@ -100,23 +99,32 @@ def fix_dataset(entry: dict) -> bool:
     return modified
 
 
-for path in sorted(PAPERS_DIR.glob("*.json")):
-    if path.name in EXCLUDE:
-        continue
-    data = json.loads(path.read_text(encoding="utf-8"))
-    file_modified = False
-    for entry in data.get("data", []):
-        old_url = entry.get("url") or ""
-        if fix_dataset(entry):
-            file_modified = True
-            total_fixed += 1
-            report.append(f"  {path.stem}  [{entry['data_type']}]  {old_url[:70]}  →  {str(entry.get('url', 'null'))[:70]}")
-    if file_modified:
-        path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        files_updated += 1
+def main():
+    report = []
+    total_fixed = 0
+    files_updated = 0
 
-print(f"Files updated : {files_updated}")
-print(f"Entries fixed : {total_fixed}")
-print()
-for line in report:
-    print(line)
+    for path in sorted(PAPERS_DIR.glob("*.json")):
+        if path.name in EXCLUDE:
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        file_modified = False
+        for entry in data.get("data", []):
+            old_url = entry.get("url") or ""
+            if fix_dataset(entry):
+                file_modified = True
+                total_fixed += 1
+                report.append(f"  {path.stem}  [{entry['data_type']}]  {old_url[:70]}  →  {str(entry.get('url', 'null'))[:70]}")
+        if file_modified:
+            path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            files_updated += 1
+
+    print(f"Files updated : {files_updated}")
+    print(f"Entries fixed : {total_fixed}")
+    print()
+    for line in report:
+        print(line)
+
+
+if __name__ == "__main__":
+    main()

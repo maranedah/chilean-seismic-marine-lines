@@ -9,19 +9,19 @@ Each extracted image is already a cropped "screenshot" of the figure + its capti
 `$ARGUMENTS` should be one of:
 - A single paper ID, e.g. `geersen_2015_seamounts_iquique`
 - A space-separated list of paper IDs
-- `all` — process every PDF in `pdfs/`
+- `all` — process every PDF in `data/source_paper_pdfs/`
 
-Optional flag: `--force` — re-process papers that already have `images/{id}/figures.json`
+Optional flag: `--force` — re-process papers that already have `data/extracted_images/{id}/figures.json`
 
 ---
 
 ## Step 0 — Determine papers to process
 
-If `$ARGUMENTS` contains `all`: list all `.pdf` files in `pdfs/` and derive paper IDs by stripping `.pdf`.
+If `$ARGUMENTS` contains `all`: list all `.pdf` files in `data/source_paper_pdfs/` and derive paper IDs by stripping `.pdf`.
 
 For each paper:
-1. Confirm `pdfs/{paper_id}.pdf` exists — warn and skip if not.
-2. Skip if `images/{paper_id}/figures.json` already exists and `--force` is not set.
+1. Confirm `data/source_paper_pdfs/{paper_id}.pdf` exists — warn and skip if not.
+2. Skip if `data/extracted_images/{paper_id}/figures.json` already exists and `--force` is not set.
 
 ---
 
@@ -40,7 +40,7 @@ If `figures_saved` is 0, write an empty `figures.json` with `"note": "no embedde
 
 ## Step 2 — Read the manifest
 
-Read `images/{paper_id}/_manifest.json`. Key fields:
+Read `data/extracted_images/{paper_id}/_manifest.json`. Key fields:
 - `max_figure_number` — the highest `N` found in any `Figure N` reference in the PDF. **You must keep exactly this many figures** (one per figure number).
 - `captions` — dict mapping figure label → full caption text extracted from the PDF text (may be from a different page than the image). Use this as the authoritative caption.
 - `figures[]` — one entry per extracted image crop, each with:
@@ -104,18 +104,18 @@ del images\{paper_id}\_manifest.json
 
 ## Step 5 — Write figures.json
 
-Write `images/{paper_id}/figures.json` **before moving to the next paper**:
+Write `data/extracted_images/{paper_id}/figures.json` **before moving to the next paper**:
 
 ```json
 {
   "paper_id": "geersen_2015_seamounts_iquique",
-  "pdf_file": "pdfs/geersen_2015_seamounts_iquique.pdf",
+  "pdf_file": "data/source_paper_pdfs/geersen_2015_seamounts_iquique.pdf",
   "extracted_at": "2026-04-03T14:00:00Z",
   "total_figures": 4,
   "figures": [
     {
       "filename": "fig_p002_01.png",
-      "path": "images/geersen_2015_seamounts_iquique/fig_p002_01.png",
+      "path": "data/extracted_images/geersen_2015_seamounts_iquique/fig_p002_01.png",
       "page": 2,
       "width_px": 1479,
       "height_px": 1586,

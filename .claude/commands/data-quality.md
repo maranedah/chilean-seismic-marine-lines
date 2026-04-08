@@ -10,7 +10,7 @@ If no argument is given, run a full audit across all quality dimensions below.
 
 ## Step 1 — Extract field values
 
-Run a Python script to extract all unique values for the target field across every `papers/*.json` file (excluding `survey_results.json`). Count occurrences of each variant. Output: sorted frequency table.
+Run a Python script to extract all unique values for the target field across every `data/extracted_jsons/*.json` file (excluding `survey_results.json`). Count occurrences of each variant. Output: sorted frequency table.
 
 Use the Windows temp-file pattern:
 ```bash
@@ -50,7 +50,7 @@ For each group of variants, determine the canonical form:
 
 ## Step 4 — Apply corrections
 
-Edit each affected `papers/{id}.json` file. Only change fields where a variant maps to the canonical form. Do not modify fields that are already canonical.
+Edit each affected `data/extracted_jsons/{id}.json` file. Only change fields where a variant maps to the canonical form. Do not modify fields that are already canonical.
 
 For vessel fields specifically, if a paper has `"R/V SONNE"` (bare, no cruise ID), do **not** guess the cruise ID — leave it and flag it for manual review instead.
 

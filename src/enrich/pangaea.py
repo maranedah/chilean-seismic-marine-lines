@@ -167,17 +167,17 @@ def main():
     total = 0
 
     if not args.papers_only:
-        dataset_files = [str(p) for p in sorted((ROOT / "datasets").glob("*.json"))]
+        dataset_files = [str(p) for p in sorted((ROOT / "data" / "datasets").glob("*.json"))]
         print(f"=== Processing {len(dataset_files)} dataset files ===\n")
-        total += process_files(dataset_files, "datasets/", args.dry_run)
+        total += process_files(dataset_files, "data/datasets/", args.dry_run)
 
     if not args.datasets_only:
         paper_files = [
-            f for f in [str(p) for p in sorted((ROOT / "papers").glob("*.json"))]
+            f for f in [str(p) for p in sorted((ROOT / "data" / "extracted_jsons").glob("*.json"))]
             if os.path.basename(f) != "survey_results.json"
         ]
         print(f"\n=== Processing {len(paper_files)} paper files ===\n")
-        total += process_files(paper_files, "papers/", args.dry_run)
+        total += process_files(paper_files, "data/extracted_jsons/", args.dry_run)
 
     print(f"\n=== TOTAL UPDATED: {total} ===")
 

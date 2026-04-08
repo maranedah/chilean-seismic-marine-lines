@@ -19,13 +19,12 @@ Usage:
   python -m src.extract.fields paper_id1    # specific papers
 """
 
+import argparse
 import json
 import os
 import re
 import sys
 from pathlib import Path
-
-sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).parent.parent.parent
 
@@ -237,8 +236,8 @@ def _extract_freq_range(text: str) -> list[float] | None:
 # ── per-paper processing ──────────────────────────────────────────────────────
 
 def process(paper_id: str) -> bool:
-    txt_path = str(ROOT / "pdf_text" / f"{paper_id}.txt")
-    json_path = str(ROOT / "papers" / f"{paper_id}.json")
+    txt_path = str(ROOT / "data" / "extracted_text" / f"{paper_id}.txt")
+    json_path = str(ROOT / "data" / "extracted_jsons" / f"{paper_id}.json")
 
     if not os.path.exists(txt_path) or not os.path.exists(json_path):
         print(f"SKIP {paper_id}: missing txt or json")
@@ -349,12 +348,20 @@ def process(paper_id: str) -> bool:
 
 # ── main ──────────────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
-    ids = sys.argv[1:]
+def main():
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+
+    parser = argparse.ArgumentParser(description="Extract metadata fields from PDF text files")
+    parser.add_argument("paper_ids", nargs="*", metavar="PAPER_ID",
+                        help="Paper IDs to process (default: all with extracted text)")
+    args = parser.parse_args()
+
+    ids = args.paper_ids
     if not ids:
         ids = [
             f[:-4]
-            for f in sorted(os.listdir(ROOT / "pdf_text"))
+            for f in sorted(os.listdir(ROOT / "data" / "extracted_text"))
             if f.endswith(".txt")
         ]
 
@@ -364,3 +371,7 @@ if __name__ == "__main__":
             updated += 1
 
     print(f"\nDone. {updated}/{len(ids)} papers updated.")
+
+
+if __name__ == "__main__":
+    main()

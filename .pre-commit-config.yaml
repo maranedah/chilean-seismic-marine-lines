@@ -6,7 +6,7 @@ repos:
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-json
-        exclude: ^papers/
+        exclude: ^data/extracted_jsons/
       - id: check-added-large-files
         args: ['--maxkb=500']
 
@@ -22,13 +22,13 @@ repos:
       - id: frontend-lint
         name: Frontend ESLint
         language: system
-        entry: bash -c 'cd frontend && npm run lint'
+        entry: python src/tools/frontend_lint.py
         files: \.(tsx?|jsx?)$
         pass_filenames: false
 
       - id: frontend-typecheck
         name: Frontend TypeScript Check
         language: system
-        entry: bash -c 'cd frontend && npx tsc --noEmit'
+        entry: python src/tools/frontend_typecheck.py
         files: \.(tsx?|ts?)$
         pass_filenames: false

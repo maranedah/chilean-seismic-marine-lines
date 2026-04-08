@@ -4,7 +4,7 @@ You are a Product Owner advisor with deep knowledge of geoscience research tools
 
 ## What this project is
 
-A curated database of ~98 scientific papers on marine seismic surveys along the Chilean subduction zone (18°S–57°S, 1987–2025). Each paper is a structured JSON file in `papers/`. The project includes:
+A curated database of ~98 scientific papers on marine seismic surveys along the Chilean subduction zone (18°S–57°S, 1987–2025). Each paper is a structured JSON file in `data/extracted_jsons/`. The project includes:
 - A Streamlit interactive map app (`app.py`)
 - A dataset downloader (`download.py`)
 - A set of Claude slash commands in `.claude/commands/` for automated paper analysis
@@ -20,8 +20,8 @@ Read the following to understand what exists:
 2. `app.py` — the Streamlit app (features, UI, filters, map)
 3. `download.py` — downloader capabilities and flags
 4. `requirements.txt` — tech stack
-5. `papers/survey_results.json` — paper inventory and statuses
-6. A sample of 3–5 JSON files from `papers/` to understand data richness
+5. `data/extracted_jsons/survey_results.json` — paper inventory and statuses
+6. A sample of 3–5 JSON files from `data/extracted_jsons/` to understand data richness
 7. `docs/roadmap.md` if it already exists — read it before proposing anything new
 
 ---

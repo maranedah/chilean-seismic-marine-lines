@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent.parent
-PAPERS_DIR = ROOT / "papers"
+PAPERS_DIR = ROOT / "data" / "extracted_jsons"
 EXCLUDE = {"survey_results.json", "data_availability.json", "schema.json"}
 
 RULES = [
@@ -18,30 +18,38 @@ RULES = [
     ("seismic_reflection_mcs", ["seismic reflection", "mcs", "multichannel", "multi-channel", "segd", "reflection data", "reflection profile", "shot data"]),
 ]
 
+
 def infer_type(entry):
-    text = " ".join([entry.get("name",""), entry.get("description",""), entry.get("format",""), entry.get("repository","")]).lower()
+    text = " ".join([entry.get("name", ""), entry.get("description", ""), entry.get("format", ""), entry.get("repository", "")]).lower()
     for dtype, keywords in RULES:
         if any(kw in text for kw in keywords):
             return dtype
     return None
 
-changed = 0
-for path in sorted(PAPERS_DIR.glob("*.json")):
-    if path.name in EXCLUDE:
-        continue
-    data = json.loads(path.read_text(encoding="utf-8"))
-    modified = False
-    for entry in data.get("data", []):
-        if "_data_note" in entry:
-            continue
-        if not entry.get("data_type"):
-            dtype = infer_type(entry)
-            if dtype:
-                entry["data_type"] = dtype
-                modified = True
-    if modified:
-        path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-        changed += 1
 
-with open(ROOT / "_backfill_result.txt", "w") as f:
-    f.write(f"Updated {changed} files\n")
+def main():
+    changed = 0
+    for path in sorted(PAPERS_DIR.glob("*.json")):
+        if path.name in EXCLUDE:
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        modified = False
+        for entry in data.get("data", []):
+            if "_data_note" in entry:
+                continue
+            if not entry.get("data_type"):
+                dtype = infer_type(entry)
+                if dtype:
+                    entry["data_type"] = dtype
+                    modified = True
+        if modified:
+            path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+            changed += 1
+
+    with open(ROOT / "_backfill_result.txt", "w") as f:
+        f.write(f"Updated {changed} files\n")
+    print(f"Updated {changed} files")
+
+
+if __name__ == "__main__":
+    main()

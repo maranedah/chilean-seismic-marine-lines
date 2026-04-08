@@ -27,7 +27,7 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-PAPERS_DIR = Path(__file__).parent.parent.parent / "papers"
+PAPERS_DIR = Path(__file__).parent.parent.parent / "data" / "extracted_jsons"
 
 HEADERS = {
     "User-Agent": (
@@ -107,21 +107,8 @@ def _detect_formats(data_lines: list[str], binary_col: int) -> list[str]:
     return sorted(exts) or None
 
 
-def parse_pangaea_tab(doi: str) -> dict:
-    """
-    Fetch the ?format=textfile for a PANGAEA DOI and return a dataset metadata dict.
-    DOI may be bare (10.1594/PANGAEA.983166) or a full URL.
-    """
-    # Normalise DOI
-    doi = re.sub(r"^https?://doi\.(?:org|pangaea\.de)/", "", doi).strip().rstrip("/")
-    tab_url = f"https://doi.pangaea.de/{doi}?format=textfile"
-    page_url = f"https://doi.org/{doi}"
-
-    print(f"  Fetching PANGAEA tab: {tab_url}")
-    r = get(tab_url, timeout=60)
-    lines = r.text.splitlines()
-
-    # ── Split metadata block from data ──────────────────────────────────────
+def _split_tab_lines(lines: list[str]) -> tuple[list[str], Optional[str], list[str]]:
+    """Split raw tab-file lines into (meta_lines, header_line, data_lines)."""
     meta_lines: list[str] = []
     header_line: Optional[str] = None
     data_lines: list[str] = []
@@ -140,7 +127,11 @@ def parse_pangaea_tab(doi: str) -> dict:
             if line.strip():
                 data_lines.append(line)
 
-    # ── Parse metadata block ─────────────────────────────────────────────────
+    return meta_lines, header_line, data_lines
+
+
+def _parse_meta_block(meta_lines: list[str]) -> dict[str, str]:
+    """Parse the /* ... */ metadata block into a key→value dict."""
     meta: dict[str, str] = {}
     current_key = None
     for line in meta_lines:
@@ -150,6 +141,22 @@ def parse_pangaea_tab(doi: str) -> dict:
             meta[current_key] = m.group(2).strip()
         elif current_key and line.startswith("\t"):
             meta[current_key] = meta[current_key] + " " + line.strip()
+    return meta
+
+
+def parse_pangaea_tab(doi: str) -> dict:
+    """
+    Fetch the ?format=textfile for a PANGAEA DOI and return a dataset metadata dict.
+    DOI may be bare (10.1594/PANGAEA.983166) or a full URL.
+    """
+    doi = re.sub(r"^https?://doi\.(?:org|pangaea\.de)/", "", doi).strip().rstrip("/")
+    tab_url = f"https://doi.pangaea.de/{doi}?format=textfile"
+    page_url = f"https://doi.org/{doi}"
+
+    print(f"  Fetching PANGAEA tab: {tab_url}")
+    r = get(tab_url, timeout=60)
+    meta_lines, header_line, data_lines = _split_tab_lines(r.text.splitlines())
+    meta = _parse_meta_block(meta_lines)
 
     result: dict = {"doi": doi, "doi_url": page_url, "repository": ["PANGAEA"]}
 

@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src/ ./src/
 
-ENV PAPERS_DIR=/app/papers
+ENV PAPERS_DIR=/app/data/extracted_jsons
 
 EXPOSE 8000
 

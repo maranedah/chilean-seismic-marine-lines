@@ -13,13 +13,7 @@ build/
 venv/
 env/
 
-# Downloaded PDFs (large binary files, reproducible via download_pdfs.py)
-pdfs/
-
-# Rendered figure images (large, reproducible via /figure-extractor)
-images/
-
-# Downloaded seismic datasets (very large, reproducible via download.py)
+# All generated/downloaded data (PDFs, extracted text, images, datasets, graphify output)
 data/
 
 # Temp files used by Claude for output redirection (Windows pattern)
@@ -43,11 +37,9 @@ desktop.ini
 # Local Claude settings (machine-specific allow lists)
 .claude/settings.local.json
 
-graphify-out/
-pdf_text/
 _pangaea*
 pdf_validation.json
 sismica-marina-deploy.json
+.env
 frontend/node_modules
-papers/
-datasets/
+.ruff_cache/

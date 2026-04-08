@@ -1,16 +1,11 @@
 """Application use cases — orchestrate domain objects via ports."""
 
-import json
-import os
 import re
 from dataclasses import dataclass
-from pathlib import Path
 from typing import Optional
 
 from ..domain.models import Paper
-from ..domain.ports import PaperFilters, PaperRepository
-
-_PROJECT_ROOT = Path(__file__).resolve().parents[3]
+from ..domain.ports import FigureRepository, PaperFilters, PaperRepository
 
 
 _SOURCE_TYPE_MAP: dict[str, str] = {
@@ -57,29 +52,6 @@ def _normalize_vessel(name: str) -> str:
     # Normalize case variants: OGS-EXPLORA → OGS-Explora
     name = name.replace("OGS-EXPLORA", "OGS-Explora")
     return _VESSEL_MAP.get(name, name)
-
-
-def _load_pdf_stats() -> tuple[int, int, dict[str, int]]:
-    """Return (pdfs_analyzed, figures_total, figures_per_paper) from images/ folder."""
-    images_dir = _PROJECT_ROOT / "images"
-    if not images_dir.is_dir():
-        return 0, 0, {}
-    figures_per_paper: dict[str, int] = {}
-    for paper_dir in sorted(images_dir.iterdir()):
-        if not paper_dir.is_dir():
-            continue
-        figs_json = paper_dir / "figures.json"
-        if not figs_json.exists():
-            continue
-        try:
-            with open(figs_json, encoding="utf-8") as f:
-                data = json.load(f)
-            figures_per_paper[paper_dir.name] = data.get("total_figures", 0)
-        except Exception:
-            figures_per_paper[paper_dir.name] = 0
-    pdfs_analyzed = len(figures_per_paper)
-    figures_total = sum(figures_per_paper.values())
-    return pdfs_analyzed, figures_total, figures_per_paper
 
 
 @dataclass
@@ -130,8 +102,9 @@ class GetPaperUseCase:
 
 
 class GetStatsUseCase:
-    def __init__(self, repo: PaperRepository) -> None:
+    def __init__(self, repo: PaperRepository, figure_repo: FigureRepository) -> None:
         self._repo = repo
+        self._figure_repo = figure_repo
 
     def execute(self) -> StatsResult:
         papers = self._repo.get_all()
@@ -290,7 +263,7 @@ class GetStatsUseCase:
         }
         avg_completeness = round(sum(completeness_scores) / len(completeness_scores), 1) if completeness_scores else 0.0
 
-        pdfs_analyzed, figures_total, figures_per_paper = _load_pdf_stats()
+        pdfs_analyzed, figures_total, figures_per_paper = self._figure_repo.get_figure_stats()
 
         return StatsResult(
             total_papers=len(papers),

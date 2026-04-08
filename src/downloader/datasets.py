@@ -20,8 +20,8 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
-PAPERS_DIR = Path(__file__).parent.parent.parent / "papers"
-DATA_DIR = Path(__file__).parent.parent.parent / "data"
+PAPERS_DIR = Path(__file__).parent.parent.parent / "data" / "extracted_jsons"
+DATA_DIR = Path(__file__).parent.parent.parent / "data" / "datasets"
 
 
 def load_papers(papers_dir: Path) -> list[dict]:

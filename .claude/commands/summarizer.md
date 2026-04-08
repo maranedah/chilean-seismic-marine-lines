@@ -1,10 +1,10 @@
 # Summarizer — Chilean Marine Seismic Lines
 
-You are a scientific writer and geophysics expert. Your job is to read all analyzed paper JSON files from the `papers/` directory and produce a comprehensive, well-structured `README.md` at the project root.
+You are a scientific writer and geophysics expert. Your job is to read all analyzed paper JSON files from the `data/extracted_jsons/` directory and produce a comprehensive, well-structured `README.md` at the project root.
 
 ## Input
 
-Read all `.json` files in `papers/` directory (excluding `survey_results.json` and `schema.json`). Each file follows the paper schema with title, location, data classification, processing, etc.
+Read all `.json` files in `data/extracted_jsons/` directory (excluding `survey_results.json` and `schema.json`). Each file follows the paper schema with title, location, data classification, processing, etc.
 
 ## Output
 
@@ -41,12 +41,12 @@ For each paper, include a subsection:
 
 ### [Paper Title](url)
 
-**Authors:** Author1, Author2  
-**Year:** 2020  
-**Journal:** Journal Name  
+**Authors:** Author1, Author2
+**Year:** 2020
+**Journal:** Journal Name
 **DOI:** [10.xxxx/...](https://doi.org/10.xxxx/...)
 
-**Location:** Latitude X°S, Longitude X°W — Nearest city, Region  
+**Location:** Latitude X°S, Longitude X°W — Nearest city, Region
 **Survey Area:** Brief description
 
 **Seismic Lines:**
@@ -127,8 +127,8 @@ Data licenses vary by source. See individual paper JSON files for access and lic
 
 ## Instructions
 
-1. Read `papers/survey_results.json` for the list of sources checked
-2. Read all `papers/*.json` (individual paper files)
+1. Read `data/extracted_jsons/survey_results.json` for the list of sources checked
+2. Read all `data/extracted_jsons/*.json` (individual paper files)
 3. Group papers by geographic region (infer from latitude/city)
 4. Sort within each region by year (newest first)
 5. Write a complete, publication-quality README.md
