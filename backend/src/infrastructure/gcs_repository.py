@@ -9,7 +9,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import PurePosixPath
 from typing import Optional
 
-from google.api_core.exceptions import NotFound
 from google.cloud import storage
 
 from ..domain.models import Paper
