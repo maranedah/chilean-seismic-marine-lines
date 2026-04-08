@@ -29,4 +29,6 @@ jobs:
   deploy-infrastructure:
     needs: [build-frontend-image, build-backend-images]
     uses: ./.github/workflows/terraform.yml
-    secrets: inherit
+    secrets:
+      GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+      GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
