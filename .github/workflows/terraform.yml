@@ -8,11 +8,12 @@ env:
   REGION: us-central1
   REGISTRY: us.gcr.io
   PROJECT_NAME: sismica-marina
-  GCP_SA_KEY: ${{ github.ref == 'refs/heads/main' && secrets.PROD_GCP_SA_KEY || secrets.DEV_GCP_SA_KEY }}
+  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: prod
 
     steps:
     - name: Checkout code

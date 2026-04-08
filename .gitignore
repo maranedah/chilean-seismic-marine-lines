@@ -48,3 +48,4 @@ pdf_text/
 _pangaea*
 pdf_validation.json
 sismica-marina-deploy.json
+frontend/node_modules
