@@ -1,0 +1,26 @@
+{
+  "id": "mgl1610_mcs",
+  "cruise": "MGL1610",
+  "cruise_name": "PICTURES",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2016,
+  "data_type": "seismic_reflection_mcs",
+  "name": "MGL1610 PICTURES MCS Reflection Data — North Chile 19°–21°S",
+  "classification": "PROCESSED",
+  "format": ["SEG-Y", "SEG-D"],
+  "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
+  "doi": "10.1594/IEDA/323934",
+  "repository": ["MGDS"],
+  "size_gb": null,
+  "access": "open",
+  "download_command": "wget -r -np -nH --cut-dirs=4 -A '*.segd,*.segy' 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934'",
+  "description": "MCS reflection shot data (SEGD/SEGY format) acquired during the 2016 PICTURES experiment (MGL1610) offshore northern Chile (19°–21°S). 8-km, 648-channel streamer, 6600 in³ source, 125 m shot interval. Archived at MGDS dataset UID 23934.",
+  "used_by": [
+    "gonzalez_2023_northern_forearc_mcs",
+    "ma_2022_megathrust_reflectivity_iquique_natcomm",
+    "ma_2023_iquique_ridge_impact",
+    "myers_2022_iquique_ridge_crustal",
+    "reginato_2020_iquique_wedge_tecto",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

@@ -51,10 +51,14 @@
     {
       "name": "Compiled published wide-angle seismic refraction data (multiple cruises)",
       "classification": "PROCESSED",
-      "format": "ASCII / model output",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "Published literature (no single repository)",
+      "repository": [
+        "Published literature (no single repository)"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -75,7 +79,7 @@
     "software": [],
     "notes": "No new seismic data acquired; modelling study using published data. Covers the full Chilean margin from ~18°S to 46°S."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Bronze open access PDF available at Oxford Academic. Abstract reconstructed from survey snippet. This is a modelling study — no primary seismic data collected. Seismic data used are published compilations from prior GEOMAR cruises. No datasets deposited in public repositories."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. Modelling study confirmed — no new data acquired. Authors (Contreras-Reyes + Osses, Universidad de Chile), title, DOI, open_access_url all confirmed. Uses GEBCO bathymetric data and published seismic velocity models from SPOC/TIPTEQ/CINCA cruises. Custom finite-difference flexure code (no commercial software named). Bounding box 18–46°S confirmed."
 }

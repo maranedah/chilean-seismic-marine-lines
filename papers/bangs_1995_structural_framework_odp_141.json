@@ -64,15 +64,19 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V Conrad (RC2901 site survey for ODP Leg 141)",
+    "vessel": [
+      "R/V Robert Conrad"
+    ],
     "year_acquired": 1990,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3743,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
-    "fold": null,
+    "fold": 30,
     "line_spacing_km": null
   },
   "data": [
@@ -80,10 +84,14 @@
       "data_type": "seismic_reflection_mcs",
       "name": "R/V Conrad ODP 141 Pre-Site Survey Lines 745, 751, 762 — Chile Triple Junction ~46°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "LDEO / unknown",
+      "repository": [
+        "LDEO"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -103,11 +111,13 @@
       "6. Seismic interpretation"
     ],
     "software": [
-      "unknown"
+      "DISCO"
     ],
-    "notes": "ODP Initial Reports chapter; open access at TAMU ODP publications archive"
+    "notes": "Initial processing at Lamont-Doherty Geological Observatory; post-stack time migration using DISCO software at USGS facility, Palo Alto, CA (finite-difference algorithm, up to 45° dip).",
+    "migration_type": "PSSDM"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access ODP publication available at odp.tamu.edu. RC2901 Conrad cruise data accessible via MGDS. Named seismic lines 745, 751, 762 are key references in the Chile Triple Junction literature."
+  "analysis_notes": "Open access ODP publication available at odp.tamu.edu. RC2901 Conrad cruise data accessible via MGDS. Named seismic lines 745, 751, 762. Source: 10-gun array, 3743 in³. Fold: 30 CMP (25m bins). Processing: Lamont-Doherty + DISCO migration at USGS Palo Alto.",
+  "tectonic_setting": "mixed"
 }

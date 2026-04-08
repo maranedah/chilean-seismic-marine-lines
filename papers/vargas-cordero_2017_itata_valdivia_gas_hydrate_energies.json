@@ -39,48 +39,117 @@
     },
     "seismic_lines": [
       {
-        "name": "Itata offshore MCS profile (~37°S)",
+        "name": "RC2901-727 — Itata offshore (~37°S); R/V Conrad RC2901, Jan–Feb 1988",
         "lat_start": -37.0,
         "lon_start": -76.0,
         "lat_end": -37.0,
         "lon_end": -73.5,
-        "length_km": 220
+        "length_km": null
       },
       {
-        "name": "Valdivia offshore MCS profile (~40°S)",
+        "name": "SO161-29 — Valdivia offshore (~40°S); R/V SONNE SO161 SPOC, Jan–Feb 2001",
         "lat_start": -40.0,
         "lon_start": -76.0,
         "lat_end": -40.0,
         "lon_end": -74.0,
-        "length_km": 180
+        "length_km": null
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE and legacy cruises",
-    "year_acquired": null,
-    "source_type": "airgun array",
+    "vessel": [
+      "R/V SONNE",
+      "R/V Robert Conrad"
+    ],
+    "year_acquired": 1988,
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
-    "sample_rate_ms": 4,
+    "streamer_length_m": 3000,
+    "channel_count": 132,
+    "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, Jan–Feb 2001",
+      "RC2901, 1988"
+    ],
+    "shot_interval_m": 50.0
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "MCS Profiles — Itata and Valdivia Offshores (37°S and 40°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "MCS reflection profiles at Itata (~37°S) and Valdivia (~40°S) offshore Chilean margin analyzed for BSR-based gas hydrate and free gas quantification; velocity model shows hydrate concentrations up to 17% of total volume. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Bathymetry:Singlebeam, Gravity:Field, Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "MGD77"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=15251",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "unknown",
+      "name": "Bathymetry:Swath",
+      "classification": "RAW",
+      "format": [
+        "MGDS"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=2794,14008,16981",
+      "doi": null,
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "RAW",
+      "format": [
+        "MGDS:Nav",
+        "SHP"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=11106,11107",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "MDPI open access paper. Uses legacy MCS seismic data from Chilean margin, likely from SPOC/GEOMAR cruises.",
@@ -96,12 +165,13 @@
       "6. Geothermal gradient calculation"
     ],
     "software": [
-      "Echos (OGS)",
-      "unknown"
+      "Seismic Unix (SU v43R8, CWP Golden CO)"
     ],
-    "notes": "MDPI open-access journal; full text freely available"
+    "notes": "RC2901-727 (Itata ~37°S): 3000m streamer, 240 ch, 12.5m intertrace, 10 airguns, 61.3L=3741cui, 50m shot spacing. SO161-29 (Valdivia ~40°S): 3000m streamer, 132 ch (1-24: 12.5m, 25-132: 25m), source volume not stated in page 3 (same array as other SO161 lines: 20 airguns, 54.1L=3302cui). MDPI open access paper.",
+    "migration_type": "PSSDM"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access paper (MDPI Energies). PDF freely available. Uses legacy Chilean margin MCS data."
+  "analysis_notes": "Validated against PDF. 3 authors confirmed correct. vessel: 'R/V SONNE' only → added 'R/V Conrad (RC2901)' + cruise IDs. year_acquired: null → 1988. streamer_length_m: null → 3000. channel_count: null → 132 (SO161)/240 (RC2901). software: 'Echos/unknown' → Seismic Unix SU v43R8. seismic_lines: named RC2901-727 (Itata) and SO161-29 (Valdivia).",
+  "tectonic_setting": "accretionary"
 }

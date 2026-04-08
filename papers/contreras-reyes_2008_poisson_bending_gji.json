@@ -10,7 +10,7 @@
   ],
   "year": 2008,
   "journal": "Geophysical Journal International",
-  "doi": "10.1111/j.1365-246X.2007.03668.x",
+  "doi": "10.1111/j.1365-246X.2008.03716.x",
   "url": "https://academic.oup.com/gji/article/173/1/142/552413",
   "open_access_url": null,
   "abstract": "Joint inversion of seismic refraction and wide-angle reflection data at the Southern Central Chile outer rise yields the P- and S-wave velocity structure of the incoming oceanic Nazca Plate. The Poisson's ratio in the uppermost mantle increases from ~1.75 in the outer rise to values of >1.8 at the trench axis, indicating increasing serpentinization. Bending-related faulting opens near-vertical cracks modifying porosity and permeability and providing pathways for seawater.",
@@ -27,34 +27,46 @@
     "mantle anisotropy"
   ],
   "location": {
-    "latitude": -40.5,
-    "longitude": -76.5,
-    "city": "Valdivia",
-    "region": "Región de Los Ríos",
+    "latitude": -43.0,
+    "longitude": -79.0,
+    "city": "Chiloé",
+    "region": "Región de Los Lagos",
     "country": "Chile",
-    "description": "Outer rise of the Nazca plate offshore southern central Chile (~38°–43°S), trench-outer rise region",
+    "description": "Outer rise of the Nazca plate offshore southern central Chile (~43°S), between Chiloe and Guafo Fracture Zones; TIPTEQ cruise SO181",
     "bounding_box": {
-      "lat_min": -43.0,
-      "lat_max": -38.0,
-      "lon_min": -79.0,
-      "lon_max": -74.0
+      "lat_min": -44.5,
+      "lat_max": -42.0,
+      "lon_min": -80.0,
+      "lon_max": -76.0
     },
     "seismic_lines": [
       {
-        "name": "SPOC/TIPTEQ outer rise OBS profile — P-S wave (~38°–43°S)",
-        "lat_start": -38.0,
-        "lon_start": -77.0,
+        "name": "P01a",
+        "lat_start": -43.0,
+        "lon_start": -79.0,
         "lat_end": -43.0,
         "lon_end": -77.0,
-        "length_km": 580
+        "length_km": 65
+      },
+      {
+        "name": "P03",
+        "lat_start": -42.0,
+        "lon_start": -79.0,
+        "lat_end": -44.0,
+        "lon_end": -79.0,
+        "length_km": 76
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC and SO181 TIPTEQ)",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "vessel": [
+      "R/V SONNE SO181 (TIPTEQ)"
+    ],
+    "year_acquired": 2004,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3905,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
@@ -67,10 +79,14 @@
       "data_type": "seismic_refraction_obs",
       "name": "SPOC/TIPTEQ OBS P- and S-wave Wide-Angle Data — South Chile Outer Rise",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -80,10 +96,14 @@
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — South Chile Outer Rise",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -103,11 +123,12 @@
       "6. Mantle anisotropy analysis"
     ],
     "software": [
-      "RAYINVR"
+      "TOMO2D (Korenaga et al. 2000)",
+      "Reflectivity method (Fuchs & Mueller 1971)"
     ],
     "notes": "S-wave data from converted phases on OBS; first study to derive Poisson's ratio at this outer rise location"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Paper behind paywall (GJI). Data from SPOC SO161 / TIPTEQ SO181 accessible via MGDS. Note: Semantic Scholar returned wrong paper for this DOI — the paper was identified from survey_results.json metadata."
+  "analysis_notes": "PDF validated 2026-04-05. Corrected: year_acquired 2001→2004 (TIPTEQ cruise SO181, 2004); source_volume_cui null→3905 (8×8L G-guns = 64L); vessel→'R/V SONNE SO181 (TIPTEQ)'; seismic lines updated to P01a (65 km E-W) and P03 (76 km N-S); software RAYINVR→TOMO2D + Reflectivity method; bounding box narrowed to ~43°S (Chiloe-Guafo FZ area). No data availability statement found."
 }

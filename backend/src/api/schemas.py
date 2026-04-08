@@ -1,11 +1,33 @@
 """Pydantic response schemas and domain→schema adapters."""
 
+import json
+import os
 from typing import Optional
 
 from pydantic import BaseModel
 
 from ..application.use_cases import StatsResult
 from ..domain.models import Paper
+
+# Root of the project (4 levels up from this file: api → src → backend → project)
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+
+def _load_preview_figures(paper_id: str, max_count: int = 3) -> list[str]:
+    """Return up to max_count figure URL paths for a paper, or [] if none."""
+    figures_json = os.path.join(_PROJECT_ROOT, "images", paper_id, "figures.json")
+    if not os.path.exists(figures_json):
+        return []
+    try:
+        with open(figures_json, encoding="utf-8") as f:
+            data = json.load(f)
+        return [
+            "/" + fig["path"].replace("\\", "/")
+            for fig in data.get("figures", [])[:max_count]
+            if fig.get("path")
+        ]
+    except Exception:
+        return []
 
 
 # ── Response schemas ──────────────────────────────────────────────────────────
@@ -25,6 +47,8 @@ class SeismicLineSchema(BaseModel):
     lat_end: Optional[float] = None
     lon_end: Optional[float] = None
     length_km: Optional[float] = None
+    depth_km: Optional[float] = None
+    profile_orientation: Optional[str] = None
 
 
 class LocationSchema(BaseModel):
@@ -39,9 +63,10 @@ class LocationSchema(BaseModel):
 
 
 class AcquisitionSchema(BaseModel):
-    vessel: Optional[str] = None
+    vessel: Optional[list[str]] = None
+    expeditions: Optional[list[str]] = None
     year_acquired: Optional[int] = None
-    source_type: Optional[str] = None
+    source_type: Optional[list[str]] = None
     source_volume_cui: Optional[float] = None
     streamer_length_m: Optional[float] = None
     channel_count: Optional[int] = None
@@ -49,20 +74,27 @@ class AcquisitionSchema(BaseModel):
     record_length_s: Optional[float] = None
     fold: Optional[int] = None
     line_spacing_km: Optional[float] = None
+    shot_interval_m: Optional[float] = None
+    group_interval_m: Optional[float] = None
+    obs_spacing_km: Optional[float] = None
+    nearest_offset_m: Optional[float] = None
+    frequency_range_hz: Optional[list[float]] = None
+    depth_penetration_km: Optional[float] = None
 
 
 class DatasetSchema(BaseModel):
     data_type: str = ""
     name: str = ""
     classification: str = "PROCESSED"
-    format: Optional[str] = None
+    format: Optional[list[str]] = None
     url: Optional[str] = None
     doi: Optional[str] = None
-    repository: Optional[str] = None
+    repository: Optional[list[str]] = None
     size_gb: Optional[float] = None
     access: str = "unknown"
     download_command: Optional[str] = None
     description: str = ""
+    cdp_spacing_m: Optional[float] = None
 
 
 class ProcessingSchema(BaseModel):
@@ -71,6 +103,7 @@ class ProcessingSchema(BaseModel):
     workflow: list[str] = []
     software: list[str] = []
     notes: Optional[str] = None
+    migration_type: Optional[str] = None
 
 
 class PaperSchema(BaseModel):
@@ -90,6 +123,8 @@ class PaperSchema(BaseModel):
     processing: Optional[ProcessingSchema] = None
     analysis_confidence: Optional[str] = None
     analysis_notes: Optional[str] = None
+    tectonic_setting: Optional[str] = None
+    associated_earthquakes: list[str] = []
     # computed
     geographic_region: str = ""
     paper_url: Optional[str] = None
@@ -120,13 +155,15 @@ class PaperSummarySchema(BaseModel):
     classifications: list[str] = []
     num_datasets: int = 0
     keywords: list[str] = []
-    vessel: Optional[str] = None
+    open_access_paper: bool = False
+    vessel: Optional[list[str]] = None
     acq_year: Optional[int] = None
-    source_type: Optional[str] = None
+    source_type: Optional[list[str]] = None
     data_formats: list[str] = []
     repositories: list[str] = []
     seismic_lines: list[SeismicLineSchema] = []
     completeness: float = 0.0
+    preview_figures: list[str] = []
 
 
 class StatsSchema(BaseModel):
@@ -145,8 +182,18 @@ class StatsSchema(BaseModel):
     by_source_type: dict[str, int] = {}
     by_vessel: dict[str, int] = {}
     by_acq_year: dict[str, int] = {}
+    by_repository: dict[str, int] = {}
     completeness_buckets: dict[str, int] = {}
     avg_completeness: float = 0.0
+    size_gb_by_type: dict[str, float] = {}
+    datasets_by_format: dict[str, int] = {}
+    size_known_count: int = 0
+    size_unknown_count: int = 0
+    paper_field_fill: dict[str, float] = {}
+    dataset_field_fill: dict[str, float] = {}
+    pdfs_analyzed: int = 0
+    figures_total: int = 0
+    figures_per_paper: dict[str, int] = {}
 
 
 # ── Adapters ──────────────────────────────────────────────────────────────────
@@ -176,6 +223,7 @@ def to_paper_summary(paper: Paper) -> PaperSummarySchema:
         city=city,
         geographic_region=paper.geographic_region,
         paper_url=paper.paper_url,
+        open_access_paper=paper.open_access_url is not None,
         has_open_data=paper.has_open_data,
         access_types=paper.access_types,
         data_types=paper.data_types,
@@ -185,8 +233,8 @@ def to_paper_summary(paper: Paper) -> PaperSummarySchema:
         vessel=acq.vessel if acq else None,
         acq_year=acq.year_acquired if acq else None,
         source_type=acq.source_type if acq else None,
-        data_formats=list({d.format for d in paper.data if d.format}),
-        repositories=list({d.repository for d in paper.data if d.repository}),
+        data_formats=list({fmt for d in paper.data if d.format for fmt in d.format}),
+        repositories=list({repo for d in paper.data if d.repository for repo in d.repository}),
         seismic_lines=(
             [
                 SeismicLineSchema(
@@ -196,6 +244,8 @@ def to_paper_summary(paper: Paper) -> PaperSummarySchema:
                     lat_end=sl.lat_end,
                     lon_end=sl.lon_end,
                     length_km=sl.length_km,
+                    depth_km=sl.depth_km,
+                    profile_orientation=sl.profile_orientation,
                 )
                 for sl in paper.location.seismic_lines
             ]
@@ -203,6 +253,7 @@ def to_paper_summary(paper: Paper) -> PaperSummarySchema:
             else []
         ),
         completeness=paper.completeness,
+        preview_figures=_load_preview_figures(paper.id),
     )
 
 
@@ -234,6 +285,8 @@ def to_paper_schema(paper: Paper) -> PaperSchema:
                     lat_end=sl.lat_end,
                     lon_end=sl.lon_end,
                     length_km=sl.length_km,
+                    depth_km=sl.depth_km,
+                    profile_orientation=sl.profile_orientation,
                 )
                 for sl in loc.seismic_lines
             ],
@@ -246,6 +299,7 @@ def to_paper_schema(paper: Paper) -> PaperSchema:
     acquisition_schema = (
         AcquisitionSchema(
             vessel=acq.vessel,
+            expeditions=acq.expeditions,
             year_acquired=acq.year_acquired,
             source_type=acq.source_type,
             source_volume_cui=acq.source_volume_cui,
@@ -255,6 +309,12 @@ def to_paper_schema(paper: Paper) -> PaperSchema:
             record_length_s=acq.record_length_s,
             fold=acq.fold,
             line_spacing_km=acq.line_spacing_km,
+            shot_interval_m=acq.shot_interval_m,
+            group_interval_m=acq.group_interval_m,
+            obs_spacing_km=acq.obs_spacing_km,
+            nearest_offset_m=acq.nearest_offset_m,
+            frequency_range_hz=acq.frequency_range_hz,
+            depth_penetration_km=acq.depth_penetration_km,
         )
         if acq
         else None
@@ -268,6 +328,7 @@ def to_paper_schema(paper: Paper) -> PaperSchema:
             workflow=proc.workflow,
             software=proc.software,
             notes=proc.notes,
+            migration_type=proc.migration_type,
         )
         if proc
         else None
@@ -299,12 +360,15 @@ def to_paper_schema(paper: Paper) -> PaperSchema:
                 access=d.access,
                 download_command=d.download_command,
                 description=d.description,
+                cdp_spacing_m=d.cdp_spacing_m,
             )
             for d in paper.data
         ],
         processing=processing_schema,
         analysis_confidence=paper.analysis_confidence,
         analysis_notes=paper.analysis_notes,
+        tectonic_setting=paper.tectonic_setting,
+        associated_earthquakes=paper.associated_earthquakes,
         geographic_region=paper.geographic_region,
         paper_url=paper.paper_url,
         has_open_data=paper.has_open_data,
@@ -332,6 +396,16 @@ def to_stats_schema(stats: StatsResult) -> StatsSchema:
         by_source_type=stats.by_source_type,
         by_vessel=stats.by_vessel,
         by_acq_year={str(k): v for k, v in stats.by_acq_year.items()},
+        by_repository=stats.by_repository,
         completeness_buckets=stats.completeness_buckets,
         avg_completeness=stats.avg_completeness,
+        size_gb_by_type=stats.size_gb_by_type,
+        datasets_by_format=stats.datasets_by_format,
+        size_known_count=stats.size_known_count,
+        size_unknown_count=stats.size_unknown_count,
+        paper_field_fill=stats.paper_field_fill,
+        dataset_field_fill=stats.dataset_field_fill,
+        pdfs_analyzed=stats.pdfs_analyzed,
+        figures_total=stats.figures_total,
+        figures_per_paper=stats.figures_per_paper,
     )

@@ -78,18 +78,3 @@ else:
 ```
 Applied in `extract_figures.py`.
 
----
-
-## BUG-005: Wrong PDF downloaded for diaz-naveas_1999
-
-**Severity:** High  
-**Affects:** `diaz-naveas_1999_sediment_subduction_Chile_GEOMAR`
-
-**Symptom:**  
-`pdfs/diaz-naveas_1999_sediment_subduction_Chile_GEOMAR.pdf` is a completely unrelated paper: *"Antiprotozoal, Antitubercular and Cytotoxic Potential of Cyanobacterial Extracts from Ireland"* (Natural Product Communications, 2011, 6 pages).
-
-**Root cause:**  
-The PDF downloader resolved the wrong URL for this paper ID.
-
-**Fix:**  
-Manually obtain the correct PDF (Diaz-Naveas 1999, GEOMAR report on sediment subduction along Chile) and replace the current file.

@@ -1,15 +1,29 @@
 {
   "id": "contreras-reyes_2018_wide_angle_review_springer",
   "title": "Structure and Tectonics of the Chilean Convergent Margin from Wide-Angle Seismic Studies: A Review",
-  "authors": ["Contreras-Reyes, Eduardo"],
+  "authors": [
+    "Contreras-Reyes, Eduardo"
+  ],
   "year": 2018,
   "journal": "The Evolution of the Chilean-Argentinean Andes (Springer Earth System Sciences)",
   "doi": "10.1007/978-3-319-67774-3_1",
   "url": "https://link.springer.com/chapter/10.1007/978-3-319-67774-3_1",
   "open_access_url": null,
   "abstract": "This review compiles published 2-D velocity-depth models along the Chilean margin (22°–48°S) from wide-angle seismic studies to examine the structure and tectonic processes governing this convergent margin. It discusses subduction erosion in the north and sediment accretion in the south, identifying latitudinal segmentation of forearc properties. Two prominent velocity transition zones characterize the marine forearc and control megathrust seismicity.",
-  "keywords": ["wide-angle seismic", "review", "Chilean margin", "velocity model", "OBS", "OBH", "CINCA", "SPOC", "TIPTEQ", "subduction erosion", "accretion", "latitudinal segmentation"],
-
+  "keywords": [
+    "wide-angle seismic",
+    "review",
+    "Chilean margin",
+    "velocity model",
+    "OBS",
+    "OBH",
+    "CINCA",
+    "SPOC",
+    "TIPTEQ",
+    "subduction erosion",
+    "accretion",
+    "latitudinal segmentation"
+  ],
   "location": {
     "latitude": -35.0,
     "longitude": -73.0,
@@ -18,23 +32,31 @@
     "country": "Chile",
     "description": "Full Chilean convergent margin from 22°S to 48°S; synthesis of all published wide-angle seismic models",
     "bounding_box": {
-      "lat_min": -48.0, "lat_max": -22.0,
-      "lon_min": -80.0, "lon_max": -68.0
+      "lat_min": -48.0,
+      "lat_max": -22.0,
+      "lon_min": -80.0,
+      "lon_max": -68.0
     },
     "seismic_lines": [
       {
         "name": "Multiple profiles — CINCA, CONDOR, SPOC, TIPTEQ, SO213 (22°–48°S)",
-        "lat_start": -22.0, "lon_start": -71.0,
-        "lat_end": -48.0, "lon_end": -75.0,
-        "length_km": 3000
+        "lat_start": -22.0,
+        "lon_start": -71.0,
+        "lat_end": -48.0,
+        "lon_end": -75.0,
+        "length_km": 3000,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "Multiple vessels (compilation of published datasets)",
+    "vessel": [
+      "Multiple vessels"
+    ],
     "year_acquired": null,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -43,16 +65,19 @@
     "fold": null,
     "line_spacing_km": null
   },
-
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "Compilation of Published OBS/OBH Wide-Angle Velocity Models — Chilean Margin 22°–48°S",
       "classification": "PROCESSED",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "other",
+      "repository": [
+        "other"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -60,7 +85,6 @@
     }
   ],
   "_data_note": "Review chapter; no new data acquired. Compiles published velocity models from CINCA, CONDOR, SPOC, TIPTEQ and other cruises. Individual cruise datasets accessible via MGDS.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "This is a review/synthesis chapter that compiles and interprets previously published 2D velocity-depth models from wide-angle seismic surveys along the Chilean margin between 22°S and 48°S. No new data processing performed. The review identifies two velocity transition zones in the marine forearc and discusses latitudinal segmentation from erosive (north) to accretionary (south) margin styles.",
@@ -69,11 +93,16 @@
       "2. Synthesis and comparison of structural results",
       "3. Interpretation of tectonic segmentation"
     ],
-    "software": ["unknown"],
+    "software": [
+      "unknown"
+    ],
     "notes": "Synthesis chapter in Springer volume; individual dataset citations span CINCA95, CONDOR, SPOC, TIPTEQ and additional cruises"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Springer book chapter; behind paywall. No open access version confirmed. As a review, it does not contribute new raw data but provides comprehensive bibliography of Chilean margin seismic surveys."
+  "analysis_notes": "PDF validated 2026-04-05. All fields confirmed correct: single author Eduardo Contreras-Reyes, DOI 10.1007/978-3-319-67774-3_1, coverage 22°-48°S. Review chapter with no new data acquisition. No corrections needed.",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Tocopilla 2007 Mw7.7"
+  ]
 }

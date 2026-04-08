@@ -49,9 +49,13 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104 — CINCA95 cruise, 1995)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -64,10 +68,15 @@
     {
       "name": "CINCA95 Multichannel Seismic Reflection Data (reprocessed, ~19°–21°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GFZ Potsdam / GEOMAR internal",
+      "repository": [
+        "GFZ Potsdam",
+        "GEOMAR internal"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,

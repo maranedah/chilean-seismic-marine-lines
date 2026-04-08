@@ -37,12 +37,13 @@
     },
     "seismic_lines": [
       {
-        "name": "CINCA Wide-angle Profile at 23°30′S",
+        "name": "SO104-401 — CINCA95 wide-angle refraction profile at 23°30′S; 225 km long, 15 OBH + 4 PDAS land stations",
         "lat_start": -23.5,
         "lon_start": -72.5,
         "lat_end": -23.5,
         "lon_end": -70.0,
-        "length_km": null
+        "length_km": 225,
+        "profile_orientation": "margin-parallel"
       },
       {
         "name": "CINCA Near-vertical MCS Profile at 23°30′S",
@@ -50,30 +51,46 @@
         "lon_start": -72.5,
         "lat_end": -23.5,
         "lon_end": -70.0,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104 — CINCA experiment, 1995)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 5492,
     "streamer_length_m": null,
-    "channel_count": null,
+    "channel_count": 19,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95, 1995"
+    ],
+    "frequency_range_hz": [
+      3.0,
+      13.0
+    ]
   },
   "data": [
     {
       "name": "CINCA Wide-angle OBS seismic refraction data (23°30′S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -83,32 +100,61 @@
     {
       "name": "CINCA Near-vertical MCS reflection data (23°30′S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "Near-vertical incidence MCS reflection profiles from CINCA experiment at 23°30′S offshore Antofagasta, coincident with wide-angle profile.",
-      "data_type": "seismic_refraction_obs"
+      "data_type": "seismic_reflection_mcs"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
     "classification": "PROCESSED",
     "summary": "Coincident wide-angle seismic refraction and near-vertical MCS reflection data from the CINCA experiment (1995) at 23°30′S offshore Antofagasta processed to produce a 2D velocity model. Joint refraction and reflection travel time tomography used to obtain the velocity field. Gravity forward modelling applied as additional constraint. The resulting models reveal arc-type igneous basement of the overriding plate and document long-term subduction erosion.",
     "workflow": [
-      "1. CINCA OBS deployment and airgun shooting (1995)",
-      "2. Wide-angle travel time picking (Pg, PmP, Pn phases)",
-      "3. Near-vertical MCS: geometry, velocity analysis, stack",
-      "4. Joint refraction-reflection travel time tomography",
-      "5. 2D gravity forward modelling",
-      "6. Integration and interpretation"
+      "1. OBS (15 OBH IFM-GEOMAR) and land station (4 PDAS GFZ-Potsdam) deployment along SO104-401 profile at 23°30′S",
+      "2. Airgun shooting: 3 × 30-L air guns (5492 cui total) fired every 60 s (150 m spacing) from R/V SONNE",
+      "3. Wide-angle travel time picking: Pg, Pn, PiP phases; picking errors 50 ms (near offset), 60 ms (far offset), 80 ms (PiP); 3048 first arrivals + 721 PiP picked",
+      "4. 1-D velocity models: best-fit models for oceanic plate (3 OBS) and continental margin (lower slope OBHs 4–8, upper slope OBHs 9–15)",
+      "5. 2-D reference model construction by linear interpolation of 1-D models; initial PiP geometry from MCS PSDM section (von Huene & Ranero 2003) + Antofagasta earthquake aftershocks",
+      "6. Joint refraction-reflection travel time tomography (Korenaga et al. 2000): 10 iterations; 2-D velocity field + floating reflector (interplate boundary); horizontal grid 0.5 km, vertical 0.1–1 km",
+      "7. Monte Carlo uncertainty analysis for oceanic plate velocity parameters",
+      "8. Checkerboard and spike tests for resolution assessment",
+      "9. 2-D gravity forward modelling using velocity-derived density (Birch 1961; Christensen & Mooney 1995)",
+      "10. Porosity derivation from velocity using Raymer-Hunt-Gardner (1980) transform",
+      "11. Integration with PSDM MCS section (von Huene & Ranero 2003) and multibeam bathymetry for tectonic interpretation"
     ],
-    "software": [],
-    "notes": "Foundational paper for north Chile subduction zone seismic structure. CINCA experiment conducted in 1995 by GEOMAR aboard R/V SONNE SO104."
+    "software": [
+      "Korenaga et al. (2000) joint refraction-reflection travel time tomography code (TOMO2D)"
+    ],
+    "notes": "CINCA95 cruise: SO-104/1, 22 July–24 August 1995 (Hinz et al. 1995 cruise report). 3 × 30-L air guns (5492 cui), 60 s / 150 m shot interval. 15 OBH (IFM-GEOMAR) + 4 PDAS land stations (GFZ-Potsdam / Free Univ. Berlin). Land records provided by Stefan Lueth (FU Berlin). Profile 225 km long. MCS near-vertical data from von Huene & Ranero (2003), not newly acquired here — pre-stack depth migrated. Funded by German BMBF.",
+    "migration_type": "PSSDM"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Bronze open access PDF available via Wiley. Abstract reconstructed from survey snippet. CINCA experiment data from 1995 held at GEOMAR; not publicly deposited in standard repositories. Vessel SO104 confirmed from CINCA project documentation."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. Title, authors (2), DOI confirmed. vessel: 'R/V SONNE' → 'R/V SONNE (SO104, CINCA95, July–August 1995)' (confirmed in acknowledgments: 'CINCA data collected during R/V SONNE cruise 104'). source_volume_cui: null → 5492 (3 × 30-L air guns = 90L × 61.02). channel_count: null → 19 (15 OBH IFM-GEOMAR + 4 PDAS GFZ-Potsdam/FU Berlin). seismic_lines[0] updated to SO104-401, length_km=225. data[1].data_type: 'seismic_refraction_obs' → 'seismic_reflection_mcs' (near-vertical MCS data). workflow expanded to 11 steps based on methods section; software added: Korenaga et al. (2000) TOMO2D. MCS section from von Huene & Ranero (2003), not newly acquired in this study. Data not in public repository.",
+  "tectonic_setting": "erosional"
 }

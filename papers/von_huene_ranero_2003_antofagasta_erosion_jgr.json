@@ -41,57 +41,63 @@
         "lon_start": -71.5,
         "lat_end": -23.5,
         "lon_end": -70.0,
-        "length_km": 150
+        "length_km": 150,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104, CINCA95 cruise, 1995)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 2,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "depth_penetration_km": 10.0
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "CINCA95 Multichannel Seismic Reflection Data — Antofagasta Transect",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR",
+      "repository": [
+        "BGR"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Prestack depth-migrated MCS reflection profiles from SO104 (CINCA95) offshore Antofagasta; images subducting grabens, frontal prism, 1.5-km thick interplate reflective layer, and seamount tunnelling structures. No direct public dataset download identified; BGR holds track shapefiles only (Marine_Seismik@bgr.de)."
     },
     {
+      "dataset_ref": "cinca95_bathymetry",
       "data_type": "bathymetry",
-      "name": "CINCA95 Swath Bathymetry — North Chile Margin",
-      "classification": "RAW",
-      "format": "NetCDF",
-      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
-      "doi": "10.1594/PANGAEA.893033",
-      "repository": "PANGAEA",
-      "size_gb": null,
-      "access": "open",
-      "download_command": null,
-      "description": "Multibeam bathymetry from SO104 cruise offshore Antofagasta used to characterize slope morphology and tectonic features. Published as Geersen et al. (2018), merged multibeam grid from SO104, SO244, and MGL1610."
+      "notes": "Multibeam bathymetry from SO104 cruise offshore Antofagasta used to characterize slope morphology and tectonic features. Published as Geersen et al. (2018), merged multibeam grid from SO104, SO244, and MGL1610."
     },
     {
       "data_type": "gravity",
       "name": "CINCA95 Free-Air Gravity — North Chile",
       "classification": "RAW",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -101,14 +107,34 @@
       "data_type": "navigation",
       "name": "CINCA95 Navigation Data",
       "classification": "RAW",
-      "format": "CSV",
+      "format": [
+        "CSV"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Navigation and positioning data from the SO104 cruise"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "CINCA95 (SO104) data hosted at MGDS. Prestack depth migration applied to MCS profiles makes them PROCESSED.",
@@ -126,9 +152,11 @@
     "software": [
       "unknown"
     ],
-    "notes": "PSDM applied; this is a fully processed section used for tectonic interpretation"
+    "notes": "PSDM applied; this is a fully processed section used for tectonic interpretation",
+    "migration_type": "PSSDM"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access PDF available via OceanRep GEOMAR. Data from CINCA95 SO104 cruise (1995), accessible via MGDS. The Semantic Scholar record confirms OA PDF at oceanrep.geomar.de."
+  "analysis_notes": "Open access PDF available via OceanRep GEOMAR. Data from CINCA95 SO104 cruise (1995), accessible via MGDS. The Semantic Scholar record confirms OA PDF at oceanrep.geomar.de.",
+  "tectonic_setting": "mixed"
 }

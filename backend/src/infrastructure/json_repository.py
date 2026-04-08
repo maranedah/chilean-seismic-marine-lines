@@ -53,6 +53,8 @@ class JsonPaperRepository(PaperRepository):
                 lat_end=line.get("lat_end"),
                 lon_end=line.get("lon_end"),
                 length_km=line.get("length_km"),
+                depth_km=line.get("depth_km"),
+                profile_orientation=line.get("profile_orientation"),
             )
             for line in loc_data.get("seismic_lines", [])
         ]
@@ -73,11 +75,39 @@ class JsonPaperRepository(PaperRepository):
         )
 
         acq_raw = data.get("acquisition") or {}
+
+        def _parse_year(val: object) -> int | None:
+            if val is None:
+                return None
+            if isinstance(val, list):
+                val = val[0]
+            if isinstance(val, int):
+                return val
+            # Handle range strings like "2000-2001" — take the first year
+            return int(str(val).split("-")[0])
+
+        def _to_list(val: object) -> list[str] | None:
+            if val is None:
+                return None
+            if isinstance(val, list):
+                return [str(v) for v in val]
+            # Legacy string — wrap in single-element list
+            return [str(val)]
+
+        def _to_repo_list(val: object) -> list[str] | None:
+            if val is None:
+                return None
+            if isinstance(val, list):
+                return [str(v).strip() for v in val]
+            # Legacy string — split on " / " separator
+            return [part.strip() for part in str(val).split(" / ")]
+
         acquisition = (
             Acquisition(
-                vessel=acq_raw.get("vessel"),
-                year_acquired=acq_raw.get("year_acquired"),
-                source_type=acq_raw.get("source_type"),
+                vessel=_to_list(acq_raw.get("vessel")),
+                expeditions=_to_list(acq_raw.get("expeditions")),
+                year_acquired=_parse_year(acq_raw.get("year_acquired")),
+                source_type=_to_list(acq_raw.get("source_type")),
                 source_volume_cui=acq_raw.get("source_volume_cui"),
                 streamer_length_m=acq_raw.get("streamer_length_m"),
                 channel_count=acq_raw.get("channel_count"),
@@ -85,6 +115,12 @@ class JsonPaperRepository(PaperRepository):
                 record_length_s=acq_raw.get("record_length_s"),
                 fold=acq_raw.get("fold"),
                 line_spacing_km=acq_raw.get("line_spacing_km"),
+                shot_interval_m=acq_raw.get("shot_interval_m"),
+                group_interval_m=acq_raw.get("group_interval_m"),
+                obs_spacing_km=acq_raw.get("obs_spacing_km"),
+                nearest_offset_m=acq_raw.get("nearest_offset_m"),
+                frequency_range_hz=acq_raw.get("frequency_range_hz"),
+                depth_penetration_km=acq_raw.get("depth_penetration_km"),
             )
             if acq_raw
             else None
@@ -95,14 +131,15 @@ class JsonPaperRepository(PaperRepository):
                 data_type=d.get("data_type", ""),
                 name=d.get("name", ""),
                 classification=d.get("classification", "PROCESSED"),
-                format=d.get("format"),
+                format=_to_list(d.get("format")),
                 url=d.get("url"),
                 doi=d.get("doi"),
-                repository=d.get("repository"),
+                repository=_to_repo_list(d.get("repository")),
                 size_gb=d.get("size_gb"),
                 access=d.get("access", "unknown"),
                 download_command=d.get("download_command"),
                 description=d.get("description", ""),
+                cdp_spacing_m=d.get("cdp_spacing_m"),
             )
             for d in data.get("data", [])
             if not d.get("_data_note")
@@ -116,6 +153,7 @@ class JsonPaperRepository(PaperRepository):
                 workflow=proc_raw.get("workflow", []),
                 software=proc_raw.get("software", []),
                 notes=proc_raw.get("notes"),
+                migration_type=proc_raw.get("migration_type"),
             )
             if proc_raw
             else None
@@ -138,6 +176,8 @@ class JsonPaperRepository(PaperRepository):
             processing=processing,
             analysis_confidence=data.get("analysis_confidence"),
             analysis_notes=data.get("analysis_notes"),
+            tectonic_setting=data.get("tectonic_setting"),
+            associated_earthquakes=data.get("associated_earthquakes", []),
         )
 
     # ── port implementation ───────────────────────────────────────────────────

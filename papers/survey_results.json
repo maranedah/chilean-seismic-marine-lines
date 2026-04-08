@@ -1795,27 +1795,6 @@
       "status": "ANALYZED"
     },
     {
-      "id": "bloch_2014_north_chile_reflectivity_fluids_gji",
-      "title": "High-resolution image of the North Chilean subduction zone: seismicity, reflectivity and fluids",
-      "authors": [
-        "Bloch, W.",
-        "Kummerow, J.",
-        "Salazar, P.",
-        "Wigger, P.",
-        "Shapiro, S.A."
-      ],
-      "year": 2014,
-      "journal": "Geophysical Journal International",
-      "doi": "10.1093/gji/ggu084",
-      "url": "https://academic.oup.com/gji/article/197/3/1744/655690",
-      "abstract_snippet": "High-precision locations for 5,250 earthquakes are obtained in the Iquique segment of the northern Chilean subduction zone from two temporary local seismic networks around 21°S. A double seismic zone in the downgoing Nazca slab is clearly identified. A combined interpretation of seismicity and reflectivity along the seismic ANCORP'96 experiment suggests the prevalence of fluid processes in the subducted oceanic crust and uppermost 20 km of the mantle. Released fluids migrate upwards, explaining the enhanced seismic reflectivity in the uppermost mantle of the Nazca slab.",
-      "relevance_score": 4,
-      "relevance_notes": "Combines local seismic network data with marine-based ANCORP'96 seismic reflection data offshore northern Chile (~21°S) to interpret fluid processes and reflectivity of the subduction zone; uses the ANCORP marine seismic profile as primary structural framework",
-      "geographic_focus": "North Chile (~21°S, Iquique segment)",
-      "data_type_hint": "Seismic reflection",
-      "status": "ANALYZED"
-    },
-    {
       "id": "klaucke_2012_cold_seeps_chile_margin_gml",
       "title": "Sidescan sonar imagery of widespread fossil and active cold seeps along the central Chilean continental margin",
       "authors": [
@@ -1975,23 +1954,6 @@
       "status": "ANALYZED"
     },
     {
-      "id": "diaz-naveas_1999_sediment_subduction_Chile_GEOMAR",
-      "title": "Sediment subduction and accretion at the Chilean convergent margin between 35° and 40°S",
-      "authors": [
-        "Diaz-Naveas, J.L."
-      ],
-      "year": 1999,
-      "journal": "Ph.D. thesis, Christian-Albrechts-Universität Kiel / GEOMAR Report",
-      "doi": "N/A",
-      "url": "https://oceanrep.geomar.de/id/eprint/2866/",
-      "abstract_snippet": "Seismic reflection profiles, swath bathymetric data, and heat flow measurements were combined to characterize sediment subduction and accretion processes along the Chilean convergent margin between 35° and 40°S. The data reveal the geometry of the accretionary prism and quantify mass fluxes of incoming and accreted sediments. The study provides the first systematic compilation of marine seismic lines from this sector of the south-central Chile margin.",
-      "relevance_score": 3,
-      "relevance_notes": "Presents marine seismic reflection profiles and heat flow data from south-central Chile (35°–40°S); foundational GEOMAR report on sediment accretion/subduction using named survey lines from this sector",
-      "geographic_focus": "Central Chile / South Chile (35°–40°S)",
-      "data_type_hint": "Seismic reflection",
-      "status": "ANALYZED"
-    },
-    {
       "id": "arnulf_2022_images_underplating_chile_jgr",
       "title": "Seismic imaging of the underplated lower continental crust of south-central Chile",
       "authors": [
@@ -2073,6 +2035,6 @@
       "status": "ANALYZED"
     }
   ],
-  "total_found": 98,
+  "total_found": 96,
   "recommended_for_analysis": 98
 }

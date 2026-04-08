@@ -5,8 +5,7 @@
     "Contreras-Reyes, Eduardo",
     "Grevemeyer, Ingo",
     "Flueh, Ernst R.",
-    "Scherwath, M.",
-    "Bialas, Joerg"
+    "Reichert, Christian"
   ],
   "year": 2008,
   "journal": "Journal of Geophysical Research: Solid Earth",
@@ -42,43 +41,69 @@
     },
     "seismic_lines": [
       {
-        "name": "SPOC Wide-angle Profile P4 (~38°S)",
+        "name": "TIPTEQ Profile P09 — OBS wide-angle refraction (~38°S, 215 km, SO181)",
         "lat_start": -38.0,
         "lon_start": -77.0,
+        "lat_end": -38.0,
+        "lon_end": -74.5,
+        "length_km": 215
+      },
+      {
+        "name": "SPOC Profile P01 — OBS wide-angle refraction (~38°S, SO161, 2001)",
+        "lat_start": -38.0,
+        "lon_start": -75.5,
         "lat_end": -38.0,
         "lon_end": -72.5,
         "length_km": null
       },
       {
-        "name": "TIPTEQ Wide-angle Profile (~38.2°S)",
-        "lat_start": -38.2,
-        "lon_start": -76.5,
-        "lat_end": -38.2,
+        "name": "SPOC MCS Profile P09 — multichannel seismic reflection (~38°S, SO161)",
+        "lat_start": -38.0,
+        "lon_start": -77.0,
+        "lat_end": -38.0,
         "lon_end": -72.5,
         "length_km": null
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC 2001; SO181 TIPTEQ 2004–2005)",
+    "vessel": [
+      "R/V SONNE",
+      "R/V SONNE"
+    ],
     "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3124,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, Oct–Nov 2001",
+      "SO181, TIPTEQ, Dec 2004–Feb 2005"
+    ],
+    "shot_interval_m": 150.0,
+    "frequency_range_hz": [
+      1.0,
+      20.0
+    ]
   },
   "data": [
     {
       "name": "SPOC/TIPTEQ Wide-angle OBS Seismic Refraction Data (~38°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -88,10 +113,14 @@
     {
       "name": "SPOC/TIPTEQ Multichannel Seismic Reflection Data (~38°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -111,10 +140,14 @@
       "6. Swath bathymetry processing",
       "7. Integrated structural interpretation"
     ],
-    "software": [],
-    "notes": "Bronze open access PDF available. Key paper for south-central Chile subduction zone structure at ~38°S. First documentation of outer rise bending faults cutting ≥6 km into mantle in this area."
+    "software": [
+      "TOMO2D"
+    ],
+    "notes": "Bronze open access PDF available. Key paper for south-central Chile subduction zone structure at ~38°S. First documentation of outer rise bending faults cutting ≥6 km into mantle in this area.",
+    "migration_type": "post-stack"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Bronze open access PDF available via Wiley. Abstract reconstructed from survey snippet. SPOC (SO161, 2001) and TIPTEQ (SO181, 2004–2005) cruise identities confirmed from authorship and companion papers. Bialas (GEOMAR) confirmed involvement in acquisition."
+  "analysis_notes": "Validated against PDF. Authors corrected: removed Scherwath and Bialas (not authors — Scherwath thanked in acknowledgments, Bialas cited for OBS instrument), added Reichert, Christian (BGR Hannover). Vessel expanded to SO161 SPOC + SO181 TIPTEQ. source_volume_cui=3124 (SPOC MCS: 20 airguns × 51.2 L total = 3124 cui); TIPTEQ refraction source was 8×8 L G-guns = 64 L = 3905 cui. Profile names corrected to P09 (TIPTEQ, 215 km) + P01 (SPOC). 48 OBH/S stations total. Software: TOMO2D (Korenaga et al. 2000). No data availability statement found; data held at IFM-GEOMAR.",
+  "tectonic_setting": "mixed"
 }

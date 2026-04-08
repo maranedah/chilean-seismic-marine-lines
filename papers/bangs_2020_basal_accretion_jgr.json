@@ -48,14 +48,19 @@
         "lon_start": -73.0,
         "lat_end": -44.0,
         "lon_end": -75.0,
-        "length_km": 1000
+        "length_km": 1000,
+        "profile_orientation": "margin-perpendicular"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V Marcus G. Langseth (MGL1701, CEVICHE cruise, 2017)",
+    "vessel": [
+      "R/V Marcus G. Langseth"
+    ],
     "year_acquired": 2017,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": 6600,
     "streamer_length_m": 15150,
     "channel_count": 1212,
@@ -66,69 +71,119 @@
   },
   "data": [
     {
+      "dataset_ref": "mgl1701_mcs",
       "data_type": "seismic_reflection_mcs",
-      "name": "MGL1701 CEVICHE MCS Reflection Data — South-Central Chile 30°–44°S",
-      "classification": "PROCESSED",
-      "format": "SEG-Y",
-      "url": "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
-      "doi": "10.1594/IEDA/324399",
-      "repository": "MGDS",
-      "size_gb": null,
-      "access": "open",
-      "download_command": null,
-      "description": "15.15-km long-offset MCS reflection data from 2017 CEVICHE cruise along ~1000 km of south-central Chile; images underthrust sediment layer, basal accretion of crustal slices, and plate boundary reflectivity"
+      "notes": "15.15-km long-offset MCS reflection data from 2017 CEVICHE cruise along ~1000 km of south-central Chile; images underthrust sediment layer, basal accretion of crustal slices, and plate boundary reflectivity"
     },
     {
+      "dataset_ref": "mgl1701_bathymetry",
       "data_type": "bathymetry",
-      "name": "MGL1701 Multibeam Bathymetry — South-Central Chile",
-      "classification": "RAW",
-      "format": "NetCDF",
-      "url": "https://www.rvdata.us/search/cruise/MGL1701",
-      "doi": null,
-      "repository": "RVData",
-      "size_gb": null,
-      "access": "open",
-      "download_command": null,
-      "description": "Multibeam bathymetry acquired during MGL1701 cruise along the south-central Chilean margin"
+      "notes": "Raw multibeam swath bathymetry data (1,753 files, ~201 GB, Kongsberg EM122) from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile 30°–44°S."
+    },
+    {
+      "dataset_ref": "mgl1701_gravity",
+      "data_type": "gravity",
+      "notes": "Raw underway gravimeter data from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile."
+    },
+    {
+      "dataset_ref": "mgl1701_magnetics",
+      "data_type": "magnetics",
+      "notes": "Raw magnetometer data from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile."
+    },
+    {
+      "dataset_ref": "mgl1701_navigation",
+      "data_type": "navigation",
+      "notes": "Primary navigation (GPS positions, 253 MB) from the 2017 CEVICHE (MGL1701) cruise, archived via R2R."
     },
     {
       "data_type": "gravity",
-      "name": "MGL1701 Shipboard Gravity — South-Central Chile",
+      "name": "Gravity:Field",
       "classification": "RAW",
-      "format": "ASCII",
-      "url": "https://www.rvdata.us/search/cruise/MGL1701",
-      "doi": null,
-      "repository": "RVData",
-      "size_gb": null,
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123893",
+      "doi": "10.7284/123893",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.149,
       "access": "open",
       "download_command": null,
-      "description": "Free-air gravity data from MGL1701 cruise used to constrain density models of basal accretion bodies"
+      "description": "Raw, underway Gravimeter data as originally collected from a Bell BGM-3 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
     },
     {
       "data_type": "magnetics",
-      "name": "MGL1701 Magnetics — South-Central Chile",
+      "name": "Magnetic:Field",
       "classification": "RAW",
-      "format": "ASCII",
-      "url": "https://www.rvdata.us/search/cruise/MGL1701",
-      "doi": null,
-      "repository": "RVData",
-      "size_gb": null,
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123887",
+      "doi": "10.7284/123887",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 1.3,
       "access": "open",
       "download_command": null,
-      "description": "Magnetic anomaly data from MGL1701 cruise"
+      "description": "Raw, underway Magnetometer data as originally collected from a Geometrics G-882 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
     },
     {
       "data_type": "navigation",
-      "name": "MGL1701 Navigation Data",
-      "classification": "RAW",
-      "format": "CSV",
-      "url": "https://www.rvdata.us/search/cruise/MGL1701",
-      "doi": null,
-      "repository": "RVData",
-      "size_gb": null,
+      "name": "Navigation:Primary",
+      "classification": "PROCESSED",
+      "format": [
+        "R2R:Nav"
+      ],
+      "url": "https://doi.org/10.7284/603741",
+      "doi": "10.7284/603741",
+      "repository": [
+        "R2R"
+      ],
+      "size_gb": 0.2358,
       "access": "open",
       "download_command": null,
-      "description": "Navigation and GPS positioning data from the MGL1701 CEVICHE cruise"
+      "description": "Fileset 603741 (r2rnav data) from cruise MGL1701",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Seismic:Active:Subbottom",
+      "classification": "RAW",
+      "format": [
+        "KEB"
+      ],
+      "url": "https://doi.org/10.7284/123889",
+      "doi": "10.7284/123889",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 2.0,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Singlebeam Sonar data as originally collected from a Knudsen 3260 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "velocity_sound",
+      "name": "Temperature, Velocity:Sound",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123884",
+      "doi": "10.7284/123884",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.0043,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Expendable Probe data as originally collected from a Sippican MK21 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "MGL1701 CEVICHE cruise data accessible via MGDS and RVData. Long-offset 15.15-km streamer makes this a unique dataset for imaging deep structure.",
@@ -145,12 +200,18 @@
       "7. Depth section interpretation"
     ],
     "software": [
-      "ProMAX",
-      "unknown FWI code"
+      "Paradigm Echos",
+      "Paradigm Geodepth"
     ],
-    "notes": "15.15-km streamer provides long-offset data critical for imaging deep structure; FWI applied for high-resolution velocity models"
+    "notes": "15.15-km streamer. Processing used Paradigm Echos and Geodepth (confirmed from Acknowledgments). LIFT multiple suppression (Choo et al. 2004) used as second step after SRME.",
+    "migration_type": "Kirchhoff"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "MGL1701 cruise data available via MGDS and RVData. Companion paper to Olsen et al. 2020, Arnulf et al. 2022, and Maksymowicz et al. 2021 using the same CEVICHE dataset."
+  "analysis_notes": "Validated against PDF. Software corrected: ProMAX/FWI → Paradigm Echos + Paradigm Geodepth (confirmed from Acknowledgments). Source volume 108.2 L = 6,600 in³ confirmed. Data available from MGDS (marine-geo.org). Not open access (Cochrane Chile institutional download). Morgan's first name 'Joanna' could not be confirmed from PDF (shows J. K. only).",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8",
+    "Valdivia 1960 Mw9.5"
+  ]
 }

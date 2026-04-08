@@ -1,15 +1,30 @@
 {
   "id": "geersen_2011_pleistocene_slope_failures_arauco_jgs",
   "title": "Pleistocene giant slope failures offshore Arauco Peninsula, Southern Central Chile",
-  "authors": ["Geersen, Jacob", "Völker, David", "Behrmann, Jan H.", "Lacasse, Christine", "Watt, Sebastian F. L."],
+  "authors": [
+    "Geersen, Jacob",
+    "Völker, David",
+    "Behrmann, Jan H.",
+    "Lacasse, Christine",
+    "Watt, Sebastian F. L."
+  ],
   "year": 2011,
   "journal": "Journal of the Geological Society",
-  "doi": "10.1144/0016-76492010-076",
-  "url": "https://jgs.lyellcollection.org/content/168/6/1351",
-  "open_access_url": null,
+  "doi": "10.1144/0016-76492011-027",
+  "url": "https://www.lyellcollection.org/doi/abs/10.1144/0016-76492011-027",
+  "open_access_url": "https://oceanrep.geomar.de/id/eprint/11610/",
   "abstract": "Pleistocene giant submarine slope failures offshore the Arauco Peninsula (~37°–38°S), southern central Chile, are documented using multibeam bathymetry and PARASOUND sub-bottom profiler data. Multiple mass transport deposits with volumes up to several hundred km³ are identified and dated using sediment cores. The failures are attributed to seismic triggering, excess pore pressure, and volcanic ash loading during the Pleistocene.",
-  "keywords": ["Pleistocene", "slope failures", "submarine landslides", "Arauco Peninsula", "37°–38°S", "multibeam bathymetry", "PARASOUND", "SONNE", "Journal of the Geological Society"],
-
+  "keywords": [
+    "Pleistocene",
+    "slope failures",
+    "submarine landslides",
+    "Arauco Peninsula",
+    "37°–38°S",
+    "multibeam bathymetry",
+    "PARASOUND",
+    "SONNE",
+    "Journal of the Geological Society"
+  ],
   "location": {
     "latitude": -37.5,
     "longitude": -75.0,
@@ -18,41 +33,54 @@
     "country": "Chile",
     "description": "Offshore Arauco Peninsula (~37°–38°S) southern central Chile; Pleistocene giant submarine slope failures documented by multibeam and PARASOUND",
     "bounding_box": {
-      "lat_min": -38.5, "lat_max": -37.0,
-      "lon_min": -76.5, "lon_max": -73.5
+      "lat_min": -38.5,
+      "lat_max": -37.0,
+      "lon_min": -76.5,
+      "lon_max": -73.5
     },
     "seismic_lines": [
       {
         "name": "SONNE PARASOUND profiles — Arauco slope failures ~37°–38°S",
-        "lat_start": -37.0, "lon_start": -76.5,
-        "lat_end": -38.5, "lon_end": -73.5,
-        "length_km": 200
+        "lat_start": -37.0,
+        "lon_start": -76.5,
+        "lat_end": -38.5,
+        "lon_end": -73.5,
+        "length_km": 200,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V SONNE (SPOC cruise SO161 or related cruise)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 2001,
-    "source_type": "PARASOUND sub-bottom profiler and multibeam echosounder",
+    "source_type": [
+      "sub-bottom profiler",
+      "multibeam echosounder"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "group_interval_m": 25.0
   },
-
   "data": [
     {
       "data_type": "subbottom",
       "name": "SONNE PARASOUND Profiles — Arauco Slope Failures ~37°–38°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -62,10 +90,14 @@
       "data_type": "bathymetry",
       "name": "SONNE Multibeam Bathymetry — Arauco Slope Failures ~37°–38°S",
       "classification": "PROCESSED",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -73,7 +105,6 @@
     }
   ],
   "_data_note": "Journal of the Geological Society paper; behind paywall. SONNE cruise (likely SPOC SO161). Repository not confirmed.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "Multibeam bathymetry and PARASOUND sub-bottom profiler data from SONNE cruise(s) offshore Arauco Peninsula (~37°–38°S) document Pleistocene giant submarine slope failures. Multiple mass transport deposits are identified and dated using sediment cores. Failure mechanisms attributed to seismic triggering, pore pressure, and volcanic ash loading.",
@@ -84,11 +115,15 @@
       "4. Sediment core analysis and radiocarbon/tephrochronology dating",
       "5. Failure mechanism analysis"
     ],
-    "software": ["CARIS HIPS/SIPS", "unknown"],
-    "notes": "JGS slope stability paper related to SPOC data; companion to Geersen et al. 2011 Tectonics forearc paper"
+    "software": [
+      "CARIS HIPS/SIPS",
+      "unknown"
+    ],
+    "notes": "JGS slope stability paper related to SPOC data; companion to Geersen et al. 2011 Tectonics forearc paper",
+    "migration_type": "post-stack"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "medium",
-  "analysis_notes": "JGS paper; behind paywall. SONNE cruise (likely SPOC SO161). Repository not confirmed."
+  "analysis_notes": "JGS paper; behind paywall. SONNE cruise (likely SPOC SO161). Repository not confirmed.",
+  "tectonic_setting": "mixed"
 }

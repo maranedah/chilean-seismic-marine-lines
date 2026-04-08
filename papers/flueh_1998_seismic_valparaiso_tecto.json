@@ -15,8 +15,8 @@
   ],
   "year": 1998,
   "journal": "Tectonophysics",
-  "doi": "10.1016/S0040-1951(97)00269-2",
-  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040195197002692",
+  "doi": "10.1016/S0040-1951(97)00299-0",
+  "url": "https://www.sciencedirect.com/science/article/pii/S0040195197002990",
   "open_access_url": null,
   "abstract": "Seismic investigations of the continental margin off- and onshore Valparaiso, Chile were carried out during the CINCA project in 1995. Wide-angle reflection and refraction data were acquired using Ocean Bottom Hydrophones (OBH) and ocean-bottom seismometers along profiles across the margin in the Valparaiso region. The velocity structure reveals the geometry of the subducting Nazca plate and the overriding South American continental crust in the Juan Fernández Ridge collision zone.",
   "keywords": [
@@ -46,7 +46,15 @@
     },
     "seismic_lines": [
       {
-        "name": "CINCA95 Profile 2 — Valparaiso OBH/OBS line (~32°S)",
+        "name": "Profile 1",
+        "lat_start": -33.5,
+        "lon_start": -74.0,
+        "lat_end": -33.5,
+        "lon_end": -71.0,
+        "length_km": 280
+      },
+      {
+        "name": "Profile 2",
         "lat_start": -32.5,
         "lon_start": -74.0,
         "lat_end": -32.5,
@@ -56,12 +64,18 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104, CINCA95, 1995)",
+    "vessel": [
+      "R/V SONNE SO101",
+      "R/V SONNE SO103",
+      "R/V SONNE SO104"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 6000,
+    "streamer_length_m": 3000,
+    "channel_count": 120,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
@@ -72,10 +86,15 @@
       "data_type": "obh",
       "name": "CINCA95 OBH Wide-Angle Refraction Data — Valparaiso ~32°S",
       "classification": "RAW",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -85,36 +104,37 @@
       "data_type": "seismic_reflection_mcs",
       "name": "CINCA95 MCS Reflection Profiles — Valparaiso Region",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Coincident MCS reflection profiles providing near-vertical imaging to complement the wide-angle OBH data at Valparaiso. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
     },
     {
+      "dataset_ref": "cinca95_bathymetry",
       "data_type": "bathymetry",
-      "name": "CINCA95 Swath Bathymetry — Central Chile ~32°S",
-      "classification": "RAW",
-      "format": "NetCDF",
-      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
-      "doi": "10.1594/PANGAEA.893033",
-      "repository": "PANGAEA",
-      "size_gb": null,
-      "access": "open",
-      "download_command": null,
-      "description": "Multibeam bathymetry from SO104 CINCA95 cruise in the Valparaiso margin region. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+      "notes": "Multibeam bathymetry from SO104 CINCA95 cruise in the Valparaiso margin region. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
     },
     {
       "data_type": "gravity",
       "name": "CINCA95 Gravity — Central Chile ~32°S",
       "classification": "RAW",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -134,11 +154,13 @@
       "6. Gravity modeling for constraint"
     ],
     "software": [
-      "RAYINVR"
+      "MacRay (Luetgert 1992)"
     ],
-    "notes": "Amphibious profile with marine OBH and land stations; companion to Zelt et al. 1999 3D tomography paper using same dataset"
+    "notes": "Amphibious profile with marine OBH and land stations; companion to Zelt et al. 1999 3D tomography paper using same dataset",
+    "migration_type": "post-stack"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Tectonophysics paper, behind paywall. CINCA95 SO104 data accessible via MGDS. Foundational CINCA paper for the Valparaiso/JFR collision zone."
+  "analysis_notes": "PDF validated 2026-04-05. Corrected: vessel updated to SO101+SO103+SO104; source_volume_cui null→6000 (3× BOLT CT600 2000 cui airguns on SO103); streamer_length_m null→3000; channel_count null→120; added Profile 1 seismic line; software RAYINVR→MacRay (Luetgert 1992). MCS source on SO104 was 52L tuned arrays (~3173 cui) — kept source_volume_cui as 6000 (OBH refraction source per paper's acquisition section). Authors and DOI confirmed correct.",
+  "tectonic_setting": "accretionary"
 }

@@ -42,3 +42,9 @@ desktop.ini
 
 # Local Claude settings (machine-specific allow lists)
 .claude/settings.local.json
+
+graphify-out/
+pdf_text/
+_pangaea*
+pdf_validation.json
+sismica-marina-deploy.json

@@ -40,43 +40,67 @@
     },
     "seismic_lines": [
       {
-        "name": "Wide-angle profile at ~31°S",
-        "lat_start": -31.0,
-        "lon_start": -73.5,
-        "lat_end": -31.0,
-        "lon_end": -70.5,
-        "length_km": null
+        "name": "Profile P2 — MCS + OBS wide-angle (~32°S, Los Vilos, 196 km, SO161 SPOC 2000)",
+        "lat_start": -32.0,
+        "lon_start": -74.0,
+        "lat_end": -32.0,
+        "lon_end": -71.0,
+        "length_km": 196,
+        "profile_orientation": "margin-perpendicular"
       },
       {
-        "name": "Wide-angle profile at ~32.5°S",
-        "lat_start": -32.5,
+        "name": "Profile P3 — MCS + OBS wide-angle (~31°S, Punitaqui, Contreras-Reyes et al. 2014)",
+        "lat_start": -31.0,
+        "lon_start": -74.0,
+        "lat_end": -31.0,
+        "lon_end": -71.5,
+        "length_km": 196,
+        "profile_orientation": "margin-perpendicular"
+      },
+      {
+        "name": "Profile P1 — wide-angle (~33°S, Flueh et al. 1998; Zelt 1999)",
+        "lat_start": -33.0,
         "lon_start": -73.5,
-        "lat_end": -32.5,
+        "lat_end": -33.0,
         "lon_end": -70.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-perpendicular"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
-    "year_acquired": null,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
-    "sample_rate_ms": 2,
-    "record_length_s": null,
-    "fold": null,
-    "line_spacing_km": null
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2000,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3124,
+    "streamer_length_m": 2700,
+    "channel_count": 108,
+    "sample_rate_ms": 4,
+    "record_length_s": 14.3,
+    "fold": 27,
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, 2000"
+    ],
+    "shot_interval_m": 154.0,
+    "group_interval_m": 25.0
   },
   "data": [
     {
       "name": "Wide-angle OBS seismic refraction profiles (31°–33°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -86,10 +110,14 @@
     {
       "name": "Multichannel seismic reflection profiles (31°–33°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -108,10 +136,18 @@
       "5. Gravity modeling as additional constraint",
       "6. Interpretation: crustal thinning, erosion quantification"
     ],
-    "software": [],
-    "notes": "Bronze open access PDF available via Oxford Academic. Study covers Juan Fernández Ridge collision zone at ~33°S."
+    "software": [
+      "TOMO2D"
+    ],
+    "notes": "Bronze open access PDF available via Oxford Academic. Study covers Juan Fernández Ridge collision zone at ~33°S.",
+    "migration_type": "post-stack"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Bronze open access PDF available at Oxford Academic. Abstract partially reconstructed from survey snippet and Semantic Scholar metadata — publisher elided abstract from API response. Cruise details not confirmed; Sonne vessel inferred from GEOMAR authorship and regional survey history."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. vessel=SO161 SPOC 2000 (confirmed: 'R/V Sonne in 2000, Reichert et al. 2002'); year_acquired=2000; source_volume_cui=3124 (20 airguns, 51.2 L); streamer_length_m=2700 (108 ch × 25 m); channel_count=108; sample_rate_ms corrected 2→4 ms; record_length_s=14.3 (14332 ms); fold=27; CDP spacing=12.5 m; shot spacing=154 m. Profile P2 at ~32°S, 196 km, 26 OBS/OBH, 5 km spacing. Software: TOMO2D (Korenaga et al. 2000 method, same as Contreras-Reyes et al. 2014). FONDECYT 1130004.",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8",
+    "Valdivia 1960 Mw9.5"
+  ]
 }

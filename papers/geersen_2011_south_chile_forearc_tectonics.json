@@ -14,7 +14,7 @@
   "journal": "Tectonics",
   "doi": "10.1029/2010TC002777",
   "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2010TC002777",
-  "open_access_url": null,
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2010TC002777",
   "abstract": "A unique acoustic data set including >90% bathymetric coverage of the continental slope reveals an along-strike heterogeneity of the South Chilean marine fore arc (35°S–40°S). The South Chilean marine forearc is separated into four tectonic segments: Concepción North, Concepción South, Nahuelbuta, and Tolten (from north to south). Splay faults are seismically imaged in multiple segments, with normal faults and transpressional structures documenting active deformation. Giant submarine landslides observed offshore Arauco Peninsula coincide with the segment boundary between the 1960 and 2010 earthquake rupture zones.",
   "keywords": [
     "marine forearc",
@@ -42,36 +42,74 @@
     },
     "seismic_lines": [
       {
-        "name": "SPOC/TIPTEQ and legacy MCS profiles — South Chile forearc 35°–40°S",
-        "lat_start": -35.0,
+        "name": "ENAP-1 (= Conrad line 728, Bangs & Cande 1997) — ~35.3°S, R/V Conrad 1988",
+        "lat_start": -35.3,
         "lon_start": -75.0,
-        "lat_end": -40.0,
+        "lat_end": -35.3,
+        "lon_end": -73.0,
+        "length_km": null
+      },
+      {
+        "name": "ENAP-2 — ~36.5°S, R/V Conrad 1988",
+        "lat_start": -36.5,
+        "lon_start": -75.0,
+        "lat_end": -36.5,
+        "lon_end": -73.0,
+        "length_km": null
+      },
+      {
+        "name": "ENAP-6 (= Conrad line 732, Bangs & Cande 1997) — ~38.8°S, R/V Conrad 1988",
+        "lat_start": -38.8,
+        "lon_start": -75.5,
+        "lat_end": -38.8,
+        "lon_end": -73.5,
+        "length_km": null
+      },
+      {
+        "name": "SO181-04 (high-res, 16 ch, 100m streamer, GI gun) — ~37.7°S, R/V Sonne SO181",
+        "lat_start": -37.7,
+        "lon_start": -75.0,
+        "lat_end": -37.7,
         "lon_end": -74.0,
-        "length_km": 600
+        "length_km": null
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (multiple GEOMAR cruises) and legacy survey vessels",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V Robert Conrad",
+      "R/V SONNE"
+    ],
+    "year_acquired": 1988,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 4882,
+    "streamer_length_m": 3000,
+    "channel_count": 240,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "RC2901, 1988",
+      "SO181, TIPTEQ, Dec 2004–Feb 2005"
+    ],
+    "group_interval_m": 12.5
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "GEOMAR MCS Reflection Profiles — South Chile Forearc 35°–40°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -81,14 +119,73 @@
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — South Chile Forearc >90% Coverage (35°–40°S)",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Comprehensive >90% coverage swath bathymetry of the south Chilean forearc slope (35°–40°S) revealing four tectonic segments and giant submarine landslides offshore Arauco Peninsula. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Bathymetry:Singlebeam, Gravity:Field, Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "MGD77"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=15251",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "unknown",
+      "name": "Bathymetry:Swath",
+      "classification": "RAW",
+      "format": [
+        "MGDS"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=2794,14008,16981",
+      "doi": null,
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "RAW",
+      "format": [
+        "MGDS:Nav",
+        "SHP"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=11106,11107",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "SPOC (SO161) and TIPTEQ (SO181) data accessible via MGDS. Key tectonic study of the south Chilean forearc.",
@@ -102,12 +199,17 @@
       "4. Tectonic segmentation analysis"
     ],
     "software": [
-      "GMT",
-      "unknown"
+      "GMT"
     ],
-    "notes": "Key study defining four tectonic segments of the south Chilean marine forearc"
+    "notes": "Key study defining four tectonic segments of the south Chilean marine forearc",
+    "migration_type": "post-stack"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Tectonics/AGU paper; behind paywall. SPOC/TIPTEQ data at MGDS. Foundational study for the south Chilean forearc tectonic segmentation."
+  "analysis_notes": "Validated against PDF (open access, Tectonics 30, TC3006). Authors confirmed correct (Geersen et al., 7 authors). Primary seismic data are R/V Conrad ENAP lines (1988): ENAP-1 (=line 728), ENAP-2, ENAP-6 (=line 732), 10 airguns 80L=4882cui, 3000m/240ch streamer, 12.5m group spacing, rebinned to 25m CDP; finite-difference poststack time migration. High-res SO181-04 (R/V Sonne SO181-1b): 16ch, 100m streamer, SSI GI source (2×1.72L=210cui). vessel corrected from 'R/V SONNE' to Conrad+SO181. year_acquired corrected 2001→1988. source_volume_cui=4882, streamer=3000m, channels=240. Seismic processing software not named (references Diaz-Naveas 1999). SFB 574 contribution 198.",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8",
+    "Valdivia 1960 Mw9.5"
+  ]
 }

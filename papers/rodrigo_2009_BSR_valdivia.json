@@ -37,35 +37,51 @@
     },
     "seismic_lines": [
       {
-        "name": "MCS Profile offshore Valdivia (~40°S)",
+        "name": "SO161-26 — SPOC Area A trench-perpendicular line offshore Valdivia (~40°S); 227 km total, 111 km processed",
         "lat_start": -40.0,
         "lon_start": -76.0,
         "lat_end": -40.0,
-        "lon_end": -74.0,
-        "length_km": null
+        "lon_end": -73.5,
+        "length_km": 227
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
-    "year_acquired": null,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
-    "sample_rate_ms": null,
-    "record_length_s": null,
-    "fold": null,
-    "line_spacing_km": null
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2001,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3124,
+    "streamer_length_m": 3000,
+    "channel_count": 132,
+    "sample_rate_ms": 4,
+    "record_length_s": 14,
+    "fold": 27,
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, 2001"
+    ],
+    "group_interval_m": 25.0,
+    "frequency_range_hz": [
+      1.0,
+      4.0
+    ]
   },
   "data": [
     {
       "name": "Multichannel seismic reflection profiles offshore Valdivia (BSR study)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "Unknown / internal archive",
+      "repository": [
+        "internal archive"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -77,18 +93,28 @@
     "classification": "PROCESSED",
     "summary": "Multichannel seismic reflection data from offshore Valdivia (40°S) were processed to image the BSR and quantify gas hydrate distribution. Processing included standard MCS workflow (filtering, velocity analysis, stack, migration) followed by 1D forward modelling to derive velocity structure at BSR depth. The analysis involved comparison of recorded seismograms with synthetic waveforms to constrain the physical properties of hydrate-bearing sediments.",
     "workflow": [
-      "1. MCS data pre-processing (geometry, filtering)",
-      "2. Velocity analysis and NMO",
-      "3. CDP stack",
-      "4. Post-stack time migration",
-      "5. Interval velocity extraction for gas hydrate estimation",
-      "6. 1D forward waveform modelling",
-      "7. BSR mapping and distribution analysis"
+      "1. Data acquisition (SO161-26, SPOC 2001; 132-ch 3000m streamer, 20 airguns 51.2L, 50m shots, 4ms, 14s records)",
+      "2. Format conversion to SEG-Y",
+      "3. Trace editing (noisy traces killed)",
+      "4. Butterworth bandpass filtering (5–10–55–65 Hz)",
+      "5. Geometry specification and CMP gathering",
+      "6. Spherical divergence correction",
+      "7. Predictive deconvolution (max lag 240ms, min lag 15ms)",
+      "8. Velocity analysis (every 700–5000m)",
+      "9. Multiple attenuation (f–k filter)",
+      "10. NMO correction and muting",
+      "11. CDP stacking",
+      "12. Post-stack Gazdag migration",
+      "13. Time-variant bandpass filtering",
+      "14. Depth conversion (Dix 1955 from NMO velocity model)",
+      "15. BSR 1-D forward waveform modeling (Vera et al. 1990 reflectivity method)"
     ],
     "software": [],
-    "notes": "Chilean national seismic data; authors affiliated with SHOA (Chilean Navy Hydrographic and Oceanographic Service) and Universidad de Chile."
+    "notes": "Data from SPOC SO161 cruise (2001); released by BGR (Germany) for analysis. Authors: Rodrigo at CICESE/INACH (Mexico/Chile), Vera at Universidad de Chile, González-Fernández at CICESE. Processing: 20 airguns 51.2L (3124 cu in), 3000m 132-ch streamer (first 24 at 12.5m, next 108 at 25m), 14s records at 4ms, ~50m shot interval, fold=27. Processing used Yilmaz (1987) standard workflow; post-stack Gazdag migration; depth conversion with Dix (1955). 1-D forward modeling using Vera et al. (1990) reflectivity code. Only 108-channel subset used for processing (CMP spacing 12.5m).",
+    "migration_type": "NMO"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "low",
-  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. No datasets deposited in public repositories identified. Vessel and acquisition year not confirmed; R/V SONNE inferred from co-authorship with GEOMAR researchers. Data likely held in Chilean national archives (SHOA or Universidad de Chile)."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. Title, authors, DOI confirmed. vessel: 'R/V SONNE' → 'R/V SONNE (SO161, SPOC, 2001)'; year_acquired: null → 2001; source_volume_cui: null → 3124 (51.2L × 61.02); streamer_length_m: null → 3000; channel_count: null → 132 (first 24 at 12.5m + 108 at 25m; 108 used in processing); sample_rate_ms: null → 4; record_length_s: null → 14; fold: null → 27; seismic_lines updated to named line SO161-26 (227 km total, 111 km processed). Processing: Gazdag post-stack migration, Dix (1955) depth conversion, Vera et al. (1990) reflectivity forward modeling. Authors at CICESE/INACH (not SHOA as previously noted). Data provided by BGR Germany.",
+  "tectonic_setting": "accretionary"
 }

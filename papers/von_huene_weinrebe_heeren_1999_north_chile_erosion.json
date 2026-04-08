@@ -41,64 +41,89 @@
         "lon_start": -71.0,
         "lat_end": -26.0,
         "lon_end": -71.0,
-        "length_km": 800
+        "length_km": 800,
+        "profile_orientation": "oblique"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104, CINCA95, 1995)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 2,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO103, CINCA95, 1995"
+    ]
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "CINCA95 MCS Reflection Profiles — North Chile Margin (19°–26°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
-      "description": "Multichannel seismic reflection profiles from the CINCA95 (SO104) cruise used to quantify subduction erosion along the north Chile margin between 19°–26°S; images extensional faulting and lack of accretionary wedge. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+      "description": "Multichannel seismic reflection profiles from the CINCA95 (SO103) cruise used to quantify subduction erosion along the north Chile margin between 19°–26°S; images extensional faulting and lack of accretionary wedge. [CINCA95 cruise (SO103, 1995) datasets searchable on PANGAEA]"
     },
     {
+      "dataset_ref": "cinca95_bathymetry",
       "data_type": "bathymetry",
-      "name": "CINCA95 Swath Bathymetry — North Chile (19°–26°S)",
-      "classification": "RAW",
-      "format": "NetCDF",
-      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
-      "doi": "10.1594/PANGAEA.893033",
-      "repository": "PANGAEA",
-      "size_gb": null,
-      "access": "open",
-      "download_command": null,
-      "description": "Multibeam swath bathymetry from SO104 revealing tectonic features of the north Chile margin consistent with subduction erosion. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+      "notes": "Multibeam swath bathymetry from SO103 revealing tectonic features of the north Chile margin consistent with subduction erosion. [CINCA95 cruise (SO103, 1995) datasets searchable on PANGAEA]"
     },
     {
       "data_type": "gravity",
       "name": "Shipboard Gravity — North Chile",
       "classification": "RAW",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Shipboard free-air gravity data from SO104 supplementing seismic and bathymetric interpretation"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
-  "_data_note": "CINCA95 (SO104) cruise data. MCS and bathymetry accessible via MGDS.",
+  "_data_note": "CINCA95 (SO103) cruise data. MCS and bathymetry accessible via MGDS.",
   "processing": {
     "classification": "PROCESSED",
     "summary": "Multichannel seismic reflection data from CINCA95 (SO104, 1995) were processed to image the north Chilean margin structure. The study uses depth-converted seismic profiles to calculate mass budgets of eroded forearc material and characterize the geometry of the sediment-starved margin. Swath bathymetry is combined with seismic data to map extensional faulting and slope morphology between 19°–26°S.",
@@ -116,7 +141,8 @@
     ],
     "notes": "Synthesis paper using CINCA95 data; some profiles depth-migrated for mass balance calculations"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Paper behind paywall; abstract and metadata derived from survey_results.json snippet and known CINCA95 cruise information. No open-access version found."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. 3 authors confirmed correct (von Huene R., Weinrebe W., Heeren F., all GEOMAR). CRITICAL: cruise corrected SO104→SO103. References on last page cite 'SONNE Cruise 103, Leg 1 (22 July–28 August 1995)' and 'Sonne-Cruise 103, Leg 3 (16 September–15 October 1995)' — both in the north Chile area (19°–26°S). SO103 covered north Chile; SO104 covered central Chile (~32°S). No open-access version found. Gravity data: no specific repository found.",
+  "tectonic_setting": "mixed"
 }

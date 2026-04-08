@@ -2,8 +2,24 @@
   "id": "sallares_ranero_2006_seismic_images_springer",
   "title": "Seismic Images of Accretive and Erosive Subduction Zones from the Chilean Margin",
   "authors": [
-    "Sallarès, Valentí",
-    "Ranero, César R."
+    "Sick, Christof",
+    "Yoon, Mi-Kyung",
+    "Rauch, Klaus",
+    "Buske, Stefan",
+    "Lüth, Stefan",
+    "Araneda, Manuel",
+    "Bataille, Klaus",
+    "Chong, Guillermo",
+    "Giese, Peter",
+    "Krawczyk, Charlotte",
+    "Mechie, James",
+    "Meyer, Heinrich",
+    "Oncken, Onno",
+    "Reichert, Christian",
+    "Schmitz, Michael",
+    "Shapiro, Serge",
+    "Stiller, Manfred",
+    "Wigger, Peter"
   ],
   "year": 2006,
   "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
@@ -38,44 +54,82 @@
     },
     "seismic_lines": [
       {
-        "name": "CINCA95 transects — northern Chile 19°–26°S (erosive)",
-        "lat_start": -19.0,
-        "lon_start": -71.5,
-        "lat_end": -26.0,
-        "lon_end": -71.5,
-        "length_km": 800
+        "name": "SO104-07 — CINCA95 MCS reflection profile, 22°S, offshore Antofagasta",
+        "lat_start": -22.0,
+        "lon_start": -72.5,
+        "lat_end": -22.0,
+        "lon_end": -70.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       },
       {
-        "name": "SPOC/TIPTEQ transects — south-central Chile 36°–40°S (accretionary)",
-        "lat_start": -36.0,
-        "lon_start": -75.0,
-        "lat_end": -40.0,
-        "lon_end": -75.0,
-        "length_km": 500
+        "name": "SO104-13 — CINCA95 MCS reflection profile, 23.25°S, offshore Antofagasta",
+        "lat_start": -23.25,
+        "lon_start": -72.5,
+        "lat_end": -23.25,
+        "lon_end": -70.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "ANCORP — onshore reflection/refraction profile, 21°S, Chile/Bolivia",
+        "lat_start": -21.0,
+        "lon_start": -70.0,
+        "lat_end": -21.0,
+        "lon_end": -65.0,
+        "length_km": 385,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "SPOC (SO161) onshore seismic reflection profile — 38°S, south-central Chile",
+        "lat_start": -38.0,
+        "lon_start": -74.0,
+        "lat_end": -38.0,
+        "lon_end": -72.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104 CINCA95 and SO161 SPOC, SO181 TIPTEQ)",
-    "year_acquired": 1995,
-    "source_type": "airgun array",
+    "vessel": [
+      "R/V SONNE",
+      "R/V SONNE"
+    ],
+    "year_acquired": 1994,
+    "source_type": [
+      "airgun array",
+      "explosive shots",
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
-    "sample_rate_ms": 4,
+    "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95, 1995",
+      "SO161, SPOC, 2001"
+    ],
+    "shot_interval_m": 50.0,
+    "depth_penetration_km": 10.0
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "CINCA95 and SPOC MCS Profiles — Erosive and Accretionary Chilean Margin",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -85,14 +139,34 @@
       "data_type": "seismic_refraction_obs",
       "name": "CINCA95 and SPOC OBH Wide-Angle Data — Chilean Margin",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Wide-angle OBH refraction data from CINCA95 and SPOC cruises providing velocity models for both the erosive and accretionary Chilean margin segments. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "Springer review chapter (2006). Uses SFB267 collaborative project data from CINCA and SPOC cruises. All data at MGDS.",
@@ -104,11 +178,13 @@
       "2. Synthesis and comparison of seismic images"
     ],
     "software": [
-      "GMT"
+      "Kirchhoff prestack depth migration (PSDM)"
     ],
-    "notes": "Review chapter in Springer Andes volume (2006); SFB267 project"
+    "notes": "Chapter 7 in Springer 'The Andes: Active Subduction Orogeny' (Oncken et al. 2006). Synthesis of SFB267 project: CINCA (SO104, 1995), SPOC (SO161, 2001) marine + ANCORP/PRECORP/PISCO/ISSA onshore reflection/refraction experiments. Marine data provided by BGR and IFM-GEOMAR. Both prestack Kirchhoff depth migration (CINCA MCS reflection) and wide-angle velocity models presented. Note: Peter Giese (†) deceased.",
+    "migration_type": "Kirchhoff"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Springer book chapter; behind paywall. CINCA (SO104) and SPOC (SO161) data accessible via MGDS."
+  "analysis_notes": "Validated against PDF. CRITICAL: authors completely wrong (was Sallarès+Ranero) → corrected to 18 actual authors led by Sick, Christof (Chapter 7, Springer Andes volume 2006). vessel updated: R/V SONNE (SO104 CINCA95 + SO161 SPOC) confirmed in acknowledgments. sample_rate_ms: 4 → null (pre-populated default, not confirmed for synthesis chapter). seismic_lines updated with named profiles SO104-07, SO104-13, ANCORP, SPOC 38°S. Software: Kirchhoff PSDM (from PhD thesis Sick 2005 and Buske et al. methods). SFB267 project (DFG-funded). 4500 km MCS + 1300 km wide-angle/refraction + 460 km onshore wide-angle in CINCA area.",
+  "tectonic_setting": "accretionary"
 }

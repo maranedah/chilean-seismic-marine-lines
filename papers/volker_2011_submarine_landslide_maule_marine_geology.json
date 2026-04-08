@@ -3,7 +3,7 @@
   "title": "Analysis of submarine landsliding in the rupture area of the 27 February 2010 Maule earthquake, Central Chile",
   "authors": [
     "Völker, David",
-    "Scholz, Felipe",
+    "Scholz, Florian",
     "Geersen, Jacob"
   ],
   "year": 2011,
@@ -42,31 +42,47 @@
         "lon_start": -74.0,
         "lat_end": -38.0,
         "lon_end": -73.0,
-        "length_km": 250
+        "length_km": 250,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (post-Maule survey, 2010) and pre-earthquake GEOMAR cruises",
+    "vessel": [
+      "R/V Melville",
+      "R/V SONNE"
+    ],
     "year_acquired": 2010,
-    "source_type": "sub-bottom profiler (Parasound) and multibeam",
+    "source_type": [
+      "sub-bottom profiler",
+      "multibeam echosounder"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "MV1004, SIOSEARCH, 2010",
+      "SO210, Sep–Nov 2010"
+    ],
+    "depth_penetration_km": 22.0
   },
   "data": [
     {
       "data_type": "bathymetry",
       "name": "Pre/Post Maule Earthquake Comparative Bathymetry — Central Chile 36°–38°S",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -76,10 +92,14 @@
       "data_type": "subbottom",
       "name": "Parasound Sub-Bottom Profiles — Maule Earthquake Zone",
       "classification": "RAW",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -89,10 +109,14 @@
       "data_type": "seismic_reflection_mcs",
       "name": "Legacy MCS Profiles — Maule Rupture Zone",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -116,7 +140,11 @@
     ],
     "notes": "Primarily bathymetric study; seismic role is secondary context"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Marine Geology paper; behind paywall. Post-Maule R/V SONNE SO210 data likely at MGDS. Abstract from survey_results.json."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. author: 'Scholz Felipe' → 'Scholz Florian' (confirmed from title page). vessel: 'R/V SONNE' → R/V Melville MV1004 SIOSEARCH (NSF/Scripps rapid response, weeks after earthquake) + R/V SONNE SO210 (Sep-Nov 2010, IFM-GEOMAR). Pre-earthquake bathymetry from legacy IFM-GEOMAR cruises. BioBio Slide offshore Concepción is the main focus area.",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8"
+  ]
 }

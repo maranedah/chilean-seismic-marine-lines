@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { MapContainer, TileLayer, CircleMarker, Tooltip, Polyline } from 'react-leaflet'
-import { useRouter } from 'next/navigation'
 import type { PaperSummary } from '@/types/paper'
 
 function markerColor(paper: PaperSummary): string {
@@ -11,21 +10,33 @@ function markerColor(paper: PaperSummary): string {
   return '#9ca3af'
 }
 
+function FigurePreview({ src }: { src: string }) {
+  const [failed, setFailed] = useState(false)
+  if (failed) return null
+  return (
+    <img
+      src={src}
+      alt=""
+      onError={() => setFailed(true)}
+      style={{ width: 96, height: 90, objectFit: 'cover', borderRadius: 4, display: 'block', flexShrink: 0 }}
+    />
+  )
+}
+
 function PaperTooltip({ paper }: { paper: PaperSummary }) {
-  const [imgFailed, setImgFailed] = useState(false)
-  const previewUrl = `/images/${paper.id}/fig_001.png`
+  // Use API-provided paths if available, otherwise try sequential filenames
+  const candidates = paper.preview_figures?.length
+    ? paper.preview_figures.slice(0, 3)
+    : [1, 2, 3].map((n) => `/images/${paper.id}/fig_${String(n).padStart(3, '0')}.png`)
 
   return (
-    <div style={{ fontFamily: 'sans-serif', maxWidth: 280 }}>
-      {!imgFailed && (
-        <img
-          src={previewUrl}
-          alt="Figure 1"
-          onError={() => setImgFailed(true)}
-          style={{ width: '100%', maxHeight: 160, objectFit: 'cover', borderRadius: 4, marginBottom: 8, display: 'block' }}
-        />
-      )}
-      <p style={{ fontWeight: 600, marginBottom: 3, lineHeight: 1.3 }}>
+    <div className="paper-tooltip-inner">
+      <div style={{ display: 'flex', gap: 4, marginBottom: 8 }}>
+        {candidates.map((src) => (
+          <FigurePreview key={src} src={src} />
+        ))}
+      </div>
+      <p style={{ fontWeight: 600, marginBottom: 3, lineHeight: 1.3, fontSize: 13 }}>
         {paper.title.length > 80 ? paper.title.slice(0, 80) + '…' : paper.title}
       </p>
       <p style={{ color: '#555', fontSize: 12, marginBottom: 2 }}>
@@ -47,7 +58,6 @@ interface Props {
 }
 
 export default function SurveyMap({ papers, showLines = false }: Props) {
-  const router = useRouter()
   const mapped = papers.filter((p) => p.latitude !== null && p.longitude !== null)
 
   return (
@@ -71,12 +81,12 @@ export default function SurveyMap({ papers, showLines = false }: Props) {
             radius={8}
             pathOptions={{ color: '#fff', weight: 1.5, fillColor: color, fillOpacity: 0.85 }}
             eventHandlers={{
-              click: () => router.push(`/papers/${paper.id}`),
+              click: () => window.open(`/papers/${paper.id}`, '_blank'),
               mouseover: (e) => e.target.setStyle({ radius: 11, weight: 2 }),
               mouseout: (e) => e.target.setStyle({ radius: 8, weight: 1.5 }),
             }}
           >
-            <Tooltip direction="top" offset={[0, -6]}>
+            <Tooltip direction="top" offset={[0, -6]} className="paper-tooltip">
               <PaperTooltip paper={paper} />
             </Tooltip>
           </CircleMarker>

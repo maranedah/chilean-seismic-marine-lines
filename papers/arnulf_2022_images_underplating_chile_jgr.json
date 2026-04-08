@@ -52,9 +52,13 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V Marcus G. Langseth (MGL1701, CEVICHE 2017)",
+    "vessel": [
+      "R/V Marcus G. Langseth"
+    ],
     "year_acquired": 2017,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": 6600,
     "streamer_length_m": 15150,
     "channel_count": 1212,
@@ -65,17 +69,99 @@
   },
   "data": [
     {
+      "dataset_ref": "mgl1701_mcs",
       "data_type": "seismic_reflection_mcs",
-      "name": "MGL1701 CEVICHE Long-Offset MCS Data — South-Central Chile 36°–41°S (FWI)",
-      "classification": "PROCESSED",
-      "format": "SEG-Y",
-      "url": "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
-      "doi": "10.1594/IEDA/324399",
-      "repository": "MGDS",
-      "size_gb": null,
+      "notes": "MGL1701 CEVICHE 15.15-km streamer long-offset MCS data processed with full-waveform inversion (FWI) to image underplating and high-resolution velocity structure of the south-central Chilean subduction zone (36°–41°S)"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Gravity:Field",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123893",
+      "doi": "10.7284/123893",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.149,
       "access": "open",
       "download_command": null,
-      "description": "MGL1701 CEVICHE 15.15-km streamer long-offset MCS data processed with full-waveform inversion (FWI) to image underplating and high-resolution velocity structure of the south-central Chilean subduction zone (36°–41°S)"
+      "description": "Raw, underway Gravimeter data as originally collected from a Bell BGM-3 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "magnetics",
+      "name": "Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123887",
+      "doi": "10.7284/123887",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 1.3,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Magnetometer data as originally collected from a Geometrics G-882 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "PROCESSED",
+      "format": [
+        "R2R:Nav"
+      ],
+      "url": "https://doi.org/10.7284/603741",
+      "doi": "10.7284/603741",
+      "repository": [
+        "R2R"
+      ],
+      "size_gb": 0.2358,
+      "access": "open",
+      "download_command": null,
+      "description": "Fileset 603741 (r2rnav data) from cruise MGL1701",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Seismic:Active:Subbottom",
+      "classification": "RAW",
+      "format": [
+        "KEB"
+      ],
+      "url": "https://doi.org/10.7284/123889",
+      "doi": "10.7284/123889",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 2.0,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Singlebeam Sonar data as originally collected from a Knudsen 3260 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "velocity_sound",
+      "name": "Temperature, Velocity:Sound",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123884",
+      "doi": "10.7284/123884",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.0043,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Expendable Probe data as originally collected from a Sippican MK21 system in 2017 on the vessel Langseth during the cruise MGL1701, \"Crustal Experiment from Valdivia to Illapel to Characterize Huge Earthquakes (CEVICHE)\", by investigator Bangs, Nathan",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "JGR paper; behind paywall. MGL1701 CEVICHE data at MGDS (open access). Companion to Bangs et al. 2020 and Maksymowicz et al. 2021.",

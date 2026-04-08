@@ -1,0 +1,25 @@
+{
+  "id": "mgl1610_subbottom",
+  "cruise": "MGL1610",
+  "cruise_name": "PICTURES",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2016,
+  "data_type": "subbottom",
+  "name": "MGL1610 PICTURES Subbottom Profiler (Knudsen 3260) — North Chile",
+  "classification": "RAW",
+  "format": ["KEB", "SEG-Y", "XTF"],
+  "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+  "doi": "10.7284/123641",
+  "repository": ["MGDS", "NOAA", "NCEI"],
+  "size_gb": 1.1,
+  "access": "open",
+  "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123641",
+  "description": "Raw singlebeam/subbottom profiler data (Knudsen 3260, 50 files, ~1.1 GB) from the 2016 PICTURES (MGL1610) cruise.",
+  "used_by": [
+    "gonzalez_2023_northern_forearc_mcs",
+    "ma_2023_iquique_ridge_impact",
+    "myers_2022_iquique_ridge_crustal",
+    "reginato_2020_iquique_wedge_tecto",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

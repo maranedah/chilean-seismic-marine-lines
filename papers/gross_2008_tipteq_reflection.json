@@ -10,7 +10,7 @@
   "journal": "Geophysical Journal International",
   "doi": "10.1111/j.1365-246X.2007.03680.x",
   "url": "https://academic.oup.com/gji/article/172/2/565/2059075",
-  "open_access_url": null,
+  "open_access_url": "https://academic.oup.com/gji/article-pdf/172/2/565/5980720/172-2-565.pdf",
   "abstract": "This study presents findings from the reflection seismic component of the TIPTEQ (from The Incoming Plate to mega-Thrust EarthQuake processes) active-source seismology experiment across the Chilean subduction zone at 38.2°S. The seismic data clearly show the subducted Nazca plate with varying reflectivity along the plate interface. The researchers interpret high reflectivity at the plate interface as evidence of a subduction channel with thickness variations of 2–5 km. The survey acquired both marine MCS reflection profiles offshore and an onshore reflection component as part of the amphibious TIPTEQ experiment.",
   "keywords": [
     "TIPTEQ",
@@ -36,39 +36,48 @@
     },
     "seismic_lines": [
       {
-        "name": "TIPTEQ Main Reflection Profile (~38.2°S)",
+        "name": "TIPTEQ NVR onshore reflection profile (~38.2°S) — 105 km CDP line, 73 NVR shots at 1.5 km spacing, Jan 2005",
         "lat_start": -38.2,
-        "lon_start": -76.0,
+        "lon_start": -73.5,
         "lat_end": -38.2,
-        "lon_end": -72.5,
-        "length_km": null
+        "lon_end": -72.0,
+        "length_km": 105,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO181 — TIPTEQ cruise, 2004/2005)",
-    "year_acquired": 2004,
-    "source_type": "airgun array",
+    "vessel": null,
+    "year_acquired": 2005,
+    "source_type": [
+      "explosive shots"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
-    "channel_count": null,
-    "sample_rate_ms": 2,
-    "record_length_s": null,
+    "channel_count": 180,
+    "sample_rate_ms": 5,
+    "record_length_s": 102,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "depth_penetration_km": 50.0
   },
   "data": [
     {
       "name": "TIPTEQ Marine Multichannel Seismic Reflection Data",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep / internal archive",
+      "repository": [
+        "GEOMAR OceanRep",
+        "internal archive"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
-      "description": "Marine MCS reflection profiles from TIPTEQ experiment at 38.2°S imaging the subduction zone to the deep crust. Processed to reveal subduction channel reflectivity and Nazca plate geometry.",
+      "description": "ONSHORE near-vertical reflection (NVR) profiles from TIPTEQ experiment at 38.2°S (Jan 2005), imaging the subduction zone to 50–60 km depth. Explosive borehole shots (75–300 kg), 180 three-component geophones at 100 m spacing, 8-fold CDP coverage. Kirchhoff prestack depth migration applied using SPOC velocity model. Reveals subduction channel at 2–5 km thickness.",
       "data_type": "seismic_reflection_mcs"
     }
   ],
@@ -87,9 +96,11 @@
       "9. Interpretation of plate interface reflectivity"
     ],
     "software": [],
-    "notes": "Part of the international TIPTEQ (from The Incoming Plate to mega-Thrust EarthQuake processes) project. Amphibious survey including offshore and onshore reflection components."
+    "notes": "Part of the international TIPTEQ (from The Incoming Plate to mega-Thrust EarthQuake processes) project. Amphibious survey including offshore and onshore reflection components.",
+    "migration_type": "Kirchhoff"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Paper is behind paywall; Semantic Scholar API returned 404. Metadata derived from survey_results.json abstract snippet plus knowledge of TIPTEQ project. Abstract is an inference from multiple sources. TIPTEQ cruise SO181 context from other papers in this survey."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF (open access, GJI 172:565-571). This paper is about the ONSHORE NVR reflection survey component of TIPTEQ, NOT marine MCS. vessel corrected: 'R/V SONNE' → null (onshore survey). source_type corrected: 'airgun array' → 'explosive shots' (75–300 kg borehole charges). year_acquired corrected: 2004 → 2005 (Jan 13–30, 2005). sample_rate_ms corrected: 2 → 5 (Table 1). channel_count: null → 180 per spread (EarthDataLogger PR6-24, 3-component, 4.5 Hz, 100m spacing). record_length_s: null → 102. Profile: 105-km CDP line, 8-fold NVR + ESP. Kirchhoff PSDM using Buske (1999) method with SPOC velocity model. Recording format MiniSEED.",
+  "tectonic_setting": "accretionary"
 }

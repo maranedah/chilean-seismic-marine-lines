@@ -1,0 +1,25 @@
+{
+  "id": "mgl1610_obs",
+  "cruise": "MGL1610",
+  "cruise_name": "PICTURES",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2016,
+  "data_type": "seismic_refraction_obs",
+  "name": "MGL1610 PICTURES OBS Wide-Angle Refraction Data — XW Network",
+  "classification": "RAW",
+  "format": ["SEED", "miniSEED"],
+  "url": "http://ds.iris.edu/mda/XW/?starttime=2016-01-01T00:00:00&endtime=2016-12-31T23:59:59",
+  "doi": "10.7914/SN/XW_2016",
+  "repository": ["IRIS", "EarthScope"],
+  "size_gb": null,
+  "access": "open",
+  "download_command": null,
+  "description": "51 OBS stations (XW network, 2016) deployed during MGL1610 PICTURES cruise offshore northern Chile. Wide-angle seismic refraction data accessible via IRIS/EarthScope FDSN web services.",
+  "used_by": [
+    "gonzalez_2023_northern_forearc_mcs",
+    "ma_2023_iquique_ridge_impact",
+    "myers_2022_iquique_ridge_crustal",
+    "reginato_2020_iquique_wedge_tecto",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

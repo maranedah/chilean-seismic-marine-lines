@@ -1,0 +1,25 @@
+{
+  "id": "mgl1610_seismic_nav",
+  "cruise": "MGL1610",
+  "cruise_name": "PICTURES",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2016,
+  "data_type": "navigation",
+  "name": "MGL1610 PICTURES Seismic Shot-Time Navigation (ASCII) — MGDS UID 23933",
+  "classification": "PROCESSED",
+  "format": ["ASCII"],
+  "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933",
+  "doi": "10.1594/IEDA/323933",
+  "repository": ["MGDS"],
+  "size_gb": null,
+  "access": "open",
+  "download_command": "wget -r -np -nH --cut-dirs=4 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=23933'",
+  "description": "Processed seismic shot-time navigation data from the MGL1610 PICTURES cruise, offshore Chile. Required when processing the MCS reflection data.",
+  "used_by": [
+    "gonzalez_2023_northern_forearc_mcs",
+    "ma_2023_iquique_ridge_impact",
+    "myers_2022_iquique_ridge_crustal",
+    "reginato_2020_iquique_wedge_tecto",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

@@ -1,15 +1,27 @@
 {
   "id": "moscoso_contreras-reyes_2012_outer_rise_andean_geo",
   "title": "Outer rise seismicity related to the Maule, Chile 2010 mega-thrust earthquake and hydration of the incoming oceanic lithosphere",
-  "authors": ["Moscoso, Eduardo", "Contreras-Reyes, Eduardo"],
+  "authors": [
+    "Moscoso, Eduardo",
+    "Contreras-Reyes, Eduardo"
+  ],
   "year": 2012,
   "journal": "Andean Geology",
   "doi": "10.5027/andgeoV39n3-a12",
   "url": "https://www.andeangeology.cl/index.php/revista1/article/view/V39n3-a12",
   "open_access_url": "https://www.andeangeology.cl/index.php/revista1/article/view/V39n3-a12/pdf",
   "abstract": "During the first weeks following the 2010 Maule main shock, an outer rise seismic cluster of >450 events (mainly extensional, Mw=4–6) formed seaward of the main slip maximum. Outer rise seismicity is strongly correlated with the heterogeneous coseismic slip distribution. Seismic constraints reveal reduced P-wave velocities in the uppermost mantle at the trench-outer rise region (7.5–7.8 km/s), suggesting serpentinization. High-resolution bathymetry reveals bending-related faulting more intense seaward of maximum slip.",
-  "keywords": ["outer rise", "Maule earthquake", "seismicity", "serpentinization", "seismic refraction", "34°–36°S", "bending faults", "OBS", "Andean Geology open access"],
-
+  "keywords": [
+    "outer rise",
+    "Maule earthquake",
+    "seismicity",
+    "serpentinization",
+    "seismic refraction",
+    "34°–36°S",
+    "bending faults",
+    "OBS",
+    "Andean Geology open access"
+  ],
   "location": {
     "latitude": -34.5,
     "longitude": -74.5,
@@ -18,23 +30,29 @@
     "country": "Chile",
     "description": "Outer rise of the incoming Nazca plate offshore Maule earthquake zone (~34°–36°S)",
     "bounding_box": {
-      "lat_min": -36.0, "lat_max": -34.0,
-      "lon_min": -76.0, "lon_max": -73.0
+      "lat_min": -36.0,
+      "lat_max": -34.0,
+      "lon_min": -76.0,
+      "lon_max": -73.0
     },
     "seismic_lines": [
       {
         "name": "Wide-angle OBS refraction profile — Maule outer rise ~34°–36°S",
-        "lat_start": -34.0, "lon_start": -76.0,
-        "lat_end": -36.0, "lon_end": -73.5,
-        "length_km": 280
+        "lat_start": -34.0,
+        "lon_start": -76.0,
+        "lat_end": -36.0,
+        "lon_end": -73.5,
+        "length_km": 280,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V SONNE (post-Maule cruise 2010)",
-    "year_acquired": 2010,
-    "source_type": "airgun array (active) and passive seismic (aftershocks)",
+    "vessel": null,
+    "year_acquired": null,
+    "source_type": [
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -43,16 +61,19 @@
     "fold": null,
     "line_spacing_km": null
   },
-
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "OBS Wide-Angle Data — Maule Outer Rise ~34°–36°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -62,10 +83,14 @@
       "data_type": "bathymetry",
       "name": "High-Resolution Bathymetry — Maule Outer Rise",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -73,7 +98,6 @@
     }
   ],
   "_data_note": "Andean Geology open access journal. Post-Maule survey data. Specific cruise not confirmed from available metadata.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "Wide-angle OBS seismic refraction data from the outer rise offshore Maule (~34°–36°S) were processed to derive 2D P-wave velocity models revealing serpentinization (Vp 7.5–7.8 km/s). Combined with post-Maule aftershock catalog (>450 events) and high-resolution bathymetry showing bending-related faults more intense seaward of maximum slip. Published in Andean Geology (open access).",
@@ -84,11 +108,17 @@
       "4. Aftershock relocation",
       "5. Correlation with bathymetry and slip model"
     ],
-    "software": ["RAYINVR", "unknown"],
+    "software": [
+      "RAYINVR",
+      "unknown"
+    ],
     "notes": "Andean Geology open access paper; post-Maule earthquake survey"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access via Andean Geology (andeangeology.cl). Post-Maule earthquake survey from 2010."
+  "analysis_notes": "Open access via Andean Geology (andeangeology.cl). This paper uses published earthquake catalog data (USGS/CMT) and published seismic velocity constraints from prior studies — no new seismic acquisition by these authors. Vessel and year_acquired set to null. Outer rise seismicity catalog + bathymetry compiled from prior surveys.",
+  "tectonic_setting": "accretionary",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8"
+  ]
 }

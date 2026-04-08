@@ -20,6 +20,8 @@ class SeismicLine:
     lat_end: Optional[float] = None
     lon_end: Optional[float] = None
     length_km: Optional[float] = None
+    depth_km: Optional[float] = None
+    profile_orientation: Optional[str] = None
 
 
 @dataclass
@@ -36,9 +38,10 @@ class Location:
 
 @dataclass
 class Acquisition:
-    vessel: Optional[str] = None
+    vessel: Optional[list[str]] = None
+    expeditions: Optional[list[str]] = None
     year_acquired: Optional[int] = None
-    source_type: Optional[str] = None
+    source_type: Optional[list[str]] = None
     source_volume_cui: Optional[float] = None
     streamer_length_m: Optional[float] = None
     channel_count: Optional[int] = None
@@ -46,6 +49,12 @@ class Acquisition:
     record_length_s: Optional[float] = None
     fold: Optional[int] = None
     line_spacing_km: Optional[float] = None
+    shot_interval_m: Optional[float] = None
+    group_interval_m: Optional[float] = None
+    obs_spacing_km: Optional[float] = None
+    nearest_offset_m: Optional[float] = None
+    frequency_range_hz: Optional[list[float]] = None
+    depth_penetration_km: Optional[float] = None
 
 
 @dataclass
@@ -53,14 +62,15 @@ class Dataset:
     data_type: str = ""
     name: str = ""
     classification: str = "PROCESSED"
-    format: Optional[str] = None
+    format: Optional[list[str]] = None
     url: Optional[str] = None
     doi: Optional[str] = None
-    repository: Optional[str] = None
+    repository: Optional[list[str]] = None
     size_gb: Optional[float] = None
     access: str = "unknown"
     download_command: Optional[str] = None
     description: str = ""
+    cdp_spacing_m: Optional[float] = None
 
 
 @dataclass
@@ -70,6 +80,7 @@ class Processing:
     workflow: list[str] = field(default_factory=list)
     software: list[str] = field(default_factory=list)
     notes: Optional[str] = None
+    migration_type: Optional[str] = None
 
 
 @dataclass
@@ -90,6 +101,8 @@ class Paper:
     processing: Optional[Processing] = None
     analysis_confidence: Optional[str] = None
     analysis_notes: Optional[str] = None
+    tectonic_setting: Optional[str] = None
+    associated_earthquakes: list[str] = field(default_factory=list)
 
     @property
     def geographic_region(self) -> str:

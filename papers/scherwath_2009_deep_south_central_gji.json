@@ -2,21 +2,21 @@
   "id": "scherwath_2009_deep_south_central_gji",
   "title": "Deep lithospheric structures along the southern central Chile margin from wide-angle P-wave modelling",
   "authors": [
-    "Scherwath, M.",
-    "Contreras-Reyes, E.",
-    "Flueh, E.R.",
-    "Grevemeyer, I.",
-    "Krabbenhoeft, A.",
-    "Papenberg, C.",
-    "Petersen, C.J.",
-    "Weinrebe, R.W."
+    "Scherwath, Martin",
+    "Contreras-Reyes, Eduardo",
+    "Flueh, Ernst R.",
+    "Grevemeyer, Ingo",
+    "Krabbenhoeft, Anne",
+    "Papenberg, Cord",
+    "Petersen, Carl Joern",
+    "Weinrebe, Wilhelm"
   ],
   "year": 2009,
   "journal": "Geophysical Journal International",
   "doi": "10.1111/j.1365-246X.2009.04298.x",
   "url": "https://academic.oup.com/gji/article/179/1/579/2012327",
   "open_access_url": "https://academic.oup.com/gji/article-pdf/179/1/579/17360408/179-1-579.pdf",
-  "abstract": "The study investigates crustal and upper-mantle structures of the subduction zone in south-central Chile by analyzing wide-angle seismic refraction data from three distinct profiles. Wide-angle P-wave modeling examines how the thermal state of the incoming oceanic Nazca Plate influences subduction zone geometry across different plate ages ranging from 3 to 14.5 million years old at the trench. The three profiles span the SPOC (36°S and 38.5°S) and TIPTEQ (38.2°S) experiment areas, covering the south-central Chile margin from 36°S to 43°S.",
+  "abstract": "Crustal and upper-mantle structures of the subduction zone in south-central Chile between 42°S and 46°S are determined from seismic wide-angle reflection and refraction data using the Zelt & Smith ray-tracing method. Three TIPTEQ profiles (Corridors 2, 3, 4) were analysed along segments with oceanic plate ages of 14.5 Ma (Chiloé), 6.5 Ma, and 3 Ma (near Chile Triple Junction). The oceanic Nazca Plate is ~5 km thick with slightly increasing thickness northward. Three-quarters of trench sediments subduct into the subduction channel in south-central Chile. The updip limit of the seismogenic zone coincides with a strong lateral velocity gradient ~75-80 km from the deformation front interpreted as a palaeo-backstop.",
   "keywords": [
     "wide-angle seismic",
     "P-wave modelling",
@@ -28,70 +28,161 @@
     "OBS"
   ],
   "location": {
-    "latitude": -39.5,
-    "longitude": -74.0,
-    "city": "Valdivia / Concepción",
-    "region": "Los Ríos / Biobío",
+    "latitude": -44.0,
+    "longitude": -76.0,
+    "city": "Puerto Montt (nearest)",
+    "region": "Los Lagos / Aysén",
     "country": "Chile",
-    "description": "South-central Chile margin from 36°S to 43°S, spanning SPOC and TIPTEQ experiment profiles",
+    "description": "South-central Chile margin between 42°S and 46°S (Chiloé to Chile Triple Junction), TIPTEQ SO181 cruise",
     "bounding_box": {
-      "lat_min": -43.0,
-      "lat_max": -36.0,
-      "lon_min": -77.0,
-      "lon_max": -72.0
+      "lat_min": -47.0,
+      "lat_max": -42.0,
+      "lon_min": -80.0,
+      "lon_max": -73.0
     },
     "seismic_lines": [
       {
-        "name": "SPOC Profile P1 (~36°S)",
-        "lat_start": -36.0,
-        "lon_start": -76.0,
-        "lat_end": -36.0,
-        "lon_end": -72.5,
-        "length_km": null
+        "name": "TIPTEQ Corridor 2 — ~42°S (14.5 Ma crust, Chiloé area), 350 km total, 75 km used here; TIPTEQ SO181",
+        "lat_start": -42.0,
+        "lon_start": -79.0,
+        "lat_end": -42.0,
+        "lon_end": -74.0,
+        "length_km": 350
       },
       {
-        "name": "SPOC Profile P3 (~38.5°S)",
-        "lat_start": -38.5,
-        "lon_start": -76.5,
-        "lat_end": -38.5,
-        "lon_end": -73.0,
-        "length_km": null
+        "name": "TIPTEQ Corridor 3 — ~44°S (6.5 Ma crust), 320 km; 45/50 OBS/H used; TIPTEQ SO181",
+        "lat_start": -44.0,
+        "lon_start": -79.0,
+        "lat_end": -44.0,
+        "lon_end": -74.5,
+        "length_km": 320
       },
       {
-        "name": "TIPTEQ Profile (~38.2°S)",
-        "lat_start": -38.2,
-        "lon_start": -76.0,
-        "lat_end": -38.2,
-        "lon_end": -73.0,
-        "length_km": null
+        "name": "TIPTEQ Corridor 4 — ~46°S (3 Ma crust, near Chile Triple Junction), 225 km; 34/37 OBS/H used; TIPTEQ SO181",
+        "lat_start": -46.0,
+        "lon_start": -79.0,
+        "lat_end": -46.0,
+        "lon_end": -75.0,
+        "length_km": 225
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC 2001; SO181 TIPTEQ 2004–2005)",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "vessel": [
+      "R/V SONNE",
+      "R/V Robert Conrad"
+    ],
+    "year_acquired": 2004,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3900,
     "streamer_length_m": null,
-    "channel_count": null,
+    "channel_count": 16,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO181, TIPTEQ, Dec 2004–Feb 2005",
+      "RC2901, 1988"
+    ],
+    "shot_interval_m": 100.0,
+    "obs_spacing_km": 5.5
   },
   "data": [
     {
       "name": "SPOC Wide-angle OBS Seismic Data (three profiles, 36°–43°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "Wide-angle OBS seismic refraction data from SPOC (SO161) and TIPTEQ (SO181) experiments. Three profiles across the south-central Chile margin used for P-wave forward modelling and 2D velocity structure.",
       "data_type": "seismic_refraction_obs"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Bathymetry:Singlebeam, Gravity:Field, Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "MGD77"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=15251",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "unknown",
+      "name": "Bathymetry:Swath",
+      "classification": "RAW",
+      "format": [
+        "MGDS"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=2794,14008,16981",
+      "doi": null,
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "RAW",
+      "format": [
+        "MGDS:Nav",
+        "SHP"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=11106,11107",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Seismic Reflection/Refraction",
+      "classification": "RAW",
+      "format": [
+        "ASCII",
+        "ASCII:TSN",
+        "PDF",
+        "SEGY"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=18861,18864,29438,29439,29440",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the R/V Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -105,10 +196,14 @@
       "5. Gravity forward modelling as additional constraint",
       "6. Comparison of velocity models with thermal models"
     ],
-    "software": [],
-    "notes": "Data from two cruises: SPOC 2001 (SO161) and TIPTEQ 2004–2005 (SO181). Three profiles spanning 36°–43°S."
+    "software": [
+      "Zelt & Smith (1992) ray-tracing / forward modelling",
+      "Zelt & Forsyth (1994) floating reflector algorithm"
+    ],
+    "notes": "Primary data from TIPTEQ SO181 (Dec 2004–Feb 2005). Three corridors: Corridor 2 (~42°S), Corridor 3 (~44°S), Corridor 4 (~46°S). 64L (3900 cui) airgun array, shots every 100–150 m. OBS/H at 5.5 km spacing. Short 16-channel streamer also used for shallow structure. Legacy MCS from R/V Conrad RC 2901 (Lamont Doherty, 1988) used for decollement reflector (Bangs & Cande 1997). Open access PDF at Oxford Academic."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Bronze open access PDF available at Oxford Academic. Abstract reconstructed from survey snippet and GEOMAR/SPOC/TIPTEQ project knowledge. Publisher elided abstract from Semantic Scholar API. Cruise identifiers (SO161, SO181) confirmed from co-author Contreras-Reyes_2008 paper."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. 8 authors confirmed (first names expanded from initials). DOI confirmed. CRITICAL location/profiles corrected: study area is 42°S–46°S TIPTEQ Corridors 2/3/4 (NOT SPOC 36°S/38.5°S as previously stated). vessel: 'R/V SONNE' → 'R/V SONNE (SO181, TIPTEQ, Dec 2004–Feb 2005)' + 'R/V Conrad (RC2901, 1988)'. year_acquired: 2001 → 2004. source_volume_cui: null → 3900 (64L × 61.02, paper states 3900 in³ directly). channel_count: null → 16 (short 16-channel streamer for shallow structure). Software: Zelt & Smith (1992) + Zelt & Forsyth (1994). Corridor lengths: 2=350km, 3=320km, 4=225km. OBS used: Corridor 3=45/50, Corridor 4=34/37.",
+  "tectonic_setting": "mixed"
 }

@@ -40,40 +40,69 @@
     },
     "seismic_lines": [
       {
-        "name": "Amphibious seismic profile at ~22°S (marine + land)",
+        "name": "CINCA95 amphibious profile at ~22°S — 19 OBH + 30 land stations (~420 km total)",
         "lat_start": -22.0,
         "lon_start": -72.0,
         "lat_end": -22.0,
         "lon_end": -68.5,
-        "length_km": null
+        "length_km": 420,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
-    "year_acquired": 2007,
-    "source_type": "airgun array",
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 1995,
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95, 1995"
+    ]
   },
   "data": [
     {
       "name": "Amphibious wide-angle seismic refraction data (~22°S, Tocopilla)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep / internal",
+      "repository": [
+        "GEOMAR OceanRep",
+        "internal"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "Marine OBS + land station wide-angle seismic refraction data at ~22°S offshore Tocopilla. Complemented by 2007 Tocopilla aftershock hypocentres for constraining slab geometry.",
       "data_type": "seismic_refraction_obs"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -87,10 +116,17 @@
       "5. Integration with 2007 Tocopilla aftershock hypocentres",
       "6. Slab geometry interpretation"
     ],
-    "software": [],
+    "software": [
+      "TOMO2D"
+    ],
     "notes": "Nature Geoscience letter; behind paywall. Abrupt dip change from <10° to ~22° at ~22°S. Amphibious experiment with marine OBS and onshore seismic stations."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "low",
-  "analysis_notes": "Paper behind paywall in Nature Geoscience; no open access version found. Abstract reconstructed from survey snippet. Acquisition timing likely shortly after 2007 Tocopilla earthquake (Mw 7.7). Grevemeyer (GEOMAR) co-authorship suggests R/V SONNE involvement. No data repository identified."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF (Nature Geoscience letter, 4 pages). year_acquired corrected 2007→1995 (CINCA95 cruise, German RV SONNE SO104); 2007 data is only Tocopilla aftershock hypocentres from a local seismological network (not ship-acquired). 19 OBHs + 30 land stations + 2 land shots; profile ~420 km at ~22°S. Acknowledgments: FONDECYT 11090009, German BMBF; data from GeoForschungZentrum Potsdam and IPOC. No source_volume_cui stated in letter (CINCA95 source parameters in Patzwahl et al. 1999). Software: TOMO2D implied.",
+  "tectonic_setting": "erosional",
+  "associated_earthquakes": [
+    "Arequipa 2001 Mw8.4",
+    "Tocopilla 2007 Mw7.7"
+  ]
 }

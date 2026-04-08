@@ -14,8 +14,8 @@ export function computeFilterOptions(papers: PaperSummary[]): FilterOptions {
   return {
     authors: uniq(papers.flatMap((p) => p.authors.map((a) => a.split(',')[0].trim()))).sort(),
     keywords: uniq(papers.flatMap((p) => p.keywords)).sort(),
-    vessels: uniq(papers.map((p) => p.vessel ?? '')).filter(Boolean).sort(),
-    source_types: uniq(papers.map((p) => p.source_type ?? '')).filter(Boolean).sort(),
+    vessels: uniq(papers.flatMap((p) => p.vessel ?? [])).sort(),
+    source_types: uniq(papers.flatMap((p) => p.source_type ?? [])).sort(),
     data_formats: uniq(papers.flatMap((p) => p.data_formats)).sort(),
     repositories: uniq(papers.flatMap((p) => p.repositories)).sort(),
   }
@@ -44,6 +44,8 @@ export function applyFilters(papers: PaperSummary[], filters: PaperFilters): Pap
     if (filters.year_min && p.year < filters.year_min) return false
     if (filters.year_max && p.year > filters.year_max) return false
     if (filters.access && !p.access_types.includes(filters.access)) return false
+    if (filters.paper_access === 'open' && !p.open_access_paper) return false
+    if (filters.paper_access === 'restricted' && p.open_access_paper) return false
     if (filters.classification && !p.classifications.includes(filters.classification)) return false
     if (filters.open_only && !p.has_open_data) return false
 
@@ -70,8 +72,14 @@ export function applyFilters(papers: PaperSummary[], filters: PaperFilters): Pap
       if (!p.repositories.some((r) => includesCI(r, filters.repository!))) return false
     }
 
-    if (filters.vessel && !includesCI(p.vessel, filters.vessel)) return false
-    if (filters.source_type && !includesCI(p.source_type, filters.source_type)) return false
+    if (filters.vessel) {
+      const q = filters.vessel.toLowerCase()
+      if (!p.vessel?.some((v) => v.toLowerCase().includes(q))) return false
+    }
+    if (filters.source_type) {
+      const q = filters.source_type.toLowerCase()
+      if (!p.source_type?.some((s) => s.toLowerCase().includes(q))) return false
+    }
 
     if (filters.acq_year_min && (p.acq_year == null || p.acq_year < filters.acq_year_min))
       return false
@@ -117,9 +125,9 @@ export function hasAdvancedFilters(f: PaperFilters): boolean {
     f.keyword ||
     f.data_types?.length ||
     f.data_format ||
-    f.repository ||
     f.vessel ||
     f.source_type ||
+    f.paper_access ||
     f.acq_year_min ||
     f.acq_year_max ||
     f.lat_min != null ||

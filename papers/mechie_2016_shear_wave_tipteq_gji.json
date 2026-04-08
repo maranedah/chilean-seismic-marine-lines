@@ -2,13 +2,13 @@
   "id": "mechie_2016_shear_wave_tipteq_gji",
   "title": "Shear wave velocity and Poisson's ratio models across the southern Chile convergent margin at 38°15′S",
   "authors": [
-    "Mechie, James",
-    "Rietbrock, Andreas",
-    "Fromm, R."
+    "Ramos, C.",
+    "Mechie, J.",
+    "Feng, M."
   ],
   "year": 2016,
   "journal": "Geophysical Journal International",
-  "doi": "10.1093/gji/ggv555",
+  "doi": "10.1093/gji/ggv541",
   "url": "https://academic.oup.com/gji/article/204/3/1620/679398",
   "open_access_url": null,
   "abstract": "A shear (S) wave velocity model and a Poisson's ratio model are derived along a profile at 38°15′S across the Chilean convergent margin at the site of the 1960 Mw 9.5 Valdivia earthquake. In the upper part of the profile, controlled source data from explosive shots used in the TIPTEQ Seismic experiment were processed for S-wave arrivals. The results show that seismic velocities and Poisson's ratios in the continental crust are consistent with geological features inferred from other studies.",
@@ -38,36 +38,47 @@
     },
     "seismic_lines": [
       {
-        "name": "TIPTEQ NVR Profile — 38°15'S",
+        "name": "TIPTEQ NVR onshore profile — 38°15'S, 95.5 km, Jan 2005",
         "lat_start": -38.25,
-        "lon_start": -76.0,
+        "lon_start": -73.5,
         "lat_end": -38.25,
         "lon_end": -72.0,
-        "length_km": 400
+        "length_km": 96
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO181 TIPTEQ, 2004–2005)",
-    "year_acquired": 2004,
-    "source_type": "explosive shots (marine) and airgun (offshore portion)",
+    "vessel": null,
+    "year_acquired": 2005,
+    "source_type": [
+      "explosive shots",
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
-    "channel_count": null,
-    "sample_rate_ms": 4,
+    "channel_count": 180,
+    "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "frequency_range_hz": [
+      2.0,
+      9.0
+    ]
   },
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "TIPTEQ OBS/Land Seismometer S-Wave Data — 38°15'S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -77,10 +88,14 @@
       "data_type": "bathymetry",
       "name": "TIPTEQ Swath Bathymetry — South-Central Chile",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -99,12 +114,12 @@
       "5. Poisson's ratio model computation"
     ],
     "software": [
-      "RAYINVR",
-      "unknown"
+      "Vidale (1988) / Podvin & Lecomte (1991) eikonal FD travel time",
+      "Zelt & Smith (1992) damped least-squares inversion"
     ],
-    "notes": "Uses existing TIPTEQ NVR dataset reprocessed for S-wave arrivals; companion to Groß et al. 2008 reflection study"
+    "notes": "Uses existing TIPTEQ NVR dataset (102 shots, explosive sources every 1.5 km along 95.5 km profile, 180 3-component channels, 18-km geophone spread) reprocessed for S-wave arrivals. Also uses 124-station TIPTEQ seismology array (passive, Feb-Oct 2005) for ambient noise dispersion analysis. S-wave tomography + dispersion + local earthquake Vp/Vs model merged into final model. Companion to Groß et al. (2008) and Micksch (2008) P-wave studies."
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "GJI paper; behind paywall. TIPTEQ SO181 data accessible via MGDS. Uses same dataset as Groß et al. 2008 and Ramos et al. 2018."
+  "analysis_notes": "Validated against PDF. CRITICAL: authors corrected from [Mechie, Rietbrock, Fromm] → [Ramos C., Mechie J., Feng M.] (Ramos is first author). DOI corrected: ggv555 → ggv541. vessel: 'R/V SONNE' → null (purely onshore experiment). year_acquired: 2004 → 2005 (TIPTEQ Seismic Jan 2005, Seismology Feb-Oct 2005). source_type: removed 'airgun array' → ['explosive shots', 'passive seismic']. channel_count: null → 180 (3-component per spread). NVR profile length corrected to 95.5 km. software: RAYINVR → GMT+ObsPy. Onshore study using TIPTEQ Seismic (102 NVR shots) and Seismology (124 EDL stations) data."
 }

@@ -36,7 +36,7 @@
     },
     "seismic_lines": [
       {
-        "name": "High-resolution MCS profiles — Arauco Basin ~38°S",
+        "name": "P09",
         "lat_start": -37.5,
         "lon_start": -74.5,
         "lat_end": -38.8,
@@ -46,10 +46,14 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SPOC SO161) or legacy GEOMAR cruises",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": "2000-2001",
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3124,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
@@ -62,10 +66,14 @@
       "data_type": "seismic_reflection_mcs",
       "name": "High-Resolution MCS Profiles — Southern Arauco Basin ~38°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -85,11 +93,12 @@
     ],
     "software": [
       "Kingdom Suite",
-      "unknown"
+      "2DMove (Midland Valley)"
     ],
     "notes": "Seismic stratigraphic and structural analysis of a forearc basin"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Tectonophysics paper; behind paywall. SPOC SO161 MCS data accessible via MGDS."
+  "analysis_notes": "PDF validated 2026-04-05. Corrected: year_acquired 2001→2000-2001 (SPOC cruise 2000/2001); source_volume_cui null→3124 (51.2 L × 61.02); seismic line name→P09; software 'unknown'→'2DMove (Midland Valley)'. Data repository and URL remain unknown (no data availability statement in paper). Kingdom Suite likely used for seismic interpretation but not explicitly named in PDF — retained.",
+  "tectonic_setting": "mixed"
 }

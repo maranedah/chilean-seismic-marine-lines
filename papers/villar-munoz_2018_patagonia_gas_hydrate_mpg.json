@@ -1,15 +1,30 @@
 {
   "id": "villar-munoz_2018_patagonia_gas_hydrate_mpg",
   "title": "A first estimation of gas hydrates offshore Patagonia (Chile)",
-  "authors": ["Villar-Muñoz, Lucía", "Bento, Joaquim P.", "Klaeschen, Dirk", "Tinivella, Umberta", "Vargas-Cordero, Iván de la Cruz", "Behrmann, Jan H."],
+  "authors": [
+    "Villar-Muñoz, Lucía",
+    "Bento, Joaquim P.",
+    "Klaeschen, Dirk",
+    "Tinivella, Umberta",
+    "Vargas-Cordero, Iván de la Cruz",
+    "Behrmann, Jan H."
+  ],
   "year": 2018,
   "journal": "Marine and Petroleum Geology",
   "doi": "10.1016/j.marpetgeo.2018.06.002",
   "url": "https://oceanrep.geomar.de/id/eprint/43532/",
   "open_access_url": "https://oceanrep.geomar.de/id/eprint/43532/",
   "abstract": "The spatial distribution of gas hydrate in the accretionary prism and forearc sediments offshore western Patagonia (50°–57°S), landward of the Antarctica–South America plate boundary, is documented for the first time. BSR-derived heat flow values of 30–70 mW/m² are calculated. Average gas hydrate concentration is 3.4%–10% and average BSR thickness is ~290 m, with estimated methane of ~3.0 × 10¹³ m³.",
-  "keywords": ["gas hydrate", "BSR", "Patagonia", "50°–57°S", "Antarctica-South America", "seismic reflection", "heat flow", "OceanRep GEOMAR open access"],
-
+  "keywords": [
+    "gas hydrate",
+    "BSR",
+    "Patagonia",
+    "50°–57°S",
+    "Antarctica-South America",
+    "seismic reflection",
+    "heat flow",
+    "OceanRep GEOMAR open access"
+  ],
   "location": {
     "latitude": -53.5,
     "longitude": -73.0,
@@ -18,77 +33,171 @@
     "country": "Chile",
     "description": "Offshore western Patagonia (50°–57°S); first systematic gas hydrate study for southern Chilean Patagonian margin",
     "bounding_box": {
-      "lat_min": -57.0, "lat_max": -50.0,
-      "lon_min": -76.0, "lon_max": -70.0
+      "lat_min": -57.0,
+      "lat_max": -50.0,
+      "lon_min": -76.0,
+      "lon_max": -70.0
     },
     "seismic_lines": [
       {
-        "name": "MCS profiles — offshore Patagonia 50°–57°S (legacy and R/V SONNE)",
-        "lat_start": -50.0, "lon_start": -75.0,
-        "lat_end": -57.0, "lon_end": -70.0,
-        "length_km": 800
+        "name": "RC2902-790",
+        "cruise": "RC2902",
+        "notes": "R/V R.D. Conrad 1988; detailed velocity analysis and PreSDM; southern sector ~53°–57°S; strong continuous BSR"
+      },
+      {
+        "name": "IT95-247",
+        "cruise": "IT95",
+        "notes": "R/V OGS-EXPLORA 1995"
+      },
+      {
+        "name": "IT95-251",
+        "cruise": "IT95",
+        "notes": "R/V OGS-EXPLORA 1995; near FTJ, no BSR detected"
+      },
+      {
+        "name": "IT97-168",
+        "cruise": "IT97",
+        "notes": "R/V OGS-EXPLORA 1997"
+      },
+      {
+        "name": "IT97-169",
+        "cruise": "IT97",
+        "notes": "R/V OGS-EXPLORA 1997; deepest BSR 632 mbsf at ~55°S"
+      },
+      {
+        "name": "IT97-171",
+        "cruise": "IT97",
+        "notes": "R/V OGS-EXPLORA 1997; strongest BSR, deep décollement near top of oceanic crust"
+      },
+      {
+        "name": "IT97-175",
+        "cruise": "IT97",
+        "notes": "R/V OGS-EXPLORA 1997; southernmost profile ~57°S; shallowest BSR 286 mbsf"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V SONNE and legacy cruises (multiple)",
-    "year_acquired": null,
-    "source_type": "airgun array",
+    "vessel": [
+      "R/V R.D. Conrad RC2902 (1988)",
+      "R/V OGS-EXPLORA IT95 (1995)",
+      "R/V OGS-EXPLORA IT97 (1997)"
+    ],
+    "year_acquired": [
+      1988,
+      1995,
+      1997
+    ],
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "streamer_length_m": 3000,
+    "channel_count": 240,
     "sample_rate_ms": 4,
-    "record_length_s": null,
+    "record_length_s": 15,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "shot_interval_m": 50,
+    "group_spacing_m": 12.5,
+    "acquisition_details": [
+      {
+        "cruise": "RC2902",
+        "vessel": "R/V R.D. Conrad",
+        "year": 1988,
+        "channels": 240,
+        "group_spacing_m": 12.5,
+        "max_offset_m": 3300,
+        "record_length_s": 15
+      },
+      {
+        "cruise": "IT95",
+        "vessel": "R/V OGS-EXPLORA",
+        "year": 1995,
+        "channels": 120,
+        "streamer_m": 3000,
+        "airguns": 36,
+        "shot_spacing_m": 50,
+        "lines": [
+          "IT95-247",
+          "IT95-251"
+        ]
+      },
+      {
+        "cruise": "IT97",
+        "vessel": "R/V OGS-EXPLORA",
+        "year": 1997,
+        "channels": 120,
+        "streamer_m": 3000,
+        "airguns": 36,
+        "shot_spacing_m": 50,
+        "lines": [
+          "IT97-168",
+          "IT97-169",
+          "IT97-171",
+          "IT97-175"
+        ]
+      }
+    ]
   },
-
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
-      "name": "MCS Reflection Data — Offshore Patagonia 50°–57°S",
-      "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
-      "url": "https://oceanrep.geomar.de/id/eprint/43532/",
+      "name": "R/V R.D. Conrad RC2902 MCS Profile RC2902-790 — Southern Patagonia ~53°–57°S",
+      "classification": "PROCESSED",
+      "format": [
+        "SEG-Y"
+      ],
+      "url": "http://www.ig.utexas.edu/",
       "doi": null,
-      "repository": "other",
+      "repository": [
+        "UTIG Seismic Data Center"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
-      "description": "Multichannel seismic reflection profiles from offshore western Patagonia (50°–57°S) used to map BSR distribution and estimate gas hydrate concentration for the first time in this region; BSR-derived heat flow 30–70 mW/m²"
+      "description": "RC2902-790 MCS profile (R/V R.D. Conrad 1988), 240 ch, 12.5 m group spacing, 15 s record length, offset up to 3300 m. Openly available at UTIG SDC (acknowledged). Used for detailed PreSDM velocity analysis and gas hydrate concentration estimation."
     },
     {
-      "data_type": "bathymetry",
-      "name": "Swath Bathymetry — Offshore Patagonia 50°–57°S",
-      "classification": "RAW",
-      "format": "NetCDF",
+      "data_type": "seismic_reflection_mcs",
+      "name": "R/V OGS-EXPLORA IT95/IT97 MCS Profiles — Southern Patagonia 50°–57°S",
+      "classification": "PROCESSED",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "OGS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
-      "description": "Multibeam bathymetry from various cruises used to characterize the Patagonian continental margin morphology"
+      "description": "Six profiles from Italian cruises IT95 (lines 247, 251) and IT97 (lines 168, 169, 171, 175) aboard R/V OGS-EXPLORA, 120 channels, 3000 m streamer, 36-airgun array, 50 m shot spacing. Used for BSR identification and heat flow mapping."
     }
   ],
-  "_data_note": "Open access via OceanRep GEOMAR. First gas hydrate study for the southern Chilean Patagonian margin (50°–57°S).",
-
+  "_data_note": "RC2902 data openly available at http://www.ig.utexas.edu/ (UTIG SDC). OGS-EXPLORA data from OGS (Italian institution) — access unknown. Paper open access via OceanRep GEOMAR at https://oceanrep.geomar.de/id/eprint/43532/.",
   "processing": {
     "classification": "SEMI_PROCESSED",
     "summary": "MCS reflection profiles from offshore western Patagonia (50°–57°S) were analyzed to identify and map the BSR distribution for the first time in this region. Velocity analysis provides gas hydrate concentration estimates (3.4%–10% total volume) and BSR-derived heat flow values (30–70 mW/m²). The large estimated methane volume (~3.0 × 10¹³ m³) makes this an important potential resource.",
     "workflow": [
-      "1. Compilation of legacy seismic profiles",
-      "2. BSR identification and mapping",
-      "3. Velocity analysis in BSR zone",
-      "4. Gas hydrate concentration estimation",
-      "5. Heat flow calculation from BSR depth"
+      "1. Compilation of 7 MCS profiles from 3 cruises (RC2902, IT95, IT97)",
+      "2. BSR identification by reversed polarity relative to seafloor reflection",
+      "3. TWT to depth conversion using seawater velocity 1500 m/s",
+      "4. BSR depth and heat flow spatial mapping (colour-coded maps 50°–57°S)",
+      "5. Heat flow q calculation using Dickens & Quinby-Hunt (1994) BSR temperature-pressure function; k=0.85 W/mK (ODP Leg 202)",
+      "6. Iterative grid-based reflection tomography PreSDM (Woodward et al. 2008) on RC2902-790 for velocity model",
+      "7. Gas hydrate concentration estimation via modified Domenico approach (Tinivella & Carcione 2001; Tinivella 2002)",
+      "8. Average BSR depth and hydrate thickness calculation per CDP",
+      "9. Methane volume estimate using average concentration 3.4%, porosity 50%, total area 53,000 km²"
     ],
-    "software": ["unknown"],
-    "notes": "Open access via GEOMAR OceanRep repository"
+    "software": [
+      "GMT"
+    ],
+    "notes": "Seven legacy seismic profiles from 3 cruises analyzed; PreSDM velocity analysis applied to RC2902-790 only",
+    "migration_type": "PreSDM (Kirchhoff reflection tomography)"
   },
-
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-05T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access via OceanRep GEOMAR (confirmed URL). First gas hydrate mapping for the Patagonian margin."
+  "analysis_notes": "PDF confirmed. Major corrections: vessel corrected from R/V SONNE to R/V R.D. Conrad RC2902 (1988) + R/V OGS-EXPLORA IT95 (1995) + IT97 (1997) — no R/V SONNE in this paper; year_acquired [1988,1995,1997]; seismic_lines updated to 7 named profiles (RC2902-790, IT95-247/-251, IT97-168/-169/-171/-175); channel_count=240 (RC2902)/120 (OGS); record_length_s=15 (RC2902); data entries split — RC2902 open at UTIG SDC http://www.ig.utexas.edu/, OGS-EXPLORA unknown; software=GMT; migration_type corrected from PSSDM to PreSDM; workflow expanded to 9 steps.",
+  "tectonic_setting": "accretionary"
 }

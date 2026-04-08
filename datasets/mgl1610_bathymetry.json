@@ -1,0 +1,25 @@
+{
+  "id": "mgl1610_bathymetry",
+  "cruise": "MGL1610",
+  "cruise_name": "PICTURES",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2016,
+  "data_type": "bathymetry",
+  "name": "MGL1610 PICTURES Swath Bathymetry (Kongsberg EM122) — North Chile",
+  "classification": "RAW",
+  "format": ["Kongsberg .all"],
+  "url": "https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+  "doi": "10.7284/123638",
+  "repository": ["MGDS", "NOAA", "NCEI"],
+  "size_gb": 170,
+  "access": "open",
+  "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1610/fileset/123638",
+  "description": "Raw multibeam swath bathymetry, backscatter, and sidescan data (2,642 files, ~170 GB) acquired with Kongsberg EM122 during the 2016 PICTURES (MGL1610) cruise offshore northern Chile 19°–21°S.",
+  "used_by": [
+    "gonzalez_2023_northern_forearc_mcs",
+    "ma_2023_iquique_ridge_impact",
+    "myers_2022_iquique_ridge_crustal",
+    "reginato_2020_iquique_wedge_tecto",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

@@ -5,6 +5,28 @@ import { useRouter } from 'next/navigation'
 import type { PaperSummary } from '@/types/paper'
 import Badge, { type BadgeVariant } from '@/atoms/Badge'
 
+function FigureHoverPreview({ figures }: { figures: string[] }) {
+  if (!figures?.length) return null
+  return (
+    <div
+      className="absolute z-50 bottom-full left-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-xl p-2 pointer-events-none"
+      style={{ width: 320 }}
+    >
+      <div className="flex gap-1.5">
+        {figures.slice(0, 3).map((src) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            className="flex-1 min-w-0 rounded object-cover"
+            style={{ height: 90 }}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 type SortKey = 'year' | 'title' | 'authors_short' | 'journal' | 'geographic_region' | 'num_datasets' | 'completeness'
 
 const ACCESS_VARIANT: Record<string, BadgeVariant> = {
@@ -21,6 +43,7 @@ export default function PapersTable({ papers }: Props) {
   const router = useRouter()
   const [sortKey, setSortKey] = useState<SortKey>('year')
   const [sortAsc, setSortAsc] = useState(false)
+  const [hoveredId, setHoveredId] = useState<string | null>(null)
 
   function handleSort(key: SortKey) {
     if (key === sortKey) {
@@ -73,18 +96,24 @@ export default function PapersTable({ papers }: Props) {
             <th className={thClass} onClick={() => handleSort('completeness')}>
               Fill <SortIcon col="completeness" />
             </th>
+            <th className="px-4 py-3" />
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-100">
           {sorted.map((p) => (
             <tr
               key={p.id}
-              className="hover:bg-blue-50 cursor-pointer transition-colors"
+              className="hover:bg-blue-50 cursor-pointer transition-colors relative"
               onClick={() => router.push(`/papers/${p.id}`)}
+              onMouseEnter={() => setHoveredId(p.id)}
+              onMouseLeave={() => setHoveredId(null)}
             >
               <td className="px-4 py-3 text-gray-900 font-medium">{p.year}</td>
               <td className="px-4 py-3 text-gray-600 whitespace-nowrap">{p.authors_short}</td>
-              <td className="px-4 py-3 text-gray-900 max-w-xs">
+              <td className="px-4 py-3 text-gray-900 max-w-xs relative">
+                {hoveredId === p.id && p.preview_figures?.length > 0 && (
+                  <FigureHoverPreview figures={p.preview_figures} />
+                )}
                 <span className="line-clamp-2 hover:text-blue-700" title={p.title}>
                   {p.title}
                 </span>
@@ -113,6 +142,27 @@ export default function PapersTable({ papers }: Props) {
                 >
                   {p.completeness}%
                 </span>
+              </td>
+              <td className="px-4 py-3">
+                <div className="flex items-center gap-2 justify-end">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); router.push(`/papers/${p.id}`) }}
+                    className="text-xs text-blue-600 hover:text-blue-800 border border-blue-200 hover:border-blue-400 hover:bg-blue-50 px-2.5 py-1 rounded transition-colors whitespace-nowrap"
+                  >
+                    View summary
+                  </button>
+                  {p.paper_url && (
+                    <a
+                      href={p.paper_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-xs text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-400 hover:bg-gray-50 px-2.5 py-1 rounded transition-colors whitespace-nowrap"
+                    >
+                      View paper ↗
+                    </a>
+                  )}
+                </div>
               </td>
             </tr>
           ))}

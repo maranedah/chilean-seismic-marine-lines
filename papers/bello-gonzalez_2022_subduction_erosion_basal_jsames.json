@@ -1,15 +1,26 @@
 {
   "id": "bello-gonzalez_2022_subduction_erosion_basal_jsames",
   "title": "Subduction erosion and basal accretion in the Central Chile subduction wedge inferred from local earthquake tomography",
-  "authors": ["Bello-González, Juan P.", "Contreras-Reyes, Eduardo", "Arriagada, César"],
+  "authors": [
+    "Bello-González, Juan P.",
+    "Contreras-Reyes, Eduardo",
+    "Arriagada, César"
+  ],
   "year": 2022,
   "journal": "Journal of South American Earth Sciences",
-  "doi": "10.1016/j.jsames.2022.103819",
+  "doi": "10.1016/j.jsames.2022.103765",
   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0895981122000566",
   "open_access_url": null,
   "abstract": "Results from a temporary network of 39 seismic stations deployed April–November 2017 in Central Chile reveal 3D elastic wavespeed anomalies using local earthquake tomography. Wedge geometry with body wavespeed anomalies near the interplate contact below 30 km depth are interpreted as accretionary complexes formed by basal accretion of crustal slices. Latitudinal differences are attributed to eroded material from both plates that changes the basalt-eclogite transition depth.",
-  "keywords": ["local earthquake tomography", "central Chile", "30°–35°S", "basal accretion", "subduction erosion", "3D velocity model", "temporary seismic network"],
-
+  "keywords": [
+    "local earthquake tomography",
+    "central Chile",
+    "30°–35°S",
+    "basal accretion",
+    "subduction erosion",
+    "3D velocity model",
+    "temporary seismic network"
+  ],
   "location": {
     "latitude": -32.5,
     "longitude": -71.5,
@@ -18,23 +29,30 @@
     "country": "Chile",
     "description": "Central Chile subduction zone 30°–35°S; local earthquake tomography from land+marine network",
     "bounding_box": {
-      "lat_min": -35.0, "lat_max": -30.0,
-      "lon_min": -74.0, "lon_max": -69.0
+      "lat_min": -35.0,
+      "lat_max": -30.0,
+      "lon_min": -74.0,
+      "lon_max": -69.0
     },
     "seismic_lines": [
       {
         "name": "39-station temporary seismic network — central Chile 30°–35°S (April–Nov 2017)",
-        "lat_start": -30.0, "lon_start": -72.0,
-        "lat_end": -35.0, "lon_end": -70.0,
+        "lat_start": -30.0,
+        "lon_start": -72.0,
+        "lat_end": -35.0,
+        "lon_end": -70.0,
         "length_km": 600
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "Land-based network (no marine vessel specified; may include some OBS)",
+    "vessel": [
+      "Land-based network"
+    ],
     "year_acquired": 2017,
-    "source_type": "passive seismic (local earthquake tomography)",
+    "source_type": [
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -43,16 +61,19 @@
     "fold": null,
     "line_spacing_km": null
   },
-
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "39-Station Temporary Network — Central Chile 30°–35°S (2017) Passive Seismic",
       "classification": "RAW",
-      "format": "MSEED",
+      "format": [
+        "miniSEED"
+      ],
       "url": null,
       "doi": null,
-      "repository": "IRIS",
+      "repository": [
+        "IRIS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -60,7 +81,6 @@
     }
   ],
   "_data_note": "Primarily land-based seismic network study. May include offshore components. JSAMES paper; behind paywall.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "P- and S-wave arrival times from a 39-station temporary network in central Chile (April–November 2017) were inverted for 3D Vp, Vs and Vp/Vs models via local earthquake tomography. Velocity anomalies at 30+ km depth near the interplate contact are interpreted as basally accreted crustal slices from the subducting Nazca plate. Results show latitudinal variations in accretion/erosion linked to changes in basalt-eclogite transition depth.",
@@ -72,10 +92,12 @@
       "5. Resolution and sensitivity tests",
       "6. Tectonic interpretation"
     ],
-    "software": ["SIMULPS", "unknown"],
+    "software": [
+      "SIMULPS",
+      "unknown"
+    ],
     "notes": "Land-based network with possible OBS component offshore; data archive not confirmed"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "medium",
   "analysis_notes": "JSAMES paper; behind paywall. Land/marine network from 2017. Data archive not confirmed. Companion study to CEVICHE-era research."

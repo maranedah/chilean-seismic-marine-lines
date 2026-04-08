@@ -39,10 +39,16 @@ export default function DatasetItem({ dataset }: Props) {
       </td>
       <td className="py-3 pr-4 align-top text-xs text-gray-600 whitespace-nowrap">{typeLabel}</td>
       <td className="py-3 pr-4 align-top text-xs text-gray-600 whitespace-nowrap">
-        {dataset.format ?? '—'}
+        {dataset.format?.join(', ') ?? '—'}
       </td>
       <td className="py-3 pr-4 align-top text-xs text-gray-600 whitespace-nowrap">
         {dataset.repository ?? '—'}
+      </td>
+      <td className="py-3 pr-4 align-top text-xs text-gray-600 whitespace-nowrap">
+        {dataset.size_gb != null ? `${dataset.size_gb} GB` : '—'}
+      </td>
+      <td className="py-3 pr-4 align-top text-xs text-gray-600 whitespace-nowrap">
+        {dataset.cdp_spacing_m != null ? `${dataset.cdp_spacing_m} m` : '—'}
       </td>
       <td className="py-3 pr-4 align-top whitespace-nowrap">
         <div className="flex gap-1.5">

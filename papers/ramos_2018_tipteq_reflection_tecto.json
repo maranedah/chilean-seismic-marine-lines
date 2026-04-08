@@ -47,25 +47,37 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO181 — TIPTEQ cruise, 2004/2005)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 2004,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "frequency_range_hz": [
+      20.0,
+      40.0
+    ]
   },
   "data": [
     {
       "name": "TIPTEQ Near-vertical Seismic Reflection Data (38.25°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GFZ Potsdam",
+      "repository": [
+        "GFZ Potsdam"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -87,9 +99,11 @@
       "8. Interpretation of Lanalhue Fault Zone and plate interface"
     ],
     "software": [],
-    "notes": "GFZ Potsdam green open access PDF available. Mechie and Stiller are GFZ Potsdam researchers. Uses TIPTEQ data (SO181). First seismic image of Lanalhue Fault Zone."
+    "notes": "GFZ Potsdam green open access PDF available. Mechie and Stiller are GFZ Potsdam researchers. Uses TIPTEQ data (SO181). First seismic image of Lanalhue Fault Zone.",
+    "migration_type": "post-stack"
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Green open access PDF available at GFZ publication server. Abstract reconstructed from Semantic Scholar summary and survey snippet. TIPTEQ SO181 cruise confirmed. GFZ holds TIPTEQ data archive."
+  "analysis_notes": "Green open access PDF available at GFZ publication server. Abstract reconstructed from Semantic Scholar summary and survey snippet. TIPTEQ SO181 cruise confirmed. GFZ holds TIPTEQ data archive.",
+  "tectonic_setting": "accretionary"
 }

@@ -1,15 +1,27 @@
 {
   "id": "bello-gonzalez_2024_taltal_segment_tomography_g3",
   "title": "Seismic velocity structure of the Taltal segment of the north Chilean subduction zone from local earthquake tomography",
-  "authors": ["Bello-González, Juan Pablo", "Ruiz, Sergio", "Contreras-Reyes, Eduardo", "Madariaga, Raúl"],
+  "authors": [
+    "Bello-González, Juan Pablo",
+    "Ruiz, Sergio",
+    "Contreras-Reyes, Eduardo",
+    "Madariaga, Raúl"
+  ],
   "year": 2024,
   "journal": "Geochemistry, Geophysics, Geosystems",
   "doi": "10.1029/2024GC011500",
   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2024GC011500",
   "open_access_url": null,
   "abstract": "Local earthquake tomography (LET) is applied to the Taltal segment of the north Chilean subduction zone (~25°–27°S) using a temporary land and offshore seismic network. The derived 3D P-wave velocity model images the subducting Nazca plate, forearc structure, and the seismogenic zone. Velocity anomalies are correlated with seismogenic coupling and fluid distribution in the interplate zone.",
-  "keywords": ["Taltal segment", "north Chile", "25°–27°S", "local earthquake tomography", "3D velocity model", "seismogenic zone", "G-Cubed"],
-
+  "keywords": [
+    "Taltal segment",
+    "north Chile",
+    "25°–27°S",
+    "local earthquake tomography",
+    "3D velocity model",
+    "seismogenic zone",
+    "G-Cubed"
+  ],
   "location": {
     "latitude": -26.0,
     "longitude": -70.5,
@@ -18,23 +30,30 @@
     "country": "Chile",
     "description": "Taltal segment of north Chilean subduction zone ~25°–27°S; 3D LET using temporary seismic network",
     "bounding_box": {
-      "lat_min": -27.0, "lat_max": -25.0,
-      "lon_min": -72.0, "lon_max": -69.0
+      "lat_min": -27.0,
+      "lat_max": -25.0,
+      "lon_min": -72.0,
+      "lon_max": -69.0
     },
     "seismic_lines": [
       {
         "name": "Temporary seismic network — Taltal segment ~25°–27°S (LET study)",
-        "lat_start": -25.0, "lon_start": -71.5,
-        "lat_end": -27.0, "lon_end": -70.0,
+        "lat_start": -25.0,
+        "lon_start": -71.5,
+        "lat_end": -27.0,
+        "lon_end": -70.0,
         "length_km": 280
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "Land and offshore seismic network deployment",
+    "vessel": [
+      "Land-based network"
+    ],
     "year_acquired": 2017,
-    "source_type": "passive (natural earthquakes)",
+    "source_type": [
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -43,16 +62,19 @@
     "fold": null,
     "line_spacing_km": null
   },
-
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "Temporary Seismic Network — Taltal Segment ~25°–27°S (LET passive data)",
       "classification": "PROCESSED",
-      "format": "miniSEED",
+      "format": [
+        "miniSEED"
+      ],
       "url": null,
       "doi": null,
-      "repository": "other",
+      "repository": [
+        "other"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -60,7 +82,6 @@
     }
   ],
   "_data_note": "G-Cubed 2024 paper; behind paywall. Temporary network deployment; data repository not confirmed.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "3D P-wave velocity model of the Taltal segment (~25°–27°S) derived by local earthquake tomography using a temporary seismic network. Results image the subducting Nazca plate geometry and forearc structure, with velocity anomalies correlated to seismogenic coupling and fluid distribution.",
@@ -71,10 +92,12 @@
       "4. 3D SIMULPS tomographic inversion",
       "5. Resolution analysis and structural interpretation"
     ],
-    "software": ["SIMULPS", "unknown"],
+    "software": [
+      "SIMULPS",
+      "unknown"
+    ],
     "notes": "G-Cubed 2024 paper; companion to Bello-González et al. 2022 JSAMES LET study (30°–35°S)"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "low",
   "analysis_notes": "G-Cubed 2024 paper; behind paywall. Limited information. Temporary seismic network; repository not confirmed."

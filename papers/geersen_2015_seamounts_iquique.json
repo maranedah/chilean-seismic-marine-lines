@@ -40,40 +40,87 @@
     },
     "seismic_lines": [
       {
-        "name": "MCS reflection profiles offshore northern Chile (19°–21°S)",
+        "name": "SO104-22 (~19.7°S), SO104-26 (~20–20.7°S), SO104-27 (~20.7°S) — CINCA95 MCS",
         "lat_start": -19.0,
         "lon_start": -72.0,
         "lat_end": -21.0,
         "lon_end": -71.0,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
-    "year_acquired": null,
-    "source_type": "airgun array",
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 1995,
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95, 1995"
+    ],
+    "shot_interval_m": 50.0
   },
   "data": [
     {
-      "name": "Marine seismic reflection and swath bathymetric data, northern Chile (19°–21°S)",
+      "data_type": "seismic_reflection_mcs",
+      "name": "CINCA95 (SO104) MCS Profiles — Northern Chile 19°–21°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep / BGR",
+      "repository": [
+        "BGR"
+      ],
       "size_gb": null,
-      "access": "restricted",
+      "access": "unknown",
       "download_command": null,
-      "description": "Marine MCS reflection and swath bathymetry data from offshore northern Chile (19°–21°S) used to identify subducting seamounts and their correlation with the 2014 Iquique earthquake rupture limits.",
-      "data_type": "bathymetry"
+      "description": "Legacy CINCA95 SO104 (1995) multichannel seismic reflection profiles SO104-22, SO104-26, SO104-27 offshore northern Chile 19°–21°S, processed at Barcelona Center for Subsurface Imaging. Used to identify subducting seamounts correlated with 2014 Iquique earthquake rupture limits."
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Swath Bathymetry — Northern Chile 19°–21°S",
+      "classification": "PROCESSED",
+      "format": [
+        "NetCDF"
+      ],
+      "url": null,
+      "doi": null,
+      "repository": [
+        "BGR",
+        "GEOMAR"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "Compiled swath bathymetry of the seafloor and Nazca plate seaward of the deformation front, northern Chile 19°–21°S, used to map seamount distribution and fault topography."
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -86,10 +133,14 @@
       "4. Spatial correlation with 2014 Iquique earthquake rupture zone",
       "5. Plate coupling analysis"
     ],
-    "software": [],
-    "notes": "Gold open access paper (CC-BY) in Nature Communications. Ranero (ICREA/CSIC) and Reichert/Barckhausen (BGR) co-authorship confirms prior CINCA/BGR surveys used."
+    "software": [
+      "Claritas"
+    ],
+    "notes": "Gold open access (CC-BY). Seismic data from CINCA95 (SO104, 1995), processed at Barcelona Center for Subsurface Imaging (C.R.R. supervised processing). Bathymetry is unpublished compilation from BGR/GEOMAR surveys.",
+    "migration_type": "PSTM"
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Gold open access PDF available from Nature Communications (CC-BY). Full abstract confirmed from OpenAlex. Seismic data from prior surveys (likely CINCA or BGR surveys) offshore northern Chile. Data not publicly deposited in named repository based on available metadata."
+  "analysis_notes": "Gold open access PDF available from Nature Communications (CC-BY). Full abstract confirmed from OpenAlex. Seismic data from prior surveys (likely CINCA or BGR surveys) offshore northern Chile. Data not publicly deposited in named repository based on available metadata.",
+  "tectonic_setting": "erosional"
 }

@@ -1,0 +1,29 @@
+{
+  "id": "mgl1701_magnetics",
+  "cruise": "MGL1701",
+  "cruise_name": "CEVICHE",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2017,
+  "data_type": "magnetics",
+  "name": "MGL1701 CEVICHE Magnetics (G-882 Magnetometer) — South-Central Chile",
+  "classification": "RAW",
+  "format": [
+    "ASCII"
+  ],
+  "url": "https://service.rvdata.us/data/cruise/MGL1701/fileset/123887",
+  "doi": "10.7284/907175",
+  "repository": [
+    "MGDS",
+    "NOAA",
+    "NCEI"
+  ],
+  "size_gb": 1.2786,
+  "access": "open",
+  "download_command": "wget -r -np -nH --cut-dirs=4 https://service.rvdata.us/data/cruise/MGL1701/fileset/123887",
+  "description": "Raw magnetometer data (Geometrics G-882) from the 2017 CEVICHE (MGL1701) cruise, offshore south-central Chile 30°–44°S.",
+  "used_by": [
+    "bangs_2020_basal_accretion_jgr",
+    "olsen_2020_thick_sediment_epsl",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

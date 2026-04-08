@@ -3,8 +3,13 @@
   "title": "Latitudinal Variation in Sedimentary Processes in the Peru-Chile Trench off Central Chile",
   "authors": [
     "Völker, David",
+    "Wiedicke, Michael",
+    "Ladage, Stefan",
+    "Gaedicke, Christoph",
     "Reichert, Christian",
-    "Wiedicke, Michael"
+    "Rauch, Klaus",
+    "Kramer, Wolfgang",
+    "Heubeck, Christoph"
   ],
   "year": 2006,
   "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
@@ -42,31 +47,47 @@
         "lon_start": -75.0,
         "lat_end": -42.0,
         "lon_end": -75.0,
-        "length_km": 1000
+        "length_km": 1000,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC, SO181 TIPTEQ and earlier cruises)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 2001,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, 2001/2002"
+    ],
+    "frequency_range_hz": [
+      20.0,
+      150.0
+    ]
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "SPOC/TIPTEQ MCS Profiles — Chile Trench 33°–42°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -76,10 +97,14 @@
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — Chile Trench 33°–42°S",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -101,7 +126,8 @@
     ],
     "notes": "Springer review chapter (2006)"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Springer book chapter; behind paywall. SPOC (SO161) and TIPTEQ (SO181) data at MGDS."
+  "analysis_notes": "Validated against PDF. CRITICAL: authors expanded from 3 to 8: Völker D., Wiedicke M., Ladage S., Gaedicke C., Reichert C., Rauch K., Kramer W., Heubeck C. (order from PDF title page). vessel: added SO161 cruise ID. Data from SO161 cruise 2001-2002 covering 36°-40.5°S with swath bathymetry confirmed.",
+  "tectonic_setting": "mixed"
 }

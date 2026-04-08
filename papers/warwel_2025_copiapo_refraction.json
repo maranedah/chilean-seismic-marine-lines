@@ -46,35 +46,183 @@
         "lon_start": -74.0,
         "lat_end": -27.0,
         "lon_end": -69.0,
-        "length_km": 445
+        "length_km": 445,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO297)",
-    "year_acquired": 2022,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2023,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 5431,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO297, 2023"
+    ],
+    "depth_penetration_km": 54.0
   },
   "data": [
     {
       "name": "Wide-angle OBS/OBH seismic refraction data, SO297",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "IRIS DMC / PANGAEA",
+      "repository": [
+        "IRIS",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Seismic refraction data recorded on 36 OBS/OBH and 10 land stations along 445 km E-W transect at ~27°S. Data used for P-wave travel time tomography.",
       "data_type": "seismic_refraction_obs"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "SO297 multibeam bathymetry raw data (Kongsberg EM 122)",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.968533",
+      "doi": "10.1594/PANGAEA.968533",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "backscatter",
+      "name": "SO297 water column raw data (Kongsberg EM 122)",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.968534",
+      "doi": "10.1594/PANGAEA.968534",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Seismic processed data (Ocean Bottom Seismometer working area dataset) of RV SONNE during cruise SO297, Copiapó Ridge, Chile",
+      "classification": "RAW",
+      "format": [
+        "SGY"
+      ],
+      "url": "https://doi.org/10.1594/PANGAEA.969150",
+      "doi": "10.1594/PANGAEA.969150",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": 12.188,
+      "access": "open",
+      "download_command": null,
+      "description": "The data comprises processed active-source seismic data acquired with ocean bottom seismometer (OBS). The data were collected at the Copiapó Ridge during expedition SO297 with the research vessel RV SONNE (doi:10.48433/cr_so297) offshore Copiapó, north-central Chile (map for further details). The entire data set consists of 26 OBS stations. Seismic data were shot across the OBS along one profile. Each OBS consists of 4 channels (channel 1: hydrophone; channel 2: horizontal component 1; channel 3: horizontal component 2; channel 4: vertical component).",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Seismic processed data (Ocean Bottom Hydrophone working area dataset) of RV SONNE during cruise SO297, Copiapó Ridge, Chile",
+      "classification": "RAW",
+      "format": [
+        "SGY"
+      ],
+      "url": "https://doi.org/10.1594/PANGAEA.969551",
+      "doi": "10.1594/PANGAEA.969551",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": 1.172,
+      "access": "open",
+      "download_command": null,
+      "description": "The data comprise processed active-source seismic data acquired with ocean bottom hydrophone (OBH). The data were collected at the Copiapó Ridge during expedition SO297 with the research vessel RV SONNE (doi:10.48433/cr_so297) offshore Copiapó, north-central Chile (map for further details). The entire data set consists of 10 OBH stations. Seismic data were shot across the OBH along one profile. Each OBH consists of 1 channel (hydrophone).",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Seismic processed data (Onshore Seismometer working area dataset) of project PISAGUA, Atacama Desert near Copiapó, Chile",
+      "classification": "RAW",
+      "format": [
+        "SGY"
+      ],
+      "url": "https://doi.org/10.1594/PANGAEA.969552",
+      "doi": "10.1594/PANGAEA.969552",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": 2.208,
+      "access": "open",
+      "download_command": null,
+      "description": "The data comprises processed active-source seismic data acquired with land seismometers. The data were collected in the Atacama Desert in connection with expedition SO297 with the research vessel RV SONNE (doi:10.48433/cr_so297) offshore Copiapó, north-central Chile (map for further details). The entire data set consists of 10 land seismometer stations. Seismic data were shot offshore in one profile. Each land station consists of 3 channels (channel 1: horizontal component 1; channel 2: horizontal component 2; channel 3: vertical component).",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Seismic processed data (Ocean Bottom Hydrophone working area dataset) of RV SONNE during cruise SO297, Taltal Ridge, Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.984419",
+      "doi": "10.1594/PANGAEA.984419",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": 1.605,
+      "access": "open",
+      "download_command": null,
+      "description": "The data comprises processed active-source seismic data acquired with ocean bottom hydrophones (OBH). The data were collected at the Taltal Ridge during expedition SO297 with the research vessel RV SONNE (doi:10.48433/cr_so297) offshore Taltal, north-central Chile (map for further details). The entire data set consists of 16 OBH stations. Seismic data were shot across the OBH along one profile. Each OBH consists of 1 channel (hydrophone).",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Seismic processed data (Ocean Bottom Seismometer working area dataset) of RV SONNE during cruise SO297, Taltal Ridge, Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.984420",
+      "doi": "10.1594/PANGAEA.984420",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "The data comprises processed active-source seismic data acquired with ocean bottom seismometer (OBS). The data were collected at the Taltal Ridge during expedition SO297 with the research vessel RV SONNE (doi:10.48433/cr_so297) offshore Taltal, north-central Chile (map for further details). The entire data set consists of 27 OBS stations. Seismic data were shot across the OBS along one profile. Each OBS consists of 4 channels (channel 1: hydrophone; channel 2: horizontal component 1; channel 3: horizontal component 2; channel 4: vertical component).",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Seismic processed data (Onshore Seismometer working area dataset) of project PISAGUA, Atacama Desert near Taltal, Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.984421",
+      "doi": "10.1594/PANGAEA.984421",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "The data comprises processed active-source seismic data acquired with land seismometers. The data were collected in the Atacama Desert in connection with expedition SO297 with the research vessel RV SONNE (doi:10.48433/cr_so297) offshore Taltal, north-central Chile (map under further details). The entire data set consists of 13 land seismometers. Seismic data were shot offshore in one profile. Each land station consists of 3 channels (channel 1: horizontal component 1; channel 2: horizontal component 2; channel 3: vertical component).",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -88,10 +236,14 @@
       "5. Seismicity catalogue compilation from passive recording",
       "6. Integration of velocity model with seismicity to define subduction geometry"
     ],
-    "software": [],
-    "notes": "Amphibious experiment: 36 OBS/OBH + 10 land stations. Passive seismicity catalogue compiled during deployment period."
+    "software": [
+      "PasteUp (Fujie et al., 2008)",
+      "Seismic Unix"
+    ],
+    "notes": "Amphibious experiment: 36 OBS/OBH + 10 land stations. 12 G-gun array (89 L = 5431 cui), 2089 shots at 60 s intervals (~120 m spacing), towed at 8 m depth. Passive seismicity catalogue compiled during deployment period (December 2022–June 2023)."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Full paper accessed via OpenAlex (CC-BY). Abstract reconstructed from available metadata. Data not yet deposited in a public repository as of analysis date; paper is from 2025. Acquisition year estimated based on SO297 cruise context."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF (CC-BY open access). 8 authors confirmed correct. vessel updated to R/V SONNE (SO297). year_acquired corrected 2022→2023 (marine expedition was February–April 2023; land stations deployed December 2022–June 2023). source_volume_cui=5431 (12 G-guns, 89 L total). Software: PasteUp for picking + Seismic Unix. Data not yet deposited in a public repository as of April 2026.",
+  "tectonic_setting": "erosional"
 }

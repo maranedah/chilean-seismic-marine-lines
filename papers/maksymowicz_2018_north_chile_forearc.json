@@ -59,10 +59,16 @@
     {
       "name": "Published seismic reflection profiles and velocity models (18°–23.5°S, north Chile)",
       "classification": "PROCESSED",
-      "format": "ASCII / model output",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "Published literature (CINCA, BGR, GEOMAR)",
+      "repository": [
+        "CINCA",
+        "BGR",
+        "GEOMAR"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -86,5 +92,11 @@
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "medium",
-  "analysis_notes": "Paper behind paywall in GJI; no open access version found. Abstract reconstructed from survey snippet and Semantic Scholar metadata. Primarily a modelling study using published seismic data as input. No new seismic surveys reported. Bonvalot (IRD, France) co-authorship confirms French-Chilean collaboration."
+  "analysis_notes": "Paper behind paywall in GJI; no open access version found. Abstract reconstructed from survey snippet and Semantic Scholar metadata. Primarily a modelling study using published seismic data as input. No new seismic surveys reported. Bonvalot (IRD, France) co-authorship confirms French-Chilean collaboration.",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Arequipa 2001 Mw8.4",
+    "Iquique 2014 Mw8.2",
+    "Tocopilla 2007 Mw7.7"
+  ]
 }

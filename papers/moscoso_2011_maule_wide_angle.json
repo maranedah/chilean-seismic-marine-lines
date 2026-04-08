@@ -43,56 +43,70 @@
     },
     "seismic_lines": [
       {
-        "name": "OBS Wide-angle Profile at ~34°S",
-        "lat_start": -34.0,
-        "lon_start": -75.0,
-        "lat_end": -34.0,
-        "lon_end": -72.0,
-        "length_km": null
-      },
-      {
-        "name": "OBS Wide-angle Profile at ~35°S",
-        "lat_start": -35.0,
+        "name": "JC23 amphibious profile — ~34.5°S, ~300 km, March 2008 (25 OBS/OBH + 5 land stations)",
+        "lat_start": -34.5,
         "lon_start": -75.5,
-        "lat_end": -35.0,
+        "lat_end": -34.5,
         "lon_end": -72.0,
-        "length_km": null
-      },
-      {
-        "name": "OBS Wide-angle Profile at ~36°S",
-        "lat_start": -36.0,
-        "lon_start": -75.5,
-        "lat_end": -36.0,
-        "lon_end": -72.0,
-        "length_km": null
+        "length_km": 300
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
-    "year_acquired": 2010,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "vessel": [
+      "RRS James Cook"
+    ],
+    "year_acquired": 2008,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 11200,
     "streamer_length_m": null,
-    "channel_count": null,
+    "channel_count": 25,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "JC23, March 2008"
+    ],
+    "shot_interval_m": 150.0,
+    "depth_penetration_km": 15.0
   },
   "data": [
     {
       "name": "Wide-angle OBS seismic refraction profiles, Maule earthquake rupture zone (34°–36°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep / internal",
+      "repository": [
+        "GEOMAR OceanRep",
+        "internal"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "Wide-angle OBS seismic refraction data from multiple profiles across the 2010 Maule earthquake rupture zone (34°–36°S). Used for P-wave tomography of the seismogenic zone structure.",
       "data_type": "seismic_refraction_obs"
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Ocean bottom seismometer and ocean bottom hydrophone sgy-files of seismic refraction and wide angle data from profile P03 from James Cook cruise JC23 with links to data files",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.782435",
+      "doi": "10.1594/PANGAEA.782435",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -107,10 +121,16 @@
       "6. MCS reflection interpretation (backstop identification)",
       "7. Integration with 2010 Maule earthquake aftershock seismicity"
     ],
-    "software": [],
-    "notes": "Post-Maule earthquake rapid response survey. Data acquired in 2010 offshore south-central Chile."
+    "software": [
+      "TOMO2D (Korenaga et al., 2000)"
+    ],
+    "notes": "Data acquired March 2008 (JC23) - PRE-Maule earthquake. 4 tuned arrays × 3 airguns + 2 single airguns = 14 airguns total, 11,200 in³. Shot interval 60 s at 5 knots = ~150 m spacing. 30 instruments total (25 OBS/OBH + 5 land stations). Profile at ~34.5°S, ~300 km long."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. Acquisition year estimated as 2010 (post-Maule earthquake rapid response). Grevemeyer and Flueh (GEOMAR) suggest R/V SONNE. Rabbel and Thorwart (Kiel University) co-authorship confirms German collaboration."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. 7 authors confirmed. DOI confirmed. CRITICAL: vessel: 'R/V SONNE' → 'R/V James Cook (JC23, March 2008)' (British vessel). year_acquired: 2010 → 2008 (pre-Maule earthquake; earthquake occurred 2010 but data was from March 2008). source_volume_cui: null → 11200 (4×3 airguns + 2 single = 11,200 in³). channel_count: null → 25 (OBS/OBH). software: TOMO2D. Single profile at ~34.5°S ~300 km. seismic_lines corrected from 3 profiles to 1 profile.",
+  "tectonic_setting": "accretionary",
+  "associated_earthquakes": [
+    "Tocopilla 2007 Mw7.7"
+  ]
 }

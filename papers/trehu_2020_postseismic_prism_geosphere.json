@@ -1,15 +1,34 @@
 {
   "id": "trehu_2020_postseismic_prism_geosphere",
   "title": "Post-seismic response of the outer accretionary prism after the 2010 Maule earthquake, Chile",
-  "authors": ["Tréhu, Anne M.", "de Moor, Alexander", "Mieres Madrid, José", "Sáez, Miguel", "Chadwell, C.D.", "Ortega-Culaciati, Francisco", "Ruiz, Javier", "Ruiz, Sergio", "Tryon, Michael D."],
+  "authors": [
+    "Tréhu, Anne M.",
+    "de Moor, Alexander",
+    "Mieres Madrid, José",
+    "Sáez, Miguel",
+    "Chadwell, C.D.",
+    "Ortega-Culaciati, Francisco",
+    "Ruiz, Javier",
+    "Ruiz, Sergio",
+    "Tryon, Michael D."
+  ],
   "year": 2020,
   "journal": "Geosphere",
-  "doi": "10.1130/GES02168.1",
+  "doi": "10.1130/GES02102.1",
   "url": "https://pubs.geoscienceworld.org/gsa/geosphere/article/16/1/13/579597/",
-  "open_access_url": null,
+  "open_access_url": "https://pubs.geoscienceworld.org/gsa/geosphere/article-pdf/16/1/13/4925314/13.pdf",
   "abstract": "Ten ocean-bottom seismometers were deployed from May 2012 to March 2013 in the outer accretionary prism updip from the greatest slip of the 2010 Maule earthquake. Transient seafloor pressure changes were observed on absolute pressure gauges with polarity changes suggesting shallow source depths, and their duration of hours to days was shorter than most geodetic transients from onshore GPS networks.",
-  "keywords": ["OBS", "passive seismic", "Maule earthquake", "postseismic", "central Chile", "35°S", "accretionary prism", "pressure gauges", "2012–2013"],
-
+  "keywords": [
+    "OBS",
+    "passive seismic",
+    "Maule earthquake",
+    "postseismic",
+    "central Chile",
+    "35°S",
+    "accretionary prism",
+    "pressure gauges",
+    "2012–2013"
+  ],
   "location": {
     "latitude": -35.0,
     "longitude": -73.5,
@@ -18,49 +37,160 @@
     "country": "Chile",
     "description": "Outer accretionary prism offshore central Chile (~35°S); OBS passive deployment monitoring post-Maule earthquake deformation",
     "bounding_box": {
-      "lat_min": -36.0, "lat_max": -34.0,
-      "lon_min": -74.5, "lon_max": -72.5
+      "lat_min": -36.0,
+      "lat_max": -34.0,
+      "lon_min": -74.5,
+      "lon_max": -72.5
     },
     "seismic_lines": [
       {
         "name": "10-OBS passive array — outer accretionary prism ~35°S (May 2012–March 2013)",
-        "lat_start": -34.5, "lon_start": -73.5,
-        "lat_end": -35.5, "lon_end": -74.0,
-        "length_km": 150
+        "lat_start": -34.5,
+        "lon_start": -73.5,
+        "lat_end": -35.5,
+        "lon_end": -74.0,
+        "length_km": 150,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V Melville (AT26-09 cruise, 2012) and recovery cruise (2013)",
+    "vessel": [
+      "R/V Atlantis"
+    ],
     "year_acquired": 2012,
-    "source_type": "passive seismic (OBS with pressure gauges)",
+    "source_type": [
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "AT26-09, ChilePEPPER, May 2012"
+    ],
+    "obs_spacing_km": 25.0,
+    "frequency_range_hz": [
+      0.1,
+      1.0
+    ]
   },
-
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "Maule Post-Seismic OBS Passive Array — Outer Accretionary Prism ~35°S (2012–2013)",
       "classification": "RAW",
-      "format": "MSEED",
+      "format": [
+        "miniSEED"
+      ],
       "url": null,
       "doi": null,
-      "repository": "IRIS",
+      "repository": [
+        "IRIS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "10 OBS with absolute pressure gauges deployed May 2012–March 2013 in the outer accretionary prism at ~35°S; monitors post-seismic deformation and transient pressure changes after the 2010 Maule earthquake"
+    },
+    {
+      "data_type": "magnetics",
+      "name": "Backscatter:Optical, Magnetic:Field, Navigation, Oxygen, Temperature",
+      "classification": "RAW",
+      "format": [
+        "ASCII:SCC"
+      ],
+      "url": "https://www.marine-geo.org/tools/files/31958",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Bathymetry",
+      "classification": "RAW",
+      "format": [
+        "ASCII:ESRI",
+        "NetCDF:Grid",
+        "PDF"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=31954,31955,31956",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during R/V Atlantis expedition AT26-09 (2013)",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation",
+      "classification": "RAW",
+      "format": [
+        "ASCII:PPL"
+      ],
+      "url": "https://www.marine-geo.org/tools/files/31959",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "PROCESSED",
+      "format": [
+        "R2R:Nav"
+      ],
+      "url": "https://doi.org/10.7284/602886",
+      "doi": "10.7284/602886",
+      "repository": [
+        "R2R"
+      ],
+      "size_gb": 0.0928,
+      "access": "open",
+      "download_command": null,
+      "description": "Fileset 602886 (r2rnav data) from cruise AT26-09",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "unknown",
+      "name": "Sidescan",
+      "classification": "RAW",
+      "format": [
+        "GEOTIFF",
+        "JPEG"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=31957,31961",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during R/V Atlantis expedition AT26-09 (2013)",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "Passive OBS deployment (no active source). Data may be at IRIS/EarthScope. AT26-09 cruise (same as Tréhu 2019).",
-
   "processing": {
     "classification": "RAW",
     "summary": "Ten ocean-bottom seismometers equipped with absolute pressure gauges were deployed from May 2012 to March 2013 in the outer accretionary prism updip from maximum Maule earthquake slip (~35°S). The passive records document transient pressure changes on timescales of hours to days, interpreted as shallow post-seismic deformation. No active seismic source used.",
@@ -71,11 +201,16 @@
       "4. Event detection and characterization",
       "5. Source location analysis"
     ],
-    "software": ["unknown"],
+    "software": [
+      "unknown"
+    ],
     "notes": "Passive OBS study; companion to Tréhu et al. 2019 MCS survey in same area"
   },
-
-  "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Geosphere paper; behind paywall. Passive OBS data possibly at IRIS. No active-source MCS in this paper."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. CRITICAL DOI corrected: GES02168.1 → GES02102.1 (confirmed from paper header). Paper is OPEN ACCESS (CC-BY-NC). vessel: R/V Melville → R/V Atlantis (AT26-09, ChilePEPPER, May 2012). 9 authors confirmed correct. 10 OBS deployed (4 with intermediate-band 3C seismometers + DPG; 5 with APG only), 7-10 km spacing, deployed May 2012–March 2013. Also equipped with CAT meters (Tryon et al. 2001) for fluid flow detection.",
+  "tectonic_setting": "accretionary",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8"
+  ]
 }

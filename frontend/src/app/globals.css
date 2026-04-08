@@ -7,3 +7,26 @@
   height: 100%;
   width: 100%;
 }
+
+/* Allow images and flex layout inside tooltips */
+.leaflet-tooltip {
+  white-space: normal !important;
+  max-width: none !important;
+}
+
+.paper-tooltip {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.paper-tooltip .paper-tooltip-inner {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 10px;
+  font-family: sans-serif;
+  width: 320px;
+}

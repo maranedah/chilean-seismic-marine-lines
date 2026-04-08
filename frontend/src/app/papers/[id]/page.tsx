@@ -11,6 +11,100 @@ import Section from '@/atoms/Section'
 import DatasetItem from '@/molecules/DatasetItem'
 import Spinner from '@/atoms/Spinner'
 
+interface FigureEntry {
+  filename: string
+  path: string
+  page: number
+  type: string
+  figure_label: string | null
+  caption: string | null
+  description: string | null
+}
+
+interface FiguresManifest {
+  paper_id: string
+  total_figures: number
+  figures: FigureEntry[]
+}
+
+async function fetchFigures(id: string): Promise<FiguresManifest | null> {
+  try {
+    const res = await fetch(`/images/${id}/figures.json`)
+    if (!res.ok) return null
+    return res.json()
+  } catch {
+    return null
+  }
+}
+
+function GalleryImage({ figure, paperId }: { figure: FigureEntry; paperId: string }) {
+  const [expanded, setExpanded] = useState(false)
+  const src = `/images/${paperId}/${figure.filename}`
+
+  return (
+    <>
+      <div
+        className="group cursor-zoom-in rounded-lg overflow-hidden border border-gray-100 bg-gray-50 hover:border-blue-300 hover:shadow-md transition-all"
+        onClick={() => setExpanded(true)}
+      >
+        <img
+          src={src}
+          alt={figure.figure_label ?? figure.filename}
+          className="w-full object-cover"
+          style={{ height: 160 }}
+        />
+        {(figure.figure_label || figure.type) && (
+          <div className="px-2.5 py-2 border-t border-gray-100">
+            <div className="flex items-center justify-between gap-2">
+              {figure.figure_label && (
+                <span className="text-xs font-medium text-gray-700 truncate">
+                  {figure.figure_label}
+                </span>
+              )}
+              {figure.type && (
+                <span className="text-xs text-gray-400 shrink-0 capitalize">{figure.type.replace('_', ' ')}</span>
+              )}
+            </div>
+            {figure.description && (
+              <p className="text-xs text-gray-500 mt-1 line-clamp-2">{figure.description}</p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {expanded && (
+        <div
+          className="fixed inset-0 z-[9999] bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setExpanded(false)}
+        >
+          <div
+            className="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100">
+              <span className="font-semibold text-gray-800 text-sm">
+                {figure.figure_label ?? figure.filename}
+              </span>
+              <button
+                onClick={() => setExpanded(false)}
+                className="text-gray-400 hover:text-gray-700 text-lg leading-none"
+              >
+                ✕
+              </button>
+            </div>
+            <img src={src} alt={figure.figure_label ?? ''} className="w-full" />
+            {figure.caption && (
+              <div className="px-5 py-4 border-t border-gray-100">
+                <p className="text-xs text-gray-600 leading-relaxed">{figure.caption}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
+
 const CLASS_VARIANT: Record<string, BadgeVariant> = {
   RAW: 'info',
   SEMI_PROCESSED: 'warning',
@@ -35,6 +129,12 @@ export default function PaperDetailPage() {
   } = useQuery({
     queryKey: ['paper', id],
     queryFn: () => fetchPaper(id),
+    enabled: !!id,
+  })
+
+  const { data: figuresManifest } = useQuery({
+    queryKey: ['figures', id],
+    queryFn: () => fetchFigures(id),
     enabled: !!id,
   })
 
@@ -169,6 +269,16 @@ export default function PaperDetailPage() {
           </Section>
         )}
 
+        {figuresManifest && figuresManifest.figures.length > 0 && (
+          <Section title={`Gallery (${figuresManifest.figures.length})`}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+              {figuresManifest.figures.map((fig) => (
+                <GalleryImage key={fig.filename} figure={fig} paperId={id} />
+              ))}
+            </div>
+          </Section>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {paper.location && (
             <Section title="Location">
@@ -185,6 +295,17 @@ export default function PaperDetailPage() {
                 <Field label="Region" value={paper.location.region} />
                 <Field label="Country" value={paper.location.country} />
                 <Field label="Description" value={paper.location.description} />
+                <Field label="Tectonic setting" value={paper.tectonic_setting} />
+                {paper.associated_earthquakes?.length > 0 && (
+                  <div>
+                    <p className="text-xs font-medium text-gray-500 mb-1">Associated earthquakes</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {paper.associated_earthquakes.map((eq, i) => (
+                        <span key={i} className="text-xs bg-red-50 text-red-700 border border-red-100 px-2 py-0.5 rounded-full">{eq}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {paper.location.seismic_lines.length > 0 && (
                   <div className="pt-2">
                     <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">
@@ -196,7 +317,17 @@ export default function PaperDetailPage() {
                           key={i}
                           className="text-xs bg-gray-50 rounded p-2 border border-gray-100"
                         >
-                          <p className="font-medium text-gray-800">{line.name}</p>
+                          <div className="flex items-center justify-between gap-2">
+                            <p className="font-medium text-gray-800">{line.name}</p>
+                            <div className="flex gap-1 shrink-0">
+                              {line.profile_orientation && (
+                                <span className="text-gray-400 italic">{line.profile_orientation}</span>
+                              )}
+                              {line.depth_km != null && (
+                                <span className="text-gray-400">· {line.depth_km} km deep</span>
+                              )}
+                            </div>
+                          </div>
                           <p className="text-gray-500 mt-0.5">
                             ({line.lat_start}, {line.lon_start}) → ({line.lat_end},{' '}
                             {line.lon_end})
@@ -214,9 +345,10 @@ export default function PaperDetailPage() {
           {paper.acquisition && (
             <Section title="Acquisition">
               <div className="space-y-2">
-                <Field label="Vessel" value={paper.acquisition.vessel} />
+                <Field label="Vessel" value={paper.acquisition.vessel?.join(', ')} />
+                <Field label="Expeditions" value={paper.acquisition.expeditions?.join('; ')} />
                 <Field label="Year acquired" value={paper.acquisition.year_acquired} />
-                <Field label="Source type" value={paper.acquisition.source_type} />
+                <Field label="Source type" value={paper.acquisition.source_type?.join(', ')} />
                 <Field
                   label="Source volume"
                   value={
@@ -251,6 +383,34 @@ export default function PaperDetailPage() {
                   }
                 />
                 <Field label="Fold" value={paper.acquisition.fold} />
+                <Field
+                  label="Shot interval"
+                  value={paper.acquisition.shot_interval_m != null ? `${paper.acquisition.shot_interval_m} m` : undefined}
+                />
+                <Field
+                  label="Group interval"
+                  value={paper.acquisition.group_interval_m != null ? `${paper.acquisition.group_interval_m} m` : undefined}
+                />
+                <Field
+                  label="OBS spacing"
+                  value={paper.acquisition.obs_spacing_km != null ? `${paper.acquisition.obs_spacing_km} km` : undefined}
+                />
+                <Field
+                  label="Nearest offset"
+                  value={paper.acquisition.nearest_offset_m != null ? `${paper.acquisition.nearest_offset_m} m` : undefined}
+                />
+                <Field
+                  label="Frequency range"
+                  value={
+                    paper.acquisition.frequency_range_hz
+                      ? `${paper.acquisition.frequency_range_hz[0]}–${paper.acquisition.frequency_range_hz[1]} Hz`
+                      : undefined
+                  }
+                />
+                <Field
+                  label="Depth penetration"
+                  value={paper.acquisition.depth_penetration_km != null ? `${paper.acquisition.depth_penetration_km} km` : undefined}
+                />
               </div>
             </Section>
           )}
@@ -268,6 +428,8 @@ export default function PaperDetailPage() {
                     <th className="pb-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Type</th>
                     <th className="pb-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Format</th>
                     <th className="pb-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Repository</th>
+                    <th className="pb-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Size</th>
+                    <th className="pb-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">CDP Spacing</th>
                     <th className="pb-2 pr-4 text-xs font-semibold text-gray-500 uppercase tracking-wide">Status</th>
                     <th className="pb-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Download</th>
                   </tr>
@@ -306,6 +468,12 @@ export default function PaperDetailPage() {
                     ))}
                   </ol>
                 </div>
+              )}
+              {paper.processing.migration_type && (
+                <p className="text-sm text-gray-600">
+                  <span className="font-medium">Migration: </span>
+                  {paper.processing.migration_type}
+                </p>
               )}
               {paper.processing.software.length > 0 && (
                 <p className="text-sm text-gray-600">

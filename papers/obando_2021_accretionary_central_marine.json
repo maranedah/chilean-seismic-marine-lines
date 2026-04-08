@@ -44,7 +44,8 @@
         "lon_start": -73.5,
         "lat_end": -35.0,
         "lon_end": -72.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       },
       {
         "name": "Refraction Line 2",
@@ -52,7 +53,8 @@
         "lon_start": -73.5,
         "lat_end": -35.3,
         "lon_end": -72.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       },
       {
         "name": "Refraction Line 3",
@@ -60,7 +62,8 @@
         "lon_start": -73.5,
         "lat_end": -35.6,
         "lon_end": -72.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       },
       {
         "name": "Refraction Line 4",
@@ -68,7 +71,8 @@
         "lon_start": -73.5,
         "lat_end": -35.9,
         "lon_end": -72.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       },
       {
         "name": "Refraction Line 5",
@@ -76,30 +80,40 @@
         "lon_start": -73.5,
         "lat_end": -36.2,
         "lon_end": -72.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": null,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "shot_interval_m": 20.0
   },
   "data": [
     {
       "name": "Five OBS seismic refraction lines, central Chile accretionary prism",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "Unknown / internal",
+      "repository": [
+        "internal"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -123,5 +137,9 @@
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "medium",
-  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from Semantic Scholar summary and survey snippet. Seismic line coordinates are approximate (grid spacing not confirmed from paper). No public data repository identified."
+  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from Semantic Scholar summary and survey snippet. Seismic line coordinates are approximate (grid spacing not confirmed from paper). No public data repository identified.",
+  "tectonic_setting": "accretionary",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8"
+  ]
 }

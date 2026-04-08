@@ -2,13 +2,16 @@
   "id": "flueh_2006_geophysical_signatures_south_central_springer",
   "title": "Geophysical Signatures and Active Tectonics at the South-Central Chilean Margin",
   "authors": [
-    "Flueh, Ernst R.",
-    "Voss, N.K.",
-    "Krawczyk, C.M.",
-    "Oncken, O.",
-    "Koulakov, I.",
-    "Schick, R.",
-    "Stiller, M."
+    "Krawczyk, Charlotte M.",
+    "Mechie, James",
+    "Lüth, Stefan",
+    "Tašárová, Zuzana",
+    "Wigger, Peter",
+    "Stiller, Manfred",
+    "Brasse, Heinrich",
+    "Echtler, Helmut P.",
+    "Araneda, Manuel",
+    "Bataille, Klaus"
   ],
   "year": 2006,
   "journal": "The Andes: Frontiers in Earth Sciences (Springer)",
@@ -42,36 +45,79 @@
     },
     "seismic_lines": [
       {
-        "name": "SPOC SO161 MCS and OBH profiles — 36°–40°S",
+        "name": "SPOC-South offshore (line 3842) — 38.2°S, 22 OBS/OBH + 26 onshore receivers (SO161)",
+        "lat_start": -38.2,
+        "lon_start": -76.5,
+        "lat_end": -38.2,
+        "lon_end": -71.5,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "SPOC-Middle — amphibious + onshore only (~37.25°S, SO161)",
+        "lat_start": -37.25,
+        "lon_start": -76.0,
+        "lat_end": -37.25,
+        "lon_end": -72.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "SPOC-North — amphibious + onshore only (~36°S, SO161)",
         "lat_start": -36.0,
         "lon_start": -76.0,
-        "lat_end": -40.0,
-        "lon_end": -74.0,
-        "length_km": 500
+        "lat_end": -36.0,
+        "lon_end": -72.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "ISSA-2000 — onshore refraction/reflection (~38.9°S, explosives, 52 receivers)",
+        "lat_start": -38.9,
+        "lon_start": -73.5,
+        "lat_end": -38.9,
+        "lon_end": -71.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161, SPOC 2001) and land stations (ISSA 2000)",
+    "vessel": [
+      "R/V SONNE",
+      "Land-based network"
+    ],
     "year_acquired": 2001,
-    "source_type": "airgun array (offshore) and explosive shots (onshore)",
+    "source_type": [
+      "explosive shots",
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, 2001",
+      "ISSA-2000, 2000"
+    ],
+    "depth_penetration_km": 25.0
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "SPOC SO161 MCS Reflection Profiles — South-Central Chile 36°–40°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -81,10 +127,14 @@
       "data_type": "seismic_refraction_obs",
       "name": "SPOC SO161 OBH/OBS Wide-Angle Data — South-Central Chile",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -94,10 +144,14 @@
       "data_type": "bathymetry",
       "name": "SPOC SO161 Swath Bathymetry — South-Central Chile",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -113,12 +167,13 @@
       "2. Synthesis and geophysical interpretation"
     ],
     "software": [
-      "GMT",
-      "unknown"
+      "RAYINVR (Zelt and Smith 1992)",
+      "IGMAS"
     ],
     "notes": "Springer review chapter; SPOC SO161 data accessible via MGDS"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Springer book chapter; behind paywall. SPOC SO161 data at MGDS. ISSA 2000 land data not in public marine repositories."
+  "analysis_notes": "Validated against PDF (Chapter 8, Krawczyk et al., not Flueh et al.). Authors completely corrected: was Flueh/Voss/Krawczyk/Oncken/Koulakov/Schick/Stiller → Krawczyk/Mechie/Lüth/Tašárová/Wigger/Stiller/Brasse/Echtler/Araneda/Bataille. Vessel updated: 'R/V SONNE (SO161, SPOC, 2001)'. Seismic profiles named: SPOC-South (line 3842 offshore, 22 OBS/OBH + 26 onshore receivers), SPOC-Middle (~37.25°S), SPOC-North (~36°S), ISSA-2000 (~38.9°S, explosives + 52 receivers onshore). Software corrected: GMT/unknown → RAYINVR (Zelt & Smith 1992) + IGMAS. Grant: 03G0161 (BMBF) + SFB 267. source_volume_cui not stated in chapter.",
+  "tectonic_setting": "accretionary"
 }

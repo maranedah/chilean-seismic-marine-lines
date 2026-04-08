@@ -6,7 +6,7 @@
     "Grevemeyer, Ingo",
     "Flueh, Ernst R.",
     "Scherwath, Martin",
-    "Bialas, Joerg"
+    "Heesemann, Martin"
   ],
   "year": 2007,
   "journal": "Geochemistry, Geophysics, Geosystems",
@@ -40,44 +40,56 @@
     },
     "seismic_lines": [
       {
-        "name": "SPOC/TIPTEQ outer rise refraction profile P1 (~43°S)",
+        "name": "TIPTEQ Profile P05 — OBS wide-angle refraction (~43°S, 280 km from Chile Rise)",
         "lat_start": -43.0,
         "lon_start": -78.0,
         "lat_end": -43.0,
         "lon_end": -74.0,
-        "length_km": 350
+        "length_km": 280
       },
       {
-        "name": "SPOC/TIPTEQ outer rise refraction profile P2 (~43°S)",
-        "lat_start": -43.2,
+        "name": "TIPTEQ SCS01 — coincident high-res reflection line (~43°S)",
+        "lat_start": -43.0,
         "lon_start": -78.0,
-        "lat_end": -43.2,
+        "lat_end": -43.0,
         "lon_end": -74.0,
-        "length_km": 350
+        "length_km": 280
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC and SO181 TIPTEQ cruises)",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2004,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3906,
+    "streamer_length_m": 100,
+    "channel_count": 16,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO181, TIPTEQ, Dec 2004–Feb 2005"
+    ],
+    "shot_interval_m": 150.0
   },
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "SPOC/TIPTEQ Wide-Angle OBS Refraction Data — Outer Rise ~43°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -87,10 +99,14 @@
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — South Chile Outer Rise",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -100,10 +116,14 @@
       "data_type": "gravity",
       "name": "Shipboard Gravity — South Chile Outer Rise",
       "classification": "RAW",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -123,12 +143,12 @@
       "6. Sensitivity analysis and resolution tests"
     ],
     "software": [
-      "RAYINVR",
       "TOMO2D"
     ],
     "notes": "Two profiles reported; Vp models derived from OBS travel-time inversion document serpentinization gradient in uppermost mantle"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access PDF available via AGU/Wiley direct link. Data from SPOC SO161 and TIPTEQ SO181 cruises. MGDS has records for both cruises."
+  "analysis_notes": "Validated against PDF. Author corrected: Bialas removed, Heesemann (Martin, Univ. Bremen) added. Vessel corrected to SO181 TIPTEQ (Dec 2004–Feb 2005); year_acquired 2001→2004. Profile name corrected to P05 (+ coincident SCS01). source_volume_cui=3906 (8×8 L G-guns = 64 L for wide-angle). SCS: 100m 16-ch streamer, 1.5 L GI gun. RAYINVR removed (paper uses Korenaga et al. 2000 = TOMO2D). 38 OBH/OBS deployed at 5.5 km spacing.",
+  "tectonic_setting": "erosional"
 }

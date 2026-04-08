@@ -3,7 +3,7 @@
   "title": "3D simultaneous seismic refraction and reflection tomography of wide-angle data from the Central Chilean Margin",
   "authors": [
     "Zelt, Colin A.",
-    "Hojka, A.M.",
+    "Hojka, André M.",
     "Flueh, Ernst R.",
     "McIntosh, Kirk D."
   ],
@@ -49,26 +49,43 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104, CINCA95, 1995)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95/CONDOR, 1995"
+    ],
+    "depth_penetration_km": 25.0,
+    "frequency_range_hz": [
+      2.0,
+      15.0
+    ]
   },
   "data": [
     {
       "data_type": "obh",
       "name": "CINCA95 OBH 3D Wide-Angle Array — Central Chile ~32°S",
       "classification": "RAW",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -78,27 +95,40 @@
       "data_type": "seismic_reflection_mcs",
       "name": "CINCA95 MCS Profiles — Central Chile ~32°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Coincident MCS reflection data used as constraints in the 3D tomographic inversion. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
     },
     {
+      "dataset_ref": "cinca95_bathymetry",
       "data_type": "bathymetry",
-      "name": "CINCA95 Swath Bathymetry — Central Chile",
+      "notes": "Multibeam bathymetry from SO104 used to define seafloor geometry for tomographic modeling. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
       "classification": "RAW",
-      "format": "NetCDF",
-      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893033",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
       "doi": "10.1594/PANGAEA.893033",
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
-      "description": "Multibeam bathymetry from SO104 used to define seafloor geometry for tomographic modeling. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "Uses same CINCA95 (SO104) OBH dataset as Flueh et al. 1998. First 3D tomographic inversion for this margin.",
@@ -117,7 +147,8 @@
     ],
     "notes": "First 3D tomographic inversion for the Chilean margin; short GRL letter"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "GRL paper, behind paywall. CINCA95 SO104 data accessible via MGDS. Companion to Flueh et al. 1998."
+  "analysis_notes": "Validated against PDF. 4 authors confirmed. Hojka first name expanded to 'André M.' from PDF title page. vessel updated to R/V SONNE (SO104, CINCA95/CONDOR, 1995). Data: 10 OBH deployed (7 recovered, 3 instrument failures), 10 airgun profiles, 90×90 km 3D survey area at ~32°S. First 3D simultaneous refraction-reflection tomography of Chilean margin. Companion to Flueh et al. 1998.",
+  "tectonic_setting": "accretionary"
 }

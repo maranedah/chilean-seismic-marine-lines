@@ -102,6 +102,7 @@ export default function FilterBar({ filters, onChange, options }: Props) {
     filters.year_min ||
     filters.year_max ||
     filters.access ||
+    filters.paper_access ||
     filters.classification
   )
   const hasAdv = hasAdvancedFilters(filters)
@@ -110,7 +111,6 @@ export default function FilterBar({ filters, onChange, options }: Props) {
     filters.keyword,
     filters.data_types?.length,
     filters.data_format,
-    filters.repository,
     filters.vessel,
     filters.source_type,
     filters.acq_year_min,
@@ -166,12 +166,21 @@ export default function FilterBar({ filters, onChange, options }: Props) {
         </div>
 
         <div className="min-w-[120px]">
-          <Label>Data access</Label>
+          <Label>Dataset access</Label>
           <SelectInput value={filters.access ?? ''} onChange={(v) => set('access', v || undefined)}>
             <option value="">All</option>
             <option value="open">Open</option>
             <option value="restricted">Restricted</option>
             <option value="unknown">Unknown</option>
+          </SelectInput>
+        </div>
+
+        <div className="min-w-[120px]">
+          <Label>Paper access</Label>
+          <SelectInput value={filters.paper_access ?? ''} onChange={(v) => set('paper_access', v || undefined)}>
+            <option value="">All</option>
+            <option value="open">Open</option>
+            <option value="restricted">Restricted</option>
           </SelectInput>
         </div>
 
@@ -182,6 +191,16 @@ export default function FilterBar({ filters, onChange, options }: Props) {
             <option value="RAW">RAW</option>
             <option value="SEMI_PROCESSED">Semi-processed</option>
             <option value="PROCESSED">Processed</option>
+          </SelectInput>
+        </div>
+
+        <div className="min-w-[160px]">
+          <Label>Repository</Label>
+          <SelectInput value={filters.repository ?? ''} onChange={(v) => set('repository', v || undefined)}>
+            <option value="">All repositories</option>
+            {options?.repositories.map((r) => (
+              <option key={r} value={r}>{r}</option>
+            ))}
           </SelectInput>
         </div>
 
@@ -247,8 +266,8 @@ export default function FilterBar({ filters, onChange, options }: Props) {
             </div>
           </div>
 
-          {/* Row 2: Format · Repository · Source type */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {/* Row 2: Format · Source type */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <Label>Data format</Label>
               <SuggestInput
@@ -257,16 +276,6 @@ export default function FilterBar({ filters, onChange, options }: Props) {
                 onChange={(v) => set('data_format', v || undefined)}
                 placeholder="e.g. SEG-Y, NetCDF"
                 suggestions={options?.data_formats}
-              />
-            </div>
-            <div>
-              <Label>Repository</Label>
-              <SuggestInput
-                listId="fb-repos"
-                value={filters.repository ?? ''}
-                onChange={(v) => set('repository', v || undefined)}
-                placeholder="e.g. MGDS, RVData"
-                suggestions={options?.repositories}
               />
             </div>
             <div>

@@ -1,0 +1,26 @@
+{
+  "id": "mgl1701_mcs",
+  "cruise": "MGL1701",
+  "cruise_name": "CEVICHE",
+  "vessel": "R/V Marcus G. Langseth",
+  "year_acquired": 2017,
+  "data_type": "seismic_reflection_mcs",
+  "name": "MGL1701 CEVICHE Long-Offset MCS Reflection Data — South-Central Chile 30°–44°S",
+  "classification": "PROCESSED",
+  "format": ["SEG-Y", "SEG-D"],
+  "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
+  "url_alt": "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399",
+  "doi": "10.1594/IEDA/324399",
+  "repository": ["MGDS"],
+  "size_gb": null,
+  "access": "open",
+  "download_command": "wget -r -np -nH --cut-dirs=4 -A '*.segd,*.segy' 'http://www.marine-geo.org/tools/search/Files.php?data_set_uid=24399'",
+  "description": "15.15-km long-offset MCS reflection data (1212 channels, 6600 in³, 50 m shot interval) from the 2017 CEVICHE cruise along ~1000 km of south-central Chile margin (30°–44°S). Covers the 2015 Illapel, 2010 Maule, and 1960 Valdivia earthquake rupture zones. Cruise DOI: 10.7284/907175.",
+  "used_by": [
+    "arnulf_2022_images_underplating_chile_jgr",
+    "bangs_2020_basal_accretion_jgr",
+    "maksymowicz_2021_deep_structure_south_central_jgr",
+    "olsen_2020_thick_sediment_epsl",
+    "trehu_2023_imaging_megathrust_summary"
+  ]
+}

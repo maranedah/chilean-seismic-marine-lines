@@ -1,15 +1,34 @@
 {
   "id": "vargas-cordero_2020_lebu_seabed_morphology_sci_rep",
   "title": "Gas hydrate versus seabed morphology offshore Lebu (Chilean margin)",
-  "authors": ["Vargas-Cordero, Iván de la Cruz", "Tinivella, Umberta", "Villar-Muñoz, Lucía", "Giustiniani, Michela", "Bento, Joaquim P.", "Fernandoy, Francisco"],
+  "authors": [
+    "Vargas-Cordero, Iván",
+    "Tinivella, Umberta",
+    "Villar-Muñoz, Lucía",
+    "Bento, Joaquim P.",
+    "Cárcamo, Carolina",
+    "López-Acevedo, Diego",
+    "Fernandoy, Francisco",
+    "Rivero, Alessandra",
+    "San Juan, Marion"
+  ],
   "year": 2020,
   "journal": "Scientific Reports",
   "doi": "10.1038/s41598-020-78958-z",
   "url": "https://www.nature.com/articles/s41598-020-78958-z",
   "open_access_url": "https://www.nature.com/articles/s41598-020-78958-z",
   "abstract": "Seabed morphology growth related to fluid migration offshore Lebu (~38°S) is analyzed through stable water isotopes, bathymetric data, and marine seismic reflection profiles. The BSR detected in the seismic data indicates the transition between gas hydrate and free gas zones. The orientation of the mud cone relief is associated with fault-fracture pathways for fluid migration, and isotope data document past hydrate melting events.",
-  "keywords": ["gas hydrate", "seabed morphology", "Lebu", "38°S", "BSR", "fluid migration", "seismic reflection", "bathymetry", "Scientific Reports open access"],
-
+  "keywords": [
+    "gas hydrate",
+    "seabed morphology",
+    "Lebu",
+    "38°S",
+    "BSR",
+    "fluid migration",
+    "seismic reflection",
+    "bathymetry",
+    "Scientific Reports open access"
+  ],
   "location": {
     "latitude": -38.0,
     "longitude": -74.0,
@@ -18,23 +37,30 @@
     "country": "Chile",
     "description": "Offshore Lebu (~38°S), central Chilean margin; gas hydrate and seabed morphology study",
     "bounding_box": {
-      "lat_min": -38.5, "lat_max": -37.5,
-      "lon_min": -75.0, "lon_max": -73.0
+      "lat_min": -38.5,
+      "lat_max": -37.5,
+      "lon_min": -75.0,
+      "lon_max": -73.0
     },
     "seismic_lines": [
       {
         "name": "MCS profiles offshore Lebu ~38°S",
-        "lat_start": -38.0, "lon_start": -75.0,
-        "lat_end": -38.0, "lon_end": -73.5,
+        "lat_start": -38.0,
+        "lon_start": -75.0,
+        "lat_end": -38.0,
+        "lon_end": -73.5,
         "length_km": 140
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V SONNE and/or legacy cruises",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": null,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -43,16 +69,19 @@
     "fold": null,
     "line_spacing_km": null
   },
-
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "MCS Profiles — Offshore Lebu ~38°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -62,10 +91,14 @@
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — Offshore Lebu",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -73,7 +106,6 @@
     }
   ],
   "_data_note": "Scientific Reports open access paper. Data repository for seismic data not confirmed; bathymetry may be at MGDS.",
-
   "processing": {
     "classification": "SEMI_PROCESSED",
     "summary": "Marine seismic reflection profiles and bathymetric data offshore Lebu (~38°S) were analyzed to characterize BSR distribution and link seabed mud cone morphology to gas hydrate-related fluid migration. Stable water isotopes from sampling complement the seismic analysis. The BSR indicates the gas hydrate/free gas transition, and fault-fracture systems provide pathways for fluid migration creating the seafloor mud cone relief.",
@@ -83,11 +115,14 @@
       "3. Bathymetric analysis of seabed features",
       "4. Correlation of fault-fractures with BSR discontinuities"
     ],
-    "software": ["unknown"],
-    "notes": "Open-access Scientific Reports paper"
+    "software": [
+      "PDS2000",
+      "MB-System",
+      "GMT"
+    ],
+    "notes": "Open-access Scientific Reports (CC BY 4.0). Primary new data: high-resolution multibeam bathymetry (PDS2000 onboard, MB-System post-processing, GMT gridding at 1m resolution). Seismic reflection data cited from legacy sources (SPOC/SO161 or similar). Isotope and sediment sampling also performed."
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Scientific Reports open access paper. Full text freely available at nature.com. Seismic data source not confirmed from available information."
+  "analysis_notes": "Open access (CC BY 4.0). Author list corrected from PDF (9 authors): Giustiniani was not on this paper (she is on the 2016 Chiloé paper); added Cárcamo, López-Acevedo, Rivero, San Juan. Primary data: new high-resolution bathymetry (PDS2000/MB-System, 1m resolution) + pore water isotopes + sediment samples. Seismic data from legacy sources."
 }

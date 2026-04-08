@@ -1,71 +1,108 @@
 {
   "id": "klaucke_2012_cold_seeps_chile_margin_gml",
-  "title": "Cold seeps offshore Chile: Geomorphological and acoustic characteristics",
-  "authors": ["Klaucke, Ingo", "Weinrebe, Wilhelm", "Petersen, Christoph J.", "Bowden, David"],
+  "title": "Sidescan sonar imagery of widespread fossil and active cold seeps along the central Chilean continental margin",
+  "authors": [
+    "Klaucke, Ingo",
+    "Weinrebe, Wilhelm",
+    "Linke, Peter",
+    "Kläschen, Dirk",
+    "Bialas, Jörg"
+  ],
   "year": 2012,
   "journal": "Geo-Marine Letters",
-  "doi": "10.1007/s00367-011-0257-2",
-  "url": "https://link.springer.com/article/10.1007/s00367-011-0257-2",
-  "open_access_url": null,
-  "abstract": "Cold seep sites along the Chilean continental margin are characterized using multibeam bathymetry and PARASOUND sub-bottom profiler data acquired during SONNE cruises. Acoustic anomalies indicative of gas escape structures, pockmarks, and carbonate mounds are identified at multiple latitudes. The distribution of cold seeps is linked to fluid migration pathways and fault structures in the forearc.",
-  "keywords": ["cold seeps", "Chile margin", "PARASOUND", "multibeam bathymetry", "acoustic anomalies", "gas escape", "pockmarks", "SONNE", "Geo-Marine Letters"],
-
+  "doi": "10.1007/s00367-012-0283-1",
+  "url": "https://link.springer.com/article/10.1007/s00367-012-0283-1",
+  "open_access_url": "https://oceanrep.geomar.de/11975/",
+  "abstract": "Sidescan sonar imagery from SONNE cruises is used to characterize widespread fossil and active cold seep sites along the central Chilean continental margin. The study documents the spatial extent and acoustic backscatter characteristics of cold seep fields, identifying both active gas escape features and older fossil seep structures. The distribution of cold seeps is linked to fluid migration pathways controlled by fault structures in the forearc.",
+  "keywords": [
+    "cold seeps",
+    "Chile margin",
+    "sidescan sonar",
+    "multibeam bathymetry",
+    "acoustic backscatter",
+    "gas escape",
+    "fossil seeps",
+    "SONNE",
+    "Geo-Marine Letters"
+  ],
   "location": {
-    "latitude": -40.0,
-    "longitude": -75.0,
-    "city": "Puerto Montt",
-    "region": "Región de Los Lagos",
+    "latitude": -36.2,
+    "longitude": -74.0,
+    "city": "Concepción",
+    "region": "Región del Biobío",
     "country": "Chile",
-    "description": "Chilean continental margin multiple latitudes; cold seep geomorphology and acoustics from SONNE cruise bathymetry and PARASOUND",
+    "description": "Central Chilean continental margin between 35°S and 37°S; cold seep geomorphology and acoustics (JC23, March/April 2008 + SO210, Sep/Oct 2010)",
     "bounding_box": {
-      "lat_min": -46.0, "lat_max": -33.0,
-      "lon_min": -76.5, "lon_max": -72.0
+      "lat_min": -37.0,
+      "lat_max": -35.0,
+      "lon_min": -76.5,
+      "lon_max": -73.0
     },
     "seismic_lines": [
       {
-        "name": "SONNE PARASOUND subbottom profiles — Chile margin cold seep sites",
-        "lat_start": -33.0, "lon_start": -76.0,
-        "lat_end": -46.0, "lon_end": -74.0,
-        "length_km": 1500
+        "name": "JC23 DTS-1 sidescan sonar + chirp subbottom survey — 35°–37°S Chile margin",
+        "lat_start": -35.5,
+        "lon_start": -76.0,
+        "lat_end": -37.0,
+        "lon_end": -73.5,
+        "length_km": null
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V SONNE (multiple cruises)",
-    "year_acquired": 2007,
-    "source_type": "PARASOUND subbottom profiler and multibeam echosounder",
-    "source_volume_cui": null,
+    "vessel": [
+      "RRS James Cook",
+      "R/V SONNE"
+    ],
+    "year_acquired": 2008,
+    "source_type": [
+      "sidescan sonar",
+      "multibeam echosounder",
+      "subbottom profiler",
+      "GI-gun (seismic reflection)"
+    ],
+    "source_volume_cui": 105,
     "streamer_length_m": null,
-    "channel_count": null,
+    "channel_count": 4,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "JC23, March 2008",
+      "SO210, Sep–Nov 2010"
+    ]
   },
-
   "data": [
     {
       "data_type": "subbottom",
-      "name": "SONNE PARASOUND Subbottom Profiles — Chile Margin Cold Seep Sites",
+      "name": "SONNE Sidescan Sonar — Central Chile Margin Cold Seep Sites",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "GeoTIFF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
-      "description": "PARASOUND subbottom profiler data from multiple SONNE cruises along Chilean margin identifying cold seep acoustic anomalies, gas escape structures, pockmarks and carbonate mounds"
+      "description": "Sidescan sonar imagery from SONNE cruises documenting widespread fossil and active cold seep sites along the central Chilean continental margin"
     },
     {
       "data_type": "bathymetry",
       "name": "SONNE Multibeam Bathymetry — Chile Margin Cold Seep Sites",
       "classification": "PROCESSED",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -75,18 +112,37 @@
       "data_type": "backscatter",
       "name": "SONNE Backscatter — Chile Margin Cold Seep Sites",
       "classification": "PROCESSED",
-      "format": "GeoTIFF",
+      "format": [
+        "GeoTIFF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Backscatter intensity data from multibeam sonar used to detect acoustic anomalies at cold seep sites along the Chilean margin"
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Ocean bottom seismometer and ocean bottom hydrophone sgy-files of seismic refraction and wide angle data from profile P03 from James Cook cruise JC23 with links to data files",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.782435",
+      "doi": "10.1594/PANGAEA.782435",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "Geo-Marine Letters paper; behind paywall. Multiple SONNE cruises; specific cruise IDs not confirmed. Repository uncertain.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "Multibeam bathymetry and PARASOUND subbottom profiler data from SONNE cruises along the Chilean margin are analyzed to characterize cold seep geomorphology and acoustic signatures. Gas escape structures, pockmarks, and carbonate mounds are identified and correlated with fluid migration pathways and forearc fault structures.",
@@ -97,11 +153,14 @@
       "4. Geomorphological mapping",
       "5. Structural interpretation of fluid pathways"
     ],
-    "software": ["CARIS HIPS/SIPS", "unknown"],
-    "notes": "Geo-Marine Letters paper on cold seep acoustics; multiple SONNE cruises; related to gas hydrate studies along Chilean margin"
+    "software": [
+      "Caraibes (IFREMER)",
+      "PRISM (NOC Southampton, Le Bas et al. 1995)"
+    ],
+    "notes": "Primary cruise JC23 of RRS James Cook (March/April 2008): Simrad EM120 multibeam, DTS-1 deep-towed sidescan 75 kHz, chirp subbottom 2–10 kHz, 105 cu in GI-gun + 4-ch mini-streamer. Ground-truth cruise SO210 of RV Sonne (Sep/Oct 2010): OFOS video sled. Existing bathymetry also from R/V Sonne, R/V Meteor, R/V Vidal Gormaz."
   },
-
-  "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Geo-Marine Letters paper; behind paywall. Multiple SONNE cruises; specific cruise IDs not confirmed."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. CRITICAL: authors completely wrong [Petersen, Bowden] → [Linke, Peter; Kläschen, Dirk; Bialas, Jörg] (prior JSON used authors from a different Klaucke 2010 New Zealand paper). vessel: 'R/V SONNE' → ['RRS James Cook (JC23, March/April 2008)', 'R/V SONNE (SO210, Sep/Oct 2010)']; year_acquired: 2007 → 2008; source_volume_cui: null → 105 (GI-gun); channel_count: null → 4 (4-ch mini-streamer); bounding_box restricted from 33–46°S to 35–37°S; software: CARIS HIPS/SIPS → Caraibes (IFREMER) + PRISM (NOC Southampton). Study area is 35°S–37°S offshore Concepcion. No data repository URLs found in paper.",
+  "tectonic_setting": "mixed"
 }

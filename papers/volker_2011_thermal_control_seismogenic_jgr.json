@@ -12,7 +12,7 @@
   "journal": "Journal of Geophysical Research: Solid Earth",
   "doi": "10.1029/2011JB008247",
   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2011JB008247",
-  "open_access_url": null,
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2011JB008247",
   "abstract": "Thermal models for the Chile subduction zone are developed along two profiles at 38.2°S and 42°S within the rupture area of the 1960 Valdivia earthquake and south of the 2010 Maule earthquake. The age difference of the subducting Nazca Plate has a major impact on the thermal regime. Seafloor heat flow values derived from the depth of gas hydrate bottom-simulating reflectors confirm that the southern area has higher heat flow due to the younger, hotter incoming plate. The seismogenic zone widens and shifts landward to greater depths from south to north.",
   "keywords": [
     "thermal model",
@@ -45,35 +45,107 @@
         "lon_start": -77.0,
         "lat_end": -42.0,
         "lon_end": -76.0,
-        "length_km": 450
+        "length_km": 450,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC, SO181 TIPTEQ)",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
+    "vessel": [
+      "R/V SONNE",
+      "R/V SONNE",
+      "R/V Robert Conrad"
+    ],
+    "year_acquired": 1988,
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, 2001",
+      "SO181, TIPTEQ, Dec 2004–Feb 2005",
+      "RC2901, 1988"
+    ],
+    "depth_penetration_km": 34.0
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "SPOC/TIPTEQ MCS Profiles — BSR Heat Flow at 38.2°S and 42°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "MCS reflection profiles from SPOC (SO161) and TIPTEQ (SO181) used to map BSR depth for heat flow estimation at 38.2°S and 42°S; confirms higher heat flow at 42°S from younger incoming plate. [TIPTEQ cruise (SO181, 2004/2005) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Bathymetry:Singlebeam, Gravity:Field, Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "MGD77"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=15251",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "unknown",
+      "name": "Bathymetry:Swath",
+      "classification": "RAW",
+      "format": [
+        "MGDS"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=2794,14008,16981",
+      "doi": null,
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "RAW",
+      "format": [
+        "MGDS:Nav",
+        "SHP"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=11106,11107",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "JGR paper; behind paywall. Uses SPOC/TIPTEQ data from MGDS for BSR-based thermal modeling.",
@@ -92,7 +164,8 @@
     ],
     "notes": "Thermal modeling study using BSR depth from existing MCS profiles as heat flow proxy"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "JGR paper; behind paywall. Uses SPOC (SO161) and TIPTEQ (SO181) data accessible via MGDS."
+  "analysis_notes": "Validated against PDF. 5 authors confirmed correct. vessel: added R/V Conrad RC2901 (profiles c727, c728, c732 cited in Fig 1 for 38.2°S and 42°S transects). year_acquired: 2001→1988 (earliest data, RC2901). Thermal model uses BSR depths from SPOC SO161, TIPTEQ SO181, and R/V Conrad RC2901 profiles.",
+  "tectonic_setting": "accretionary"
 }

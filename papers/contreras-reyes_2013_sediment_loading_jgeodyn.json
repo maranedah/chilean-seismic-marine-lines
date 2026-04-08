@@ -3,12 +3,14 @@
   "title": "Sediment loading at the southern Chilean trench and its tectonic implications",
   "authors": [
     "Contreras-Reyes, Eduardo",
-    "Maksymowicz, Andrei"
+    "Jara, Jorge",
+    "Maksymowicz, Andrei",
+    "Weinrebe, Wilhelm"
   ],
   "year": 2013,
   "journal": "Journal of Geodynamics",
-  "doi": "10.1016/j.jog.2013.03.005",
-  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264370713000355",
+  "doi": "10.1016/j.jog.2013.02.009",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264370713000203",
   "open_access_url": null,
   "abstract": "Seismic and bathymetric data acquired off south-central Chile were used to estimate representative flexural rigidities and study the downward deflection of the oceanic Nazca plate due to sediment loading. Flexural modeling shows that efficient sediment subduction preferentially occurs in weak oceanic lithosphere, whereas wide accretionary prisms form in rigid oceanic lithosphere. Results suggest a general increase of fluid pressure inside the continental wedge north of 33°S.",
   "keywords": [
@@ -46,9 +48,13 @@
     ]
   },
   "acquisition": {
-    "vessel": "Multiple cruises (compilation of published GEOMAR data)",
+    "vessel": [
+      "Multiple cruises"
+    ],
     "year_acquired": null,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -62,10 +68,14 @@
       "data_type": "seismic_reflection_mcs",
       "name": "Compiled MCS Profiles — South-Central Chile Trench 33°–46°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -75,10 +85,14 @@
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — South-Central Chile",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -102,6 +116,7 @@
     "notes": "Modeling paper; seismic data compiled from SPOC, TIPTEQ, and earlier cruises"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Journal of Geodynamics paper; behind paywall. Modeling study using published data. Abstract from survey_results.json."
+  "analysis_confidence": "high",
+  "analysis_notes": "PDF validated 2026-04-05. Corrected: authors list (added Jorge Jara and Wilhelm Weinrebe, both missing); DOI corrected from 10.1016/j.jog.2013.03.005→10.1016/j.jog.2013.02.009 (confirmed from paper footer and Appendix B); URL updated. This is a pure modeling study — no new seismic data acquisition, compiled SPOC/TIPTEQ data. No data availability statement found.",
+  "tectonic_setting": "accretionary"
 }

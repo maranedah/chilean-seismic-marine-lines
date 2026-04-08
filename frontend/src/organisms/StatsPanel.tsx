@@ -132,31 +132,24 @@ function PapersTab({ stats }: { stats: Stats }) {
 
   return (
     <div className="space-y-6">
-      {/* Papers per year */}
-      <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-        <h3 className="text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wide">
-          Papers per Year
-        </h3>
-        <ResponsiveContainer width="100%" height={200}>
-          <BarChart data={yearData} barSize={8}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-            <XAxis
-              dataKey="year"
-              tick={{ fontSize: 11 }}
-              tickFormatter={(v: number) => (v % 5 === 0 ? String(v) : '')}
-            />
-            <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
-            <Tooltip
-              contentStyle={{ fontSize: 12 }}
-              labelFormatter={(v) => `Year: ${v}`}
-              formatter={(v: number) => [v, 'Papers']}
-            />
-            <Bar dataKey="count" fill="#0284c7" radius={[2, 2, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
+      {/* Row 1: Data Acquisition + Vessel */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <HorizontalBar
+          title="Data Acquisition (Source Type)"
+          data={sortedEntries(stats.by_source_type)}
+          color="#0d9488"
+          valueLabel="Papers"
+        />
+        <HorizontalBar
+          title="Vessel"
+          data={sortedEntries(stats.by_vessel)}
+          color="#7c3aed"
+          valueLabel="Papers"
+          labelWidth={160}
+        />
       </div>
 
-      {/* Region pie + Source type */}
+      {/* Row 2: Papers by Region + Papers per Year */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
           <h3 className="text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wide">
@@ -185,29 +178,38 @@ function PapersTab({ stats }: { stats: Stats }) {
           </ResponsiveContainer>
         </div>
 
-        <HorizontalBar
-          title="Data Acquisition (Source Type)"
-          data={sortedEntries(stats.by_source_type)}
-          color="#0d9488"
-          valueLabel="Papers"
-        />
+        <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+          <h3 className="text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wide">
+            Papers per Year
+          </h3>
+          <ResponsiveContainer width="100%" height={200}>
+            <BarChart data={yearData} barCategoryGap="4%">
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <XAxis
+                dataKey="year"
+                tick={{ fontSize: 11 }}
+                tickFormatter={(v: number) => (v % 5 === 0 ? String(v) : '')}
+              />
+              <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
+              <Tooltip
+                contentStyle={{ fontSize: 12 }}
+                labelFormatter={(v) => `Year: ${v}`}
+                formatter={(v: number) => [v, 'Papers']}
+              />
+              <Bar dataKey="count" fill="#0284c7" radius={[2, 2, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
 
-      {/* Vessel + Year acquired */}
+      {/* Row 3: Year Acquired */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <HorizontalBar
-          title="Vessel"
-          data={sortedEntries(stats.by_vessel)}
-          color="#7c3aed"
-          valueLabel="Papers"
-          labelWidth={160}
-        />
         <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
           <h3 className="text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wide">
             Year Acquired
           </h3>
           <ResponsiveContainer width="100%" height={200}>
-            <BarChart data={sortedAcqYear(stats.by_acq_year)} barSize={8}>
+            <BarChart data={sortedAcqYear(stats.by_acq_year)} barCategoryGap="4%">
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis
                 dataKey="year"
@@ -243,6 +245,21 @@ function DatasetsTab({ stats }: { stats: Stats }) {
     fill: CLASS_COLORS[name] ?? '#6b7280',
   }))
 
+  const sizeByTypeData = Object.entries(stats.size_gb_by_type ?? {})
+    .map(([key, gb]) => ({ name: DATA_TYPE_LABELS[key] ?? key, gb }))
+    .sort((a, b) => b.gb - a.gb)
+
+  const formatData = sortedEntries(stats.datasets_by_format ?? {})
+
+  const sizeKnown = stats.size_known_count ?? 0
+  const sizeUnknown = stats.size_unknown_count ?? 0
+  const sizeTotal = sizeKnown + sizeUnknown
+  const sizePieData = [
+    { name: 'Known size', value: sizeKnown, fill: '#0d9488' },
+    { name: 'Unknown size', value: sizeUnknown, fill: '#e5e7eb' },
+  ]
+  const totalGb = Object.values(stats.size_gb_by_type ?? {}).reduce((a, b) => a + b, 0)
+
   return (
     <div className="space-y-6">
       {/* Type + Format */}
@@ -252,7 +269,7 @@ function DatasetsTab({ stats }: { stats: Stats }) {
             Datasets by Type
           </h3>
           <ResponsiveContainer width="100%" height={Math.max(dataTypeData.length * 28 + 20, 80)}>
-            <BarChart data={dataTypeData} layout="vertical" barSize={14}>
+            <BarChart data={dataTypeData} layout="vertical" barCategoryGap="4%">
               <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f0f0f0" />
               <XAxis type="number" tick={{ fontSize: 11 }} allowDecimals={false} />
               <YAxis type="category" dataKey="name" tick={{ fontSize: 11 }} width={110} />
@@ -264,10 +281,96 @@ function DatasetsTab({ stats }: { stats: Stats }) {
 
         <HorizontalBar
           title="Data Format"
-          data={sortedEntries(stats.by_data_format)}
+          data={formatData}
           color="#0284c7"
           valueLabel="Datasets"
         />
+      </div>
+
+      {/* Repository */}
+      <HorizontalBar
+        title="Repository"
+        data={sortedEntries(stats.by_repository ?? {})}
+        color="#0284c7"
+        valueLabel="Datasets"
+        labelWidth={180}
+      />
+
+      {/* Size stats */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* GB by type bar */}
+        <div className="md:col-span-2 bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+          <div className="flex items-baseline justify-between mb-4">
+            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">
+              Volume by Data Type
+            </h3>
+            <span className="text-xs text-gray-400">{totalGb.toFixed(1)} GB total (known)</span>
+          </div>
+          {sizeByTypeData.length > 0 ? (
+            <ResponsiveContainer width="100%" height={Math.max(sizeByTypeData.length * 32 + 20, 80)}>
+              <BarChart data={sizeByTypeData} layout="vertical" barCategoryGap="6%" margin={{ left: 8, right: 40 }}>
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f0f0f0" />
+                <XAxis type="number" tick={{ fontSize: 11 }} unit=" GB" />
+                <YAxis type="category" dataKey="name" tick={{ fontSize: 11 }} width={120} />
+                <Tooltip
+                  contentStyle={{ fontSize: 12 }}
+                  formatter={(v: number) => [`${v.toFixed(1)} GB`, 'Size']}
+                />
+                <Bar dataKey="gb" fill="#7c3aed" radius={[0, 3, 3, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          ) : (
+            <p className="text-sm text-gray-400 italic">No size data available.</p>
+          )}
+        </div>
+
+        {/* Known vs unknown pie */}
+        <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm flex flex-col">
+          <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-4">
+            Size Coverage
+          </h3>
+          <div className="flex-1 flex flex-col items-center justify-center gap-4">
+            <ResponsiveContainer width="100%" height={160}>
+              <PieChart>
+                <Pie
+                  data={sizePieData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={45}
+                  outerRadius={70}
+                  dataKey="value"
+                  startAngle={90}
+                  endAngle={-270}
+                >
+                  {sizePieData.map((entry, i) => (
+                    <Cell key={i} fill={entry.fill} />
+                  ))}
+                </Pie>
+                <Tooltip contentStyle={{ fontSize: 12 }} formatter={(v: number) => [v, 'Datasets']} />
+              </PieChart>
+            </ResponsiveContainer>
+            <div className="w-full space-y-2 text-xs">
+              <div className="flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-teal-600 inline-block" />
+                  Known
+                </span>
+                <span className="font-medium text-gray-700">
+                  {sizeKnown} ({sizeTotal > 0 ? Math.round(100 * sizeKnown / sizeTotal) : 0}%)
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-gray-200 inline-block" />
+                  Unknown
+                </span>
+                <span className="font-medium text-gray-700">
+                  {sizeUnknown} ({sizeTotal > 0 ? Math.round(100 * sizeUnknown / sizeTotal) : 0}%)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Classification pie */}
@@ -376,7 +479,7 @@ function QualityTab({ stats }: { stats: Stats }) {
             Papers by Completeness Band
           </h3>
           <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={barData} barSize={36}>
+            <BarChart data={barData} barCategoryGap="4%">
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="name" tick={{ fontSize: 10 }} />
               <YAxis tick={{ fontSize: 11 }} allowDecimals={false} />
@@ -392,6 +495,23 @@ function QualityTab({ stats }: { stats: Stats }) {
             </BarChart>
           </ResponsiveContainer>
         </div>
+      </div>
+
+      {/* PDF Analysis */}
+      <PdfAnalysisSection stats={stats} />
+
+      {/* Per-field coverage */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <FieldCoverageTable
+          title="Paper Field Coverage"
+          data={stats.paper_field_fill ?? {}}
+          color="#0284c7"
+        />
+        <FieldCoverageTable
+          title="Dataset Field Coverage"
+          data={stats.dataset_field_fill ?? {}}
+          color="#7c3aed"
+        />
       </div>
 
       {/* Guidance note */}
@@ -418,6 +538,128 @@ function sortedAcqYear(freq: Record<string, number>) {
     .sort((a, b) => a.year - b.year)
 }
 
+// ── PDF analysis section ──────────────────────────────────────────────────────
+
+function PdfAnalysisSection({ stats }: { stats: Stats }) {
+  const total = stats.total_papers
+  const analyzed = stats.pdfs_analyzed ?? 0
+  const figTotal = stats.figures_total ?? 0
+  const figMap = stats.figures_per_paper ?? {}
+  const papersWithFigs = Object.values(figMap).filter(v => v > 0).length
+
+  // Build per-paper rows sorted by figures desc, then name
+  const rows = Object.entries(figMap).sort(([aId, aFigs], [bId, bFigs]) => {
+    if (bFigs !== aFigs) return bFigs - aFigs
+    return aId.localeCompare(bId)
+  })
+
+  const [expanded, setExpanded] = useState(false)
+  const visibleRows = expanded ? rows : rows.slice(0, 10)
+
+  return (
+    <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm space-y-4">
+      <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">PDF Analysis</h3>
+
+      {/* Summary tiles */}
+      <div className="grid grid-cols-3 gap-4">
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-sky-600">{analyzed} / {total}</div>
+          <div className="text-xs text-gray-500 mt-1">PDFs analyzed (text extracted)</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-emerald-600">{papersWithFigs} / {total}</div>
+          <div className="text-xs text-gray-500 mt-1">Papers with figures extracted</div>
+        </div>
+        <div className="bg-gray-50 rounded-lg p-4 text-center">
+          <div className="text-2xl font-bold text-violet-600">{figTotal}</div>
+          <div className="text-xs text-gray-500 mt-1">Total figures extracted</div>
+        </div>
+      </div>
+
+      {/* Per-paper figure count table */}
+      <div>
+        <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
+          Figures per paper
+        </div>
+        <div className="divide-y divide-gray-50">
+          {visibleRows.map(([paperId, count]) => {
+            const barPct = rows.length > 0 ? Math.round((count / (rows[0][1] || 1)) * 100) : 0
+            return (
+              <div key={paperId} className="flex items-center gap-3 py-1.5 text-xs">
+                <span className="w-72 shrink-0 text-gray-600 truncate font-mono" title={paperId}>
+                  {paperId}
+                </span>
+                <div className="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
+                  {count > 0 && (
+                    <div
+                      className="h-2 rounded-full bg-violet-400"
+                      style={{ width: `${barPct}%` }}
+                    />
+                  )}
+                </div>
+                <span className="w-8 text-right tabular-nums font-medium text-gray-700">
+                  {count}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+        {rows.length > 10 && (
+          <button
+            onClick={() => setExpanded(e => !e)}
+            className="mt-2 text-xs text-sky-600 hover:underline"
+          >
+            {expanded ? 'Show less' : `Show all ${rows.length} papers`}
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
+// ── Field coverage table ──────────────────────────────────────────────────────
+
+function FieldCoverageTable({
+  title,
+  data,
+  color,
+}: {
+  title: string
+  data: Record<string, number>
+  color: string
+}) {
+  const rows = Object.entries(data).sort(([, a], [, b]) => b - a)
+
+  return (
+    <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+      <h3 className="text-sm font-semibold text-gray-700 mb-4 uppercase tracking-wide">{title}</h3>
+      <div className="space-y-2">
+        {rows.map(([field, pct]) => {
+          const nullPct = 100 - pct
+          const barColor = pct >= 80 ? '#16a34a' : pct >= 50 ? color : '#dc2626'
+          return (
+            <div key={field} className="flex items-center gap-3 text-xs">
+              <span className="w-36 shrink-0 text-gray-600 truncate" title={field}>{field}</span>
+              <div className="flex-1 bg-gray-100 rounded-full h-2 overflow-hidden">
+                <div
+                  className="h-2 rounded-full transition-all"
+                  style={{ width: `${pct}%`, backgroundColor: barColor }}
+                />
+              </div>
+              <span className="w-16 text-right shrink-0 tabular-nums">
+                <span className="font-medium text-gray-700">{pct}%</span>
+                {nullPct > 0 && (
+                  <span className="text-gray-400 ml-1">({nullPct.toFixed(0)}% null)</span>
+                )}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
 // ── Shared horizontal bar chart ───────────────────────────────────────────────
 
 function HorizontalBar({
@@ -440,7 +682,7 @@ function HorizontalBar({
         {title}
       </h3>
       <ResponsiveContainer width="100%" height={height}>
-        <BarChart data={data} layout="vertical" barSize={14} margin={{ left: 8, right: 24 }}>
+        <BarChart data={data} layout="vertical" barCategoryGap="4%" margin={{ left: 8, right: 24 }}>
           <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f0f0f0" />
           <XAxis type="number" tick={{ fontSize: 11 }} allowDecimals={false} />
           <YAxis type="category" dataKey="name" tick={{ fontSize: 11 }} width={labelWidth} />

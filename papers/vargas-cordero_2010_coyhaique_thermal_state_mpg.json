@@ -10,9 +10,9 @@
   ],
   "year": 2010,
   "journal": "Marine and Petroleum Geology",
-  "doi": "10.1016/j.marpetgeo.2010.01.008",
-  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264817210000450",
-  "open_access_url": null,
+  "doi": "10.1016/j.marpetgeo.2010.02.011",
+  "url": "https://www.sciencedirect.com/science/article/pii/S0264817210000450",
+  "open_access_url": "http://darchive.mblwhoilibrary.org/bitstreams/6a857fb3-8716-52eb-9848-77f3accad4c0/download",
   "abstract": "Detailed velocity analysis using pre-stack depth migration was performed on multichannel seismic reflection line RC2901-734 offshore Coyhaique, Chile (44°30′S). The velocity model shows a hydrate-bearing layer above the BSR with high velocity (1700–2200 m/s) and maximum thickness of 250 m, and a free gas-bearing layer below with low velocity (1250–1400 m/s). Geothermal gradient estimates range from 35 to 95 °C/km.",
   "keywords": [
     "gas hydrate",
@@ -50,26 +50,40 @@
     ]
   },
   "acquisition": {
-    "vessel": "R/V Conrad (RC2901 cruise)",
-    "year_acquired": 1990,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V Conrad RC2901"
+    ],
+    "year_acquired": 1988,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3742,
+    "streamer_length_m": 3000,
+    "channel_count": 240,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "shot_interval_m": 50,
+    "frequency_range_hz": [
+      15,
+      70
+    ],
+    "group_spacing_m": 12.5
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "R/V Conrad Line RC2901-734 — Coyhaique Offshore 44.5°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "LDEO / unknown",
+      "repository": [
+        "LDEO"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -81,20 +95,28 @@
     "classification": "PROCESSED",
     "summary": "Pre-stack depth migration (PSDM) was applied to the RC2901-734 MCS line offshore Coyhaique (44.5°S) to derive a detailed velocity model for gas hydrate and free gas quantification. The velocity model shows a high-velocity hydrate layer (1700–2200 m/s, up to 250 m thick) above the BSR and a low-velocity free gas zone (1250–1400 m/s) below. Geothermal gradients of 35–95°C/km are estimated from BSR depth.",
     "workflow": [
-      "1. Trace editing and preprocessing",
-      "2. Velocity analysis (semblance, NMO correction)",
-      "3. Pre-stack depth migration (PSDM)",
-      "4. Residual velocity analysis for BSR zone",
-      "5. Gas hydrate and free gas concentration estimation",
-      "6. Geothermal gradient calculation from BSR depth"
+      "1. Standard processing using Seismic Unix (SU): stacking velocity analysis every 100 CDP (625 m)",
+      "2. Band-pass filter 15–70 Hz applied pre- and post-stack",
+      "3. Post-stack time migration (phase-shift method) for BSR identification",
+      "4. Selection of 20 km window (CDP 4000–7000) where BSR is strongest",
+      "5. Kirchhoff PreSDM with layer-stripping velocity model building (CIG r-parameter semblance)",
+      "6. Grid spacing 10 m (horizontal) × 12.5 m (vertical); initial velocity 1480 m/s",
+      "7. Iterative velocity updates per layer: seafloor (5 iter), layer 1 (28 iter), layer 2 to BSR (30 iter), free gas zone to BGR (26 iter)",
+      "8. Velocity gradient below BGR; final velocity model smoothed before final PreSDM",
+      "9. CIG stack to max 2500 m offset; trace mixing and band-pass filter on final stack",
+      "10. ±5% velocity perturbation sensitivity test; average depth error ~2%",
+      "11. BSR-derived geothermal gradient from BSR depth, seafloor depth, and seafloor temperature (2.2°C)",
+      "12. Gas hydrate/free gas concentration estimation via modified Domenico approach (Tinivella 1999/2002)",
+      "13. Sensitivity analysis on concentration estimates with ±5% velocity perturbation"
     ],
     "software": [
-      "Echos (OGS)",
-      "unknown"
+      "Seismic Unix (SU)"
     ],
-    "notes": "PSDM applied to single named seismic line; geothermal gradient derived from BSR depth"
+    "notes": "PreSDM (Kirchhoff) with layer-stripping applied to a 20 km window of RC2901-734 where BSR is strongest; geothermal gradient derived from BSR depth; velocity accuracy confirmed by ±5% perturbation test",
+    "migration_type": "PreSDM"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-05T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Marine and Petroleum Geology paper; behind paywall. Line RC2901-734 from R/V Conrad 1990 cruise accessible via MGDS."
+  "analysis_notes": "PDF confirmed. Corrections applied: year_acquired 1990 → 1988 (RC2901 cruise was Jan–Feb 1988 per PDF); vessel name corrected to R/V Conrad RC2901; streamer_length_m=3000, channel_count=240, group_spacing_m=12.5, source_volume_cui=3742 (61.34 L), frequency_range_hz=[15,70] all added; software corrected from 'Echos (OGS)' to 'Seismic Unix (SU)'; migration_type corrected from PSSDM to PreSDM; workflow expanded to 13 steps. Data repository confirmed as LDEO (acknowledged). open_access_url present in JSON — plausibility unverified but retained.",
+  "tectonic_setting": "accretionary"
 }

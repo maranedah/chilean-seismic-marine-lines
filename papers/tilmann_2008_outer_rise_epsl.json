@@ -47,7 +47,8 @@
         "lon_start": -80.0,
         "lat_end": -38.0,
         "lon_end": -75.5,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-perpendicular"
       },
       {
         "name": "OBS passive array — outer rise at ~43°S",
@@ -55,35 +56,71 @@
         "lon_start": -80.0,
         "lat_end": -43.0,
         "lon_end": -76.0,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-perpendicular"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SPOC SO161 and/or TIPTEQ SO181)",
-    "year_acquired": 2001,
-    "source_type": "passive OBS array",
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2004,
+    "source_type": [
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
-    "channel_count": null,
+    "channel_count": 29,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO181, TIPTEQ, Dec 2004–Feb 2005"
+    ],
+    "depth_penetration_km": 10.0,
+    "frequency_range_hz": [
+      5.0,
+      20.0
+    ]
   },
   "data": [
     {
       "name": "Outer rise passive OBS micro-earthquake catalogue (~38°S and ~43°S)",
       "classification": "PROCESSED",
-      "format": "miniSEED / ASCII catalogue",
+      "format": [
+        "miniSEED"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GFZ Potsdam / GEOMAR OceanRep",
+      "repository": [
+        "GFZ Potsdam",
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "Passive OBS micro-earthquake data from two temporary arrays on the outer rise offshore southern Chile (38°S and 43°S). Seismicity catalogue complete for M ≥ 1.2–1.5, ~10 events/day per array. Waveform cluster analysis performed.",
       "data_type": "seismic_refraction_obs"
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "GEOFON network ZW (2004) — 124 stations, -39.25° to -37.03°",
+      "classification": "RAW",
+      "format": [
+        "miniSEED"
+      ],
+      "url": "https://geofon.gfz.de/doi/network/ZW/2004",
+      "doi": "10.14470/mj7559637482",
+      "repository": [
+        "GFZ GEOFON"
+      ],
+      "size_gb": 507.3,
+      "access": "open",
+      "download_command": "# FDSN mass downloader — network ZW\n# obspy.clients.fdsn.mass_downloader, domain=RectangularDomain(minlatitude=-39.2, maxlatitude=-37.0, minlongitude=-73.9, maxlongitude=-71.4)",
+      "description": "Temporary seismic network ZW deployed 2004-11-12 – 2005-12-31, 124 stations across -39.25° to -37.03°, -73.94° to -71.36°. miniSEED waveforms archived at GEOFON.",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -105,5 +142,5 @@
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Green open access PDF available from GFZ publication server. Abstract reconstructed from survey snippet and available metadata. OBS deployment likely during SPOC (SO161, 2001) or TIPTEQ (SO181, 2004–2005) cruises based on co-authorship and geographic focus."
+  "analysis_notes": "Green open access PDF available from GFZ publication server. Arrays deployed Dec 2004–Jan 2005 (TIPTEQ SO181): northern array 17 OBS (~43°S, age 6 Ma), southern array 12 OBS (~38°S, age 14 Ma); total 29 instruments. year_acquired corrected from 2001→2004."
 }

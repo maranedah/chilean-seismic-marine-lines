@@ -1,15 +1,28 @@
 {
   "id": "moscoso_grevemeyer_2015_bending_faulting_maule_jgeodyn",
   "title": "Bending-related faulting of the incoming oceanic plate and its effect on lithospheric hydration and seismicity: A passive and active seismological study offshore Maule, Chile",
-  "authors": ["Moscoso, Eduardo", "Grevemeyer, Ingo"],
+  "authors": [
+    "Moscoso, Eduardo",
+    "Grevemeyer, Ingo"
+  ],
   "year": 2015,
   "journal": "Journal of Geodynamics",
   "doi": "10.1016/j.jog.2015.05.003",
   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0264370715000678",
   "open_access_url": null,
   "abstract": "New active and passive seismological data offshore Maule, Chile, examine the dependency between incoming plate structure, bending-related faulting, lithospheric hydration, and outer rise seismic activity. A 2D Poisson's ratio distribution is derived from P- and S-wave seismic wide-angle data collected at the trench-outer rise. High values of Poisson's ratio in the uppermost mantle suggest that the oceanic lithosphere is highly hydrated due to water infiltration through bending-related normal faults outcropping at the seafloor between 34°S and 35°S.",
-  "keywords": ["bending faults", "OBS", "P-wave", "S-wave", "Poisson's ratio", "Maule", "34°–35°S", "outer rise", "serpentinization", "active seismic"],
-
+  "keywords": [
+    "bending faults",
+    "OBS",
+    "P-wave",
+    "S-wave",
+    "Poisson's ratio",
+    "Maule",
+    "34°–35°S",
+    "outer rise",
+    "serpentinization",
+    "active seismic"
+  ],
   "location": {
     "latitude": -34.5,
     "longitude": -74.5,
@@ -18,41 +31,54 @@
     "country": "Chile",
     "description": "Outer rise of the incoming Nazca plate offshore Maule (34°–35°S); active and passive OBS study",
     "bounding_box": {
-      "lat_min": -35.0, "lat_max": -34.0,
-      "lon_min": -76.0, "lon_max": -73.0
+      "lat_min": -35.0,
+      "lat_max": -34.0,
+      "lon_min": -76.0,
+      "lon_max": -73.0
     },
     "seismic_lines": [
       {
         "name": "OBS P/S-wave wide-angle profile — Maule outer rise 34°–35°S",
-        "lat_start": -34.0, "lon_start": -76.0,
-        "lat_end": -35.0, "lon_end": -73.5,
-        "length_km": 250
+        "lat_start": -34.0,
+        "lon_start": -76.0,
+        "lat_end": -35.0,
+        "lon_end": -73.5,
+        "length_km": 250,
+        "profile_orientation": "margin-perpendicular"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "R/V SONNE (post-Maule cruise 2010 or 2011)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 2010,
-    "source_type": "airgun array (active) and passive seismic (OBS)",
+    "source_type": [
+      "passive seismic",
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "depth_penetration_km": 20.0
   },
-
   "data": [
     {
       "data_type": "seismic_refraction_obs",
       "name": "OBS P- and S-Wave Wide-Angle Data — Maule Outer Rise 34°–35°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -62,10 +88,14 @@
       "data_type": "bathymetry",
       "name": "Bathymetry — Maule Outer Rise 34°–35°S",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -73,7 +103,6 @@
     }
   ],
   "_data_note": "Journal of Geodynamics paper; behind paywall. Post-Maule cruise data; specific cruise not confirmed.",
-
   "processing": {
     "classification": "PROCESSED",
     "summary": "Active-source P- and S-wave wide-angle data and passive aftershock recordings from OBS instruments at the Maule outer rise (34°–35°S) are processed to derive 2D Vp, Vs and Poisson's ratio models. High Poisson's ratio values in the uppermost mantle indicate highly serpentinized lithosphere (>10%) via bending-related normal fault pathways. Combined active-passive study complementing Moscoso & Contreras-Reyes 2012.",
@@ -84,11 +113,14 @@
       "4. Poisson's ratio model derivation",
       "5. Integration with passive seismicity catalog"
     ],
-    "software": ["RAYINVR", "unknown"],
+    "software": [
+      "RAYINVR",
+      "unknown"
+    ],
     "notes": "Companion study to Moscoso & Contreras-Reyes 2012; uses both active and passive OBS data"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "medium",
-  "analysis_notes": "Journal of Geodynamics paper; behind paywall. Specific cruise not confirmed. Data repository unknown."
+  "analysis_notes": "Journal of Geodynamics paper; behind paywall. Specific cruise not confirmed. Data repository unknown.",
+  "tectonic_setting": "erosional"
 }

@@ -1,15 +1,30 @@
 {
   "id": "bourgois_2000_chile_triple_junction_jgr",
   "title": "Glacial-interglacial trench supply variation, spreading-ridge subduction, and feedback controls on the Andean margin development at the Chile triple junction area (45–48°S)",
-  "authors": ["Bourgois, J.", "Guivel, C.", "Lagabrielle, Y.", "Calmus, T.", "Boulegue, J.", "Daux, V."],
+  "authors": [
+    "Bourgois, Jacques",
+    "Guivel, Christhie",
+    "Lagabrielle, Yves",
+    "Calmus, Thierry",
+    "Boulegue, Jacques",
+    "Daux, Valerie"
+  ],
   "year": 2000,
   "journal": "Journal of Geophysical Research: Solid Earth",
   "doi": "10.1029/1999JB900400",
   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/1999JB900400",
   "open_access_url": null,
   "abstract": "EM12 bathymetry and seismic reflection data were collected during the Chile Triple Junction cruise (March–April 1997) offshore 45–48°S, where an active spreading ridge is being subducted beneath the Andean continental margin. The Andean continental margin and Chile trench show strong segmentation reflecting the slab geometry and CTJ migration history. The study reveals a margin development shaped by processes spanning from subduction-erosion to subduction-accretion.",
-  "keywords": ["Chile Triple Junction", "seismic reflection", "bathymetry", "EM12", "45°–48°S", "spreading ridge subduction", "accretionary prism", "trench morphology"],
-
+  "keywords": [
+    "Chile Triple Junction",
+    "seismic reflection",
+    "bathymetry",
+    "EM12",
+    "45°–48°S",
+    "spreading ridge subduction",
+    "accretionary prism",
+    "trench morphology"
+  ],
   "location": {
     "latitude": -46.5,
     "longitude": -76.0,
@@ -18,41 +33,55 @@
     "country": "Chile",
     "description": "Chile Triple Junction area offshore 45°–48°S where the Chile Ridge is being subducted beneath the South American plate",
     "bounding_box": {
-      "lat_min": -48.0, "lat_max": -45.0,
-      "lon_min": -78.0, "lon_max": -74.0
+      "lat_min": -48.0,
+      "lat_max": -45.0,
+      "lon_min": -78.0,
+      "lon_max": -74.0
     },
     "seismic_lines": [
       {
-        "name": "Chile Triple Junction 1997 cruise MCS profiles (45°–48°S)",
-        "lat_start": -45.0, "lon_start": -77.0,
-        "lat_end": -48.0, "lon_end": -75.0,
-        "length_km": 400
+        "name": "CTJ cruise lines 1–21 (6-channel SCS) — Chile Triple Junction 45°–48°S",
+        "lat_start": -45.0,
+        "lon_start": -78.0,
+        "lat_end": -48.0,
+        "lon_end": -74.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
-
   "acquisition": {
-    "vessel": "French research vessel (Chile Triple Junction cruise, March–April 1997)",
+    "vessel": [
+      "R/V L'Atalante"
+    ],
     "year_acquired": 1997,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
-    "channel_count": null,
+    "channel_count": 6,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "CTJ cruise, March–April 1997"
+    ]
   },
-
   "data": [
     {
-      "data_type": "seismic_reflection_mcs",
-      "name": "Chile Triple Junction 1997 MCS Reflection Data — 45°–48°S",
+      "data_type": "seismic_reflection_scs",
+      "name": "Chile Triple Junction 1997 SCS Reflection Data (6-channel) — 45°–48°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "other",
+      "repository": [
+        "other"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -62,10 +91,14 @@
       "data_type": "bathymetry",
       "name": "EM12 Swath Bathymetry — Chile Triple Junction 45°–48°S",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "other",
+      "repository": [
+        "other"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -75,10 +108,14 @@
       "data_type": "gravity",
       "name": "Shipboard Gravity — Chile Triple Junction 1997",
       "classification": "RAW",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": null,
       "doi": null,
-      "repository": "other",
+      "repository": [
+        "other"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -86,7 +123,6 @@
     }
   ],
   "_data_note": "French cruise (1997); specific vessel and data repository not confirmed. Data may be archived at IFREMER or similar French marine data repository.",
-
   "processing": {
     "classification": "SEMI_PROCESSED",
     "summary": "Seismic reflection profiles and EM12 multibeam bathymetry collected during the 1997 Chile Triple Junction cruise were processed and interpreted to document margin development at 45°–48°S. The profiles image the accretionary prism, trench fill, and margin segmentation associated with the Chile Ridge subduction. Glacial-interglacial variations in trench sediment supply are reconstructed from seismic stratigraphy.",
@@ -96,11 +132,13 @@
       "3. Post-stack time migration",
       "4. Seismic interpretation and correlation with bathymetry"
     ],
-    "software": ["unknown"],
+    "software": [
+      "unknown"
+    ],
     "notes": "French cruise; specific ship and software not identified from available metadata"
   },
-
   "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "low",
-  "analysis_notes": "JGR paper; behind paywall. French cruise from 1997 — specific vessel/repository not confirmed. Abstract from survey_results.json. Data not confirmed in any public repository."
+  "analysis_confidence": "medium",
+  "analysis_notes": "Validated against PDF. Vessel corrected to R/V L'Atalante (CTJ cruise, March–April 1997). Author first names expanded from initials. Data type corrected to SCS (6-channel), not MCS. 21 seismic lines shot during cruise. Data repository not confirmed; may be at IFREMER (France). source_volume_cui and source_volume_cui could not be determined from PDF.",
+  "tectonic_setting": "mixed"
 }

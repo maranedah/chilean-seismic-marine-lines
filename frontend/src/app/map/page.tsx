@@ -73,7 +73,8 @@ export default function MapPage() {
               </span>
             </div>
           </div>
-          <p className="text-gray-400 pt-1 border-t border-gray-100">Click a dot to open paper →</p>
+
+<p className="text-gray-400 pt-1 border-t border-gray-100">Click a dot to open paper →</p>
           <button
             className={`mt-2 pt-2 border-t border-gray-100 text-xs w-full text-left transition-colors ${
               showLines ? 'text-blue-600 font-medium' : 'text-gray-400 hover:text-gray-600'

@@ -39,19 +39,26 @@
     },
     "seismic_lines": [
       {
-        "name": "ODP Leg 141 site survey MCS profiles — Chile Triple Junction",
+        "name": "Conrad Line 745 — Chile Triple Junction (~46°S, ODP Leg 141 transect)",
         "lat_start": -46.0,
         "lon_start": -78.0,
         "lat_end": -46.0,
         "lon_end": -74.0,
-        "length_km": 380
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V Conrad (pre-ODP site survey) and ODP Leg 141 JOIDES Resolution",
+    "vessel": [
+      "R/V Robert Conrad",
+      "JOIDES Resolution"
+    ],
     "year_acquired": 1992,
-    "source_type": "airgun array (site survey) and drilling (ODP)",
+    "source_type": [
+      "airgun array",
+      "drilling"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
@@ -65,10 +72,14 @@
       "data_type": "seismic_reflection_mcs",
       "name": "ODP Leg 141 Site Survey MCS Profiles — Chile Triple Junction ~46°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "LDEO / unknown",
+      "repository": [
+        "LDEO"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -78,10 +89,14 @@
       "data_type": "velocity_sound",
       "name": "ODP Leg 141 Downhole Temperature and Velocity Logs — Chile Triple Junction",
       "classification": "PROCESSED",
-      "format": "ASCII",
+      "format": [
+        "ASCII"
+      ],
       "url": "https://www-odp.tamu.edu/publications/141_IR/141TOC.HTM",
       "doi": "10.2973/odp.proc.sr.141.1995",
-      "repository": "other",
+      "repository": [
+        "other"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
@@ -106,5 +121,6 @@
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "EPSL paper; behind paywall. ODP Leg 141 data publicly available via ODP TAMU. Site survey R/V Conrad data accessible via MGDS."
+  "analysis_notes": "Validated against PDF. EPSL 139:471-483 (1996) confirmed. Primary seismic profile is Conrad Line 745 (bangs_cande_1997 dataset). ODP Leg 141 drill sites 859, 860, 861. No seismic acquisition parameters stated in this paper (data from earlier Conrad survey). Author full first names not verifiable from PDF (initials only). ODP Leg 141 data publicly available via ODP TAMU.",
+  "tectonic_setting": "accretionary"
 }

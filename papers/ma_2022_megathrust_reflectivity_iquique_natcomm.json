@@ -3,12 +3,16 @@
   "title": "Megathrust reflectivity reveals the updip limit of the 2014 Iquique earthquake rupture",
   "authors": [
     "Ma, Bo",
-    "Klaeschen, Dirk",
-    "Kopp, Heidrun",
     "Geersen, Jacob",
     "Lange, Dietrich",
+    "Klaeschen, Dirk",
+    "Grevemeyer, Ingo",
     "Contreras-Reyes, Eduardo",
-    "Tréhu, Anne M."
+    "Petersen, Florian",
+    "Riedel, Michael",
+    "Xia, Yueyang",
+    "Tréhu, Anne M.",
+    "Kopp, Heidrun"
   ],
   "year": 2022,
   "journal": "Nature Communications",
@@ -42,53 +46,183 @@
     },
     "seismic_lines": [
       {
-        "name": "MGL1610 PICTURES Lines — North Chile 19°–21°S (megathrust reflectivity profiles)",
+        "name": "MGL1610 PICTURES Grid (MC04, MC06, MC15, MC16A, MC17, MC30) — North Chile 19°–21°S",
         "lat_start": -19.0,
         "lon_start": -71.5,
         "lat_end": -21.0,
         "lon_end": -70.5,
-        "length_km": 300
+        "length_km": 300,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V Marcus G. Langseth (MGL1610, PICTURES cruise, 2016)",
+    "vessel": [
+      "R/V Marcus G. Langseth"
+    ],
     "year_acquired": 2016,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": 6600,
     "streamer_length_m": 6000,
     "channel_count": 480,
     "sample_rate_ms": 2,
     "record_length_s": 14,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "shot_interval_m": 125.0,
+    "depth_penetration_km": 15.0
   },
   "data": [
     {
+      "dataset_ref": "mgl1610_mcs",
       "data_type": "seismic_reflection_mcs",
-      "name": "MGL1610 PICTURES MCS Data — North Chile 19°–21°S (State-of-the-Art Processing)",
-      "classification": "PROCESSED",
-      "format": "SEG-Y",
-      "url": "https://www.marine-geo.org/tools/search/Files.php?data_set_uid=23934",
-      "doi": "10.1594/IEDA/323934",
-      "repository": "MGDS",
-      "size_gb": null,
-      "access": "open",
-      "download_command": null,
-      "description": "MGL1610 PICTURES MCS reflection data processed with state-of-the-art techniques (PSDM + high-resolution velocity analysis) to image megathrust reflectivity at the 2014 Iquique earthquake updip limit; absence of reflectivity in rupture zone vs. high reflectivity updip indicating fluid pressure contrast"
+      "notes": "MGL1610 PICTURES MCS reflection data processed with state-of-the-art techniques (PSDM + high-resolution velocity analysis) to image megathrust reflectivity at the 2014 Iquique earthquake updip limit; absence of reflectivity in rupture zone vs. high reflectivity updip indicating fluid pressure contrast"
     },
     {
       "data_type": "bathymetry",
       "name": "MGL1610 Multibeam Bathymetry — North Chile 19°–21°S",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": "https://www.rvdata.us/search/cruise/MGL1610",
       "doi": null,
-      "repository": "RVData",
+      "repository": [
+        "RVData"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
       "description": "Multibeam bathymetry from MGL1610 cruise offshore northern Chile"
+    },
+    {
+      "data_type": "unknown",
+      "name": "Backscatter:Acoustic, Bathymetry:Swath, Sidescan",
+      "classification": "RAW",
+      "format": [
+        "MBSystem"
+      ],
+      "url": "https://doi.org/10.7284/123638",
+      "doi": "10.7284/123638",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 169.9,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Multibeam Sonar data as originally collected from a Kongsberg EM122 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "gravity",
+      "name": "Gravity:Field",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123647",
+      "doi": "10.7284/123647",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.1627,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Gravimeter data as originally collected from a Bell BGM-3 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "magnetics",
+      "name": "Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123640",
+      "doi": "10.7284/123640",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 2.6,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Magnetometer data as originally collected from a Geometrics G-882 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "PROCESSED",
+      "format": [
+        "R2R:Nav"
+      ],
+      "url": "https://doi.org/10.7284/603740",
+      "doi": "10.7284/603740",
+      "repository": [
+        "R2R"
+      ],
+      "size_gb": 0.2722,
+      "access": "open",
+      "download_command": null,
+      "description": "Fileset 603740 (r2rnav data) from cruise MGL1610",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Seismic:Active:Subbottom",
+      "classification": "RAW",
+      "format": [
+        "KEB"
+      ],
+      "url": "https://doi.org/10.7284/123641",
+      "doi": "10.7284/123641",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 1.1,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Singlebeam Sonar data as originally collected from a Knudsen 3260 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "velocity_sound",
+      "name": "Temperature, Velocity:Sound",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123637",
+      "doi": "10.7284/123637",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.0074,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Expendable Probe data as originally collected from a Sippican MK21 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Long-term OBS deployment in the period 12/2014 - 10/2016 offshore northern Chile with SEISAN waveform files and traveltime picks",
+      "classification": "RAW",
+      "format": [
+        "NOR",
+        "ZIP"
+      ],
+      "url": "https://doi.org/10.1594/PANGAEA.929899",
+      "doi": "10.1594/PANGAEA.929899",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": 1.604,
+      "access": "open",
+      "download_command": null,
+      "description": "This dataset includes earthquake locations from a 23 months long Ocean Bottom Seismometer (OBS) experiment conducted in response to the 2014 Mw 8.1 Iquique earthquake at the northern Chilean subduction zone. The experiment is separated into two subsequent OBS networks from December 2014 until October 2016. The accompanying zip-file SEISAN_WAV.zip includes raw waveform data for all earthquakes, the file Nordic.nor (ASCII Table) that includes all phase onset picks of all earthquakes. All data in the zipped archives can be used with the SEISAN seismology software.",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "Nature Communications open access paper. MGL1610 data accessible via MGDS and RVData.",
@@ -109,9 +243,11 @@
       "Paradigm",
       "unknown PSDM software"
     ],
-    "notes": "Nature Communications open access. PSDM with state-of-the-art amplitude analysis of megathrust reflectors"
+    "notes": "Nature Communications open access. PSDM with state-of-the-art amplitude analysis of megathrust reflectors",
+    "migration_type": "PSSDM"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access Nature Communications paper. MGL1610 data at MGDS and RVData. High-impact result linking megathrust reflectivity to earthquake rupture limits."
+  "analysis_notes": "Open access Nature Communications paper. Author list corrected from PDF (11 authors): Ma, Geersen, Lange, Klaeschen, Grevemeyer, Contreras-Reyes, Petersen, Riedel, Xia, Tréhu, Kopp. Named seismic profiles: MC04, MC06, MC15, MC16A, MC17, MC30 in grid layout. MGL1610 data at MGDS/RVData.",
+  "tectonic_setting": "mixed"
 }

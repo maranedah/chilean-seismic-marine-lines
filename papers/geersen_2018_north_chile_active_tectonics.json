@@ -4,12 +4,11 @@
   "authors": [
     "Geersen, Jacob",
     "Ranero, César R.",
-    "Kopp, Heidrun",
-    "Behrmann, Jan H.",
-    "Lange, Dietrich",
     "Klaucke, Ingo",
-    "Barrientos, Sergio",
-    "Diaz-Naveas, Juan",
+    "Behrmann, Jan H.",
+    "Kopp, Heidrun",
+    "Tréhu, Anne M.",
+    "Contreras-Reyes, Eduardo",
     "Barckhausen, Udo",
     "Reichert, Christian"
   ],
@@ -17,7 +16,7 @@
   "journal": "Tectonics",
   "doi": "10.1029/2018TC005087",
   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018tc005087",
-  "open_access_url": null,
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2018TC005087",
   "abstract": "New multibeam bathymetry data provide an unprecedented view of the tectonic regime and its along-strike heterogeneity of the North Chilean marine forearc and oceanic Nazca Plate between 19°S and 22.75°S. The tectonic map reveals a middle and upper slope configuration dominated by pervasive extensional faulting, with some faults outlining a >500-km-long ridge interpreted as remnants of a Jurassic magmatic arc. Lower slope deformation includes slope-failures, normal faulting, re-entrant embayments, and NW-SE trending anticlines and synclines resulting from subducting lower-plate topography and gravitational forearc collapse.",
   "keywords": [
     "north Chile forearc",
@@ -49,44 +48,64 @@
         "lon_start": -71.5,
         "lat_end": -22.75,
         "lon_end": -71.0,
-        "length_km": 420
+        "length_km": 420,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (multiple cruises SO104, SO211) and other GEOMAR cruises",
-    "year_acquired": 2014,
-    "source_type": "airgun array (legacy MCS) and subbottom profiler",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V SONNE",
+      "R/V Marcus G. Langseth"
+    ],
+    "year_acquired": 1995,
+    "source_type": [
+      "airgun array",
+      "multibeam echosounder"
+    ],
+    "source_volume_cui": 3124,
+    "streamer_length_m": 3000,
+    "channel_count": 120,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, 1995; SO244, 2015",
+      "MGL1610, 2016"
+    ]
   },
   "data": [
     {
       "data_type": "bathymetry",
       "name": "Multibeam Bathymetry — North Chilean Marine Forearc 19°–22.75°S",
       "classification": "RAW",
-      "format": "NetCDF",
-      "url": "https://doi.pangaea.de/10.1594/PANGAEA.983166",
-      "doi": "10.1594/PANGAEA.983166",
-      "repository": "PANGAEA",
+      "format": [
+        "NetCDF"
+      ],
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.893034",
+      "doi": "10.1594/PANGAEA.893034",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
-      "description": "New multibeam bathymetry providing unprecedented coverage of the north Chilean marine forearc (19°–22.75°S) and adjacent Nazca plate; reveals pervasive extensional faulting and gravitational forearc collapse. [SO211 cruise datasets searchable on PANGAEA]"
+      "description": "New multibeam bathymetry from SO244 (2015) and MGL1610 (2016) providing unprecedented coverage of the north Chilean marine forearc (19°–22.75°S) and adjacent Nazca plate; reveals pervasive extensional faulting and gravitational forearc collapse."
     },
     {
       "data_type": "seismic_reflection_mcs",
       "name": "Legacy MCS Profiles — North Chile Forearc 19°–22.75°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -96,17 +115,180 @@
       "data_type": "subbottom",
       "name": "Subbottom Profiler Data — North Chile Forearc",
       "classification": "RAW",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "MGDS",
+      "repository": [
+        "MGDS"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Subbottom profiler data from recent cruises used to characterize shallow sediment structure and fault scarps in the north Chilean forearc"
+    },
+    {
+      "data_type": "unknown",
+      "name": "Backscatter:Acoustic, Bathymetry:Swath, Sidescan",
+      "classification": "RAW",
+      "format": [
+        "MBSystem"
+      ],
+      "url": "https://doi.org/10.7284/123638",
+      "doi": "10.7284/123638",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 169.9,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Multibeam Sonar data as originally collected from a Kongsberg EM122 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "gravity",
+      "name": "Gravity:Field",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123647",
+      "doi": "10.7284/123647",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.1627,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Gravimeter data as originally collected from a Bell BGM-3 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "magnetics",
+      "name": "Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123640",
+      "doi": "10.7284/123640",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 2.6,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Magnetometer data as originally collected from a Geometrics G-882 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "PROCESSED",
+      "format": [
+        "R2R:Nav"
+      ],
+      "url": "https://doi.org/10.7284/603740",
+      "doi": "10.7284/603740",
+      "repository": [
+        "R2R"
+      ],
+      "size_gb": 0.2722,
+      "access": "open",
+      "download_command": null,
+      "description": "Fileset 603740 (r2rnav data) from cruise MGL1610",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "subbottom",
+      "name": "Seismic:Active:Subbottom",
+      "classification": "RAW",
+      "format": [
+        "KEB"
+      ],
+      "url": "https://doi.org/10.7284/123641",
+      "doi": "10.7284/123641",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 1.1,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Singlebeam Sonar data as originally collected from a Knudsen 3260 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "velocity_sound",
+      "name": "Temperature, Velocity:Sound",
+      "classification": "RAW",
+      "format": [
+        "ASCII"
+      ],
+      "url": "https://doi.org/10.7284/123637",
+      "doi": "10.7284/123637",
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": 0.0074,
+      "access": "open",
+      "download_command": null,
+      "description": "Raw, underway Expendable Probe data as originally collected from a Sippican MK21 system in 2016 on the vessel Langseth during the cruise MGL1610, \"Pisagua/Iquique Crustal Tomography to Understand the Region of the Earthquake Source (PICTURES)\", by investigator Tréhu, Anne",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "backscatter",
+      "name": "Multibeam backscatter data from SONNE cruise SO244",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893032",
+      "doi": "10.1594/PANGAEA.893032",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_refraction_obs",
+      "name": "Long-term OBS deployment in the period 12/2014 - 10/2016 offshore northern Chile with SEISAN waveform files and traveltime picks",
+      "classification": "RAW",
+      "format": [
+        "NOR",
+        "ZIP"
+      ],
+      "url": "https://doi.org/10.1594/PANGAEA.929899",
+      "doi": "10.1594/PANGAEA.929899",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": 1.604,
+      "access": "open",
+      "download_command": null,
+      "description": "This dataset includes earthquake locations from a 23 months long Ocean Bottom Seismometer (OBS) experiment conducted in response to the 2014 Mw 8.1 Iquique earthquake at the northern Chilean subduction zone. The experiment is separated into two subsequent OBS networks from December 2014 until October 2016. The accompanying zip-file SEISAN_WAV.zip includes raw waveform data for all earthquakes, the file Nordic.nor (ASCII Table) that includes all phase onset picks of all earthquakes. All data in the zipped archives can be used with the SEISAN seismology software.",
+      "cdp_spacing_m": null
     }
   ],
-  "_data_note": "New bathymetry from recent GEOMAR cruises (likely SO211) combined with legacy CINCA data from SO104. Tectonics AGU paper.",
+  "_data_note": "New bathymetry from SO244 (SONNE, 2015) and MGL1610 (Langseth, 2016); legacy MCS from CINCA95 (SO104, 1995). PANGAEA dataset confirmed at 10.1594/PANGAEA.893034. Open access CC license.",
   "processing": {
     "classification": "PROCESSED",
     "summary": "New multibeam bathymetry data combined with legacy seismic reflection lines and subbottom profiler data for the north Chilean forearc (19°–22.75°S) reveal four main tectonic elements: extensional faulted middle/upper slope, Jurassic magmatic arc ridge remnants, gravitational forearc collapse on the lower slope, and Nazca plate bending-fault topography. A new tectonic map of the north Chilean marine forearc is produced.",
@@ -117,13 +299,15 @@
       "4. Tectonic map construction"
     ],
     "software": [
+      "Claritas",
       "GMT",
-      "Fledermaus",
-      "unknown"
+      "Fledermaus"
     ],
-    "notes": "Combines new bathymetry with legacy MCS from CINCA and other cruises"
+    "notes": "Seismic reflection processing at Barcelona-CSI using Claritas. Combines new bathymetry (SO244 + MGL1610) with legacy MCS from CINCA95 (SO104, 1995).",
+    "migration_type": "PSTM"
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Tectonics paper; behind paywall. Bathymetry from recent cruises, legacy MCS from SO104 CINCA — both at MGDS."
+  "analysis_notes": "Open access (CC license). Authors corrected from PDF: Geersen, Ranero, Klaucke, Behrmann, Kopp, Tréhu, Contreras-Reyes, Barckhausen, Reichert. Source: ~3,124 cui air gun array, 3-km digital streamer (120 ch, 25-m group spacing) from SO104. Bathymetry from SO244 + MGL1610. PANGAEA DOI 10.1594/PANGAEA.893034 confirmed.",
+  "tectonic_setting": "mixed"
 }

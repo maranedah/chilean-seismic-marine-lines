@@ -44,42 +44,64 @@
     "seismic_lines": []
   },
   "acquisition": {
-    "vessel": "Japanese research vessel (JAMSTEC)",
+    "vessel": [
+      "R/V Mirai",
+      "Chilean Navy patrol vessel Cirujano Videla"
+    ],
     "year_acquired": 2009,
-    "source_type": "passive OBS array",
+    "source_type": [
+      "passive seismic"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
-    "channel_count": null,
-    "sample_rate_ms": null,
+    "channel_count": 13,
+    "sample_rate_ms": 10,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "MR18-06 Leg 2, JAMSTEC, Jan 2019",
+      "OBS recovery, Jan 2021"
+    ],
+    "frequency_range_hz": [
+      0.5,
+      10.0
+    ]
   },
   "data": [
     {
       "name": "OBS passive seismic array, Chile Triple Junction (2009–2010)",
       "classification": "RAW",
-      "format": "miniSEED / SEG-Y",
+      "format": [
+        "miniSEED",
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "IRIS DMC / JAMSTEC",
+      "repository": [
+        "Ocean Hemisphere Project Data Management Center, ERI, University of Tokyo"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
-      "description": "Long-term passive OBS array data from first deployment at Chile Triple Junction (2009–2010). Over 2,100 local earthquakes detected. Chile Ridge and Darwin Fracture Zone seismicity catalogued.",
+      "description": "Long-term passive OBS array data from first deployment (5 LTOBSs, 1-Hz sensors) at Chile Triple Junction (2009–2010). 133 local earthquakes (Mv 0.7–4.0) detected. Chile Ridge and Darwin Fracture Zone seismicity catalogued.",
       "data_type": "seismic_refraction_obs"
     },
     {
       "name": "OBS passive seismic array, Chile Triple Junction (2019–2021)",
       "classification": "RAW",
-      "format": "miniSEED / SEG-Y",
+      "format": [
+        "miniSEED"
+      ],
       "url": null,
       "doi": null,
-      "repository": "IRIS DMC / JAMSTEC",
+      "repository": [
+        "Ocean Hemisphere Project Data Management Center, ERI, University of Tokyo"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
-      "description": "Long-term passive OBS array data from second deployment at Chile Triple Junction (2019–2021). Two-year continuous recording of seafloor seismicity.",
+      "description": "Long-term passive OBS array data from second deployment (8 BBOBSs with CMG-3T 360s + 5 LTOBSs with LE-3Dlite 1Hz = 13 total, 12 recovered) at Chile Triple Junction (2019–2021). 2080 local earthquakes (Mv -0.3 to 5.0) detected. Sampled at 100 Hz (10 ms).",
       "data_type": "seismic_refraction_obs"
     }
   ],
@@ -97,10 +119,14 @@
       "8. Focal mechanism solutions",
       "9. Interpretation relative to CTJ structures"
     ],
-    "software": [],
+    "software": [
+      "WIN (Urabe and Tsukada, 1992)",
+      "FOCMEC (Snoke, 2003)",
+      "GMT"
+    ],
     "notes": "Hybrid open access (CC BY license). Japanese-Chilean collaboration: JAMSTEC + Universidad de Concepción. Two deployments: 2009–2010 and 2019–2021."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Paper available as hybrid open access with CC BY license via ScienceDirect (confirmed via Semantic Scholar). Abstract reconstructed from survey snippet. Passive OBS data likely archived at IRIS DMC and/or JAMSTEC data portal. Network codes and data availability details would require full paper access."
+  "analysis_notes": "Validated against PDF. CC BY open access. 9 authors confirmed. Deployment 1 (2009–2010): 5 LTOBSs (1-Hz), 133 earthquakes Mv 0.7–4.0. Deployment 2 (2019–2021): 8 BBOBSs (CMG-3T 360s) + 5 LTOBSs (LE-3Dlite 1Hz) = 13 OBS, 12 recovered; sampled at 100 Hz (10 ms); 2080 earthquakes Mv -0.3 to 5.0. vessel: 'JAMSTEC vessel' → ['R/V Mirai (MR18-06 Leg 2, JAMSTEC, Jan 2019)', 'Chilean Navy patrol vessel Cirujano Videla (recovery, Jan 2021)']. channel_count: null → 13. sample_rate_ms: null → 10. software: [] → ['WIN', 'FOCMEC', 'GMT']. Data to be available at Ocean Hemisphere Project Data Management Center, ERI, University of Tokyo."
 }

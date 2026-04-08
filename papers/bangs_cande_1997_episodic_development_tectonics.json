@@ -9,7 +9,7 @@
   "journal": "Tectonics",
   "doi": "10.1029/97TC00494",
   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/97TC00494",
-  "open_access_url": null,
+  "open_access_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/97TC00494",
   "abstract": "Seismic reflection data acquired across the southern coast of Chile image structures formed along the continental margin revealing an episodic history of accretion, non-accretion, and possibly erosion. Structures at the toe of the continental slope suggest frontal accretion of 0.75 to 1.75 km of trench fill. A small accretionary wedge 20–30 km wide abuts the truncated continental metamorphic basement extending seaward from beneath the shelf.",
   "keywords": [
     "seismic reflection",
@@ -29,43 +29,68 @@
     "country": "Chile",
     "description": "Southern Chile margin near Isla Mocha (~38°–40°S); accretionary wedge and shelf offshore pre-site survey area",
     "bounding_box": {
-      "lat_min": -40.0,
+      "lat_min": -47.0,
       "lat_max": -38.0,
       "lon_min": -76.0,
       "lon_max": -73.0
     },
     "seismic_lines": [
       {
-        "name": "Conrad pre-site MCS profiles — south Chile (~38°–40°S)",
-        "lat_start": -38.0,
+        "name": "Line 730 — Isla Mocha region (~38°8'S)",
+        "lat_start": -38.13,
         "lon_start": -76.0,
-        "lat_end": -40.0,
+        "lat_end": -38.13,
         "lon_end": -73.5,
-        "length_km": 300
+        "length_km": null
+      },
+      {
+        "name": "Line 732 — Isla Mocha region (~39°45'S)",
+        "lat_start": -39.75,
+        "lon_start": -76.0,
+        "lat_end": -39.75,
+        "lon_end": -73.5,
+        "length_km": null
+      },
+      {
+        "name": "Line 745 — Chile triple junction region (~46°S)",
+        "lat_start": -46.0,
+        "lon_start": -76.0,
+        "lat_end": -46.0,
+        "lon_end": -73.5,
+        "length_km": null
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V Conrad (pre-ODP site survey)",
+    "vessel": [
+      "R/V Robert Conrad"
+    ],
     "year_acquired": 1990,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3743,
+    "streamer_length_m": 3000,
+    "channel_count": 240,
     "sample_rate_ms": 4,
-    "record_length_s": null,
-    "fold": null,
-    "line_spacing_km": null
+    "record_length_s": 12,
+    "fold": 60,
+    "line_spacing_km": null,
+    "depth_penetration_km": 5.0
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "Conrad MCS Reflection Data — South Chile ~38°–40°S",
       "classification": "SEMI_PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "LDEO / unknown",
+      "repository": [
+        "LDEO"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -75,10 +100,14 @@
       "data_type": "bathymetry",
       "name": "Bathymetry — South Chile Margin ~38°–40°S",
       "classification": "RAW",
-      "format": "XYZ",
+      "format": [
+        "XYZ"
+      ],
       "url": null,
       "doi": null,
-      "repository": "NOAA",
+      "repository": [
+        "NOAA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
@@ -98,11 +127,12 @@
       "6. Post-stack time migration"
     ],
     "software": [
-      "unknown"
+      "Geovecteur"
     ],
-    "notes": "Stacked and migrated sections — classified as SEMI_PROCESSED (not depth migrated)"
+    "notes": "Processed at University of Texas at Austin using Geovecteur on CRAY-YMP. 240-ch streamer, 12.5 m group spacing, 60-fold CMP, 12 s record. 10-gun array 61.34 L = 3743 in³. Shot interval 20 s (~50 m). Finite-difference migration."
   },
   "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Paper behind paywall (Tectonics/AGU). Conrad cruise data likely available via MGDS. Abstract from survey_results.json snippet."
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. Added: source_volume_cui=3743 (61.34 L, 10-gun array), streamer_length_m=3000 (240 ch × 12.5 m), channel_count=240, record_length_s=12, fold=60 CMP. Software corrected to Geovecteur (CRAY-YMP, UT Austin). Bounding box extended to -47°S to include line 745 at triple junction. Named lines 730, 732, 745 added. Data acquired for ENAP (Chilean oil company); no public repository confirmed.",
+  "tectonic_setting": "mixed"
 }

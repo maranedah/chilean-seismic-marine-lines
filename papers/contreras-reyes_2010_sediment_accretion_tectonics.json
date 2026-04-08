@@ -3,9 +3,8 @@
   "title": "Tectonic control on sediment accretion and subduction off south central Chile: Implications for coseismic rupture processes of the 1960 and 2010 megathrust earthquakes",
   "authors": [
     "Contreras-Reyes, Eduardo",
-    "Grevemeyer, Ingo",
     "Flueh, Ernst R.",
-    "Reichert, Christian"
+    "Grevemeyer, Ingo"
   ],
   "year": 2010,
   "journal": "Tectonics",
@@ -41,59 +40,84 @@
     },
     "seismic_lines": [
       {
-        "name": "SPOC Profile at ~36°S",
-        "lat_start": -36.0,
-        "lon_start": -76.5,
-        "lat_end": -36.0,
-        "lon_end": -72.5,
-        "length_km": null
-      },
-      {
-        "name": "SPOC Profile at ~38.5°S",
-        "lat_start": -38.5,
-        "lon_start": -76.5,
-        "lat_end": -38.5,
-        "lon_end": -73.0,
-        "length_km": null
-      },
-      {
-        "name": "TIPTEQ Profile at ~38.2°S",
-        "lat_start": -38.2,
-        "lon_start": -76.0,
-        "lat_end": -38.2,
-        "lon_end": -72.5,
-        "length_km": null
-      },
-      {
-        "name": "Profile at ~43°S (Chile Triple Junction vicinity)",
+        "name": "TIPTEQ Corridor C2 — OBS wide-angle refraction (~43°S, offshore Isla de Chiloé, SO181)",
         "lat_start": -43.0,
         "lon_start": -77.5,
         "lat_end": -43.0,
         "lon_end": -74.0,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "TIPTEQ Corridor C1 — OBS wide-angle (~38°S, published Contreras-Reyes et al. 2008)",
+        "lat_start": -38.0,
+        "lon_start": -77.0,
+        "lat_end": -38.0,
+        "lon_end": -72.5,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "TIPTEQ Corridor C3 — OBS wide-angle (~43.5°S, published Scherwath et al. 2009)",
+        "lat_start": -43.5,
+        "lon_start": -77.5,
+        "lat_end": -43.5,
+        "lon_end": -74.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "TIPTEQ Corridor C4 — OBS wide-angle (~45°S, published Scherwath et al. 2009)",
+        "lat_start": -45.0,
+        "lon_start": -77.5,
+        "lat_end": -45.0,
+        "lon_end": -74.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "MCS Lines E1/E2/E4/E6 — ENAP reflection profiles (Bangs & Cande 1997)",
+        "lat_start": -33.0,
+        "lon_start": -74.5,
+        "lat_end": -46.0,
+        "lon_end": -74.5,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO161 SPOC 2001; SO181 TIPTEQ 2004–2005)",
-    "year_acquired": 2001,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2004,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3905,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO181, TIPTEQ, Dec 2004–Feb 2005"
+    ],
+    "shot_interval_m": 150.0
   },
   "data": [
     {
       "name": "Compiled wide-angle OBS refraction profiles, south-central Chile (33°–46°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -103,10 +127,14 @@
     {
       "name": "Multichannel seismic reflection profiles, south-central Chile",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -125,10 +153,14 @@
       "5. Along-margin comparison",
       "6. Correlation with earthquake rupture parameters"
     ],
-    "software": [],
-    "notes": "Bronze open access PDF available. Key compilation study covering multiple GEOMAR cruises. Direct link between sediment accretion patterns and 1960/2010 earthquake ruptures."
+    "software": [
+      "TOMO2D"
+    ],
+    "notes": "Bronze open access PDF available. Key compilation study covering multiple GEOMAR cruises. Direct link between sediment accretion patterns and 1960/2010 earthquake ruptures.",
+    "migration_type": "post-stack"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "Bronze open access PDF available via Wiley OnlineLibrary. Abstract reconstructed from survey snippet. Compilation study drawing on SPOC (SO161, 2001) and TIPTEQ (SO181, 2004–2005) data. Includes new data not previously published. Reichert co-authorship suggests BGR (Federal Institute for Geosciences, Germany) involvement."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. Authors corrected: removed Reichert (not author), fixed order to Flueh 2nd/Grevemeyer 3rd (both IFM-GEOMAR). New data: TIPTEQ corridor C2 (~43°S, offshore Chiloé), 11 OBH/S, BMBF grant 03G0181A. source_volume_cui=3905 (8×8 L G-guns = 64 L). Software: TOMO2D (Korenaga et al. 2000). Profiles C1–C4 named; MCS E1/E2/E4/E6 from Bangs & Cande 1997. Compilation also uses Scherwath et al. 2009, Flueh et al. 1998, Zelt 1999 profiles.",
+  "tectonic_setting": "mixed"
 }

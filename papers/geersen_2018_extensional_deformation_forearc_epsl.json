@@ -17,7 +17,7 @@
   "journal": "Earth and Planetary Science Letters",
   "doi": "10.1016/j.epsl.2018.02.030",
   "url": "https://www.sciencedirect.com/science/article/pii/S0012821X1830092X",
-  "open_access_url": null,
+  "open_access_url": "https://www.sciencedirect.com/science/article/pii/S0012821X1830092X",
   "abstract": "The paper documents permanent extensional deformation of the lower slope localized to the region 20.8°S–22°S along the North Chilean margin. Critical taper analysis, comparison of permanent deformation to inter-seismic seismicity and plate-coupling models, and observations from other subduction zones including the 2011 Tohoku-Oki area suggest that the normal faults at the lower slope may have resulted from shallow, possibly near-trench breaking earthquake ruptures. The study used multibeam bathymetry and legacy seismic reflection lines to define the deformation pattern.",
   "keywords": [
     "extensional deformation",
@@ -45,36 +45,60 @@
     },
     "seismic_lines": [
       {
-        "name": "Legacy MCS profiles — North Chile lower slope 20.8°–22°S",
-        "lat_start": -20.8,
+        "name": "SO104-07 — lower slope ~21°S, CINCA95 reprocessed at Barcelona-CSI",
+        "lat_start": -21.0,
+        "lon_start": -71.5,
+        "lat_end": -21.0,
+        "lon_end": -70.3,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "SO104-09 — lower slope ~22°S, CINCA95 reprocessed at Barcelona-CSI",
+        "lat_start": -22.0,
         "lon_start": -71.5,
         "lat_end": -22.0,
-        "lon_end": -70.5,
-        "length_km": 200
+        "lon_end": -70.3,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (multiple GEOMAR cruises) and legacy surveys",
-    "year_acquired": 2014,
-    "source_type": "airgun array (legacy MCS)",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V SONNE",
+      "R/V SONNE"
+    ],
+    "year_acquired": 1995,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3124,
+    "streamer_length_m": 3000,
+    "channel_count": 120,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95, 1995",
+      "SO244, 2015"
+    ],
+    "shot_interval_m": 50.0
   },
   "data": [
     {
       "data_type": "bathymetry",
       "name": "Multibeam Bathymetry — North Chile Lower Slope 20.8°–22°S",
       "classification": "RAW",
-      "format": "NetCDF",
+      "format": [
+        "NetCDF"
+      ],
       "url": "https://doi.pangaea.de/10.1594/PANGAEA.983166",
       "doi": "10.1594/PANGAEA.983166",
-      "repository": "PANGAEA",
+      "repository": [
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
@@ -84,14 +108,51 @@
       "data_type": "seismic_reflection_mcs",
       "name": "Legacy MCS Profiles — North Chile Lower Slope 20.8°–22°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "BGR / PANGAEA",
+      "repository": [
+        "BGR",
+        "PANGAEA"
+      ],
       "size_gb": null,
       "access": "unknown",
       "download_command": null,
       "description": "Legacy seismic reflection lines used to characterize subsurface structure of the deformed lower slope at 20.8°–22°S, complementing new bathymetric mapping. [CINCA95 cruise (SO104, 1995) datasets searchable on PANGAEA]"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "backscatter",
+      "name": "Multibeam backscatter data from SONNE cruise SO244",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893032",
+      "doi": "10.1594/PANGAEA.893032",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "_data_note": "Same dataset as Geersen et al. 2018 Tectonics paper. EPSL companion study focused on extensional deformation at 20.8°–22°S.",
@@ -105,12 +166,14 @@
       "4. Comparison with seismicity and coupling models"
     ],
     "software": [
-      "GMT",
-      "unknown"
+      "Claritas",
+      "GMT"
     ],
-    "notes": "EPSL paper; companion to Geersen et al. 2018 Tectonics paper"
+    "notes": "EPSL paper; companion to Geersen et al. 2018 Tectonics paper",
+    "migration_type": "post-stack"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "EPSL paper; behind paywall. Uses same GEOMAR bathymetry and legacy MCS dataset as Geersen 2018 Tectonics paper."
+  "analysis_notes": "Validated against PDF. Open access CC BY-NC-ND; open_access_url set. Authors 10, all confirmed correct. Seismic data: SO104 (CINCA95, BGR, 1995): ~3124 cui airgun array, 3km/120ch/25m streamer; reprocessed at Barcelona-CSI with Claritas (decon, f-k, radon multiple attenuation, PreSTM, PSTM+PSDM). Bathymetry: SO244 (2015). Named lines SO104-07 and SO104-09. year_acquired corrected 2014→1995. vessel updated to SO104+SO244. source_volume_cui=3124, streamer=3000m, channels=120. Software corrected to Claritas+GMT.",
+  "tectonic_setting": "erosional"
 }

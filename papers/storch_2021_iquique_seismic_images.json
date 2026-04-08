@@ -43,35 +43,70 @@
         "lon_start": -72.0,
         "lat_end": -19.67,
         "lon_end": -70.2,
-        "length_km": null
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE (SO104 — CINCA95 cruise, 1995)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": 1995,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 2,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO104, CINCA95, 1995"
+    ],
+    "shot_interval_m": 50.0,
+    "depth_penetration_km": 20.0,
+    "frequency_range_hz": [
+      90.0,
+      120.0
+    ]
   },
   "data": [
     {
       "name": "CINCA95 Multichannel Seismic Reflection Data (reprocessed)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep / internal archive",
+      "repository": [
+        "GEOMAR OceanRep",
+        "internal archive"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "CINCA95 multichannel seismic data acquired in 1995 offshore northern Chile, reprocessed in this study using pre-stack depth migration (PSDM) to image the subduction interface at 19°40′S to ~16 km depth.",
       "data_type": "seismic_reflection_mcs"
+    },
+    {
+      "data_type": "bathymetry",
+      "name": "Multibeam bathymetry from SONNE cruises SO104 and SO244 — north Chile",
+      "classification": "RAW",
+      "format": null,
+      "url": "https://doi.org/10.1594/PANGAEA.893033",
+      "doi": "10.1594/PANGAEA.893033",
+      "repository": [
+        "PANGAEA"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -89,9 +124,11 @@
       "9. Depth image interpretation"
     ],
     "software": [],
-    "notes": "Reprocessing of 1995 CINCA95 data. Original data acquired during SONNE cruise SO104. Pre-stack depth migration used for improved imaging."
+    "notes": "Reprocessing of 1995 CINCA95 data. Original data acquired during SONNE cruise SO104. Pre-stack depth migration used for improved imaging.",
+    "migration_type": "PSSDM"
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Paper is open access via GFZ publication server. Abstract confirmed from OpenAlex and GFZ repository. CINCA95 data are archival (1995); not publicly deposited in standard repositories but held at GEOMAR/GFZ. Acquisition vessel SO104 (SONNE) inferred from CINCA95 project documentation."
+  "analysis_notes": "Paper is open access via GFZ publication server. Abstract confirmed from OpenAlex and GFZ repository. CINCA95 data are archival (1995); not publicly deposited in standard repositories but held at GEOMAR/GFZ. Acquisition vessel SO104 (SONNE) inferred from CINCA95 project documentation.",
+  "tectonic_setting": "mixed"
 }

@@ -25,49 +25,61 @@
     "Andean Geology"
   ],
   "location": {
-    "latitude": -42.0,
+    "latitude": -43.5,
     "longitude": -74.5,
     "city": "Castro (Chiloé Island)",
     "region": "Región de Los Lagos",
     "country": "Chile",
-    "description": "Offshore Chiloé Island at ~42°S, southern Chilean margin, gas hydrate province",
+    "description": "Offshore Chiloé Island at 43°–44°S, southern Chilean margin, gas hydrate province; SPOC project line SO161-40",
     "bounding_box": {
-      "lat_min": -43.0,
-      "lat_max": -41.0,
+      "lat_min": -44.0,
+      "lat_max": -43.0,
       "lon_min": -76.5,
       "lon_max": -73.5
     },
     "seismic_lines": [
       {
-        "name": "MCS Profile offshore Chiloé Island (~42°S)",
-        "lat_start": -42.0,
+        "name": "SO161-40 (SPOC, 2001)",
+        "lat_start": -43.5,
         "lon_start": -76.0,
-        "lat_end": -42.0,
+        "lat_end": -43.5,
         "lon_end": -74.0,
         "length_km": null
       }
     ]
   },
   "acquisition": {
-    "vessel": null,
-    "year_acquired": null,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V SONNE"
+    ],
+    "year_acquired": 2001,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3301,
+    "streamer_length_m": 3000,
+    "channel_count": 132,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO161, SPOC, Jan–Feb 2001"
+    ]
   },
   "data": [
     {
       "name": "Multichannel seismic profile offshore Chiloé Island",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "OGS (Istituto Nazionale di Oceanografia e di Geofisica Sperimentale) or SHOA",
+      "repository": [
+        "OGS",
+        "SHOA"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -88,10 +100,14 @@
       "7. Gas hydrate and free gas concentration estimation (rock physics)",
       "8. Geothermal gradient estimation from BSR depth"
     ],
-    "software": [],
-    "notes": "Gold open access paper in Andean Geology (Chilean national journal). OGS Trieste (Italy) co-authorship suggests Italian-Chilean collaborative dataset."
+    "software": [
+      "Kirchhoff PreSTM",
+      "Kirchhoff PreSDM"
+    ],
+    "notes": "Gold open access paper in Andean Geology. SPOC project (SO161, Jan–Feb 2001) legacy data; line SO161-40 at 43°–44°S. Advanced processing includes Kirchhoff pre-stack time and depth migration with layer-stripping velocity analysis.",
+    "migration_type": "PSTM"
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
+  "analyzed_at": "2026-04-04T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Paper is gold open access in Andean Geology with CC-BY license. Full PDF available at journal website. Abstract confirmed from Semantic Scholar. No explicit data repository link found in metadata. Seismic data likely from a prior SHOA or OGS cruise; specific vessel not confirmed."
+  "analysis_notes": "PDF confirmed: RV Sonne cruise SO161 (Jan–Feb 2001), SPOC project. Line SO161-40 at 43°–44°S. 20-gun array, total volume 54.1 L (3301 cui), shot interval 20 s (~50 m spacing). Streamer 3 km, 132 channels (channels 1–24: 12.5 m inter-trace; channels 25–132: 25 m inter-trace). Software: Kirchhoff PreSTM + PreSDM. Authors confirmed: Vargas-Cordero, Tinivella, Villar-Muñoz, Giustiniani (Giustiniani IS on this paper, unlike the 2020 Lebu paper). DOI confirmed: 10.5027/andgeoV43n3-a02."
 }

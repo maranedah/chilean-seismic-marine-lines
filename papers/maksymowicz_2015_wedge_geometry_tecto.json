@@ -53,10 +53,15 @@
     {
       "name": "Compiled bathymetric and seismic data — full Chilean margin",
       "classification": "PROCESSED",
-      "format": "ASCII / GeoTIFF",
+      "format": [
+        "ASCII",
+        "GeoTIFF"
+      ],
       "url": null,
       "doi": null,
-      "repository": "Published literature compilation",
+      "repository": [
+        "Published literature compilation"
+      ],
       "size_gb": null,
       "access": "open",
       "download_command": null,
@@ -79,5 +84,9 @@
   },
   "analyzed_at": "2026-04-02T00:00:00Z",
   "analysis_confidence": "high",
-  "analysis_notes": "Open access PDF available via Universidad de Chile institutional repository (CC BY-NC-ND). Abstract confirmed from Semantic Scholar. Compilation study with no new seismic data. Maksymowicz (Universidad de Chile) is sole author."
+  "analysis_notes": "Open access PDF available via Universidad de Chile institutional repository (CC BY-NC-ND). Abstract confirmed from Semantic Scholar. Compilation study with no new seismic data. Maksymowicz (Universidad de Chile) is sole author.",
+  "tectonic_setting": "mixed",
+  "associated_earthquakes": [
+    "Maule 2010 Mw8.8"
+  ]
 }

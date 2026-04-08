@@ -38,35 +38,77 @@
     },
     "seismic_lines": [
       {
-        "name": "MCS profiles offshore Tierra del Fuego / Drake Passage (~54°–57°S)",
+        "name": "I95-169 — trench-perpendicular, northern part of study area (~54°S)",
         "lat_start": -54.0,
-        "lon_start": -70.0,
+        "lon_start": -72.0,
+        "lat_end": -54.0,
+        "lon_end": -67.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "I95-171 — trench-perpendicular, central part of study area (~55°S)",
+        "lat_start": -55.0,
+        "lon_start": -72.0,
+        "lat_end": -55.0,
+        "lon_end": -67.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "I95-175 — trench-perpendicular, southern part of study area (~56°S)",
+        "lat_start": -56.0,
+        "lon_start": -72.0,
+        "lat_end": -56.0,
+        "lon_end": -67.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
+      },
+      {
+        "name": "I95-180 / I95-181 — margin-parallel tie lines on Fuegian Terrace",
+        "lat_start": -54.0,
+        "lon_start": -71.0,
         "lat_end": -57.0,
-        "lon_end": -64.0,
-        "length_km": null
+        "lon_end": -70.0,
+        "length_km": null,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": null,
-    "year_acquired": null,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V OGS-Explora",
+      "R/V OGS-Explora"
+    ],
+    "year_acquired": 1995,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 4882,
+    "streamer_length_m": 3000,
+    "channel_count": 120,
     "sample_rate_ms": null,
     "record_length_s": null,
-    "fold": null,
-    "line_spacing_km": null
+    "fold": 30,
+    "line_spacing_km": null,
+    "expeditions": [
+      "PNRA, April 1995",
+      "PNRA, March/April 1997"
+    ]
   },
   "data": [
     {
       "name": "Multichannel seismic reflection profiles, southernmost Chile (54°–57°S)",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "OGS (Istituto Nazionale di Oceanografia e di Geofisica Sperimentale) or SHOA",
+      "repository": [
+        "OGS",
+        "SHOA"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
@@ -78,19 +120,18 @@
     "classification": "PROCESSED",
     "summary": "Multichannel seismic reflection data newly acquired offshore southernmost Chile (54°–57°S) processed to characterize structural variability of the active margin. Standard MCS processing applied to produce stacked and migrated sections. Three tectonic domains identified: oceanic Antarctic plate, accretionary wedge, and continental backstop. First systematic seismic coverage of this poorly studied region.",
     "workflow": [
-      "1. MCS data acquisition in challenging weather conditions",
-      "2. Demultiplexing and trace editing",
-      "3. Geometry assignment",
-      "4. Bandpass filtering",
-      "5. Velocity analysis",
-      "6. NMO correction and CDP stacking",
-      "7. Post-stack migration",
-      "8. Tectonic interpretation"
+      "1. MCS data acquisition (R/V OGS-Explora, April 1995; 36-gun array 80L, 3000m 120-ch streamer, 50m shot interval, 30-fold)",
+      "2. Pre-stack partial migration (DMO)",
+      "3. Multiple removal (median filters)",
+      "4. CDP stacking",
+      "5. Post-stack migration",
+      "6. Tectonic interpretation of profiles I95-169, I95-171, I95-175 (cross-margin) and I95-180/181 (margin-parallel)"
     ],
     "software": [],
-    "notes": "Italian-Chilean collaborative study. OGS Trieste (Italy) and Universidad de Chile involved. Data from late 1990s. Austral region with limited prior coverage."
+    "notes": "Italian Antarctic Research Program (PNRA). Primary cruise April 1995; second cruise March/April 1997 (same parameters). Total ~1500 km of MCS + gravity + magnetic profiles. PDF has digit encoding artifact (each digit = original + 1 mod 10). No specific software package names mentioned."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "low",
-  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet. 1999 paper predates most data repositories. Data likely archived at OGS (Trieste, Italy) or SHOA (Chile). No public datasets identified. Vessel and acquisition year not confirmed."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF (garbled digit encoding: each displayed digit = original + 1 mod 10). Authors confirmed: Polonia, Brancolini, Torelli, Vera. DOI confirmed. vessel: null → R/V OGS-Explora (PNRA, April 1995 + March/April 1997). year_acquired: null → 1995. source_volume_cui: null → 4882 (80L × 61.02, decoded from '79 l'). streamer_length_m: null → 3000 (decoded from '2999 m'). channel_count: null → 120 (decoded from '019'). fold: null → 30 (decoded from '29-fold'). seismic_lines updated with decoded profile names I95-169/171/175 (cross-margin) and I95-180/181 (margin-parallel). Processing workflow corrected to include DMO pre-stack partial migration and median filter multiple removal. No public data repository. Data at OGS Trieste (Italy).",
+  "tectonic_setting": "accretionary"
 }

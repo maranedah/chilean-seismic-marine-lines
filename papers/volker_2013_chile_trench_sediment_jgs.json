@@ -42,51 +42,66 @@
         "lon_start": -75.0,
         "lat_end": -46.0,
         "lon_end": -75.0,
-        "length_km": 1600
+        "length_km": 1600,
+        "profile_orientation": "margin-parallel"
       }
     ]
   },
   "acquisition": {
-    "vessel": "Multiple vessels (compilation including R/V SONNE cruises SO161, SO181, SO211 and others)",
+    "vessel": [
+      "R/V SONNE"
+    ],
     "year_acquired": null,
-    "source_type": "airgun array",
+    "source_type": [
+      "airgun array"
+    ],
     "source_volume_cui": null,
     "streamer_length_m": null,
     "channel_count": null,
     "sample_rate_ms": 4,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "multiple cruises: SO107/SO161/SO181"
+    ]
   },
   "data": [
     {
       "data_type": "seismic_reflection_mcs",
       "name": "Compilation of Depth-Converted MCS Profiles — Chile Trench 32°–46°S",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
-      "url": null,
+      "format": [
+        "SEG-Y"
+      ],
+      "url": "https://geolsoc.figshare.com/articles/dataset/Sedimentary_fill_of_the_Chile_Trench_32_46_S_volumetric_distribution_and_causal_factors/3453473/1",
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "Geological Society figshare"
+      ],
       "size_gb": null,
-      "access": "unknown",
+      "access": "open",
       "download_command": null,
-      "description": "Compilation of depth-converted seismic reflection profiles crossing the Chile Trench between 32°–46°S used to calculate 3D trench geometry and sediment volume; includes SPOC, TIPTEQ, and other GEOMAR cruise profiles. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+      "description": "Compilation of depth-converted seismic reflection profiles crossing the Chile Trench between 32°–46°S used to calculate 3D trench geometry and sediment volume; includes SPOC, TIPTEQ, and other GEOMAR cruise profiles."
     },
     {
       "data_type": "bathymetry",
       "name": "Swath Bathymetry — Chile Trench 32°–46°S",
       "classification": "RAW",
-      "format": "NetCDF",
-      "url": null,
+      "format": [
+        "NetCDF"
+      ],
+      "url": "https://geolsoc.figshare.com/articles/dataset/Sedimentary_fill_of_the_Chile_Trench_32_46_S_volumetric_distribution_and_causal_factors/3453473/1",
       "doi": null,
-      "repository": "PANGAEA",
+      "repository": [
+        "Geological Society figshare"
+      ],
       "size_gb": null,
-      "access": "unknown",
+      "access": "open",
       "download_command": null,
-      "description": "Multibeam bathymetry used to constrain trench geometry between interpolated seismic profiles. [SPOC cruise (SO161, 2001) datasets searchable on PANGAEA]"
+      "description": "Multibeam bathymetry used to constrain trench geometry between interpolated seismic profiles."
     }
   ],
-  "_data_note": "Synthesis paper using depth-converted MCS profiles from multiple GEOMAR cruises. Individual datasets accessible via MGDS under respective cruise IDs (SO161, SO181, etc.).",
   "processing": {
     "classification": "PROCESSED",
     "summary": "Multiple published depth-converted seismic reflection profiles crossing the Chile Trench between 32°–46°S were compiled and interpolated to build a 3D model of the trench geometry. Volume integration yields 46,000 ± 500 km³ of trench fill. The latitudinal volume distribution reflects glacial-interglacial variations in sediment supply from rivers and glaciers of southern Chile.",
@@ -102,7 +117,8 @@
     ],
     "notes": "Synthesis using existing published depth sections; no new seismic acquisition"
   },
-  "analyzed_at": "2026-04-03T00:00:00Z",
-  "analysis_confidence": "medium",
-  "analysis_notes": "JGS paper, behind paywall. Uses compiled data from multiple cruises. Abstract from survey_results.json."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. 4 authors confirmed correct. Data openly available at Geological Society figshare confirmed. Synthesis study using published profiles; no new seismic acquisition.",
+  "tectonic_setting": "mixed"
 }

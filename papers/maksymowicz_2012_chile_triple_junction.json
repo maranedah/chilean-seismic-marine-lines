@@ -39,40 +39,138 @@
     },
     "seismic_lines": [
       {
-        "name": "OBS refraction profile at Chile Triple Junction (~46°S)",
-        "lat_start": -46.5,
-        "lon_start": -79.0,
-        "lat_end": -46.5,
+        "name": "P07 — OBS refraction/reflection profile, 110 km south of CTJ (~47°–48°S), TIPTEQ SO181, Dec 2004–Feb 2005",
+        "lat_start": -47.0,
+        "lon_start": -77.5,
+        "lat_end": -47.5,
         "lon_end": -74.5,
+        "length_km": 220
+      },
+      {
+        "name": "rc2901-746, rc2901-748, rc2901-751 — Legacy MCS reflection profiles, R/V Conrad RC 2901, 1988",
+        "lat_start": -46.5,
+        "lon_start": -78.0,
+        "lat_end": -47.5,
+        "lon_end": -75.0,
         "length_km": null
       }
     ]
   },
   "acquisition": {
-    "vessel": "R/V SONNE",
-    "year_acquired": null,
-    "source_type": "airgun array",
-    "source_volume_cui": null,
-    "streamer_length_m": null,
-    "channel_count": null,
+    "vessel": [
+      "R/V SONNE",
+      "R/V Robert Conrad"
+    ],
+    "year_acquired": 2004,
+    "source_type": [
+      "airgun array"
+    ],
+    "source_volume_cui": 3905,
+    "streamer_length_m": 100,
+    "channel_count": 37,
     "sample_rate_ms": null,
     "record_length_s": null,
     "fold": null,
-    "line_spacing_km": null
+    "line_spacing_km": null,
+    "expeditions": [
+      "SO181, TIPTEQ, Dec 2004–Feb 2005",
+      "RC2901, 1988"
+    ],
+    "shot_interval_m": 150.0
   },
   "data": [
     {
       "name": "Wide-angle OBS seismic refraction and MCS reflection data, Chile Triple Junction",
       "classification": "PROCESSED",
-      "format": "SEG-Y",
+      "format": [
+        "SEG-Y"
+      ],
       "url": null,
       "doi": null,
-      "repository": "GEOMAR OceanRep",
+      "repository": [
+        "GEOMAR OceanRep"
+      ],
       "size_gb": null,
       "access": "restricted",
       "download_command": null,
       "description": "Amphibious seismic refraction (OBS) and MCS reflection data from the Chile Triple Junction region (~46°S), used for tomographic imaging of the Antarctic–South America subduction zone and accretionary prism structure.",
       "data_type": "seismic_refraction_obs"
+    },
+    {
+      "data_type": "gravity",
+      "name": "Bathymetry:Singlebeam, Gravity:Field, Magnetic:Field",
+      "classification": "RAW",
+      "format": [
+        "MGD77"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/Files.php?data_set_uid=15251",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "unknown",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "unknown",
+      "name": "Bathymetry:Swath",
+      "classification": "RAW",
+      "format": [
+        "MGDS"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=2794,14008,16981",
+      "doi": null,
+      "repository": [
+        "NOAA:NCEI"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "navigation",
+      "name": "Navigation:Primary",
+      "classification": "RAW",
+      "format": [
+        "MGDS:Nav",
+        "SHP"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=11106,11107",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
+    },
+    {
+      "data_type": "seismic_reflection_mcs",
+      "name": "Seismic Reflection/Refraction",
+      "classification": "RAW",
+      "format": [
+        "ASCII",
+        "ASCII:TSN",
+        "PDF",
+        "SEGY"
+      ],
+      "url": "http://www.marine-geo.org/tools/search/DataSets.php?data_set_uids=18861,18864,29438,29439,29440",
+      "doi": null,
+      "repository": [
+        "MGDS"
+      ],
+      "size_gb": null,
+      "access": "open",
+      "download_command": null,
+      "description": "acquired during the R/V Robert D. Conrad expedition RC2901 (1988)",
+      "cdp_spacing_m": null
     }
   ],
   "processing": {
@@ -87,10 +185,13 @@
       "6. Gravity modelling as additional constraint",
       "7. Integrated interpretation"
     ],
-    "software": [],
-    "notes": "GEOMAR-led study. Chile Triple Junction is the locus of Chile Ridge subduction at ~46°S. Accretionary prism 70–80 km wide confirmed."
+    "software": [
+      "Korenaga et al. (2000) joint refraction/reflection tomography"
+    ],
+    "notes": "Profile P07, 37 OBS/OBH spaced 5.5 km, 8×8L G guns (64L=3905cui), shot interval 60s (~150m spacing). Reflection: 16-channel 100m streamer + GI gun 1.5L. Legacy MCS from R/V Conrad RC 2901 (1988, Lamont Doherty). Accretionary prism 70–80 km wide at ~47°S."
   },
-  "analyzed_at": "2026-04-02T00:00:00Z",
-  "analysis_confidence": "low",
-  "analysis_notes": "Paper behind paywall; no open access version found. Abstract reconstructed from survey snippet and Semantic Scholar metadata (abstract elided by publisher). Cruise identification not confirmed; GEOMAR authorship (Grevemeyer, Flueh) suggests R/V SONNE. Acquisition year unknown."
+  "analyzed_at": "2026-04-04T00:00:00Z",
+  "analysis_confidence": "high",
+  "analysis_notes": "Validated against PDF. 4 authors confirmed. DOI confirmed. vessel: 'R/V SONNE' → 'R/V SONNE (SO181, TIPTEQ, Dec 2004–Feb 2005)' + 'R/V Conrad (RC 2901, 1988)' (from acknowledgments). year_acquired: null → 2004. source_volume_cui: null → 3905 (8×8L=64L×61.02). streamer_length_m: null → 100 (16-channel 100m for reflection). channel_count: null → 37 (OBS/OBH). Software: Korenaga et al. (2000) joint tomography. Profile P07 identified. Legacy MCS from Lamont Doherty (RC 2901, 1988): lines rc2901-746, -748, -751.",
+  "tectonic_setting": "mixed"
 }
