@@ -34,8 +34,8 @@ resource "google_cloud_run_v2_service" "backend" {
       }
 
       env {
-        name  = "PAPERS_DIR"
-        value = "/app/papers"
+        name  = "GCS_BUCKET"
+        value = var.gcs_bucket
       }
 
       resources {

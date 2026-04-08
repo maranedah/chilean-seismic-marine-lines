@@ -29,3 +29,8 @@ variable "frontend_image" {
   description = "Fully-qualified frontend Docker image URL (registry/project/name:tag)"
   type        = string
 }
+
+variable "gcs_bucket" {
+  description = "GCS bucket name for paper JSONs and images"
+  type        = string
+}

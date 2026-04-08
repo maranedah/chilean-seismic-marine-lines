@@ -46,6 +46,7 @@ jobs:
         environment    = "${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}"
         backend_image  = "${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.PROJECT_NAME }}-backend:${{ github.sha }}"
         frontend_image = "${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.PROJECT_NAME }}-frontend:${{ github.sha }}"
+        gcs_bucket     = "${{ secrets.GCS_BUCKET }}"
         EOF
 
     - name: Terraform Init
