@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 env:
-  PROJECT_ID: ${{ github.ref == 'refs/heads/main' && secrets.PROD_PROJECT_ID || secrets.DEV_PROJECT_ID }}
+  PROJECT_ID: sismica-marina
   REGION: us-central1
   REGISTRY: us.gcr.io
   PROJECT_NAME: sismica-marina
@@ -20,7 +20,7 @@ jobs:
     - name: Google Auth
       uses: 'google-github-actions/auth@v2'
       with:
-        credentials_json: secrets.GCP_SA_KEY
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
         create_credentials_file: true
 
     - name: Set up Cloud SDK
