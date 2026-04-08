@@ -70,5 +70,10 @@ jobs:
     - name: Output Service URLs
       working-directory: terraform
       run: |
-        echo "Frontend URL: $(terraform output -raw frontend_url)"
-        echo "Backend URL:  $(terraform output -raw backend_url)"
+        echo "Frontend URL:    $(terraform output -raw frontend_url)"
+        echo "Backend URL:     $(terraform output -raw backend_url)"
+        echo "Load Balancer IP: $(terraform output -raw load_balancer_ip)"
+        echo "Site URL:        $(terraform output -raw site_url)"
+        echo ""
+        echo "=== DNS Nameservers (set at domain registrar) ==="
+        terraform output -json dns_nameservers | tr -d '[]"' | tr ',' '\n' | xargs -I{} echo "  {}"

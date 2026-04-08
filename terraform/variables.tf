@@ -34,3 +34,9 @@ variable "gcs_bucket" {
   description = "GCS bucket name for paper JSONs and images"
   type        = string
 }
+
+variable "domain" {
+  description = "Apex domain for the public site (e.g. sismicamarina.cl)"
+  type        = string
+  default     = "sismicamarina.cl"
+}
