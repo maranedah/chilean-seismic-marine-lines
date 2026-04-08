@@ -16,8 +16,6 @@ env/
 # All generated/downloaded data (PDFs, extracted text, images, datasets, graphify output)
 data/
 
-# Temp files used by Claude for output redirection (Windows pattern)
-**.txt
 
 # Editor / IDE
 .vscode/
